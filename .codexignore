@@ -1,0 +1,11 @@
+raw/
+data/
+downloads/
+logs/
+cache/
+*.html
+*.jdx
+*.png
+*.jpg
+*.zip
+*.csv

@@ -1,8 +1,8 @@
 import pandas as pd
 from pathlib import Path
 
-RAW_PATH = Path("master/compound_master_100000_random_raw.csv")
-CLEAN_PATH = Path("master/compound_master_100000_random_clean.csv")
+RAW_PATH = Path("master/compound_master_100000_in_order.csv")
+CLEAN_PATH = Path("master/compound_master_100000_in_order_clean.csv")
 
 df = pd.read_csv(RAW_PATH)
 
