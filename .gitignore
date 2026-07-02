@@ -2,3 +2,4 @@
 /cache
 /raw
 /archive
+__pycache__
