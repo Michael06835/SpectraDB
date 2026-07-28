@@ -1,5 +1,15 @@
 # SpectraDB TODO
 
+## 2026-07-02 当前 NIST 状态
+
+- [x] 已重新编写 `scripts/harvest_nist.py` 的最小可靠版。
+- [x] 已完成 `python scripts/harvest_nist.py --limit 10 --sleep 0.5` 测试。
+- [x] 前 10 个顺序样本中已确认保存的 `.jdx` 均包含真实 JCAMP-DX 标记。
+- [x] 已修复 NIST 长时间无输出、请求超时和单 CID 阻塞问题。
+- [x] 已完成 `python scripts/harvest_nist.py --limit 20 --sleep 0.5` 稳定性测试。
+- [ ] 下一步先运行 100 个顺序样本测试，再运行 1000 个样本测试；1000 稳定前不建议运行 100000。
+- [ ] 制定旧测试文件归档计划，将旧日志、旧 checkpoint 和测试性 raw 输出移动到 `archive/`，归档前不删除任何数据。
+
 ## 当前阶段
 
 **Phase 1：数据获取基础设施建设。**
