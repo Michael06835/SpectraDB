@@ -1,189 +1,92 @@
 # SpectraDB TODO
 
-## 2026-07-02 当前 NIST 状态
-
-- [x] 已重新编写 `scripts/harvest_nist.py` 的最小可靠版。
-- [x] 已完成 `python scripts/harvest_nist.py --limit 10 --sleep 0.5` 测试。
-- [x] 前 10 个顺序样本中已确认保存的 `.jdx` 均包含真实 JCAMP-DX 标记。
-- [x] 已修复 NIST 长时间无输出、请求超时和单 CID 阻塞问题。
-- [x] 已完成 `python scripts/harvest_nist.py --limit 20 --sleep 0.5` 稳定性测试。
-- [ ] 下一步先运行 100 个顺序样本测试，再运行 1000 个样本测试；1000 稳定前不建议运行 100000。
-- [ ] 制定旧测试文件归档计划，将旧日志、旧 checkpoint 和测试性 raw 输出移动到 `archive/`，归档前不删除任何数据。
-
 ## 当前阶段
 
-**Phase 1：数据获取基础设施建设。**
+**第一阶段：数据体系与单模态模型。**
 
-当前目标不是追求最大数据量，而是建立稳定、可靠、可重复的数据获取流程。
+当前目标不是追求数据规模，而是建立稳定的 QM9S 多模态数据集，完成 IR、Raman、UV-Vis 三个单模态 1D-CNN 基线，并比较不同光谱模态对结构信息的表征能力。
 
-当前默认策略：
+当前路线：
 
-- 优先使用顺序采样 master。
-- 暂停大规模随机采样。
-- 优先保证数据真实性。
-- 小样本验证通过后再逐步扩大规模。
+- 单模态均使用 1D-CNN。
+- Morgan fingerprint 不作为光谱模型的输入。
+- 官能团预测是中间结构信息，不是最终目标。
+- 最终目标：从光谱推断完整分子结构候选，输出官能团/结构特征、结构候选、Top-k 排序与可视化。
+
+---
+
+## 已完成
+
+- [x] 下载 QM9S 数据集（`qm9s.pt` 及 IR、Raman、UV-Vis 计算光谱 CSV）。
+- [x] 构建 QM9S manifest（129817 个样本，无缺失 SMILES、无重复编号）。
+- [x] IR、Raman、UV-Vis 光谱转为 float32 NPY（IR/Raman 129817×3501，UV-Vis 129817×701）。
+- [x] 光谱质量检查（0 非有限值、2 条全零 UV-Vis、129 条强度离群）。
+- [x] 生成 Bemis–Murcko scaffold split（80/10/10，28501 个 scaffold，跨分区零重叠）。
+- [x] 生成模态有效性 mask，三模态完整配对 129815 个样本。
+- [x] 建立 QM9S 结构库（原子、键、官能团、环、共轭体系标注）。
+- [x] 生成官能团多标签矩阵（129817×14）。
+- [x] 训练 IR 1D-CNN 基线并冻结 IR-v1（test Micro-F1 0.9406±0.0048，Macro-AUROC 0.9954±0.0007）。
+- [x] 完成类别不平衡消融实验与阈值校准实验（均保留 IR-v1 默认设置）。
+- [x] 更新 `README.md`、`CHANGELOG.md`、`AGENTS.md`、`TODO.md`。
+- [x] 更新 Git 忽略规则与环境锁定文件。
 
 ---
 
 ## 当前最高优先级
 
-### Priority A：项目规则与目录清理
+### Priority A：Raman 1D-CNN 单模态基线
 
-- [ ] 用新版 `AGENTS.md` 覆盖旧版。
-- [ ] 用新版 `TODO.md` 覆盖旧版。
-- [ ] 检查并更新 `.gitignore`。
-- [ ] 检查并更新 `.codexignore`。
-- [ ] 将旧测试产物移动到 `archive/`，不删除任何文件。
-- [ ] 归档前列出计划移动的目录和文件。
-- [ ] 保留 `master/`、`scripts/`、`README.md`、`AGENTS.md`、`TODO.md`、`CHANGELOG.md`。
+- [ ] 使用 `raman_float32.npy` + `raman_scaffold_split_valid.npz` + `functional_group_labels.npy` 训练。
+- [ ] 沿用 IR-v1 约定：seed 42（canonical）+ 123/2026、max 归一化、阈值 0.5、BCE、早停。
+- [ ] 完成三随机种子测试。
+- [ ] 冻结 Raman-v1，输出 `runs/Raman-v1-FINAL/` 汇总（指标、图表、Markdown 总结）。
 
-建议归档目录：
+### Priority B：UV-Vis 1D-CNN 单模态基线
 
-```text
-archive/2026-07-02_failed_sdbs_and_nist_tests/
-```
+- [ ] 使用 `uvvis_float32.npy`（701 点）+ `uvvis_scaffold_split_valid.npz` 训练。
+- [ ] 注意 UV-Vis 轴域（1–15 eV）与 IR/Raman（cm⁻¹）不同，输入长度走配置。
+- [ ] 完成三随机种子测试。
+- [ ] 冻结 UV-Vis-v1，输出 `runs/UVVIS-v1-FINAL/` 汇总。
 
-建议归档对象：
+### Priority C：模态对比
 
-- `raw/sdbs/` 中测试性输出
-- `raw/nist/` 中可疑或测试性输出
-- `cache/` 中旧 checkpoint、cookies、测试 CAS 缓存
-- `logs/` 中旧测试日志和 debug 页面
+- [ ] 比较 IR、Raman、UV-Vis 三模态在相同标签体系下的 Micro-F1 / Macro-F1 / mAP / Macro-AUROC。
+- [ ] 分析各模态的弱类别差异。
+- [ ] 输出模态对比总结。
 
 ---
 
-## Priority B：NIST 真实 JCAMP-DX 下载
+## 后续任务
 
-当前状态：
+### 光谱→结构候选
 
-- NIST 是 Phase 1 最高优先级数据源。
-- 当前必须先解决 `.jdx` 文件真实性问题。
-- 不允许把 HTML 页面保存为 `.jdx`。
+- [ ] 用 `SpectrumEncoder1D` embedding + 结构库建立 Top-k 结构候选检索原型。
+- [ ] 评估检索命中率（Top-1/5/10）。
+- [ ] 接入结构渲染（`qm9s_structure_tools.py render`）实现可视化输出。
 
-待办：
+### 实验域数据准备
 
-- [ ] 阅读并分析 `scripts/harvest_nist.py`。
-- [ ] 确认当前为什么会把 HTML 保存成 `.jdx`。
-- [ ] 修复真实 `JCAMP=` 下载链路。
-- [ ] 下载后校验 JCAMP-DX 标记。
-- [ ] 如果内容是 HTML、错误页或免责声明页，记录失败，不保存为 `.jdx`。
-- [ ] 保留断点续跑。
-- [ ] 保留日志。
-- [ ] 保留 Ctrl+C 安全退出。
-- [ ] 保留命令行参数。
-- [ ] 接入或复用 `cache/cid_cas.csv`。
-- [ ] 使用顺序采样 master 测试前 10 个 CID。
-- [ ] 输出每个成功 `.jdx` 的前 5 行。
-- [ ] 前 10 个 CID 通过后，运行 100 个样本。
-- [ ] 100 个样本通过后，运行 1000 个样本。
-- [ ] 根据 1000 样本结果再决定是否扩大。
+- [ ] 将 NIST IR `.jdx` 解析并重采样到与 QM9S 一致的统一网格。
+- [ ] 用 master SMILES 计算 NIST 数据的官能团标签。
+- [ ] 清洗 API-Raman 数据（3,510 条）并与 SMILES 匹配、对齐波数轴。
+- [ ] 建立实验域测试/微调集划分协议。
 
-成功标准：
+### GDB-9-Ex
 
-- `.jdx` 文件非空。
-- `.jdx` 文件不是 HTML。
-- `.jdx` 包含 `##JCAMP-DX=`、`##TITLE=` 或 `##DATA TYPE=`。
-- 有成功、失败、跳过统计。
-- 有失败原因分类。
+- [ ] 将 96,731 个分子的激发态数据（ex1–50/prob1–50）合成为 UV-Vis 吸收光谱。
+- [ ] 对齐到统一 eV 网格（注意激发态最高到约 28 eV，需确定窗口）。
+- [ ] 核对与 QM9S 的分子重叠并去重。
+- [ ] 明确其用途（UV-Vis 增强训练或实验域分析）。
 
----
+### 多模态融合与可解释性
 
-## Priority C：CAS 缓存
-
-目标：
-
-建立稳定的 CID → CAS 共享缓存，供 NIST 和 SDBS 共用。
-
-待办：
-
-- [ ] 建立或规范 `cache/cid_cas.csv`。
-- [ ] 字段至少包含：`cid`、`cas`、`source`、`status`、`updated_at`、`message`。
-- [ ] 已查询过的 CID 不重复请求 PubChem。
-- [ ] 无 CAS 的 CID 也写入缓存。
-- [ ] 区分 `not_found`、`request_failed`、`parse_failed`。
-- [ ] 缓存写入兼容 Windows。
-- [ ] `os.replace` 失败时自动重试。
-- [ ] 缓存被占用时不导致整个任务崩溃。
-- [ ] 记录缓存写入失败原因。
-
----
-
-## Priority D：SDBS 页面结构调试
-
-当前状态：
-
-- SDBS 暂停大规模运行。
-- 之前 1000 样本测试结果为成功率极低。
-- 当前不应继续扩大样本量。
-- 当前任务是调试页面结构，不是追求采集数量。
-
-待办：
-
-- [ ] 从已命中 CAS 样本中选 5 个。
-- [ ] 对每个样本保存搜索页 HTML。
-- [ ] 对每个样本保存结果页 HTML。
-- [ ] 如果能进入详情页，保存详情页 HTML。
-- [ ] 保存截图。
-- [ ] 输出当前 URL、页面标题、页面类型。
-- [ ] 区分页面类型：
-
-  - disclaimer
-  - home
-  - search
-  - result list
-  - compound detail
-  - zero hit
-  - error
-  - unknown
-
-- [ ] 不把 0 hit 页面计为 result page。
-- [ ] 分析 IR / Raman / UV-Vis 链接真实 HTML 结构。
-- [ ] 修复详情页进入逻辑。
-- [ ] 修复 IR / Raman 链接解析逻辑。
-- [ ] 若一个化合物有多个谱图条目，应全部提取。
-- [ ] 只用这 5 个样本测试。
-- [ ] 5 个样本解释清楚后，再考虑扩大到 20。
-- [ ] 20 通过后，再考虑 100。
-- [ ] 禁止继续直接跑 1000 或全量。
-
-成功标准：
-
-- 能解释每个样本为什么成功或失败。
-- 能明确区分无结果、解析失败、真实命中。
-- 不保存占位文件。
-- 不把搜索页或 home 页计为成功。
-- 不写入虚假 metadata。
-
----
-
-## Priority E：数据真实性检查工具
-
-目标：
-
-建立独立校验脚本，用于检查已采集数据是否真实可靠。
-
-待办：
-
-- [ ] 新增或完善 `.jdx` 校验脚本。
-- [ ] 检查文件是否为空。
-- [ ] 检查文件是否为 HTML。
-- [ ] 检查 JCAMP-DX 标记。
-- [ ] 输出可疑文件列表。
-- [ ] 输出通过、失败、可疑数量。
-- [ ] 对旧伪 `.jdx` 制定清理方案。
-- [ ] 清理前必须获得用户明确确认。
-
----
-
-## Priority F：文档维护
-
-待办：
-
-- [ ] 每次开发完成后更新 `CHANGELOG.md`。
-- [ ] 每次开发完成后更新 `TODO.md`。
-- [ ] 重大策略调整后更新 `AGENTS.md`。
-- [ ] 必要时新增 `ROADMAP.md`。
-- [ ] README 暂时保持简洁，等数据管线稳定后再扩展。
+- [ ] IR、Raman、UV-Vis 特征融合（单模态全部稳定后进行）。
+- [ ] 综合官能团与关键结构特征。
+- [ ] 完整分子结构候选推断与 Top-k 排序。
+- [ ] 二维分子结构可视化。
+- [ ] Woodward 等化学规则辅助验证和候选重排序。
+- [ ] XAI 与光谱区域-结构片段对应分析。
+- [ ] 开放集识别、置信度与拒识。
 
 ---
 
@@ -191,61 +94,46 @@ archive/2026-07-02_failed_sdbs_and_nist_tests/
 
 以下任务当前暂停：
 
-- [ ] 大规模 SDBS 全量运行。
-- [ ] 大规模随机采样采集。
-- [ ] 分层随机采样数据获取。
-- [ ] HMDB 数据源接入。
-- [ ] MassBank 数据源接入。
-- [ ] 多模态配对。
-- [ ] 模型训练。
-- [ ] 开放集识别。
-- [ ] 数据清理删除操作。
-
-恢复条件：
-
-1. NIST 前 1000 个顺序样本验证通过。
-2. CAS 缓存稳定。
-3. SDBS 5 个命中样本页面结构调试完成。
-4. 数据真实性校验工具可用。
-5. 用户明确确认进入下一阶段。
+- [ ] QMe14S 数据接入（已退出当前方案）。
+- [ ] SDBS 采集（已暂停，恢复需先小样本页面结构调试）。
+- [ ] NIST 大规模采集扩展。
+- [ ] 大规模随机采样数据获取。
+- [ ] 大规模随机采样 master 的使用。
+- [ ] Morgan fingerprint 作为光谱模型输入（已明确不使用）。
 
 ---
 
 ## 推荐执行顺序
 
-### Step 1：项目规则更新
+### Step 1：文档与规则收尾
 
-- [ ] 覆盖 `AGENTS.md`。
-- [ ] 覆盖 `TODO.md`。
-- [ ] 更新 `.gitignore` 和 `.codexignore`。
-- [ ] 归档旧测试产物。
+- [x] 更新 `AGENTS.md`、`TODO.md`，明确当前阶段策略。
 
-### Step 2：NIST 修复
+### Step 2：Raman 单模态基线
 
-- [ ] 修复真实 JCAMP-DX 下载。
-- [ ] 前 10 个顺序样本测试。
-- [ ] 100 个顺序样本测试。
-- [ ] 1000 个顺序样本测试。
+- [ ] 训练并冻结 Raman-v1。
 
-### Step 3：CAS 缓存稳定
+### Step 3：UV-Vis 单模态基线
 
-- [ ] 完成 CID → CAS 缓存。
-- [ ] Windows 文件锁重试。
-- [ ] 失败原因分类。
+- [ ] 训练并冻结 UV-Vis-v1。
 
-### Step 4：SDBS 小样本调试
+### Step 4：模态对比
 
-- [ ] 选择 5 个命中 CAS。
-- [ ] 保存页面和截图。
-- [ ] 分析真实结构。
-- [ ] 修复详情页和光谱链接解析。
+- [ ] 输出三模态表征能力对比总结。
 
-### Step 5：决定是否进入 Phase 2
+### Step 5：光谱→结构候选
 
-进入 Phase 2 前必须满足：
+- [ ] 建立 Top-k 结构候选检索原型与可视化。
 
-- [ ] NIST 可稳定获取真实 `.jdx`。
-- [ ] SDBS 页面结构已明确。
-- [ ] 数据真实性校验通过。
-- [ ] 日志、checkpoint、缓存机制稳定。
+### Step 6：实验域验证
+
+- [ ] NIST、API-Raman 数据准备与验证。
+
+### Step 7：决定是否进入第二阶段
+
+进入第二阶段（多模态融合与完整结构推断）前必须满足：
+
+- [ ] IR、Raman、UV-Vis 三个单模态基线全部冻结。
+- [ ] 模态对比分析完成。
+- [ ] 结构候选检索原型可用。
 - [ ] 用户明确确认。
