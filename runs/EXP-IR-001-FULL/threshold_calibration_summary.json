@@ -1,0 +1,37 @@
+{
+  "checkpoint_epoch": 21,
+  "threshold_selection_set": "validation",
+  "default_threshold": 0.5,
+  "thresholds": {
+    "aldehyde": 0.430419921875,
+    "alkene": 0.45458984375,
+    "alkyne": 0.63427734375,
+    "amide": 0.57421875,
+    "amine": 0.33935546875,
+    "c_f_bond": 0.2265625,
+    "carbonyl": 0.345947265625,
+    "ester": 0.2265625,
+    "ether": 0.7119140625,
+    "hydroxyl": 0.50634765625,
+    "imine": 0.4912109375,
+    "ketone": 0.34423828125,
+    "nitrile": 0.80322265625,
+    "nitro": 0.26171875
+  },
+  "validation": {
+    "default_micro_f1": 0.9481419484432541,
+    "default_macro_f1": 0.9240275066579241,
+    "calibrated_micro_f1": 0.9507857250212922,
+    "calibrated_macro_f1": 0.9313034617643314
+  },
+  "test": {
+    "default_micro_f1": 0.9384959209259226,
+    "default_macro_f1": 0.9184608203211803,
+    "calibrated_micro_f1": 0.9335258550672322,
+    "calibrated_macro_f1": 0.92013961198089,
+    "default_precision": 0.9359620193527344,
+    "default_recall": 0.9410435796531118,
+    "calibrated_precision": 0.9248953900075104,
+    "calibrated_recall": 0.9423189039498615
+  }
+}

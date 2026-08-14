@@ -1,0 +1,157 @@
+{
+  "model_version": "IR-v1",
+  "status": "FROZEN",
+  "canonical_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-IR-001-FULL\\best_model.pt",
+  "canonical_checkpoint_policy": "Seed 42 remains the pre-specified canonical checkpoint. Test-set performance was not used to select between random seeds.",
+  "architecture": {
+    "backbone": "1D-CNN / residual 1D CNN",
+    "embedding_dim": 256,
+    "normalization": "max",
+    "loss": "BCEWithLogitsLoss",
+    "threshold": 0.5
+  },
+  "three_seed_summary": {
+    "test_loss": {
+      "mean": 0.051088954350618526,
+      "sample_sd": 0.001484321391828606,
+      "values": {
+        "seed42": 0.050674257532086986,
+        "seed123": 0.052736521460556136,
+        "seed2026": 0.04985608405921246
+      }
+    },
+    "test_micro_f1": {
+      "mean": 0.9405582194466162,
+      "sample_sd": 0.004825081713540907,
+      "values": {
+        "seed42": 0.9385174418604652,
+        "seed123": 0.9460683558579042,
+        "seed2026": 0.9370888606214792
+      }
+    },
+    "test_macro_f1": {
+      "mean": 0.919324777592449,
+      "sample_sd": 0.004941840497231467,
+      "values": {
+        "seed42": 0.9184889003993978,
+        "seed123": 0.9246312506819162,
+        "seed2026": 0.914854181696033
+      }
+    },
+    "test_micro_precision": {
+      "mean": 0.9383830113633543,
+      "sample_sd": 0.005368328487440999,
+      "values": {
+        "seed42": 0.9359327438759241,
+        "seed123": 0.9445392801365634,
+        "seed2026": 0.9346770100775755
+      }
+    },
+    "test_micro_recall": {
+      "mean": 0.9427440120487781,
+      "sample_sd": 0.00428316403071721,
+      "values": {
+        "seed42": 0.9411164553272118,
+        "seed123": 0.9476023903221105,
+        "seed2026": 0.9395131904970121
+      }
+    },
+    "test_mAP": {
+      "mean": 0.9688500974528014,
+      "sample_sd": 0.00500006692357713,
+      "values": {
+        "seed42": 0.9700594012774965,
+        "seed123": 0.9731346026697485,
+        "seed2026": 0.9633562884111591
+      }
+    },
+    "test_macro_AUROC": {
+      "mean": 0.9954318798881012,
+      "sample_sd": 0.000746398436932363,
+      "values": {
+        "seed42": 0.9953896982083613,
+        "seed123": 0.9961984746891114,
+        "seed2026": 0.9947074667668309
+      }
+    }
+  },
+  "seed_runs": {
+    "seed42": {
+      "experiment": "EXP-IR-001-FULL",
+      "best_epoch": 21,
+      "best_val_mAP": 0.9679726684984443,
+      "test_loss": 0.050674257532086986,
+      "test_micro_f1": 0.9385174418604652,
+      "test_macro_f1": 0.9184889003993978,
+      "test_micro_precision": 0.9359327438759241,
+      "test_micro_recall": 0.9411164553272118,
+      "test_mAP": 0.9700594012774965,
+      "test_macro_AUROC": 0.9953896982083613
+    },
+    "seed123": {
+      "experiment": "EXP-IR-001-SEED123",
+      "best_epoch": 30,
+      "best_val_mAP": 0.9567552281676337,
+      "test_loss": 0.052736521460556136,
+      "test_micro_f1": 0.9460683558579042,
+      "test_macro_f1": 0.9246312506819162,
+      "test_micro_precision": 0.9445392801365634,
+      "test_micro_recall": 0.9476023903221105,
+      "test_mAP": 0.9731346026697485,
+      "test_macro_AUROC": 0.9961984746891114
+    },
+    "seed2026": {
+      "experiment": "EXP-IR-001-SEED2026",
+      "best_epoch": 15,
+      "best_val_mAP": 0.9565836696364902,
+      "test_loss": 0.04985608405921246,
+      "test_micro_f1": 0.9370888606214792,
+      "test_macro_f1": 0.914854181696033,
+      "test_micro_precision": 0.9346770100775755,
+      "test_micro_recall": 0.9395131904970121,
+      "test_mAP": 0.9633562884111591,
+      "test_macro_AUROC": 0.9947074667668309
+    }
+  },
+  "canonical_seed42_test": {
+    "experiment": "EXP-IR-001-FULL",
+    "best_epoch": 21,
+    "best_val_mAP": 0.9679726684984443,
+    "test_loss": 0.050674257532086986,
+    "test_micro_f1": 0.9385174418604652,
+    "test_macro_f1": 0.9184889003993978,
+    "test_micro_precision": 0.9359327438759241,
+    "test_micro_recall": 0.9411164553272118,
+    "test_mAP": 0.9700594012774965,
+    "test_macro_AUROC": 0.9953896982083613
+  },
+  "threshold_calibration_conclusion": "Validation-optimized per-label thresholds slightly improved validation Macro-F1 but did not improve overall test Micro-F1. The default threshold of 0.5 is retained.",
+  "class_weighting_conclusion": "sqrt(pos_weight) with cap=20 increased recall but reduced precision, Micro-F1, Macro-F1, and mAP. Ordinary BCE is retained.",
+  "lowest_mean_f1_labels": [
+    {
+      "label": "c_f_bond",
+      "f1_mean": 0.7764833486482972,
+      "f1_sd": 0.012036998094697554
+    },
+    {
+      "label": "amine",
+      "f1_mean": 0.8474427794373937,
+      "f1_sd": 0.02051515412268998
+    },
+    {
+      "label": "ketone",
+      "f1_mean": 0.8686128195569399,
+      "f1_sd": 0.011828434076997381
+    },
+    {
+      "label": "nitro",
+      "f1_mean": 0.8797524314765695,
+      "f1_sd": 0.029097228420697334
+    },
+    {
+      "label": "ester",
+      "f1_mean": 0.8867177028943188,
+      "f1_sd": 0.010384123420236606
+    }
+  ]
+}

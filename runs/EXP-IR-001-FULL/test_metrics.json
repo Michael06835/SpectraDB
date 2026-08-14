@@ -1,0 +1,12 @@
+{
+  "experiment": "EXP-IR-001-FULL",
+  "best_epoch": 21,
+  "best_val_mAP": 0.9679726684984443,
+  "test_loss": 0.050674257532086986,
+  "test_micro_f1": 0.9385174418604652,
+  "test_macro_f1": 0.9184889003993978,
+  "test_micro_precision": 0.9359327438759241,
+  "test_micro_recall": 0.9411164553272118,
+  "test_mAP": 0.9700594012774965,
+  "test_macro_AUROC": 0.9953896982083613
+}

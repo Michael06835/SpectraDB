@@ -1,0 +1,45 @@
+Experimental API Raman Dataset Inspection
+======================================================================
+Data directory: E:\Projects\曦源计划\数据\SpectraDB\raw\raman_experimental
+
+raman_spectra_api_compounds.csv: 184.22 MB
+API_Product_Information.xlsx: 0.01 MB
+
+======================================================================
+RAMAN CSV
+======================================================================
+Separator mode: comma
+Number of columns: 3277
+First 20 columns: ['150.0', '151.0', '152.0', '153.0', '154.0', '155.0', '156.0', '157.0', '158.0', '159.0', '160.0', '161.0', '162.0', '163.0', '164.0', '165.0', '166.0', '167.0', '168.0', '169.0']
+Last 20 columns: ['3407.0', '3408.0', '3409.0', '3410.0', '3411.0', '3412.0', '3413.0', '3414.0', '3415.0', '3416.0', '3417.0', '3418.0', '3419.0', '3420.0', '3421.0', '3422.0', '3423.0', '3424.0', '3425.0', 'label']
+
+First 5 rows, first 12 columns:
+      150.0       151.0       152.0       153.0       154.0       155.0       156.0       157.0       158.0       159.0       160.0       161.0
+2975.316162 2954.086182 2934.369385 2913.032959 2888.102783 2859.719482 2830.151855 2802.727051 2780.262451 2763.858643 2752.540283 2743.659668
+2562.031006 2530.818359 2504.126465 2482.523193 2463.468506 2443.604492 2421.537598 2398.885742 2378.914795 2364.093750 2354.460205 2347.825684
+3706.918701 3675.912109 3649.161621 3625.712158 3603.918701 3582.241943 3560.217285 3538.892822 3520.142578 3505.149414 3493.159668 3481.610107
+2986.164795 2960.689209 2938.452881 2920.104492 2904.541260 2889.769775 2874.191162 2857.502441 2840.735352 2825.514893 2812.909668 2802.443604
+2739.325195 2721.701660 2702.028320 2679.959717 2655.924072 2631.208252 2607.982422 2588.531738 2573.780273 2562.305908 2550.968018 2536.872559
+
+CSV data rows: 3510
+First column: '150.0'
+
+======================================================================
+PRODUCT INFORMATION XLSX
+======================================================================
+Sheet names: ['Sheet1']
+
+[Sheet: Sheet1]
+Columns: ['Compound', 'Organic', 'Solvent / Reagent', 'Common Application', 'Formula', 'Approx. Raman bands (deviation of 2 cm-1 per external sources)', 'Supplier - Product', 'Assay %', 'Exposure (secs)', 'Pixel Fill %', 'Samples']
+Preview shape: (10, 11)
+                      Compound Organic Solvent / Reagent Common Application  Formula                            Approx. Raman bands (deviation of 2 cm-1 per external sources)                                        Supplier - Product  Assay %  Exposure (secs)  Pixel Fill %  Samples
+1,3-Dimethyl-2-imidazolidinone       Y              Both       Intermediate C5H10N2O        279, 326, 520, 581, 766, 964, 1031, 1183, 1452, 1494, 1669, 2785, 2860, 2951, 2995                                       TCI America - D1477     99.0              3.0            50      109
+                    2-Propanol       Y           Solvent           Reactant    C3H8O                         373, 429, 489, 820, 953, 1132, 1342, 1452, 2721, 2882, 2920, 2975 Scharlau - for analysis, ExpertQ®, ACS, ISO, Reag. Ph Eur     99.8              5.0            50      109
+          2,2-Dimethoxypropane       Y           Solvent       Intermediate  C5H12O2                     263, 399, 552, 583, 731, 828, 927, 1081, 1442, 2727, 2830, 2947, 2996                                   Sigma Aldrich - Reagent     98.0              5.0            60      107
+          4-Methyl-2-pentanone       Y              Both       Intermediate   C6H12O                    318, 419, 594, 785, 817, 959, 1124, 1451, 1464, 1711, 2874, 2920, 2962                                  Sigma Aldrich – for HPLC     99.5             15.0            50      100
+                   Acetic acid       Y              Both           Reactant  CH3COOH                                                     446, 622, 894, 1429, 1668, 2943, 2994 Scharlau - for analysis, ExpertQ®, ACS, ISO, Reag. Ph Eur     99.8              7.5            60      113
+                       Acetone       Y           Solvent           Reactant    C3H6O                       392, 531, 788, 1067, 1222, 1431, 1709, 2698, 2850, 2924, 2967, 3007                      VWR - HiPerSolv CHROMANORM® for HPLC     99.8              7.0            73      120
+                  Acetonitrile       Y           Solvent           Reactant    C₂H₃N                                              380, 920, 1375, 2253, 2293, 2732, 2994, 3004                            Scharlau - HPLC gradient grade     99.9             10.0            50      104
+                  Benzaldehyde       Y              Both           Reactant    C₇H₆O 225, 439, 616, 650, 829, 1001, 1166, 1204, 1598, 1653, 1698, 2741, 2824, 2976, 3012, 3067                               Sigma Aldrich - ReagentPlus     99.0              2.0            68      121
+                Benzyl bromide       Y           Reagent           Reactant   C7H7Br              237, 454, 548, 605, 759, 813, 1002, 1029, 1157, 1180, 1227, 1602, 2971, 3059                             Sigma Aldrich - Reagent grade     98.0              2.0            73      112
+                 Butyl acetate       Y           Solvent       Intermediate  C6H12O2                307, 634, 839, 919, 1031, 1066, 1032, 1451, 1738, 2738, 2877, 2917, 2940                                    Sigma Aldrich - for HPLC     99.7             20.0            51      106
