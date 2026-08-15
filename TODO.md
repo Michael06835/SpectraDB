@@ -38,10 +38,11 @@
 
 ### Priority A：UV-Vis 1D-CNN 单模态基线
 
-- [ ] 使用 `uvvis_float32.npy`（701 点）+ `uvvis_scaffold_split_valid.npz` 训练。
-- [ ] 注意 UV-Vis 轴域（1–15 eV）与 IR/Raman（cm⁻¹）不同，输入长度走配置。
+- [ ] 与 IR-v1、Raman-v1 完全同构：仅使用 QM9S 的 `uvvis_float32.npy`（701 点，1–15 eV）。
+- [ ] 同一官能团标签（`functional_group_labels.npy`，14 类）与同一 scaffold split 协议（`uvvis_scaffold_split_valid.npz`）。
+- [ ] 同一训练协议：seed 42（canonical）+ 123/2026、max 归一化、阈值 0.5、BCE、早停、AMP。
 - [ ] 完成三随机种子测试。
-- [ ] 冻结 UV-Vis-v1，输出 `runs/UVVIS-v1-FINAL/` 汇总。
+- [ ] 冻结 UV-Vis-v1，输出 `runs/UVVIS-v1-FINAL/` 汇总（指标、图表、Markdown 总结），与 IR/Raman 可比。
 
 ### Priority B：模态对比
 
@@ -66,13 +67,6 @@
 - [ ] 清洗 API-Raman 数据（3,510 条）并与 SMILES 匹配、对齐波数轴。
 - [ ] 建立实验域测试/微调集划分协议。
 
-### GDB-9-Ex
-
-- [ ] 将 96,731 个分子的激发态数据（ex1–50/prob1–50）合成为 UV-Vis 吸收光谱。
-- [ ] 对齐到统一 eV 网格（注意激发态最高到约 28 eV，需确定窗口）。
-- [ ] 核对与 QM9S 的分子重叠并去重。
-- [ ] 明确其用途（UV-Vis 增强训练或实验域分析）。
-
 ### 多模态融合与可解释性
 
 - [ ] IR、Raman、UV-Vis 特征融合（单模态全部稳定后进行）。
@@ -89,6 +83,7 @@
 
 以下任务当前暂停：
 
+- [ ] GDB-9-Ex 数据接入（备用外部域/方法迁移数据集，当前不参与训练，不删除原始数据）。
 - [ ] QMe14S 数据接入（已退出当前方案）。
 - [ ] SDBS 采集（已暂停，恢复需先小样本页面结构调试）。
 - [ ] NIST 大规模采集扩展。
