@@ -1,0 +1,33 @@
+{
+  "experiment": "EXP-RAMAN-001-FULL",
+  "modality": "raman",
+  "checkpoint": "runs/EXP-RAMAN-001-FULL/best_model.pt",
+  "best_epoch": 28,
+  "best_val_mAP": 0.9458209367581863,
+  "threshold_source": "validation per-label F1 optimization",
+  "default_threshold": 0.5,
+  "validation_default": {
+    "micro_f1": 0.9124831435740743,
+    "macro_f1": 0.8688175604473505,
+    "micro_precision": 0.9370683308207411,
+    "micro_recall": 0.8891550232867598
+  },
+  "validation_calibrated": {
+    "micro_f1": 0.916927273937055,
+    "macro_f1": 0.9016202786462678,
+    "micro_precision": 0.9169882885280809,
+    "micro_recall": 0.9168662674650698
+  },
+  "test_default": {
+    "micro_f1": 0.9155277214956714,
+    "macro_f1": 0.8838221744384969,
+    "micro_precision": 0.9257245027192132,
+    "micro_recall": 0.9055531263664189
+  },
+  "test_calibrated": {
+    "micro_f1": 0.9131260299491295,
+    "macro_f1": 0.8953758367476098,
+    "micro_precision": 0.8980059188275085,
+    "micro_recall": 0.9287640285672643
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "EXP-RAMAN-002-FULL",
+  "modality": "raman",
+  "weighted": true,
+  "pos_weight_transform": "sqrt",
+  "pos_weight_cap": 20.0,
+  "best_epoch": 15,
+  "best_val_mAP": 0.9470352215042854,
+  "test_loss": 0.0964923556023079,
+  "test_micro_f1": 0.9023984546869132,
+  "test_macro_f1": 0.8954498991585058,
+  "test_micro_precision": 0.8861840025292443,
+  "test_micro_recall": 0.9192173152601661,
+  "test_mAP": 0.9559423463378713,
+  "test_macro_AUROC": 0.9910905267864693
+}

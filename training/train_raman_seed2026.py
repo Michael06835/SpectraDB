@@ -27,24 +27,24 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from training.datasets.qm9s_spectrum_dataset import QM9SSpectrumDataset
-from training.models.spectrum_cnn1d import IRStructureModel
+from training.models.spectrum_cnn1d import SpectrumStructureModel
 
 
 PREPARED = ROOT / "processed" / "qm9s" / "prepared"
 
-IR_PATH = PREPARED / "ir_float32.npy"
+RAMAN_PATH = PREPARED / "raman_float32.npy"
 LABEL_PATH = PREPARED / "functional_group_labels.npy"
 LABEL_NAMES_PATH = PREPARED / "functional_group_label_names.json"
-SPLIT_PATH = PREPARED / "ir_scaffold_split_valid.npz"
+SPLIT_PATH = PREPARED / "raman_scaffold_split_valid.npz"
 
-RUN_DIR = ROOT / "runs" / "EXP-IR-002-FULL"
+RUN_DIR = ROOT / "runs" / "EXP-RAMAN-001-SEED2026"
 
 
 # ============================================================
-# EXP-IR-002-FULL configuration
+# EXP-RAMAN-001-SEED2026 configuration
 # ============================================================
 
-SEED = 42
+SEED = 2026
 
 # ------------------------------------------------------------
 # Hardware / DataLoader
@@ -86,12 +86,9 @@ NORMALIZATION = "max"
 
 THRESHOLD = 0.5
 
-# Weighted BCE ablation.
-# Uses sqrt(raw pos_weight) with cap=20 for comparability with the baseline.
-USE_POS_WEIGHT = True
-
-POS_WEIGHT_TRANSFORM = "sqrt"
-POS_WEIGHT_CAP = 20.0
+# First baseline deliberately uses ordinary BCE.
+# Class weighting will be investigated in a later experiment.
+USE_POS_WEIGHT = False
 
 
 # ============================================================
@@ -356,8 +353,8 @@ def main():
 
     print()
     print("=" * 80)
-    print("EXP-IR-002-FULL")
-    print("QM9S IR -> structural feature baseline")
+    print("EXP-RAMAN-001-SEED2026")
+    print("QM9S Raman -> structural feature baseline")
     print("=" * 80)
 
     print()
@@ -408,7 +405,7 @@ def main():
     # ========================================================
 
     required_files = [
-        IR_PATH,
+        RAMAN_PATH,
         LABEL_PATH,
         LABEL_NAMES_PATH,
         SPLIT_PATH,
@@ -503,21 +500,21 @@ def main():
     # ========================================================
 
     train_dataset = QM9SSpectrumDataset(
-        spectra_path=IR_PATH,
+        spectra_path=RAMAN_PATH,
         labels_path=LABEL_PATH,
         indices=train_idx,
         normalization=NORMALIZATION,
     )
 
     val_dataset = QM9SSpectrumDataset(
-        spectra_path=IR_PATH,
+        spectra_path=RAMAN_PATH,
         labels_path=LABEL_PATH,
         indices=val_idx,
         normalization=NORMALIZATION,
     )
 
     test_dataset = QM9SSpectrumDataset(
-        spectra_path=IR_PATH,
+        spectra_path=RAMAN_PATH,
         labels_path=LABEL_PATH,
         indices=test_idx,
         normalization=NORMALIZATION,
@@ -573,7 +570,7 @@ def main():
     # Model
     # ========================================================
 
-    model = IRStructureModel(
+    model = SpectrumStructureModel(
         num_labels=num_labels,
         embedding_dim=EMBEDDING_DIM,
     ).to(device)
@@ -608,7 +605,6 @@ def main():
         "Embedding dimension :",
         EMBEDDING_DIM,
     )
-    
 
 
     # ========================================================
@@ -616,6 +612,9 @@ def main():
     # ========================================================
 
     if USE_POS_WEIGHT:
+
+        # Not used in EXP-RAMAN-001.
+        # Reserved for future class-balanced experiment.
 
         all_labels = np.load(
             LABEL_PATH,
@@ -636,13 +635,7 @@ def main():
             - positives
         )
 
-        # ----------------------------------------------------
-        # Raw inverse-frequency positive weights
-        #
-        # raw_weight = N_negative / N_positive
-        # ----------------------------------------------------
-
-        raw_pos_weight = (
+        pos_weight = (
             negatives
             / np.maximum(
                 positives,
@@ -650,44 +643,8 @@ def main():
             )
         )
 
-        # ----------------------------------------------------
-        # Moderate weighting:
-        #
-        # final_weight = sqrt(raw_weight)
-        #
-        # This prevents rare classes from receiving
-        # excessively large gradient weights.
-        # ----------------------------------------------------
-
-        if POS_WEIGHT_TRANSFORM == "sqrt":
-
-            final_pos_weight = np.sqrt(
-                raw_pos_weight
-            )
-
-        else:
-
-            raise ValueError(
-                f"Unknown POS_WEIGHT_TRANSFORM: "
-                f"{POS_WEIGHT_TRANSFORM}"
-            )
-
-        # ----------------------------------------------------
-        # Clip extreme rare-class weights
-        #
-        # Example:
-        # nitro raw ≈ 998
-        # sqrt ≈ 31.6
-        # final → 20
-        # ----------------------------------------------------
-
-        final_pos_weight = np.minimum(
-            final_pos_weight,
-            POS_WEIGHT_CAP,
-        )
-
         pos_weight_tensor = torch.tensor(
-            final_pos_weight,
+            pos_weight,
             dtype=torch.float32,
             device=device,
         )
@@ -697,64 +654,15 @@ def main():
         )
 
         print()
-        print("=" * 80)
-        print("Class-balanced loss")
-        print("=" * 80)
-
-        print()
         print(
-            "Loss:",
-            "BCEWithLogitsLoss(pos_weight)"
+            "Loss: BCEWithLogitsLoss(pos_weight)"
         )
-
-        print(
-            "Transform:",
-            POS_WEIGHT_TRANSFORM
-        )
-
-        print(
-            "Weight cap:",
-            POS_WEIGHT_CAP
-        )
-
-        print()
-
-        print(
-            f"{'label':15s}"
-            f"{'positive':>12s}"
-            f"{'raw_weight':>15s}"
-            f"{'final_weight':>15s}"
-        )
-
-        print("-" * 57)
-
-        for (
-            name,
-            pos,
-            raw_weight,
-            final_weight,
-        ) in zip(
-            label_names,
-            positives,
-            raw_pos_weight,
-            final_pos_weight,
-        ):
-
-            print(
-                f"{name:15s}"
-                f"{int(pos):12d}"
-                f"{raw_weight:15.2f}"
-                f"{final_weight:15.2f}"
-            )
 
     else:
 
         criterion = (
             torch.nn.BCEWithLogitsLoss()
         )
-
-        raw_pos_weight = None
-        final_pos_weight = None
 
         print()
         print(
@@ -790,7 +698,10 @@ def main():
     config = {
 
         "experiment":
-            "EXP-IR-002-FULL",
+            "EXP-RAMAN-001-SEED2026",
+        
+        "modality":
+            "raman",
 
         "seed":
             SEED,
@@ -824,24 +735,6 @@ def main():
 
         "use_pos_weight":
             USE_POS_WEIGHT,
-        
-        "pos_weight_transform":
-            POS_WEIGHT_TRANSFORM,
-
-        "pos_weight_cap":
-            POS_WEIGHT_CAP,
-
-        "final_pos_weights":
-            {
-                name: float(weight)
-                for name, weight
-                in zip(
-                    label_names,
-                    final_pos_weight,
-                )
-            }
-            if USE_POS_WEIGHT
-            else None,
 
         "loss":
             "BCEWithLogitsLoss",
@@ -1482,7 +1375,10 @@ def main():
     final_result = {
 
         "experiment":
-            "EXP-IR-002-FULL",
+            "EXP-RAMAN-001-SEED2026",
+        
+        "modality":
+            "raman",
 
         "best_epoch":
             best_epoch,
@@ -1566,7 +1462,7 @@ def main():
 
     print()
     print("=" * 80)
-    print("EXP-IR-002-FULL completed")
+    print("EXP-RAMAN-001-SEED2026 completed")
     print("=" * 80)
 
     print()

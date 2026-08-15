@@ -1,0 +1,12 @@
+{
+  "experiment": "EXP-RAMAN-001-FULL",
+  "best_epoch": 28,
+  "best_val_mAP": 0.9458209367581863,
+  "test_loss": 0.07795466595594729,
+  "test_micro_f1": 0.9155277214956714,
+  "test_macro_f1": 0.8838221744384969,
+  "test_micro_precision": 0.9257245027192132,
+  "test_micro_recall": 0.9055531263664189,
+  "test_mAP": 0.9531025903538727,
+  "test_macro_AUROC": 0.9907747215089481
+}

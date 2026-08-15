@@ -27,21 +27,21 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from training.datasets.qm9s_spectrum_dataset import QM9SSpectrumDataset
-from training.models.spectrum_cnn1d import IRStructureModel
+from training.models.spectrum_cnn1d import SpectrumStructureModel
 
 
 PREPARED = ROOT / "processed" / "qm9s" / "prepared"
 
-IR_PATH = PREPARED / "ir_float32.npy"
+RAMAN_PATH = PREPARED / "raman_float32.npy"
 LABEL_PATH = PREPARED / "functional_group_labels.npy"
 LABEL_NAMES_PATH = PREPARED / "functional_group_label_names.json"
-SPLIT_PATH = PREPARED / "ir_scaffold_split_valid.npz"
+SPLIT_PATH = PREPARED / "raman_scaffold_split_valid.npz"
 
-RUN_DIR = ROOT / "runs" / "EXP-IR-002-FULL"
+RUN_DIR = ROOT / "runs" / "EXP-RAMAN-002-FULL"
 
 
 # ============================================================
-# EXP-IR-002-FULL configuration
+# EXP-RAMAN-002-FULL configuration
 # ============================================================
 
 SEED = 42
@@ -87,7 +87,7 @@ NORMALIZATION = "max"
 THRESHOLD = 0.5
 
 # Weighted BCE ablation.
-# Uses sqrt(raw pos_weight) with cap=20 for comparability with the baseline.
+# Uses sqrt(raw pos_weight) with cap=20 for comparability with IR-v1.
 USE_POS_WEIGHT = True
 
 POS_WEIGHT_TRANSFORM = "sqrt"
@@ -356,8 +356,8 @@ def main():
 
     print()
     print("=" * 80)
-    print("EXP-IR-002-FULL")
-    print("QM9S IR -> structural feature baseline")
+    print("EXP-RAMAN-002-FULL")
+    print("QM9S Raman -> structural feature baseline")
     print("=" * 80)
 
     print()
@@ -408,7 +408,7 @@ def main():
     # ========================================================
 
     required_files = [
-        IR_PATH,
+        RAMAN_PATH,
         LABEL_PATH,
         LABEL_NAMES_PATH,
         SPLIT_PATH,
@@ -503,21 +503,21 @@ def main():
     # ========================================================
 
     train_dataset = QM9SSpectrumDataset(
-        spectra_path=IR_PATH,
+        spectra_path=RAMAN_PATH,
         labels_path=LABEL_PATH,
         indices=train_idx,
         normalization=NORMALIZATION,
     )
 
     val_dataset = QM9SSpectrumDataset(
-        spectra_path=IR_PATH,
+        spectra_path=RAMAN_PATH,
         labels_path=LABEL_PATH,
         indices=val_idx,
         normalization=NORMALIZATION,
     )
 
     test_dataset = QM9SSpectrumDataset(
-        spectra_path=IR_PATH,
+        spectra_path=RAMAN_PATH,
         labels_path=LABEL_PATH,
         indices=test_idx,
         normalization=NORMALIZATION,
@@ -573,7 +573,7 @@ def main():
     # Model
     # ========================================================
 
-    model = IRStructureModel(
+    model = SpectrumStructureModel(
         num_labels=num_labels,
         embedding_dim=EMBEDDING_DIM,
     ).to(device)
@@ -790,7 +790,10 @@ def main():
     config = {
 
         "experiment":
-            "EXP-IR-002-FULL",
+            "EXP-RAMAN-002-FULL",
+        
+        "modality":
+            "raman",
 
         "seed":
             SEED,
@@ -1482,7 +1485,10 @@ def main():
     final_result = {
 
         "experiment":
-            "EXP-IR-002-FULL",
+            "EXP-RAMAN-002-FULL",
+        
+        "modality":
+            "raman",
 
         "best_epoch":
             best_epoch,
@@ -1566,7 +1572,7 @@ def main():
 
     print()
     print("=" * 80)
-    print("EXP-IR-002-FULL completed")
+    print("EXP-RAMAN-002-FULL completed")
     print("=" * 80)
 
     print()

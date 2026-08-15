@@ -111,7 +111,7 @@ class SpectrumEncoder1D(nn.Module):
         return z
 
 
-class IRStructureModel(nn.Module):
+class SpectrumStructureModel(nn.Module):
     """
     Temporary structure-feature training head.
 
@@ -143,6 +143,10 @@ class IRStructureModel(nn.Module):
             "embedding": z,
             "logits": logits,
         }
+
+
+# Backward compatibility for frozen IR-v1 scripts
+IRStructureModel = SpectrumStructureModel
 
 
 if __name__ == "__main__":
