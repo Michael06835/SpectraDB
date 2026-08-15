@@ -27,6 +27,8 @@
 - [x] 生成官能团多标签矩阵（129817×14）。
 - [x] 训练 IR 1D-CNN 基线并冻结 IR-v1（test Micro-F1 0.9406±0.0048，Macro-AUROC 0.9954±0.0007）。
 - [x] 完成类别不平衡消融实验与阈值校准实验（均保留 IR-v1 默认设置）。
+- [x] 训练 Raman 1D-CNN 基线并冻结 Raman-v1（test Micro-F1 0.9151±0.0014，Macro-AUROC 0.9911±0.0004）。
+- [x] 完成 Raman 类别不平衡消融实验与阈值校准实验（均保留 Raman-v1 默认设置）。
 - [x] 更新 `README.md`、`CHANGELOG.md`、`AGENTS.md`、`TODO.md`。
 - [x] 更新 Git 忽略规则与环境锁定文件。
 
@@ -34,21 +36,14 @@
 
 ## 当前最高优先级
 
-### Priority A：Raman 1D-CNN 单模态基线
-
-- [ ] 使用 `raman_float32.npy` + `raman_scaffold_split_valid.npz` + `functional_group_labels.npy` 训练。
-- [ ] 沿用 IR-v1 约定：seed 42（canonical）+ 123/2026、max 归一化、阈值 0.5、BCE、早停。
-- [ ] 完成三随机种子测试。
-- [ ] 冻结 Raman-v1，输出 `runs/Raman-v1-FINAL/` 汇总（指标、图表、Markdown 总结）。
-
-### Priority B：UV-Vis 1D-CNN 单模态基线
+### Priority A：UV-Vis 1D-CNN 单模态基线
 
 - [ ] 使用 `uvvis_float32.npy`（701 点）+ `uvvis_scaffold_split_valid.npz` 训练。
 - [ ] 注意 UV-Vis 轴域（1–15 eV）与 IR/Raman（cm⁻¹）不同，输入长度走配置。
 - [ ] 完成三随机种子测试。
 - [ ] 冻结 UV-Vis-v1，输出 `runs/UVVIS-v1-FINAL/` 汇总。
 
-### Priority C：模态对比
+### Priority B：模态对比
 
 - [ ] 比较 IR、Raman、UV-Vis 三模态在相同标签体系下的 Micro-F1 / Macro-F1 / mAP / Macro-AUROC。
 - [ ] 分析各模态的弱类别差异。
@@ -111,7 +106,7 @@
 
 ### Step 2：Raman 单模态基线
 
-- [ ] 训练并冻结 Raman-v1。
+- [x] 训练并冻结 Raman-v1。
 
 ### Step 3：UV-Vis 单模态基线
 

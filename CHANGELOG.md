@@ -196,11 +196,17 @@
 * 更新`.gitignore`（忽略raw/、processed/、模型checkpoint、master CSV等大型生成文件）
 * 更新环境锁定文件
 * 更新`README.md`、`CHANGELOG.md`
+* 编写Raman 1D-CNN训练管线（复用IR管线模式）
+* 完成sanity测试与正式训练（seed 42/123/2026）
+* 完成类别不平衡消融实验（sqrt pos_weight不采用）
+* 完成阈值校准实验（保留统一阈值0.5）
+* 汇总三随机种子结果并冻结Raman-v1
 ### 当前进度
 * IR单模态基线完成并冻结
+* Raman-v1冻结：test Micro-F1 0.9151±0.0014、mAP 0.9548±0.0044、Macro-AUROC 0.9911±0.0004
 ### 下一步计划
-* Raman 1D-CNN单模态基线
 * UV-Vis 1D-CNN单模态基线
+* IR、Raman、UV-Vis模态对比分析
 * IR、Raman、UV-Vis三模态融合
 * 完整分子结构候选推断与可视化
 * 实验域数据（NIST、API-Raman）验证与微调

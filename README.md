@@ -1,4 +1,4 @@
-# 最后更新时间：00:53(UTC+8) 08/15/2026
+# 最后更新时间：18:40(UTC+8) 08/15/2026
 
 # SpectraDB
 ## 项目简介
@@ -79,7 +79,7 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 1. 建立QM9S多模态数据集（已完成）
 2. 生成官能团标签与结构库（已完成）
 3. IR 1D-CNN单模态基线（已完成）
-4. Raman 1D-CNN单模态基线
+4. Raman 1D-CNN单模态基线（已完成）
 5. UV-Vis 1D-CNN单模态基线
 6. 光谱→结构候选生成与可视化
 7. 实验域数据（NIST、API-Raman）验证与微调
@@ -98,4 +98,4 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 * HuggingFace
 * Lightning
 ## 项目状态
-IR单模态基线已完成并冻结（test Micro-F1 0.9406，Macro-AUROC 0.9954）；下一步开展Raman、UV-Vis单模态基线。
+IR、Raman单模态基线已完成并冻结（IR-v1：test Micro-F1 0.9406，Macro-AUROC 0.9954；Raman-v1：test Micro-F1 0.9151，Macro-AUROC 0.9911）；下一步开展UV-Vis单模态基线。

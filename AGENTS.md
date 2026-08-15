@@ -62,7 +62,7 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - scaffold split：已完成。
 - 官能团多标签（14 类）：已完成。
 - IR 1D-CNN：已完成，IR-v1 已冻结（test Micro-F1 0.9406，Macro-AUROC 0.9954）。
-- Raman 1D-CNN：下一步。
+- Raman 1D-CNN：已完成，Raman-v1 已冻结（test Micro-F1 0.9151，Macro-AUROC 0.9911）。
 - UV-Vis 1D-CNN：计划进行。
 
 ---
@@ -369,6 +369,10 @@ QM9S 单模态光谱 Dataset（mmap 读取 NPY，支持归一化）。
 
 IR 1D-CNN 训练脚本（每个随机种子一份脚本）。
 
+### `training/train_raman_*.py`
+
+Raman 1D-CNN 训练脚本（每个随机种子一份脚本）。
+
 ### `training/calibrate_ir_thresholds.py` / `training/finalize_ir_results.py`
 
 阈值校准与结果汇总脚本。
@@ -490,12 +494,11 @@ Git 中不保存：
 当前最高优先级如下：
 
 1. 更新 `AGENTS.md` 和 `TODO.md`，明确当前阶段策略。
-2. 训练并冻结 Raman 1D-CNN 单模态基线（Raman-v1）。
-3. 训练并冻结 UV-Vis 1D-CNN 单模态基线（UV-Vis-v1）。
-4. 比较 IR、Raman、UV-Vis 对结构信息的表征能力。
-5. 建立光谱→结构候选检索原型（encoder embedding + 结构库 Top-k）。
-6. 准备实验域数据（NIST IR 重采样、API-Raman 清洗），供第三阶段微调与验证。
-7. 三模态融合与可解释性分析（单模态全部稳定后进行）。
+2. 训练并冻结 UV-Vis 1D-CNN 单模态基线（UV-Vis-v1）。
+3. 比较 IR、Raman、UV-Vis 对结构信息的表征能力。
+4. 建立光谱→结构候选检索原型（encoder embedding + 结构库 Top-k）。
+5. 准备实验域数据（NIST IR 重采样、API-Raman 清洗），供第三阶段微调与验证。
+6. 三模态融合与可解释性分析（单模态全部稳定后进行）。
 
 ---
 
