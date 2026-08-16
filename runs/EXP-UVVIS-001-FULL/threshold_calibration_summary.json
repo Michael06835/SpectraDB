@@ -1,0 +1,33 @@
+{
+  "experiment": "EXP-UVVIS-001-FULL",
+  "modality": "uvvis",
+  "checkpoint": "runs/EXP-UVVIS-001-FULL/best_model.pt",
+  "best_epoch": 12,
+  "best_val_mAP": 0.5160956495568406,
+  "threshold_source": "validation per-label F1 optimization",
+  "default_threshold": 0.5,
+  "validation_default": {
+    "micro_f1": 0.502433577042203,
+    "macro_f1": 0.40243370208362483,
+    "micro_precision": 0.6851905062927418,
+    "micro_recall": 0.39664005322687956
+  },
+  "validation_calibrated": {
+    "micro_f1": 0.5883323479671667,
+    "macro_f1": 0.5240647744253669,
+    "micro_precision": 0.501394389632303,
+    "micro_recall": 0.7117431803060545
+  },
+  "test_default": {
+    "micro_f1": 0.516094396599933,
+    "macro_f1": 0.4228744578501665,
+    "micro_precision": 0.6683274433694456,
+    "micro_recall": 0.4203468882087159
+  },
+  "test_calibrated": {
+    "micro_f1": 0.5790138321928872,
+    "macro_f1": 0.5018989965589922,
+    "micro_precision": 0.48492301638054014,
+    "micro_recall": 0.7184083952776563
+  }
+}

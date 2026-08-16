@@ -1,0 +1,283 @@
+{
+  "model_version": "UVVIS-v1",
+  "status": "FROZEN",
+  "task": "QM9S UV-Vis -> 14 shared functional-group / structural-feature labels",
+  "canonical_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-UVVIS-001-FULL\\best_model.pt",
+  "canonical_checkpoint_policy": "Seed 42 remains the pre-specified canonical checkpoint. Test-set performance was not used to select between random seeds.",
+  "architecture": {
+    "backbone": "1D-CNN / residual 1D CNN",
+    "embedding_dim": 256,
+    "input_points": 701,
+    "normalization": "max",
+    "loss": "BCEWithLogitsLoss",
+    "threshold": 0.5
+  },
+  "three_seed_summary": {
+    "test_loss": {
+      "mean": 0.27756646183150957,
+      "sample_sd": 0.009847329464661748,
+      "values": {
+        "seed42": 0.26784744389012527,
+        "seed123": 0.27731466810358535,
+        "seed2026": 0.2875372735008181
+      }
+    },
+    "test_micro_f1": {
+      "mean": 0.489161448248604,
+      "sample_sd": 0.040557105335705786,
+      "values": {
+        "seed42": 0.5161059413027917,
+        "seed123": 0.5088610951518098,
+        "seed2026": 0.4425173082912105
+      }
+    },
+    "test_macro_f1": {
+      "mean": 0.37370212436530176,
+      "sample_sd": 0.05661888398194085,
+      "values": {
+        "seed42": 0.4228869762293475,
+        "seed123": 0.38641031215067484,
+        "seed2026": 0.311809084715883
+      }
+    },
+    "test_micro_precision": {
+      "mean": 0.6535920650465744,
+      "sample_sd": 0.012797935301813394,
+      "values": {
+        "seed42": 0.6683661645422944,
+        "seed123": 0.6464907355418305,
+        "seed2026": 0.6459192950555983
+      }
+    },
+    "test_micro_recall": {
+      "mean": 0.39214400233202157,
+      "sample_sd": 0.048156265296388154,
+      "values": {
+        "seed42": 0.4203468882087159,
+        "seed123": 0.41954525579361607,
+        "seed2026": 0.3365398629937327
+      }
+    },
+    "test_mAP": {
+      "mean": 0.505325036111548,
+      "sample_sd": 0.012714618058618333,
+      "values": {
+        "seed42": 0.5137026235471229,
+        "seed123": 0.5115776759134462,
+        "seed2026": 0.4906948088740748
+      }
+    },
+    "test_macro_AUROC": {
+      "mean": 0.8500571413123938,
+      "sample_sd": 0.004437046960121927,
+      "values": {
+        "seed42": 0.854026251493069,
+        "seed123": 0.8508782962937801,
+        "seed2026": 0.8452668761503324
+      }
+    }
+  },
+  "seed_runs": {
+    "seed42": {
+      "experiment": "EXP-UVVIS-001-FULL",
+      "modality": "uvvis",
+      "best_epoch": 12,
+      "best_val_mAP": 0.5160956495568406,
+      "test_loss": 0.26784744389012527,
+      "test_micro_f1": 0.5161059413027917,
+      "test_macro_f1": 0.4228869762293475,
+      "test_micro_precision": 0.6683661645422944,
+      "test_micro_recall": 0.4203468882087159,
+      "test_mAP": 0.5137026235471229,
+      "test_macro_AUROC": 0.854026251493069
+    },
+    "seed123": {
+      "experiment": "EXP-UVVIS-001-SEED123",
+      "modality": "uvvis",
+      "best_epoch": 14,
+      "best_val_mAP": 0.5138050844337781,
+      "test_loss": 0.27731466810358535,
+      "test_micro_f1": 0.5088610951518098,
+      "test_macro_f1": 0.38641031215067484,
+      "test_micro_precision": 0.6464907355418305,
+      "test_micro_recall": 0.41954525579361607,
+      "test_mAP": 0.5115776759134462,
+      "test_macro_AUROC": 0.8508782962937801
+    },
+    "seed2026": {
+      "experiment": "EXP-UVVIS-001-SEED2026",
+      "modality": "uvvis",
+      "best_epoch": 7,
+      "best_val_mAP": 0.4943173545923222,
+      "test_loss": 0.2875372735008181,
+      "test_micro_f1": 0.4425173082912105,
+      "test_macro_f1": 0.311809084715883,
+      "test_micro_precision": 0.6459192950555983,
+      "test_micro_recall": 0.3365398629937327,
+      "test_mAP": 0.4906948088740748,
+      "test_macro_AUROC": 0.8452668761503324
+    }
+  },
+  "canonical_seed42_test": {
+    "experiment": "EXP-UVVIS-001-FULL",
+    "modality": "uvvis",
+    "best_epoch": 12,
+    "best_val_mAP": 0.5160956495568406,
+    "test_loss": 0.26784744389012527,
+    "test_micro_f1": 0.5161059413027917,
+    "test_macro_f1": 0.4228869762293475,
+    "test_micro_precision": 0.6683661645422944,
+    "test_micro_recall": 0.4203468882087159,
+    "test_mAP": 0.5137026235471229,
+    "test_macro_AUROC": 0.854026251493069
+  },
+  "threshold_calibration": {
+    "experiment": "EXP-UVVIS-001-FULL",
+    "modality": "uvvis",
+    "checkpoint": "runs/EXP-UVVIS-001-FULL/best_model.pt",
+    "best_epoch": 12,
+    "best_val_mAP": 0.5160956495568406,
+    "threshold_source": "validation per-label F1 optimization",
+    "default_threshold": 0.5,
+    "validation_default": {
+      "micro_f1": 0.502433577042203,
+      "macro_f1": 0.40243370208362483,
+      "micro_precision": 0.6851905062927418,
+      "micro_recall": 0.39664005322687956
+    },
+    "validation_calibrated": {
+      "micro_f1": 0.5883323479671667,
+      "macro_f1": 0.5240647744253669,
+      "micro_precision": 0.501394389632303,
+      "micro_recall": 0.7117431803060545
+    },
+    "test_default": {
+      "micro_f1": 0.516094396599933,
+      "macro_f1": 0.4228744578501665,
+      "micro_precision": 0.6683274433694456,
+      "micro_recall": 0.4203468882087159
+    },
+    "test_calibrated": {
+      "micro_f1": 0.5790138321928872,
+      "macro_f1": 0.5018989965589922,
+      "micro_precision": 0.48492301638054014,
+      "micro_recall": 0.7184083952776563
+    }
+  },
+  "threshold_calibration_conclusion": "Validation-derived per-label thresholds substantially increased threshold-dependent test performance, especially Recall and Macro-F1, but reduced Precision. Because threshold calibration does not change mAP/AUROC and the cross-modality baseline protocol uses a common threshold of 0.5, UVVIS-v1 retains threshold=0.5 as its canonical baseline setting. Calibrated thresholds are retained as an auxiliary result.",
+  "class_weighting_conclusion": "sqrt(pos_weight) with cap=20 slightly increased Recall but reduced Precision, Micro-F1, Macro-F1, mAP, and Macro-AUROC. Ordinary BCE is retained.",
+  "batchnorm_diagnostic": {
+    "experiment": "EXP-UVVIS-001-BN-FULL-DIAG",
+    "source_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-UVVIS-001-FULL\\best_model.pt",
+    "recalibration_source": "train split only",
+    "batch_size": 512,
+    "num_workers": 4,
+    "normalization": "max",
+    "threshold": 0.5,
+    "batchnorm": {
+      "num_batchnorm_layers": 12,
+      "train_batches_seen": 203,
+      "train_samples_seen": 103853
+    },
+    "before": {
+      "validation": {
+        "micro_f1": 0.502433577042203,
+        "macro_f1": 0.40243370208362483,
+        "micro_precision": 0.6851905062927418,
+        "micro_recall": 0.39664005322687956,
+        "mAP": 0.5160929116103873,
+        "macro_AUROC": 0.8509581522345192,
+        "loss": 0.28841484600172856
+      },
+      "test": {
+        "micro_f1": 0.516094396599933,
+        "macro_f1": 0.4228744578501665,
+        "micro_precision": 0.6683274433694456,
+        "micro_recall": 0.4203468882087159,
+        "mAP": 0.513704379506485,
+        "macro_AUROC": 0.8540259623154819,
+        "loss": 0.26784749959413484
+      }
+    },
+    "after": {
+      "validation": {
+        "micro_f1": 0.5283287755652274,
+        "macro_f1": 0.40080048788571787,
+        "micro_precision": 0.6273209549071618,
+        "micro_recall": 0.4563206919494345,
+        "mAP": 0.5181696615031427,
+        "macro_AUROC": 0.8529542519633109,
+        "loss": 0.2932659594765265
+      },
+      "test": {
+        "micro_f1": 0.5535037398901343,
+        "macro_f1": 0.42554995745768454,
+        "micro_precision": 0.6237379505687788,
+        "micro_recall": 0.4974857892435505,
+        "mAP": 0.5168522491957449,
+        "macro_AUROC": 0.8565942309885296,
+        "loss": 0.269459540797955
+      }
+    },
+    "delta": {
+      "val": {
+        "loss": 0.004851113474797941,
+        "micro_f1": 0.025895198523024354,
+        "macro_f1": -0.0016332141979069625,
+        "micro_precision": -0.05786955138558003,
+        "micro_recall": 0.05968063872255491,
+        "mAP": 0.002076749892755414,
+        "macro_AUROC": 0.001996099728791667
+      },
+      "test": {
+        "loss": 0.001612041203820136,
+        "micro_f1": 0.0374093432902014,
+        "macro_f1": 0.0026754996075180615,
+        "micro_precision": -0.04458949280066682,
+        "micro_recall": 0.07713890103483462,
+        "mAP": 0.0031478696892599523,
+        "macro_AUROC": 0.0025682686730477133
+      }
+    },
+    "note": "BatchNorm running statistics were reset and recomputed using the training split only. Model weights were not updated."
+  },
+  "batchnorm_conclusion": "Recomputing BatchNorm running statistics using the training split changed test mAP by +0.0031 and Macro-AUROC by +0.0026. Therefore BatchNorm calibration is not the primary cause of the low UV-Vis generic-label baseline performance.",
+  "interpretation": "UV-Vis shows substantially weaker performance than the vibrational-spectrum baselines on the shared 14-label generic structural-feature task. This result is retained as a modality-information baseline and does not imply that UV-Vis lacks structure-relevant information.",
+  "lowest_mean_f1_labels": [
+    {
+      "label": "nitro",
+      "f1_mean": 0.0,
+      "f1_sd": 0.0,
+      "average_precision_mean": 0.1653261435042686,
+      "auroc_mean": 0.9837249558674824
+    },
+    {
+      "label": "nitrile",
+      "f1_mean": 0.030649603720321907,
+      "f1_sd": 0.028358587002034946,
+      "average_precision_mean": 0.2124911095330726,
+      "auroc_mean": 0.6701035622792809
+    },
+    {
+      "label": "hydroxyl",
+      "f1_mean": 0.16320674037002555,
+      "f1_sd": 0.0809857280126453,
+      "average_precision_mean": 0.5133686661001113,
+      "auroc_mean": 0.6790482696464291
+    },
+    {
+      "label": "imine",
+      "f1_mean": 0.2176637155824851,
+      "f1_sd": 0.10310016230671919,
+      "average_precision_mean": 0.3935482012085778,
+      "auroc_mean": 0.836964613081334
+    },
+    {
+      "label": "c_f_bond",
+      "f1_mean": 0.2902928024538291,
+      "f1_sd": 0.098796661298878,
+      "average_precision_mean": 0.3190970592057458,
+      "auroc_mean": 0.9403584906476937
+    }
+  ]
+}

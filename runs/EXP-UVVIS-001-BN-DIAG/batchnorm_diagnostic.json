@@ -1,0 +1,11 @@
+{
+  "experiment": "EXP-UVVIS-001-BN-DIAG",
+  "source_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-UVVIS-001-SANITY\\model.pt",
+  "seed": 42,
+  "n_samples": 512,
+  "batch_size": 64,
+  "train_mode_f1": 0.9807938540332907,
+  "eval_mode_f1": 0.7646464646464647,
+  "difference": 0.21614738938682598,
+  "diagnosis": "Significant train/eval discrepancy associated with BatchNorm running statistics."
+}

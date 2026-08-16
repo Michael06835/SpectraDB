@@ -1,0 +1,13 @@
+{
+  "experiment": "EXP-UVVIS-001-SEED123",
+  "modality": "uvvis",
+  "best_epoch": 14,
+  "best_val_mAP": 0.5138050844337781,
+  "test_loss": 0.27731466810358535,
+  "test_micro_f1": 0.5088610951518098,
+  "test_macro_f1": 0.38641031215067484,
+  "test_micro_precision": 0.6464907355418305,
+  "test_micro_recall": 0.41954525579361607,
+  "test_mAP": 0.5115776759134462,
+  "test_macro_AUROC": 0.8508782962937801
+}

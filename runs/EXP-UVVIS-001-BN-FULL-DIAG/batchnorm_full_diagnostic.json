@@ -1,0 +1,75 @@
+{
+  "experiment": "EXP-UVVIS-001-BN-FULL-DIAG",
+  "source_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-UVVIS-001-FULL\\best_model.pt",
+  "recalibration_source": "train split only",
+  "batch_size": 512,
+  "num_workers": 4,
+  "normalization": "max",
+  "threshold": 0.5,
+  "batchnorm": {
+    "num_batchnorm_layers": 12,
+    "train_batches_seen": 203,
+    "train_samples_seen": 103853
+  },
+  "before": {
+    "validation": {
+      "micro_f1": 0.502433577042203,
+      "macro_f1": 0.40243370208362483,
+      "micro_precision": 0.6851905062927418,
+      "micro_recall": 0.39664005322687956,
+      "mAP": 0.5160929116103873,
+      "macro_AUROC": 0.8509581522345192,
+      "loss": 0.28841484600172856
+    },
+    "test": {
+      "micro_f1": 0.516094396599933,
+      "macro_f1": 0.4228744578501665,
+      "micro_precision": 0.6683274433694456,
+      "micro_recall": 0.4203468882087159,
+      "mAP": 0.513704379506485,
+      "macro_AUROC": 0.8540259623154819,
+      "loss": 0.26784749959413484
+    }
+  },
+  "after": {
+    "validation": {
+      "micro_f1": 0.5283287755652274,
+      "macro_f1": 0.40080048788571787,
+      "micro_precision": 0.6273209549071618,
+      "micro_recall": 0.4563206919494345,
+      "mAP": 0.5181696615031427,
+      "macro_AUROC": 0.8529542519633109,
+      "loss": 0.2932659594765265
+    },
+    "test": {
+      "micro_f1": 0.5535037398901343,
+      "macro_f1": 0.42554995745768454,
+      "micro_precision": 0.6237379505687788,
+      "micro_recall": 0.4974857892435505,
+      "mAP": 0.5168522491957449,
+      "macro_AUROC": 0.8565942309885296,
+      "loss": 0.269459540797955
+    }
+  },
+  "delta": {
+    "val": {
+      "loss": 0.004851113474797941,
+      "micro_f1": 0.025895198523024354,
+      "macro_f1": -0.0016332141979069625,
+      "micro_precision": -0.05786955138558003,
+      "micro_recall": 0.05968063872255491,
+      "mAP": 0.002076749892755414,
+      "macro_AUROC": 0.001996099728791667
+    },
+    "test": {
+      "loss": 0.001612041203820136,
+      "micro_f1": 0.0374093432902014,
+      "macro_f1": 0.0026754996075180615,
+      "micro_precision": -0.04458949280066682,
+      "micro_recall": 0.07713890103483462,
+      "mAP": 0.0031478696892599523,
+      "macro_AUROC": 0.0025682686730477133
+    }
+  },
+  "note": "BatchNorm running statistics were reset and recomputed using the training split only. Model weights were not updated."
+}

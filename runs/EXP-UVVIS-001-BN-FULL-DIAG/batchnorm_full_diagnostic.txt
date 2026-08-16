@@ -1,0 +1,31 @@
+EXP-UVVIS-001-FULL BatchNorm diagnostic
+==================================================
+
+Source checkpoint: E:\Projects\曦源计划\数据\SpectraDB\runs\EXP-UVVIS-001-FULL\best_model.pt
+Recalibration source: TRAIN split only
+BatchNorm layers: 12
+Train samples used: 103853
+
+BEFORE TEST
+Micro-F1: 0.5161
+Macro-F1: 0.4229
+Precision: 0.6683
+Recall: 0.4203
+mAP: 0.5137
+Macro-AUROC: 0.8540
+
+AFTER TEST
+Micro-F1: 0.5535
+Macro-F1: 0.4255
+Precision: 0.6237
+Recall: 0.4975
+mAP: 0.5169
+Macro-AUROC: 0.8566
+
+DELTA TEST
+Micro-F1: +0.0374
+Macro-F1: +0.0027
+Precision: -0.0446
+Recall: +0.0771
+mAP: +0.0031
+Macro-AUROC: +0.0026

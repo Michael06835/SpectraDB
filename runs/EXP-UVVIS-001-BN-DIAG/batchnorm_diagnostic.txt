@@ -1,0 +1,12 @@
+UV-Vis BatchNorm diagnostic
+===========================
+Source checkpoint : E:\Projects\曦源计划\数据\SpectraDB\runs\EXP-UVVIS-001-SANITY\model.pt
+Seed              : 42
+Samples           : 512
+Batch size        : 64
+Train-mode F1     : 0.9808
+Eval-mode F1      : 0.7646
+Difference        : +0.2161
+
+Conclusion:
+Significant train/eval discrepancy associated with BatchNorm running statistics.
