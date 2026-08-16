@@ -211,3 +211,25 @@
 * 完整分子结构候选推断与可视化
 * 实验域数据（NIST、API-Raman）验证与微调
 * 开放集识别与可解释性分析
+
+## 2026-08-16
+### 完成内容
+* 编写UV-Vis 1D-CNN训练管线（复用IR/Raman管线模式）
+* 完成sanity测试与正式训练（seed 42/123/2026）
+* 完成类别不平衡消融实验（sqrt pos_weight不采用）
+* 完成阈值校准实验（canonical阈值保留0.5，校准结果作为辅助）
+* 完成BatchNorm重校准诊断（非低mAP主因）
+* 汇总三随机种子结果并冻结UVVIS-v1
+* 弃用GDB-9-Ex为主训练数据，降级为备用外部域/方法迁移数据集
+* 新增`task/`（任务说明书）与`competitor/`（文献竞争态势周检）目录
+### 当前进度
+* IR、Raman、UV-Vis三个单模态基线全部完成并冻结
+* UV-Vis在共享14类标签上明显弱于振动光谱（test Micro-F1 0.4892±0.0406），定位为研究问题observation
+* 当前进入UV专属共轭/发色团化学语义标签设计（Line A）
+### 下一步计划
+* UV-specific label taxonomy设计与生成
+* 三模态信息画像与模态对比
+* chemistry-aware多模态融合
+* 完整分子结构候选与Top-k
+* 实验域数据（NIST、API-Raman）验证与微调
+* 开放集识别与可解释性分析

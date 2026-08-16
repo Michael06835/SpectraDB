@@ -1,10 +1,10 @@
-# SpectraDB Agent 工作说明 最近修改：00:30 8/16/2026
+# SpectraDB Agent 工作说明 最近修改：18:55 8/16/2026
 
 ## 1. 项目定位
 
 SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推断的数据库和模型建设项目。
 
-项目目标是建立统一的多模态光谱数据库，并实现从光谱推断分子结构信息：以单模态 1D-CNN 模型（IR、Raman、UV-Vis）为基础，逐步输出官能团/结构特征、完整分子结构候选与分子结构可视化，最终进行三模态融合与模型可解释性分析。
+项目目标是建立统一的多模态光谱数据库，并实现从光谱推断分子结构信息：以单模态 1D-CNN 模型（IR、Raman、UV-Vis）为基础，按各模态的化学证据分工进行 chemistry-aware 自适应融合，逐步输出官能团/结构特征、完整分子结构候选与分子结构可视化，最终实现模型可解释性分析。
 
 官能团预测只是中间结构信息，不是最终目标。
 
@@ -43,7 +43,7 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 
 当前处于：
 
-**第一阶段（数据体系与单模态模型）。**
+**第一阶段（数据体系与单模态模型）已完成；当前进入第二阶段准备（UV专属化学语义监督与 chemistry-aware 多模态融合）。**
 
 第一阶段包括：
 
@@ -64,7 +64,9 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - 官能团多标签（14 类）：已完成。
 - IR 1D-CNN：已完成，IR-v1 已冻结（test Micro-F1 0.9406，Macro-AUROC 0.9954）。
 - Raman 1D-CNN：已完成，Raman-v1 已冻结（test Micro-F1 0.9151，Macro-AUROC 0.9911）。
-- UV-Vis 1D-CNN：计划进行。
+- UV-Vis 1D-CNN：已完成，UV-Vis-v1 已冻结（test Micro-F1 0.4892，Macro-AUROC 0.8501）。
+- 模态对比：待输出（三模态信息画像）。
+- UV-specific 化学语义标签：下一步（当前最高优先级）。
 
 ---
 
@@ -376,6 +378,10 @@ IR 1D-CNN 训练脚本（每个随机种子一份脚本）。
 
 Raman 1D-CNN 训练脚本（每个随机种子一份脚本）。
 
+### `training/train_uvvis_*.py`
+
+UV-Vis 1D-CNN 训练脚本（每个随机种子一份脚本）。
+
 ### `training/calibrate_ir_thresholds.py` / `training/finalize_ir_results.py`
 
 阈值校准与结果汇总脚本。
@@ -497,11 +503,13 @@ Git 中不保存：
 当前最高优先级如下：
 
 1. 更新 `AGENTS.md` 和 `TODO.md`，明确当前阶段策略。
-2. 训练并冻结 UV-Vis 1D-CNN 单模态基线（UV-Vis-v1）。
-3. 比较 IR、Raman、UV-Vis 对结构信息的表征能力。
-4. 建立光谱→结构候选检索原型（encoder embedding + 结构库 Top-k）。
-5. 准备实验域数据（NIST IR 重采样、API-Raman 清洗），供第三阶段微调与验证。
-6. 三模态融合与可解释性分析（单模态全部稳定后进行）。
+2. 设计并冻结 UV-specific label taxonomy，编写 `scripts/build_uvvis_specific_labels.py` 自动生成标签（Line A）。
+3. UV-specific 单模态基线 + shared vs specific 对照，验证"UV 被问对问题后是否显著变强"（Line A）。
+4. 三模态信息画像，识别各模态擅长与不擅长的结构子群（Line B）。
+5. chemistry-aware 融合：naive 对照 → generic gating → proposed routing + 消融（Line C，论文核心方法）。
+6. 完整结构 Top-k：融合证据成立后进入（Line D）。
+7. 鲁棒性与实验域：缺失/噪声模态、NIST/API-Raman 验证（Line F/G）。
+8. 开放集与可解释性分析（Line H/I）。
 
 ---
 
@@ -521,7 +529,8 @@ Git 中不保存：
 
 目标：
 
-- IR、Raman、UV-Vis 特征融合。
+- UV-Vis 专属共轭/发色团化学语义监督（UV-specific labels）。
+- IR、Raman、UV-Vis 化学证据分工的 chemistry-aware 融合。
 - 综合官能团与关键结构特征。
 - 完整分子结构候选推断与 Top-k 排序。
 - 二维分子结构可视化。
