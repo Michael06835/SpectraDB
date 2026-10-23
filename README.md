@@ -1,4 +1,4 @@
-# 最后更新时间：18:50(UTC+8) 08/16/2026
+# 最后更新时间：06:00(UTC+8) 10/24/2026
 
 # SpectraDB
 ## 项目简介
@@ -57,6 +57,7 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 ### 结构标注：
 * 官能团多标签（14类）
 * 原子/键/环/共轭体系标注
+* UV专属化学语义标注（58二值 + 73数值特征）
 
 ## 项目目录
 * SpectraDB/
@@ -81,12 +82,13 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 3. IR 1D-CNN单模态基线（已完成）
 4. Raman 1D-CNN单模态基线（已完成）
 5. UV-Vis 1D-CNN单模态基线（已完成）
-6. UV专属共轭/发色团化学语义标签
-7. 三模态信息画像与模态对比
-8. Chemistry-aware多模态融合
-9. 完整结构候选与Top-k
-10. 实验域数据（NIST、API-Raman）验证与微调
-11. 开放集识别与可解释性分析
+6. UV专属共轭/发色团化学语义标签（已完成）
+7. UV-specific单模态基线与shared/specific对照
+8. 三模态信息画像与模态对比
+9. Chemistry-aware多模态融合
+10. 完整结构候选与Top-k
+11. 实验域数据（NIST、API-Raman）验证与微调
+12. 开放集识别与可解释性分析
 ## 开发环境
 ### 已有：
 * Python
@@ -101,4 +103,4 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 * HuggingFace
 * Lightning
 ## 项目状态
-IR、Raman、UV-Vis三个单模态基线已完成并冻结（IR-v1：test Micro-F1 0.9406，Macro-AUROC 0.9954；Raman-v1：0.9151，0.9911；UV-Vis-v1：0.4892，0.8501）；当前进入UV专属化学语义标签与chemistry-aware融合阶段。
+IR、Raman、UV-Vis三个单模态基线已完成并冻结（IR-v1：test Micro-F1 0.9406，Macro-AUROC 0.9954；Raman-v1：0.9151，0.9911；UV-Vis-v1：0.4892，0.8501）；UV专属化学语义标注已完成（schema v1.0 FINAL + builder v1.0.1：129817样本全部成功，58二值+73数值特征，统计与split审计完成）；下一步开展UV-specific单模态基线与shared/specific对照。
