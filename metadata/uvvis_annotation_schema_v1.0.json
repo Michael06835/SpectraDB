@@ -1,0 +1,2243 @@
+{
+  "schema_name": "UV-Vis Chemical Semantic Annotation Schema",
+  "schema_version": "1.0",
+  "project": "SpectraDB / 曦源项目",
+  "modality": "uvvis",
+  "purpose": "Define reproducible molecular-structure annotations relevant to UV-Vis electronic absorption. The schema separates raw molecular-graph facts, derived chemical semantics, heuristic electronic-context annotations, reserved Woodward-Fieser structural inputs, and reserved spectrum-derived descriptors.",
+  "design_principles": [
+    "Prefer raw and continuous structural facts over premature binarization.",
+    "Separate molecular-graph facts from derived chemical semantics.",
+    "Separate deterministic structural derivations from heuristic donor-acceptor interpretations.",
+    "Do not delete rare annotations; change training_status instead.",
+    "Structure annotations must be derived only from molecular structure and must not use UV-Vis spectra.",
+    "Annotation definition and downstream training-target selection must remain separate.",
+    "Hierarchical label relationships must be retained explicitly.",
+    "Invalid molecular annotations must never be silently converted to all-zero labels.",
+    "RDKit version, aromaticity handling, source structure checksum, and builder version must be recorded for reproducibility.",
+    "RDKit conjugation perception is retained as a raw cheminformatics descriptor; UV-specific conjugation semantics are defined from the explicit uv_pi_system_graph."
+  ],
+  "allowed_feature_types": [
+    "binary",
+    "integer",
+    "float",
+    "categorical",
+    "string",
+    "metadata"
+  ],
+  "allowed_derivations": [
+    "raw",
+    "derived",
+    "heuristic",
+    "reserved"
+  ],
+  "allowed_training_status": [
+    "pending_frequency_audit",
+    "active",
+    "auxiliary",
+    "reserved",
+    "disabled"
+  ],
+  "allowed_implementation_status": [
+    "planned",
+    "implemented",
+    "reserved_for_later"
+  ],
+  "current_chemistry_scope": {
+    "elements": [
+      "H",
+      "C",
+      "N",
+      "O",
+      "F"
+    ],
+    "dataset_scope": "QM9S",
+    "notes": "The schema is extensible, but v1.0 only activates chemistry that is relevant to the current QM9S molecular space."
+  },
+  "annotation_validity_fields": [
+    {
+      "name": "annotation_valid",
+      "type": "binary",
+      "layer": "metadata",
+      "source": "annotation_pipeline",
+      "derivation": "raw",
+      "definition": "1 if all required molecular parsing and structure-annotation steps completed successfully; otherwise 0.",
+      "training_status": "reserved",
+      "implementation_status": "planned",
+      "data_leakage_risk": false
+    },
+    {
+      "name": "annotation_warning_count",
+      "type": "integer",
+      "layer": "metadata",
+      "source": "annotation_pipeline",
+      "derivation": "raw",
+      "definition": "Number of non-fatal annotation warnings generated for the molecule.",
+      "training_status": "reserved",
+      "implementation_status": "planned",
+      "data_leakage_risk": false
+    },
+    {
+      "name": "annotation_error_code",
+      "type": "string",
+      "layer": "metadata",
+      "source": "annotation_pipeline",
+      "derivation": "raw",
+      "definition": "Machine-readable error code if annotation_valid is 0; empty string otherwise.",
+      "training_status": "reserved",
+      "implementation_status": "planned",
+      "data_leakage_risk": false
+    }
+  ],
+  "layers": {
+    "A_raw_pi_conjugation_descriptors": {
+      "description": "Low-level molecular-graph descriptors. RDKit conjugation descriptors are kept separate from UV-specific pi-system descriptors.",
+      "implementation_priority": "current",
+      "features": [
+        {
+          "name": "heavy_atom_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of non-hydrogen atoms in the molecule.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "nonaromatic_double_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of non-aromatic bonds with bond type DOUBLE.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "triple_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of bonds with bond type TRIPLE.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "aromatic_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of bonds marked aromatic by the configured RDKit aromaticity model.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "explicit_unsaturated_unit_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "Total number of explicit non-aromatic double- and triple-bond unsaturated units. Aromatic systems are not converted into an arbitrary pi-bond count.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_conjugated_bond_count",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "raw",
+          "definition": "Number of bonds for which RDKit Bond.GetIsConjugated() is true.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_conjugated_atom_count",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Number of unique heavy atoms incident to at least one RDKit-conjugated bond.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_conjugated_component_count",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Number of connected components in the RDKit-conjugated subgraph.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_max_conjugated_component_atoms",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Maximum number of atoms in any RDKit-conjugated connected component.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_max_conjugated_component_bonds",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Maximum number of RDKit-conjugated bonds in any RDKit-conjugated connected component.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_max_conjugated_pi_units",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Maximum number of explicit pi units found within one RDKit-conjugated component. This is a raw cheminformatics descriptor and not the canonical UV conjugation length.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_max_conjugated_C=C_count",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Maximum number of non-aromatic C=C units in one RDKit-conjugated component.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_max_conjugated_C#C_count",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Maximum number of C#C units in one RDKit-conjugated component.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_longest_conjugated_path_atoms",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Number of atoms in the longest non-repeating atom path inside a RDKit-conjugated component. Graph descriptor only; not a direct physical conjugation length.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_longest_conjugated_path_bonds",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Number of bonds in the longest non-repeating bond path inside a RDKit-conjugated component. Graph descriptor only; not a direct physical conjugation length.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_fraction_conjugated_heavy_atoms",
+          "type": "float",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "rdkit_conjugated_atom_count divided by heavy_atom_count.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_cyclic_conjugated_component_count",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Number of RDKit-conjugated components containing at least one ring bond.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_branched_conjugated_component_count",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Number of RDKit-conjugated components containing an atom with subgraph degree at least 3.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_max_conjugated_graph_degree",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Maximum atom degree measured within the RDKit-conjugated subgraph.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "rdkit_conjugated_branch_point_count",
+          "type": "integer",
+          "source": "rdkit_conjugated_subgraph",
+          "derivation": "derived",
+          "definition": "Number of atoms with degree at least 3 within the RDKit-conjugated subgraph.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "uv_pi_system_component_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of independent UV-relevant conjugated or intrinsically delocalized pi systems. An isolated non-aromatic pi unit does not count as a component. An aromatic ring system counts as one UV pi-system component.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "uv_pi_system_atom_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of unique heavy atoms belonging to UV-relevant conjugated or intrinsically delocalized pi systems. Atoms belonging only to isolated non-aromatic pi units are excluded.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "max_uv_pi_system_atoms",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Maximum number of unique heavy atoms participating in any one UV-relevant conjugated or intrinsically delocalized pi system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "max_uv_pi_system_units",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Maximum number of pi-system graph nodes contained in any one UV pi-system component.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "fraction_uv_pi_system_heavy_atoms",
+          "type": "float",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "uv_pi_system_atom_count divided by heavy_atom_count; isolated non-aromatic pi units are excluded from the numerator.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "max_linear_conjugated_pi_units",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Maximum number of consecutively conjugatively coupled pi-system nodes along one non-repeating valid path. Cumulated unsaturation is excluded from ordinary linear-conjugation counting.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "max_linear_conjugated_C=C_units",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Maximum number of conjugatively coupled non-aromatic C=C units along one valid linear conjugated path.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "max_linear_conjugated_C#C_units",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Maximum number of conjugatively coupled C#C units along one valid conjugated path.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_unsaturated_unit_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of explicit non-aromatic unsaturated units not conjugatively coupled to another pi unit or aromatic ring system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_alkene_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of non-aromatic C=C units not conjugatively coupled to another pi unit or aromatic ring system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_alkyne_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of C#C units not conjugatively coupled to another pi unit or aromatic ring system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "cumulated_unsaturation_unit_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "Number of central-atom cumulated-unsaturation motifs in which one atom participates in two adjacent explicit multiple bonds, such as X=C=Y.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "exocyclic_double_bond_count",
+          "type": "integer",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "Number of non-aromatic double bonds that are exocyclic with respect to at least one ring.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "exocyclic_ring_relation_count",
+          "type": "integer",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "Number of double-bond-to-ring exocyclic relationships. A single double bond may contribute more than one relation in polycyclic systems.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        }
+      ]
+    },
+    "B1_conjugation_semantics": {
+      "description": "Binary UV-relevant conjugation semantics derived from the explicit uv_pi_system_graph. RDKit conjugation flags are not sufficient by themselves to assign these labels.",
+      "implementation_priority": "current",
+      "features": [
+        {
+          "name": "has_conjugation",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "uv_pi_system_component_count is greater than zero. This includes aromatic delocalization and non-aromatic systems containing at least two conjugatively coupled pi units.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_nonaromatic_conjugation",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one valid UV pi-system component contains two or more conjugatively coupled non-aromatic pi units. Cumulated unsaturation alone does not satisfy this criterion.",
+          "parent": "has_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_unsaturation",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "isolated_unsaturated_unit_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_alkene",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "isolated_alkene_count is greater than zero.",
+          "parent": "isolated_unsaturation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_alkyne",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "isolated_alkyne_count is greater than zero.",
+          "parent": "isolated_unsaturation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "conjugated_diene",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one valid non-aromatic conjugated path contains two or more conjugatively coupled C=C units. Cumulated systems such as C=C=C do not satisfy this criterion solely by containing two adjacent double bonds.",
+          "parent": "has_nonaromatic_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "conjugated_triene",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "max_linear_conjugated_C=C_units is greater than or equal to 3.",
+          "parent": "conjugated_diene",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "extended_polyene",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "max_linear_conjugated_C=C_units is greater than or equal to 4.",
+          "parent": "conjugated_triene",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "conjugated_enyne",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one valid conjugated path contains at least one C=C unit and at least one C#C unit.",
+          "parent": "has_nonaromatic_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "conjugated_diyne",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one valid conjugated path contains two or more conjugatively coupled C#C units.",
+          "parent": "has_nonaromatic_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "cumulated_unsaturation",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "cumulated_unsaturation_unit_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "acyclic_conjugated_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one UV pi-system component containing conjugative coupling contains no ring participation.",
+          "parent": "has_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "cyclic_conjugated_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one UV pi-system component contains ring participation.",
+          "parent": "has_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "branched_conjugated_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one UV pi-system component has a pi-system graph node with degree at least 3.",
+          "parent": "has_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "multiple_independent_conjugated_systems",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "uv_pi_system_component_count is greater than or equal to 2.",
+          "parent": "has_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "mixed_aromatic_nonaromatic_conjugation",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "A single UV pi-system component contains at least one aromatic ring-system node and at least one non-aromatic explicit pi-unit node.",
+          "parent": "has_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "cross_conjugation_candidate",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "Topology is compatible with potential cross-conjugation based on branching of a non-aromatic UV pi-system graph. This is not a definitive classical cross-conjugation assignment in v1.0.",
+          "parent": "branched_conjugated_system",
+          "training_status": "reserved",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        }
+      ]
+    },
+    "B2_aromatic_semantics": {
+      "description": "Descriptors and binary labels describing aromatic systems and aromatic/non-aromatic pi connectivity.",
+      "implementation_priority": "current",
+      "features": [
+        {
+          "name": "aromatic_atom_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of atoms marked aromatic by the configured RDKit default aromaticity model.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "aromatic_ring_count",
+          "type": "integer",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "Number of aromatic rings enumerated using RDKit SymmSSSR under the recorded RDKit default aromaticity model.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "aromatic_system_count",
+          "type": "integer",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "Number of independent aromatic ring systems. Aromatic rings fused by sharing at least one ring bond belong to the same system; aromatic rings connected only through a non-ring single bond belong to separate systems.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "largest_aromatic_system_atoms",
+          "type": "integer",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "Number of unique aromatic atoms in the largest aromatic ring system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "largest_aromatic_system_rings",
+          "type": "integer",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "Number of RDKit SymmSSSR aromatic rings in the largest aromatic ring system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "fused_aromatic_ring_system_count",
+          "type": "integer",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "Number of aromatic ring systems containing at least two aromatic rings fused by sharing at least one ring bond.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "biaryl_single_bond_link_count",
+          "type": "integer",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "Number of non-ring single bonds directly linking atoms belonging to two distinct aromatic ring systems.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pyridine_like_aromatic_N_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "Number of aromatic nitrogen atoms whose lone pair is not required for the aromatic sextet (pyridine-like aromatic N).",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false,
+          "notes": "Builder implementation must use an explicit RDKit atom-state/SMARTS rule and dedicated test molecules; do not infer this class from element identity alone."
+        },
+        {
+          "name": "pyrrole_like_aromatic_N_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "Number of aromatic nitrogen atoms whose lone pair contributes to the aromatic sextet (pyrrole-like aromatic N).",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false,
+          "notes": "Builder implementation must use an explicit RDKit atom-state/SMARTS rule and dedicated test molecules; do not infer this class from element identity alone."
+        },
+        {
+          "name": "has_aromatic_system",
+          "type": "binary",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "aromatic_ring_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "single_aromatic_ring",
+          "type": "binary",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "aromatic_ring_count equals 1.",
+          "parent": "has_aromatic_system",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "multiple_aromatic_rings",
+          "type": "binary",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "aromatic_ring_count is greater than or equal to 2.",
+          "parent": "has_aromatic_system",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "multiple_independent_aromatic_systems",
+          "type": "binary",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "aromatic_system_count is greater than or equal to 2.",
+          "parent": "has_aromatic_system",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "fused_aromatic_system",
+          "type": "binary",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "fused_aromatic_ring_system_count is greater than zero.",
+          "parent": "multiple_aromatic_rings",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_biaryl_single_bond_link",
+          "type": "binary",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "biaryl_single_bond_link_count is greater than zero.",
+          "parent": "multiple_aromatic_rings",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "carbocyclic_aromatic",
+          "type": "binary",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "At least one aromatic ring system consists exclusively of carbon aromatic atoms.",
+          "parent": "has_aromatic_system",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "heteroaromatic",
+          "type": "binary",
+          "source": "ring_topology",
+          "derivation": "derived",
+          "definition": "At least one aromatic ring system contains an aromatic atom other than carbon.",
+          "parent": "has_aromatic_system",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "N_heteroaromatic",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "At least one aromatic nitrogen atom is present.",
+          "parent": "heteroaromatic",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "O_heteroaromatic",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "At least one aromatic oxygen atom is present.",
+          "parent": "heteroaromatic",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_pyridine_like_aromatic_N",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "pyridine_like_aromatic_N_count is greater than zero.",
+          "parent": "N_heteroaromatic",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_pyrrole_like_aromatic_N",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "pyrrole_like_aromatic_N_count is greater than zero.",
+          "parent": "N_heteroaromatic",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "aromatic_to_nonaromatic_pi_conjugation",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "An aromatic ring-system node and at least one non-aromatic explicit pi-unit node occur in the same UV pi-system component and are connected by a valid conjugative-coupling path.",
+          "parent": "mixed_aromatic_nonaromatic_conjugation",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        }
+      ]
+    },
+    "B3_carbonyl_chromophore_semantics": {
+      "description": "Carbonyl-centered UV-relevant structural environments.",
+      "implementation_priority": "current",
+      "features": [
+        {
+          "name": "carbonyl_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of carbonyl C=O motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_carbonyl_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of carbonyl groups that are externally nonconjugated, meaning they are not coupled to an additional external pi unit or aromatic ring system. Intrinsic ester/amide resonance does not disqualify this label.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false,
+          "notes": "In v1.0, 'isolated_carbonyl' means externally nonconjugated carbonyl."
+        },
+        {
+          "name": "pi_conjugated_carbonyl_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of carbonyl groups externally conjugatively coupled to at least one additional pi unit or aromatic ring system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "aldehyde_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of aldehyde carbonyl motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "ketone_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of ketone carbonyl motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "ester_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of ester carbonyl motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "amide_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of amide carbonyl motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "carboxylic_acid_carbonyl_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of carboxylic-acid carbonyl motifs.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "acyl_fluoride_carbonyl_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of acyl-fluoride carbonyl motifs.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "anhydride_carbonyl_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of carbonyl motifs belonging to carboxylic anhydrides.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "other_carbonyl_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "Number of carbonyl motifs not assigned to the explicitly enumerated carbonyl subclasses in schema v1.0. This is an audit field intended to reveal missing motif classes.",
+          "training_status": "auxiliary",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "max_carbonyl_conjugated_C=C_path_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Maximum number of sequentially conjugatively coupled C=C units reachable from a carbonyl pi unit along one valid UV pi-system path.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_carbonyl",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "carbonyl_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_carbonyl",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "isolated_carbonyl_count is greater than zero. Here 'isolated' means externally nonconjugated; intrinsic ester/amide resonance is not counted as external conjugation.",
+          "parent": "has_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_conjugated_carbonyl",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "pi_conjugated_carbonyl_count is greater than zero.",
+          "parent": "has_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "alpha_beta_unsaturated_carbonyl",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one carbonyl pi unit is followed along a valid conjugated path by at least one C=C unit; equivalently max_carbonyl_conjugated_C=C_path_count is at least 1.",
+          "parent": "pi_conjugated_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "extended_unsaturated_carbonyl",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one carbonyl-centered conjugated path contains two or more sequentially coupled C=C units; equivalently max_carbonyl_conjugated_C=C_path_count is at least 2.",
+          "parent": "alpha_beta_unsaturated_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "aryl_carbonyl",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one carbonyl pi unit is directly conjugatively coupled to an aromatic ring system.",
+          "parent": "pi_conjugated_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "conjugated_aldehyde",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one aldehyde carbonyl is externally conjugatively coupled to another pi unit or aromatic ring system.",
+          "parent": "pi_conjugated_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "conjugated_ketone",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one ketone carbonyl is externally conjugatively coupled to another pi unit or aromatic ring system.",
+          "parent": "pi_conjugated_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_extended_ester",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one ester carbonyl participates in an additional external pi or aromatic conjugated system beyond intrinsic ester resonance.",
+          "parent": "pi_conjugated_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_extended_amide",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "At least one amide carbonyl participates in an additional external pi or aromatic conjugated system beyond intrinsic amide resonance.",
+          "parent": "pi_conjugated_carbonyl",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        }
+      ]
+    },
+    "B4_nitrogen_chromophore_semantics": {
+      "description": "Nitrogen-containing unsaturated and UV-relevant structural environments.",
+      "implementation_priority": "current",
+      "features": [
+        {
+          "name": "imine_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of non-aromatic C=N motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_imine_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of C=N units not externally conjugatively coupled to another pi unit or aromatic ring system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_conjugated_imine_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of C=N units externally conjugatively coupled to at least one additional pi unit or aromatic ring system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "nitrile_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of C#N motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_nitrile_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of nitrile groups whose carbon atom is not conjugatively coupled to an additional pi or aromatic system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_conjugated_nitrile_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of nitrile groups whose carbon atom is conjugatively coupled to an additional pi or aromatic system.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "nitro_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of nitro-group motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_conjugated_nitro_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of nitro groups directly attached to a UV pi-system framework in a topology compatible with conjugative interaction. This is a 2D structural annotation and does not imply a quantified conjugation strength.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "NN_double_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "raw",
+          "definition": "Number of explicit N=N double bonds.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_imine",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "imine_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_imine",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "isolated_imine_count is greater than zero.",
+          "parent": "has_imine",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_conjugated_imine",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "pi_conjugated_imine_count is greater than zero.",
+          "parent": "has_imine",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_nitrile",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "nitrile_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "isolated_nitrile",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "isolated_nitrile_count is greater than zero.",
+          "parent": "has_nitrile",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_conjugated_nitrile",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "pi_conjugated_nitrile_count is greater than zero.",
+          "parent": "has_nitrile",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_nitro",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "nitro_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "pi_conjugated_nitro",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "pi_conjugated_nitro_count is greater than zero. This is a 2D structural topology label, not a quantitative statement about effective conjugation strength.",
+          "parent": "has_nitro",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_NN_double_bond",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "derived",
+          "definition": "NN_double_bond_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        }
+      ]
+    },
+    "B5_auxochrome_and_electronic_context": {
+      "description": "Strict structural attachment facts plus explicitly marked donor-acceptor heuristics. Heteroatom attachment requires single-bond connection to the pi-system framework and excludes heteroatoms that are themselves part of the target pi unit.",
+      "implementation_priority": "current",
+      "features": [
+        {
+          "name": "lone_pair_O_pi_attachment_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of oxygen substituents connected through a SINGLE bond to a UV pi-system atom, where the oxygen is not itself part of the target pi unit and is not an acyl oxygen directly bonded to a carbonyl carbon.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "hydroxy_pi_attachment_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of hydroxy oxygens connected through a SINGLE bond to a UV pi-system atom, excluding carboxylic-acid/acyl hydroxy oxygen directly bonded to a carbonyl carbon.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "alkoxy_pi_attachment_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of non-acyl ether-like or alkoxy oxygens connected through a SINGLE bond to a UV pi-system atom. Ester/acyl oxygen directly bonded to a carbonyl carbon is excluded.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "N_pi_attachment_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of nitrogen atoms connected through a SINGLE bond to a UV pi-system atom while not being the atom that defines the target pi unit itself.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "lone_pair_donor_N_pi_attachment_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of donor-capable nitrogen substituents connected through a SINGLE bond to a UV pi-system atom. Amide-like N, imine N, nitrile N, nitro N, and formal-positive/quaternary N are excluded.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "fluorine_pi_attachment_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "Number of fluorine atoms directly attached to atoms belonging to a UV pi-system component.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "donor_attachment_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "Total number of v1.0 donor-like attachments associated with UV pi-system components, defined from hydroxy, alkoxy, and lone-pair-donor nitrogen attachments.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "acceptor_attachment_count",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "Total number of v1.0 acceptor-like motifs associated with UV pi-system components, defined from externally pi-conjugated carbonyl, nitrile, and nitro motifs.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "donor_acceptor_pair_count_same_system",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "Number of donor-like/acceptor-like attachment pairs associated with the same UV pi-system component.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "min_donor_acceptor_pi_path_distance",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "Minimum shortest-path length, measured in UV pi-system graph edges, between a pi-system node bearing a donor-like attachment and a pi-system node bearing an acceptor-like attachment within the same component. Use -1 when no valid donor-acceptor pair exists. Reserved in schema v1.0 because aromatic ring systems are compressed at the system level; a future atom-level positional pi framework is required for meaningful ortho/meta/para-sensitive distances.",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false,
+          "not_applicable_value": -1
+        },
+        {
+          "name": "max_donor_acceptor_pi_path_distance",
+          "type": "integer",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "Maximum shortest-path length, measured in UV pi-system graph edges, among valid donor-acceptor pairs within the same UV pi-system component. Use -1 when no valid donor-acceptor pair exists. Reserved in schema v1.0 because aromatic ring systems are compressed at the system level; a future atom-level positional pi framework is required for meaningful ortho/meta/para-sensitive distances.",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false,
+          "not_applicable_value": -1
+        },
+        {
+          "name": "lone_pair_O_attached_to_pi_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "lone_pair_O_pi_attachment_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "hydroxy_attached_to_pi_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "hydroxy_pi_attachment_count is greater than zero.",
+          "parent": "lone_pair_O_attached_to_pi_system",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "alkoxy_attached_to_pi_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "alkoxy_pi_attachment_count is greater than zero.",
+          "parent": "lone_pair_O_attached_to_pi_system",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "N_attached_to_pi_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "N_pi_attachment_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "lone_pair_donor_N_attached_to_pi_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "lone_pair_donor_N_pi_attachment_count is greater than zero.",
+          "parent": "N_attached_to_pi_system",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "fluorine_attached_to_pi_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "derived",
+          "definition": "fluorine_pi_attachment_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "has_donor_substituted_pi_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "donor_attachment_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false,
+          "heuristic_group_definition": [
+            "hydroxy_attached_to_pi_system",
+            "alkoxy_attached_to_pi_system",
+            "lone_pair_donor_N_attached_to_pi_system"
+          ]
+        },
+        {
+          "name": "has_acceptor_substituted_pi_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "acceptor_attachment_count is greater than zero.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false,
+          "heuristic_group_definition": [
+            "pi_conjugated_carbonyl",
+            "pi_conjugated_nitrile",
+            "pi_conjugated_nitro"
+          ]
+        },
+        {
+          "name": "donor_acceptor_same_conjugated_system",
+          "type": "binary",
+          "source": "uv_pi_system_graph",
+          "derivation": "heuristic",
+          "definition": "At least one donor-like and one acceptor-like motif are associated with the same UV pi-system component.",
+          "training_status": "pending_frequency_audit",
+          "implementation_status": "planned",
+          "data_leakage_risk": false,
+          "notes": "Topology-based heuristic only; it must not automatically be interpreted as a quantitatively established D-pi-A electronic system."
+        }
+      ]
+    },
+    "C_woodward_fieser_reserved": {
+      "description": "Reserved structural inputs for a later Woodward-Fieser / Fieser-Kuhn rule engine. These are defined in schema v1.0 but not implemented in the first structure-annotation builder.",
+      "implementation_priority": "later",
+      "features": [
+        {
+          "name": "wf_diene_applicable",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_diene_class",
+          "type": "categorical",
+          "allowed_values": [
+            "none",
+            "acyclic",
+            "heteroannular",
+            "homoannular"
+          ],
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_conjugated_double_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_extra_conjugated_double_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_alkyl_ring_residue_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_exocyclic_double_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_exocyclic_ring_relation_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_O_auxochrome_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_N_auxochrome_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "wf_enone_applicable",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "enone_alpha_substitution_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "enone_beta_substitution_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "enone_gamma_substitution_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "enone_delta_substitution_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "enone_extended_double_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "enone_exocyclic_double_bond_count",
+          "type": "integer",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        },
+        {
+          "name": "enone_aromatic_attachment",
+          "type": "binary",
+          "source": "molecular_graph",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": false
+        }
+      ]
+    },
+    "D_uv_spectral_descriptors_reserved": {
+      "description": "Reserved descriptors derived from UV-Vis spectra. These must remain physically separated from molecular-structure ground-truth annotations.",
+      "implementation_priority": "later",
+      "data_leakage_policy": "These descriptors must never be used as structural ground-truth targets in the spectrum-to-structure semantic prediction task.",
+      "features": [
+        {
+          "name": "global_max_energy_eV",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "global_max_wavelength_nm",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "global_max_intensity",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "spectral_centroid_eV",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "spectral_centroid_nm",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "absorption_onset_eV",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "absorption_onset_nm",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "peak_count",
+          "type": "integer",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "peak1_energy_eV",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "peak2_energy_eV",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "peak3_energy_eV",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "peak1_intensity",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "peak2_intensity",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "peak3_intensity",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "spectral_width_eV",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        },
+        {
+          "name": "integrated_intensity",
+          "type": "float",
+          "source": "spectrum",
+          "derivation": "reserved",
+          "training_status": "reserved",
+          "implementation_status": "reserved_for_later",
+          "data_leakage_risk": true
+        }
+      ]
+    }
+  },
+  "hierarchies": {
+    "conjugation": {
+      "has_conjugation": [
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "branched_conjugated_system",
+        "multiple_independent_conjugated_systems"
+      ],
+      "isolated_unsaturation": [
+        "isolated_alkene",
+        "isolated_alkyne"
+      ],
+      "has_nonaromatic_conjugation": [
+        "conjugated_diene",
+        "conjugated_enyne",
+        "conjugated_diyne"
+      ],
+      "conjugated_diene": [
+        "conjugated_triene"
+      ],
+      "conjugated_triene": [
+        "extended_polyene"
+      ]
+    },
+    "aromatic": {
+      "has_aromatic_system": [
+        "single_aromatic_ring",
+        "multiple_aromatic_rings",
+        "multiple_independent_aromatic_systems",
+        "carbocyclic_aromatic",
+        "heteroaromatic"
+      ],
+      "multiple_aromatic_rings": [
+        "fused_aromatic_system",
+        "has_biaryl_single_bond_link"
+      ],
+      "heteroaromatic": [
+        "N_heteroaromatic",
+        "O_heteroaromatic"
+      ],
+      "N_heteroaromatic": [
+        "has_pyridine_like_aromatic_N",
+        "has_pyrrole_like_aromatic_N"
+      ]
+    },
+    "carbonyl": {
+      "has_carbonyl": [
+        "isolated_carbonyl",
+        "pi_conjugated_carbonyl"
+      ],
+      "pi_conjugated_carbonyl": [
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "conjugated_aldehyde",
+        "conjugated_ketone",
+        "pi_extended_ester",
+        "pi_extended_amide"
+      ],
+      "alpha_beta_unsaturated_carbonyl": [
+        "extended_unsaturated_carbonyl"
+      ]
+    },
+    "imine": {
+      "has_imine": [
+        "isolated_imine",
+        "pi_conjugated_imine"
+      ]
+    },
+    "nitrile": {
+      "has_nitrile": [
+        "isolated_nitrile",
+        "pi_conjugated_nitrile"
+      ]
+    },
+    "nitro": {
+      "has_nitro": [
+        "pi_conjugated_nitro"
+      ]
+    },
+    "auxochrome": {
+      "lone_pair_O_attached_to_pi_system": [
+        "hydroxy_attached_to_pi_system",
+        "alkoxy_attached_to_pi_system"
+      ],
+      "N_attached_to_pi_system": [
+        "lone_pair_donor_N_attached_to_pi_system"
+      ]
+    }
+  },
+  "consistency_rules": [
+    {
+      "rule": "conjugated_triene implies conjugated_diene",
+      "severity": "error"
+    },
+    {
+      "rule": "extended_polyene implies conjugated_triene",
+      "severity": "error"
+    },
+    {
+      "rule": "conjugated_diene implies has_nonaromatic_conjugation",
+      "severity": "error"
+    },
+    {
+      "rule": "has_nonaromatic_conjugation implies has_conjugation",
+      "severity": "error"
+    },
+    {
+      "rule": "conjugated_diene implies max_linear_conjugated_C=C_units >= 2",
+      "severity": "error"
+    },
+    {
+      "rule": "conjugated_triene implies max_linear_conjugated_C=C_units >= 3",
+      "severity": "error"
+    },
+    {
+      "rule": "extended_polyene implies max_linear_conjugated_C=C_units >= 4",
+      "severity": "error"
+    },
+    {
+      "rule": "cumulated_unsaturation alone must not imply conjugated_diene",
+      "severity": "error"
+    },
+    {
+      "rule": "isolated_alkene implies isolated_alkene_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "isolated_alkyne implies isolated_alkyne_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "multiple_independent_conjugated_systems implies uv_pi_system_component_count >= 2",
+      "severity": "error"
+    },
+    {
+      "rule": "0 <= fraction_uv_pi_system_heavy_atoms <= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "0 <= rdkit_fraction_conjugated_heavy_atoms <= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "single_aromatic_ring implies aromatic_ring_count == 1",
+      "severity": "error"
+    },
+    {
+      "rule": "multiple_aromatic_rings implies aromatic_ring_count >= 2",
+      "severity": "error"
+    },
+    {
+      "rule": "multiple_independent_aromatic_systems implies aromatic_system_count >= 2",
+      "severity": "error"
+    },
+    {
+      "rule": "fused_aromatic_system implies fused_aromatic_ring_system_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "fused_aromatic_system implies multiple_aromatic_rings",
+      "severity": "error"
+    },
+    {
+      "rule": "heteroaromatic implies has_aromatic_system",
+      "severity": "error"
+    },
+    {
+      "rule": "N_heteroaromatic implies heteroaromatic",
+      "severity": "error"
+    },
+    {
+      "rule": "O_heteroaromatic implies heteroaromatic",
+      "severity": "error"
+    },
+    {
+      "rule": "has_pyridine_like_aromatic_N implies N_heteroaromatic",
+      "severity": "error"
+    },
+    {
+      "rule": "has_pyrrole_like_aromatic_N implies N_heteroaromatic",
+      "severity": "error"
+    },
+    {
+      "rule": "has_carbonyl implies carbonyl_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "isolated_carbonyl implies isolated_carbonyl_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "pi_conjugated_carbonyl implies pi_conjugated_carbonyl_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "isolated_carbonyl_count + pi_conjugated_carbonyl_count == carbonyl_count",
+      "severity": "error"
+    },
+    {
+      "rule": "alpha_beta_unsaturated_carbonyl implies pi_conjugated_carbonyl",
+      "severity": "error"
+    },
+    {
+      "rule": "alpha_beta_unsaturated_carbonyl implies max_carbonyl_conjugated_C=C_path_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "extended_unsaturated_carbonyl implies alpha_beta_unsaturated_carbonyl",
+      "severity": "error"
+    },
+    {
+      "rule": "extended_unsaturated_carbonyl implies max_carbonyl_conjugated_C=C_path_count >= 2",
+      "severity": "error"
+    },
+    {
+      "rule": "has_imine implies imine_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "isolated_imine implies has_imine",
+      "severity": "error"
+    },
+    {
+      "rule": "pi_conjugated_imine implies has_imine",
+      "severity": "error"
+    },
+    {
+      "rule": "isolated_imine_count + pi_conjugated_imine_count == imine_count",
+      "severity": "error"
+    },
+    {
+      "rule": "has_nitrile implies nitrile_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "isolated_nitrile implies has_nitrile",
+      "severity": "error"
+    },
+    {
+      "rule": "pi_conjugated_nitrile implies has_nitrile",
+      "severity": "error"
+    },
+    {
+      "rule": "isolated_nitrile_count + pi_conjugated_nitrile_count == nitrile_count",
+      "severity": "error"
+    },
+    {
+      "rule": "has_nitro implies nitro_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "pi_conjugated_nitro implies has_nitro",
+      "severity": "error"
+    },
+    {
+      "rule": "hydroxy_attached_to_pi_system implies lone_pair_O_attached_to_pi_system",
+      "severity": "error"
+    },
+    {
+      "rule": "alkoxy_attached_to_pi_system implies lone_pair_O_attached_to_pi_system",
+      "severity": "error"
+    },
+    {
+      "rule": "lone_pair_donor_N_attached_to_pi_system implies N_attached_to_pi_system",
+      "severity": "error"
+    },
+    {
+      "rule": "has_donor_substituted_pi_system implies donor_attachment_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "has_acceptor_substituted_pi_system implies acceptor_attachment_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "donor_acceptor_same_conjugated_system implies donor_attachment_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "donor_acceptor_same_conjugated_system implies acceptor_attachment_count >= 1",
+      "severity": "error"
+    },
+    {
+      "rule": "donor_acceptor_same_conjugated_system implies donor_acceptor_pair_count_same_system >= 1",
+      "severity": "error"
+    }
+  ],
+  "training_target_selection_policy": {
+    "initial_status": "pending_frequency_audit",
+    "selection_factors": [
+      "chemical relevance to UV-Vis",
+      "positive sample count",
+      "negative sample count",
+      "train validation test coverage",
+      "label redundancy",
+      "label co-occurrence",
+      "hierarchical consistency",
+      "annotation reliability"
+    ],
+    "rare_label_policy": "Rare annotations are retained in the annotation table and moved to reserved status rather than deleted.",
+    "canonical_training_policy": "Annotation availability does not imply that every annotation must be used as a training target."
+  },
+  "planned_output_layout": {
+    "root": "processed/qm9s/uvvis_annotations_v1",
+    "files": [
+      "structure_binary_labels.npy",
+      "structure_numeric_features.npy",
+      "structure_categorical_features.npy",
+      "annotation_valid_mask.npy"
+    ],
+    "metadata": [
+      "uvvis_annotation_schema_v1.0.json",
+      "binary_label_names.json",
+      "numeric_feature_names.json",
+      "categorical_feature_names.json",
+      "annotation_statistics.csv",
+      "annotation_split_statistics.csv",
+      "annotation_cooccurrence.csv",
+      "annotation_build_info.json"
+    ],
+    "reserved_future_files": [
+      "woodward_features.npy",
+      "uvvis_spectral_descriptors.npy"
+    ]
+  },
+  "required_build_metadata": [
+    "schema_version",
+    "annotation_builder_version",
+    "rdkit_version",
+    "python_version",
+    "numpy_version",
+    "aromaticity_model",
+    "source_structure_file",
+    "source_structure_sha256",
+    "source_sample_count",
+    "uv_valid_sample_count",
+    "successful_annotation_count",
+    "failed_annotation_count",
+    "build_timestamp",
+    "git_commit",
+    "schema_revision",
+    "ring_basis",
+    "sanitization_policy",
+    "tautomer_canonicalization",
+    "charge_neutralization",
+    "protomer_normalization",
+    "source_structure_preserved",
+    "uv_pi_system_definition_version"
+  ],
+  "schema_revision": "FINAL",
+  "schema_status": "frozen",
+  "revision_notes": [
+    "Separate RDKit conjugation perception from UV-specific chemical conjugation semantics.",
+    "Introduce an explicit UV pi-system graph for diene/polyene/enyne/diyne and extended-conjugation semantics.",
+    "Prevent cumulated unsaturation such as C=C=C from being counted automatically as an ordinary conjugated diene.",
+    "Fix aromatic ring-system reproducibility by specifying RDKit SymmSSSR and the RDKit default aromaticity model.",
+    "Replace ambiguous or duplicate pi-attachment labels with non-redundant, chemically explicit annotations.",
+    "Tighten O/N auxochrome definitions and separate structural attachment facts from donor/acceptor heuristics.",
+    "Promote motif counts and path-length descriptors as reusable low-level facts from which binary labels can be regenerated."
+  ],
+  "molecular_processing_policy": {
+    "sanitization": "RDKit default SanitizeMol",
+    "aromaticity_model": "RDKit default",
+    "ring_basis": "RDKit SymmSSSR",
+    "tautomer_canonicalization": false,
+    "charge_neutralization": false,
+    "protomer_normalization": false,
+    "source_structure_preserved": true,
+    "policy_note": "The annotated molecular identity must remain the structure paired with the spectrum. No chemistry-changing standardization is permitted before annotation."
+  },
+  "graph_definitions": {
+    "rdkit_conjugated_subgraph": {
+      "definition": "Subgraph formed from bonds for which RDKit Bond.GetIsConjugated() is true and their endpoint atoms.",
+      "role": "Raw cheminformatics descriptor only. It must not by itself define UV-specific diene, triene, polyene, enyne, diyne, or extended-conjugation semantic labels."
+    },
+    "uv_pi_system_graph": {
+      "definition": "Canonical 2D chemical-semantic graph used for UV-specific conjugation labels. Aromatic ring systems are treated as intrinsically delocalized UV pi systems. Non-aromatic pi units are included only when they participate in a coupled conjugated system; isolated non-aromatic pi units are tracked separately and do not create singleton UV pi-system components.",
+      "node_rules": [
+        "Aromatic ring system: one delocalized aromatic-system node.",
+        "Non-aromatic pi unit: explicit C=C, C#C, C=O, C=N, N=N, or C#N motif when chemically relevant.",
+        "Cumulated motifs sharing a central atom, such as C=C=C, are recorded as cumulated_unsaturation and are not treated as ordinary linear conjugated diene/polyene paths."
+      ],
+      "edge_rules": [
+        "Connect two non-aromatic pi units when they form an uninterrupted alternating conjugated path without an sp3 interruption.",
+        "Connect an aromatic ring system to a directly attached exocyclic non-aromatic pi unit when the attachment provides a continuous conjugative path.",
+        "Do not merge two aromatic ring systems connected only by a non-ring single bond; record that relation separately with biaryl_single_bond_link_count.",
+        "Do not create ordinary conjugation edges solely because two multiple bonds share the same central atom in a cumulated system."
+      ],
+      "role": "Canonical graph for diene/polyene/enyne/diyne labels, conjugated-system counts, aromatic/non-aromatic coupling, carbonyl/nitrile/imine/nitro structural conjugation, and coarse donor-acceptor system membership."
+    }
+  },
+  "uv_pi_system_definition_version": "1.0",
+  "freeze_policy": "This file is the frozen Annotation Schema v1.0. Future additions or semantic changes must be introduced in v1.1 or later; v1.0 field meanings must not be silently changed.",
+  "implementation_policy_v1": {
+    "current_builder_scope": [
+      "A_raw_pi_conjugation_descriptors",
+      "B1_conjugation_semantics",
+      "B2_aromatic_semantics",
+      "B3_carbonyl_chromophore_semantics",
+      "B4_nitrogen_chromophore_semantics",
+      "B5_auxochrome_and_electronic_context"
+    ],
+    "reserved_layers": [
+      "C_woodward_fieser_reserved",
+      "D_uv_spectral_descriptors_reserved"
+    ],
+    "rule": "Do not add new v1.0 fields during builder implementation. If a genuinely new annotation is later required, introduce it in schema v1.1."
+  }
+}
