@@ -233,3 +233,20 @@
 * 完整分子结构候选与Top-k
 * 实验域数据（NIST、API-Raman）验证与微调
 * 开放集识别与可解释性分析
+
+## 2026-10-24
+### 完成内容
+* 冻结UV-Vis化学语义标注schema v1.0 FINAL（8层166 features、48条一致性规则、uv_pi_system_graph定义）
+* 编写并运行`scripts/build_qm9s_uvvis_annotations.py`（builder v1.0.1）
+* 129817个样本全部标注成功（0失败，172警告），输出`processed/qm9s/uvvis_annotations_v1_0_1/`（58二值+73数值特征）
+* 完成标注统计（`metadata/uvvis_annotation_statistics_v1_0_1.csv`）与按split审计（`metadata/uvvis_label_split_audit_v1_0_1.csv`）
+### 当前进度
+* UV专属化学语义标注v1.0.1完成；"UV不是弱，而是shared generic标签不匹配"的假设进入可验证阶段
+* QM9S化学空间事实：cumulated_unsaturation=0、N=N=0、羧酸/酰氟/酸酐=0、多独立芳香体系=0、biaryl=0；nitro仅130例（SPARSE）
+* 大部分标签通过计数筛查（COUNT_SCREEN_PASS），少数为SPARSE或NO_TRAIN_POSITIVES
+### 下一步计划
+* 基于审计冻结UV-specific labels v1（active/auxiliary/reserved判定 + 人工抽样核查）
+* UV-specific单模态基线
+* shared vs specific对照
+* 三模态信息画像与模态对比
+* chemistry-aware多模态融合
