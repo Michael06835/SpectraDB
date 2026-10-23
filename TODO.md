@@ -2,9 +2,9 @@
 
 ## 当前阶段
 
-**第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结。**
+**第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结；UV专属化学语义标注 v1.0.1 已完成。**
 
-当前进入第二阶段准备：UV专属化学语义监督与 chemistry-aware 多模态融合。
+当前进入 UV-specific 单模态基线验证：用 UV 专属共轭/发色团标签检验"UV 不是弱，而是 shared generic labels 不匹配"，随后进入 chemistry-aware 多模态融合。
 
 核心研究问题：不是把三条谱简单拼起来，而是让模型学会像化学家一样，知道什么时候该听谁——IR/Raman 承担振动结构证据，UV-Vis 承担共轭/发色团电子结构证据，通过化学证据驱动的自适应融合改善完整结构 Top-k 推断。
 
@@ -34,6 +34,9 @@
 - [x] 训练 UV-Vis 1D-CNN 基线并冻结 UVVIS-v1（test Micro-F1 0.4892±0.0406，Macro-AUROC 0.8501±0.0044）。
 - [x] 完成 UV-Vis 类别不平衡、阈值校准与 BatchNorm 重校准诊断（均保留 UVVIS-v1 默认设置）。
 - [x] 弃用 GDB-9-Ex 为主训练数据，降级为备用外部域/方法迁移数据集。
+- [x] 冻结 UV-Vis 化学语义标注 schema v1.0 FINAL（8 层 166 features、48 条一致性规则、uv_pi_system_graph 定义）。
+- [x] 编写并运行 `scripts/build_qm9s_uvvis_annotations.py`（builder v1.0.1）：129817 样本全部标注成功（0 失败，172 警告），输出 58 个二值标签 + 73 个数值特征。
+- [x] 完成标注统计（`metadata/uvvis_annotation_statistics_v1_0_1.csv`）与按 split 审计（`metadata/uvvis_label_split_audit_v1_0_1.csv`）。
 - [x] 更新 `README.md`、`CHANGELOG.md`、`AGENTS.md`、`TODO.md`。
 - [x] 更新 Git 忽略规则与环境锁定文件。
 
@@ -41,12 +44,12 @@
 
 ## 当前最高优先级
 
-### Priority A：UV专属化学语义标签（Line A，论文核心第一步）
+### Priority A：UV-specific 标签冻结与单模态基线（Line A，论文核心第一步）
 
-- [ ] 设计 UV-specific label taxonomy v0.1（共轭体系有无、共轭路径长度/π-system size、独立共轭系统数量、芳香性/融合芳环、发色团类别与组合、α,β-不饱和羰基、chromophore count/type 等），逐标签说明化学定义、RDKit 判定逻辑、预期频数风险、与 UV 吸收的物理意义。
-- [ ] 用户确认 taxonomy 后，编写 `scripts/build_uvvis_specific_labels.py` 在 QM9S 结构上自动生成标签。
-- [ ] 标签统计核查：positive count / prevalence / 共现 / 稀有类 / 相关类 + 人工抽样核查。
-- [ ] 冻结 UV-specific labels v1。
+- [x] 冻结 UV 标注 schema v1.0 FINAL，自动生成标签（builder v1.0.1，129817 全部成功）。
+- [x] 完成频数统计与 split 审计（COUNT_SCREEN_PASS / SPARSE / NO_TRAIN_POSITIVES 分类）。
+- [ ] 基于审计冻结 UV-specific labels v1：决定每个标签的 active / auxiliary / reserved 状态（SPARSE 与 NO_TRAIN_POSITIVES 标签转 reserved，稀有类保留不删除）。
+- [ ] 人工抽样核查关键标签（共轭体系、发色团、芳香 N、供受体）与化学合理性。
 - [ ] UV-specific 单模态基线（复用冻结 1D-CNN backbone + 专属 head，sanity→full→3 seeds）。
 - [ ] shared vs specific 对照，验证"UV 被问对问题后是否显著变强"。
 
@@ -121,7 +124,8 @@
 
 ### Step 2：UV专属化学语义标签（Line A）
 
-- [ ] taxonomy 设计 → 用户确认 → 自动生成 → 统计核查 → 冻结 v1。
+- [x] taxonomy 设计（schema v1.0 FINAL）→ 自动生成（builder v1.0.1）→ 统计与 split 审计。
+- [ ] 基于审计冻结 UV-specific labels v1（active/auxiliary/reserved 判定 + 人工抽样）。
 - [ ] UV-specific 单模态基线。
 - [ ] shared vs specific 对照。
 
