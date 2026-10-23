@@ -1,4 +1,4 @@
-# SpectraDB Agent 工作说明 最近修改：18:55 8/16/2026
+# SpectraDB Agent 工作说明 最近修改：06:00 10/24/2026
 
 ## 1. 项目定位
 
@@ -66,7 +66,7 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - Raman 1D-CNN：已完成，Raman-v1 已冻结（test Micro-F1 0.9151，Macro-AUROC 0.9911）。
 - UV-Vis 1D-CNN：已完成，UV-Vis-v1 已冻结（test Micro-F1 0.4892，Macro-AUROC 0.8501）。
 - 模态对比：待输出（三模态信息画像）。
-- UV-specific 化学语义标签：下一步（当前最高优先级）。
+- UV-specific 化学语义标签：schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注（129817 全部成功，58 二值 + 73 数值），频数与 split 审计已完成；UV-specific 单模态基线：下一步（当前最高优先级）。
 
 ---
 
@@ -360,6 +360,10 @@ NIST 等数据源可能依赖 CAS。
 
 从结构库生成官能团多标签矩阵（129817×14）。
 
+### `scripts/build_qm9s_uvvis_annotations.py`
+
+按 UV 标注 schema v1.0 在 QM9S 结构上生成 UV 专属化学语义标注（builder v1.0.1，输出 58 二值 + 73 数值特征及统计/审计）。
+
 ### 训练脚本
 
 ### `training/models/spectrum_cnn1d.py`
@@ -503,7 +507,7 @@ Git 中不保存：
 当前最高优先级如下：
 
 1. 更新 `AGENTS.md` 和 `TODO.md`，明确当前阶段策略。
-2. 设计并冻结 UV-specific label taxonomy，编写 `scripts/build_uvvis_specific_labels.py` 自动生成标签（Line A）。
+2. 基于审计冻结 UV-specific labels v1（active/auxiliary/reserved 判定 + 人工抽样核查）（Line A）。
 3. UV-specific 单模态基线 + shared vs specific 对照，验证"UV 被问对问题后是否显著变强"（Line A）。
 4. 三模态信息画像，识别各模态擅长与不擅长的结构子群（Line B）。
 5. chemistry-aware 融合：naive 对照 → generic gating → proposed routing + 消融（Line C，论文核心方法）。
@@ -529,7 +533,8 @@ Git 中不保存：
 
 目标：
 
-- UV-Vis 专属共轭/发色团化学语义监督（UV-specific labels）。
+- UV-Vis 专属共轭/发色团化学语义监督（UV-specific labels）：标注 schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注与审计。
+- UV-specific 单模态基线与 shared/specific 对照。
 - IR、Raman、UV-Vis 化学证据分工的 chemistry-aware 融合。
 - 综合官能团与关键结构特征。
 - 完整分子结构候选推断与 Top-k 排序。
