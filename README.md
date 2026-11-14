@@ -103,4 +103,4 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 * HuggingFace
 * Lightning
 ## 项目状态
-IR、Raman、UV-Vis三个单模态基线已完成并冻结（IR-v1：test Micro-F1 0.9406，Macro-AUROC 0.9954；Raman-v1：0.9151，0.9911；UV-Vis-v1：0.4892，0.8501）；UV专属化学语义标注（schema v1.0 FINAL + builder v1.0.1）与UVSPEC15单模态基线（3 seeds，BN重校准版Micro-F1 0.6580，Macro-AUROC 0.9384）已完成；shared vs specific对照确认UV在专属语义任务上显著变强；下一步开展三模态信息画像与chemistry-aware融合。
+IR、Raman、UV-Vis三个单模态基线已完成并冻结（IR-v1：test Micro-F1 0.9406，Macro-AUROC 0.9954；Raman-v1：0.9151，0.9911；UV-Vis-v1：0.4892，0.8501）；UV专属化学语义标注（schema v1.0 FINAL + builder v1.0.1）与UVSPEC15单模态基线（3 seeds，BN重校准版Micro-F1 0.6580，Macro-AUROC 0.9384）已完成；shared vs specific对照确认UV在专属语义任务上显著变强；UVSPEC15 v1正式实验策略已归档（普通BCE+Training-only BN重估+Validation阈值校准，三seed Mean±SD）；IR/Raman的BN审计尚未同步，多模态融合尚未开始；下一步开展三模态信息画像与chemistry-aware融合。

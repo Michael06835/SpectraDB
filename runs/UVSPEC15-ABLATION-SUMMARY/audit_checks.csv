@@ -1,0 +1,7 @@
+﻿run_name,loss,seed,original_baseline_reproduced,bn_saved_diagnostic_reproduced,label_order_verified
+EXP-UVVIS-003-UVSPEC15-FULL,BCE,42,True,True,True
+EXP-UVVIS-003-UVSPEC15-SEED123,BCE,123,True,True,True
+EXP-UVVIS-003-UVSPEC15-SEED2026,BCE,2026,True,True,True
+EXP-UVVIS-004-UVSPEC15-WBCE,WBCE,42,True,True,True
+EXP-UVVIS-004-UVSPEC15-WBCE-SEED123,WBCE,123,True,True,True
+EXP-UVVIS-004-UVSPEC15-WBCE-SEED2026,WBCE,2026,True,True,True

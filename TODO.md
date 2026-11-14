@@ -2,9 +2,9 @@
 
 ## 当前阶段
 
-**第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结；UV专属化学语义标注 v1.0.1 与 UVSPEC15 单模态基线（3 seeds + BN 重校准）已完成。**
+**第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结；UV专属化学语义标注 v1.0.1 与 UVSPEC15 单模态基线（3 seeds + BN 重校准）已完成，UVSPEC15 v1 正式实验策略已归档。**
 
-shared vs specific 对照已成立（UV 在专属语义任务上显著变强）；当前进入三模态信息画像（Line B）与 chemistry-aware 多模态融合（Line C）。
+注意：IR/Raman 的 Full BN 审计与后处理协议尚未同步完成，不得宣布其最终模型已按统一协议冻结；多模态融合尚未开始。shared vs specific 对照已成立（UV 在专属语义任务上显著变强）；当前进入三模态信息画像（Line B）与 chemistry-aware 多模态融合（Line C）。
 
 核心研究问题：不是把三条谱简单拼起来，而是让模型学会像化学家一样，知道什么时候该听谁——IR/Raman 承担振动结构证据，UV-Vis 承担共轭/发色团电子结构证据，通过化学证据驱动的自适应融合改善完整结构 Top-k 推断。
 
@@ -43,6 +43,10 @@ shared vs specific 对照已成立（UV 在专属语义任务上显著变强）�
 - [x] 完成 shared vs specific 正式对照分析（`runs/UVSPEC15-ANALYSIS/shared_vs_specific_summary.md`），确认 UV 专属语义任务下 UV 显著变强。
 - [x] 更新 `README.md`、`CHANGELOG.md`、`AGENTS.md`、`TODO.md`。
 - [x] 更新 Git 忽略规则与环境锁定文件。
+- [x] 完成 UVSPEC15 v1 正式实验策略归档（`docs/experiments/UVSPEC15_v1_experimental_strategy.md`：明确 Training/Validation/Test 分工与域差异归因）。
+- [x] 完成 UVSPEC15 实验数据一致性审计（checkpoint-seed 对应、原始/BN 重估配套、阈值配套、样本 SD、mAP/AUROC 阈值无关、audit 三项全过）。
+- [x] 新增 `docs/experiments/uvspec15_repro_protocol.md`、`docs/data/uvspec15_label_guide.md`、`docs/experiments/uvspec15_ablation_registry.md`。
+- [x] 修复训练/汇总脚本行尾空格。
 
 ---
 
@@ -75,6 +79,11 @@ shared vs specific 对照已成立（UV 在专属语义任务上显著变强）�
 ---
 
 ## 后续任务
+
+### IR/Raman BN 审计同步（未完成）
+
+- [ ] 对 IR、Raman 现有 checkpoint 执行 Full BN Diagnostic（不安排 Quick Diagnostic）。
+- [ ] 根据 Validation 结果决定是否保存 BN 重估版并重新校准阈值，生成与 UVSPEC15 同构的消融汇总与审计。
 
 ### 完整结构推断与 Top-k（Line D）
 

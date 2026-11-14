@@ -699,7 +699,7 @@ def main():
 
         "experiment":
             "EXP-UVVIS-003-UVSPEC15-FULL",
-        
+
         "modality":
             "uvvis",
 
@@ -1376,7 +1376,7 @@ def main():
 
         "experiment":
             "EXP-UVVIS-003-UVSPEC15-FULL",
-        
+
         "modality":
             "uvvis",
 
