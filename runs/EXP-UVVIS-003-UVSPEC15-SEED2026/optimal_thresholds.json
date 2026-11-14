@@ -1,0 +1,39 @@
+{
+  "experiment": "EXP-UVVIS-003-UVSPEC15-FULL",
+  "source": "validation split only",
+  "default_threshold": 0.5,
+  "thresholds": {
+    "has_conjugation": 0.6318359375,
+    "has_nonaromatic_conjugation": 0.15673828125,
+    "acyclic_conjugated_system": 0.3564453125,
+    "cyclic_conjugated_system": 0.55224609375,
+    "has_aromatic_system": 0.6513671875,
+    "heteroaromatic": 0.640625,
+    "mixed_aromatic_nonaromatic_conjugation": 0.472900390625,
+    "pi_conjugated_carbonyl": 0.2548828125,
+    "alpha_beta_unsaturated_carbonyl": 0.052825927734375,
+    "aryl_carbonyl": 0.2225341796875,
+    "pi_conjugated_imine": 0.1131591796875,
+    "pi_conjugated_nitrile": 0.1300048828125,
+    "has_donor_substituted_pi_system": 0.40673828125,
+    "has_acceptor_substituted_pi_system": 0.240234375,
+    "donor_acceptor_same_conjugated_system": 0.1964111328125
+  },
+  "validation_best_f1": {
+    "has_conjugation": 0.7715799314428171,
+    "has_nonaromatic_conjugation": 0.6180555555555556,
+    "acyclic_conjugated_system": 0.49163449163449163,
+    "cyclic_conjugated_system": 0.7130373995106605,
+    "has_aromatic_system": 0.6280875088214538,
+    "heteroaromatic": 0.6214235043745566,
+    "mixed_aromatic_nonaromatic_conjugation": 0.5113636363636364,
+    "pi_conjugated_carbonyl": 0.6311336717428089,
+    "alpha_beta_unsaturated_carbonyl": 0.4920634920634921,
+    "aryl_carbonyl": 0.33447098976109213,
+    "pi_conjugated_imine": 0.32019704433497537,
+    "pi_conjugated_nitrile": 0.2551181102362205,
+    "has_donor_substituted_pi_system": 0.49216087252897067,
+    "has_acceptor_substituted_pi_system": 0.619814878299623,
+    "donor_acceptor_same_conjugated_system": 0.3228346456692914
+  }
+}

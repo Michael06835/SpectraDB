@@ -1,4 +1,4 @@
-# SpectraDB Agent 工作说明 最近修改：06:00 10/24/2026
+# SpectraDB Agent 工作说明 最近修改：20:35 11/14/2026
 
 ## 1. 项目定位
 
@@ -66,7 +66,10 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - Raman 1D-CNN：已完成，Raman-v1 已冻结（test Micro-F1 0.9151，Macro-AUROC 0.9911）。
 - UV-Vis 1D-CNN：已完成，UV-Vis-v1 已冻结（test Micro-F1 0.4892，Macro-AUROC 0.8501）。
 - 模态对比：待输出（三模态信息画像）。
-- UV-specific 化学语义标签：schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注（129817 全部成功，58 二值 + 73 数值），频数与 split 审计已完成；UV-specific 单模态基线：下一步（当前最高优先级）。
+- UV-specific 化学语义标签：schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注（129817 全部成功，58 二值 + 73 数值），频数与 split 审计已完成；UVSPEC15（15 个 UV 专属标签）已选定并生成标签矩阵。
+- UVSPEC15 单模态基线：已完成（3 seeds，含阈值校准、BN 诊断、BN 重校准与 WBCE 对照）。
+- shared vs specific 对照：已完成（`runs/UVSPEC15-ANALYSIS/`，UV 专属语义任务显著优于 shared 通用任务）。
+- 三模态信息画像（Line B）：下一步（当前最高优先级）。
 
 ---
 
@@ -364,6 +367,10 @@ NIST 等数据源可能依赖 CAS。
 
 按 UV 标注 schema v1.0 在 QM9S 结构上生成 UV 专属化学语义标注（builder v1.0.1，输出 58 二值 + 73 数值特征及统计/审计）。
 
+### `scripts/prepare_uvspec15_labels.py`
+
+从 UV 标注矩阵提取 UVSPEC15 标签集（15 个 UV 专属标签），生成 `uvspec15_labels.npy`（129817×15）与 provenance manifest。
+
 ### 训练脚本
 
 ### `training/models/spectrum_cnn1d.py`
@@ -385,6 +392,14 @@ Raman 1D-CNN 训练脚本（每个随机种子一份脚本）。
 ### `training/train_uvvis_*.py`
 
 UV-Vis 1D-CNN 训练脚本（每个随机种子一份脚本）。
+
+### `training/train_uvvis_uvspec15*.py`
+
+UVSPEC15 单模态基线训练脚本（每个随机种子一份；Weighted BCE 变体单独脚本）。
+
+### `training/diagnose_uvspec15_batchnorm*.py` / `training/save_uvspec15_bn_checkpoint.py` / `training/calibrate_uvspec15_bn_thresholds.py`
+
+BN 诊断、BN 重校准模型保存与 BN 后阈值校准脚本。
 
 ### `training/calibrate_ir_thresholds.py` / `training/finalize_ir_results.py`
 
@@ -507,13 +522,11 @@ Git 中不保存：
 当前最高优先级如下：
 
 1. 更新 `AGENTS.md` 和 `TODO.md`，明确当前阶段策略。
-2. 基于审计冻结 UV-specific labels v1（active/auxiliary/reserved 判定 + 人工抽样核查）（Line A）。
-3. UV-specific 单模态基线 + shared vs specific 对照，验证"UV 被问对问题后是否显著变强"（Line A）。
-4. 三模态信息画像，识别各模态擅长与不擅长的结构子群（Line B）。
-5. chemistry-aware 融合：naive 对照 → generic gating → proposed routing + 消融（Line C，论文核心方法）。
-6. 完整结构 Top-k：融合证据成立后进入（Line D）。
-7. 鲁棒性与实验域：缺失/噪声模态、NIST/API-Raman 验证（Line F/G）。
-8. 开放集与可解释性分析（Line H/I）。
+2. 三模态信息画像：IR/Raman 在 UVSPEC15 标签上的 baseline + 与 UV 的 per-label 对比，识别各模态擅长与不擅长的结构子群（Line B）。
+3. chemistry-aware 融合：naive 对照 → generic gating → proposed routing + 消融（Line C，论文核心方法）。
+4. 完整结构 Top-k：融合证据成立后进入（Line D）。
+5. 鲁棒性与实验域：缺失/噪声模态、NIST/API-Raman 验证（Line F/G）。
+6. 开放集与可解释性分析（Line H/I）。
 
 ---
 

@@ -1,0 +1,37 @@
+{
+  "experiment": "EXP-UVVIS-004-UVSPEC15-WBCE",
+  "checkpoint": "best_model.pt",
+  "label_set": "UVSPEC15",
+  "num_workers": 4,
+  "calibration": "per-label F1 optimization on validation split",
+  "default_threshold": 0.5,
+  "validation_default": {
+    "micro_f1": 0.5604197027105801,
+    "macro_f1": 0.3288914145259142,
+    "micro_precision": 0.5893820500245218,
+    "micro_recall": 0.5341704633848205
+  },
+  "validation_calibrated": {
+    "micro_f1": 0.577926622013396,
+    "macro_f1": 0.47493562333653094,
+    "micro_precision": 0.5252112292177705,
+    "micro_recall": 0.6424047116346261
+  },
+  "test_default": {
+    "micro_f1": 0.6101921673558744,
+    "macro_f1": 0.3382316649676068,
+    "micro_precision": 0.6531276443402981,
+    "micro_recall": 0.5725534950071327
+  },
+  "test_calibrated": {
+    "micro_f1": 0.6099353397906982,
+    "macro_f1": 0.4807743176309634,
+    "micro_precision": 0.559664506290507,
+    "micro_recall": 0.6701283880171184
+  },
+  "test_threshold_free": {
+    "mAP": 0.487246782812416,
+    "macro_AUROC": 0.9241277257605715
+  },
+  "note": "Thresholds were selected on validation data only and then frozen for test. mAP and AUROC are threshold-free and therefore unchanged."
+}

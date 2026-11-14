@@ -1,0 +1,43 @@
+{
+  "experiment": "EXP-UVVIS-003-UVSPEC15-SEED123",
+  "seed": 123,
+  "source": "validation split only",
+  "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\UVSPEC15-BN-RECALIBRATED\\EXP-UVVIS-003-UVSPEC15-SEED123\\best_model_bn_recalibrated.pt",
+  "checkpoint_sha256": "07cb7fbca5ab363a63859be34cb845e985d9f8d7beae7c97b532400f85d1d00c",
+  "bn_recalibrated": true,
+  "default_threshold": 0.5,
+  "thresholds": {
+    "has_conjugation": 0.466064453125,
+    "has_nonaromatic_conjugation": 0.1363525390625,
+    "acyclic_conjugated_system": 0.2186279296875,
+    "cyclic_conjugated_system": 0.43994140625,
+    "has_aromatic_system": 0.474853515625,
+    "heteroaromatic": 0.3759765625,
+    "mixed_aromatic_nonaromatic_conjugation": 0.422119140625,
+    "pi_conjugated_carbonyl": 0.25390625,
+    "alpha_beta_unsaturated_carbonyl": 0.13525390625,
+    "aryl_carbonyl": 0.2313232421875,
+    "pi_conjugated_imine": 0.1346435546875,
+    "pi_conjugated_nitrile": 0.11358642578125,
+    "has_donor_substituted_pi_system": 0.3291015625,
+    "has_acceptor_substituted_pi_system": 0.2861328125,
+    "donor_acceptor_same_conjugated_system": 0.31103515625
+  },
+  "validation_best_f1": {
+    "has_conjugation": 0.807930214115781,
+    "has_nonaromatic_conjugation": 0.6002353864260496,
+    "acyclic_conjugated_system": 0.4406779661016949,
+    "cyclic_conjugated_system": 0.7516618373956026,
+    "has_aromatic_system": 0.6343337334933974,
+    "heteroaromatic": 0.6379460400348129,
+    "mixed_aromatic_nonaromatic_conjugation": 0.5110456553755522,
+    "pi_conjugated_carbonyl": 0.6335908906059373,
+    "alpha_beta_unsaturated_carbonyl": 0.4366013071895425,
+    "aryl_carbonyl": 0.3532763532763533,
+    "pi_conjugated_imine": 0.2674772036474164,
+    "pi_conjugated_nitrile": 0.2130492676431425,
+    "has_donor_substituted_pi_system": 0.4984802431610943,
+    "has_acceptor_substituted_pi_system": 0.6148123097734189,
+    "donor_acceptor_same_conjugated_system": 0.34421364985163205
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "batchnorm_layers": 12,
+  "train_batches_used": 203,
+  "train_samples_used": 103853,
+  "recalibration": "train split only; reset running stats; cumulative batch momentum; no optimizer",
+  "source_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-UVVIS-003-UVSPEC15-SEED2026\\best_model.pt",
+  "source_sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+  "run_directory": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+  "seed": 2026,
+  "batch_size": 512,
+  "num_workers": 4,
+  "changed_bn_buffer_count": 36,
+  "checkpoint_type": "postprocessed_bn_running_statistics",
+  "note": "Training-only BN buffer recalibration; no gradient or optimizer updates",
+  "saved_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\UVSPEC15-BN-RECALIBRATED\\EXP-UVVIS-003-UVSPEC15-SEED2026\\best_model_bn_recalibrated.pt",
+  "saved_sha256": "c04c3ccc00ec155251280d9ad746e017bf4eadc4c588c8a54fc737a5633c72f1"
+}

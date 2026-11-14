@@ -1,0 +1,13 @@
+{
+  "experiment": "EXP-UVVIS-003-UVSPEC15-FULL",
+  "modality": "uvvis",
+  "best_epoch": 4,
+  "best_val_mAP": 0.4503972633354555,
+  "test_loss": 0.23793699185126974,
+  "test_micro_f1": 0.5176372750583289,
+  "test_macro_f1": 0.35582026240017467,
+  "test_micro_precision": 0.43487036174507065,
+  "test_micro_recall": 0.6393152639087019,
+  "test_mAP": 0.47131274090681013,
+  "test_macro_AUROC": 0.9026041691379437
+}

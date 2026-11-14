@@ -1,0 +1,50 @@
+{
+  "experiment": "EXP-UVVIS-003-UVSPEC15-SEED123",
+  "seed": 123,
+  "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\UVSPEC15-BN-RECALIBRATED\\EXP-UVVIS-003-UVSPEC15-SEED123\\best_model_bn_recalibrated.pt",
+  "checkpoint_sha256": "07cb7fbca5ab363a63859be34cb845e985d9f8d7beae7c97b532400f85d1d00c",
+  "label_set": "UVSPEC15",
+  "batch_size": 512,
+  "num_workers": 4,
+  "model_postprocessing": "TRAIN-only BatchNorm buffer recalibration",
+  "calibration": "Per-label F1 optimization on Validation split only",
+  "default_threshold": 0.5,
+  "validation_default": {
+    "micro_f1": 0.6115958523014668,
+    "macro_f1": 0.4092108744591299,
+    "micro_precision": 0.7094763092269327,
+    "micro_recall": 0.5374486054006
+  },
+  "validation_calibrated": {
+    "micro_f1": 0.6260166760448105,
+    "macro_f1": 0.5163554705394285,
+    "micro_precision": 0.58,
+    "micro_recall": 0.6799644404933881
+  },
+  "validation_threshold_free": {
+    "mAP": 0.5156527252017183,
+    "macro_AUROC": 0.9255480342713726
+  },
+  "test_default": {
+    "micro_f1": 0.6466348463977961,
+    "macro_f1": 0.4457557440222563,
+    "micro_precision": 0.7371457785568215,
+    "micro_recall": 0.5759201141226818
+  },
+  "test_calibrated": {
+    "micro_f1": 0.6464011729898149,
+    "macro_f1": 0.5259253186996823,
+    "micro_precision": 0.5972517902070834,
+    "micro_recall": 0.7043651925820257
+  },
+  "test_threshold_free": {
+    "mAP": 0.5518362619052908,
+    "macro_AUROC": 0.9346666900866026
+  },
+  "prior_bn_diagnostic_val_check": {
+    "prior_val_mAP": 0.5156513624657167,
+    "saved_checkpoint_val_mAP": 0.5156527252017183,
+    "difference": 1.362736001597753e-06
+  },
+  "note": "Test never used to optimize thresholds. mAP/AUROC are threshold-free."
+}

@@ -250,3 +250,18 @@
 * shared vs specific对照
 * 三模态信息画像与模态对比
 * chemistry-aware多模态融合
+
+## 2026-11-14
+### 完成内容
+* 冻结UVSPEC15标签集（15个UV专属共轭/发色团标签），生成`processed/qm9s/prepared/uvspec15_labels.npy`（129817×15）与provenance manifest
+* 完成UVSPEC15单模态基线三随机种子训练（seed 42/123/2026）
+* 完成阈值校准、完整BN诊断、BN重校准模型保存与BN后阈值校准（普通BCE与Weighted BCE各3 seeds）
+* 完成Weighted BCE三随机种子对照实验
+* 完成shared vs specific正式对照分析（`runs/UVSPEC15-ANALYSIS/shared_vs_specific_summary.md`）
+### 当前进度
+* shared vs specific对照成立：同一UV光谱、同一backbone、同一split，仅换标签集，UVSPEC15（BN重校准）达test Micro-F1 0.6580±0.0154、mAP 0.5728±0.0203、Macro-AUROC 0.9384±0.0040，显著优于UV-v1 shared（0.4892/0.5053/0.8501）
+* 结论：UV不是弱，而是shared generic标签不匹配；BN重校准显著降低三seed方差（训练震荡所致）
+* Weighted BCE三seed对照确认不采用（整体指标仍略低）
+### 下一步计划
+* 三模态信息画像（Line B）：IR/Raman在UVSPEC15标签上的baseline
+* naive fusion对照 → chemistry-aware routing（Line C）

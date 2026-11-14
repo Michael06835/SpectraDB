@@ -2,9 +2,9 @@
 
 ## 当前阶段
 
-**第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结；UV专属化学语义标注 v1.0.1 已完成。**
+**第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结；UV专属化学语义标注 v1.0.1 与 UVSPEC15 单模态基线（3 seeds + BN 重校准）已完成。**
 
-当前进入 UV-specific 单模态基线验证：用 UV 专属共轭/发色团标签检验"UV 不是弱，而是 shared generic labels 不匹配"，随后进入 chemistry-aware 多模态融合。
+shared vs specific 对照已成立（UV 在专属语义任务上显著变强）；当前进入三模态信息画像（Line B）与 chemistry-aware 多模态融合（Line C）。
 
 核心研究问题：不是把三条谱简单拼起来，而是让模型学会像化学家一样，知道什么时候该听谁——IR/Raman 承担振动结构证据，UV-Vis 承担共轭/发色团电子结构证据，通过化学证据驱动的自适应融合改善完整结构 Top-k 推断。
 
@@ -37,6 +37,10 @@
 - [x] 冻结 UV-Vis 化学语义标注 schema v1.0 FINAL（8 层 166 features、48 条一致性规则、uv_pi_system_graph 定义）。
 - [x] 编写并运行 `scripts/build_qm9s_uvvis_annotations.py`（builder v1.0.1）：129817 样本全部标注成功（0 失败，172 警告），输出 58 个二值标签 + 73 个数值特征。
 - [x] 完成标注统计（`metadata/uvvis_annotation_statistics_v1_0_1.csv`）与按 split 审计（`metadata/uvvis_label_split_audit_v1_0_1.csv`）。
+- [x] 完成 UVSPEC15 单模态基线三随机种子训练（seed 42/123/2026）。
+- [x] 完成 UVSPEC15 阈值校准、完整 BN 诊断、BN 重校准模型保存与 BN 后阈值校准（普通 BCE 与 Weighted BCE 各 3 seeds）。
+- [x] 完成 Weighted BCE 三随机种子对照实验（确认不采用）。
+- [x] 完成 shared vs specific 正式对照分析（`runs/UVSPEC15-ANALYSIS/shared_vs_specific_summary.md`），确认 UV 专属语义任务下 UV 显著变强。
 - [x] 更新 `README.md`、`CHANGELOG.md`、`AGENTS.md`、`TODO.md`。
 - [x] 更新 Git 忽略规则与环境锁定文件。
 
@@ -44,14 +48,14 @@
 
 ## 当前最高优先级
 
-### Priority A：UV-specific 标签冻结与单模态基线（Line A，论文核心第一步）
+### Priority A：UV-specific 标签冻结与单模态基线（Line A，已完成）
 
 - [x] 冻结 UV 标注 schema v1.0 FINAL，自动生成标签（builder v1.0.1，129817 全部成功）。
 - [x] 完成频数统计与 split 审计（COUNT_SCREEN_PASS / SPARSE / NO_TRAIN_POSITIVES 分类）。
-- [ ] 基于审计冻结 UV-specific labels v1：决定每个标签的 active / auxiliary / reserved 状态（SPARSE 与 NO_TRAIN_POSITIVES 标签转 reserved，稀有类保留不删除）。
-- [ ] 人工抽样核查关键标签（共轭体系、发色团、芳香 N、供受体）与化学合理性。
-- [ ] UV-specific 单模态基线（复用冻结 1D-CNN backbone + 专属 head，sanity→full→3 seeds）。
-- [ ] shared vs specific 对照，验证"UV 被问对问题后是否显著变强"。
+- [x] 基于审计选定 UVSPEC15（15 个 UV 专属标签）并生成标签矩阵与 provenance manifest。
+- [ ] 人工抽样核查关键标签（共轭体系、发色团、芳香 N、供受体）与化学合理性（可选复核）。
+- [x] UVSPEC15 单模态基线（3 seeds + 阈值校准 + BN 诊断 + BN 重校准 + WBCE 对照）。
+- [x] shared vs specific 对照，验证"UV 被问对问题后显著变强"（见 `runs/UVSPEC15-ANALYSIS/`）。
 
 ### Priority B：三模态信息画像（Line B）
 
@@ -122,12 +126,12 @@
 
 - [x] IR-v1、Raman-v1、UV-Vis-v1 全部冻结。
 
-### Step 2：UV专属化学语义标签（Line A）
+### Step 2：UV专属化学语义标签（Line A）——已完成
 
 - [x] taxonomy 设计（schema v1.0 FINAL）→ 自动生成（builder v1.0.1）→ 统计与 split 审计。
-- [ ] 基于审计冻结 UV-specific labels v1（active/auxiliary/reserved 判定 + 人工抽样）。
-- [ ] UV-specific 单模态基线。
-- [ ] shared vs specific 对照。
+- [x] 基于审计选定 UVSPEC15（15 标签）并冻结标签矩阵。
+- [x] UVSPEC15 单模态基线（3 seeds + BN 重校准）。
+- [x] shared vs specific 对照（`runs/UVSPEC15-ANALYSIS/shared_vs_specific_summary.md`）。
 
 ### Step 3：模态对比与信息画像（Line B）
 
