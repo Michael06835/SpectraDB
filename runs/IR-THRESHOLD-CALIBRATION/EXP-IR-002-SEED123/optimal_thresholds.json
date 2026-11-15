@@ -1,0 +1,42 @@
+{
+  "experiment": "EXP-IR-002-SEED123",
+  "loss": "wbce",
+  "seed": 123,
+  "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-IR-002-SEED123\\best_model.pt",
+  "checkpoint_sha256": "6c1f0ae3ad01a03a1dd1d094ae614460af56d9f1973016de5fe6709cd8ea94d8",
+  "source": "validation split only",
+  "default_threshold": 0.5,
+  "thresholds": {
+    "aldehyde": 0.96484375,
+    "alkene": 0.29150390625,
+    "alkyne": 0.986328125,
+    "amide": 0.11126708984375,
+    "amine": 0.38330078125,
+    "c_f_bond": 0.79443359375,
+    "carbonyl": 0.1795654296875,
+    "ester": 0.279296875,
+    "ether": 0.64892578125,
+    "hydroxyl": 0.71044921875,
+    "imine": 0.724609375,
+    "ketone": 0.7841796875,
+    "nitrile": 0.044921875,
+    "nitro": 0.476806640625
+  },
+  "validation_best_f1": {
+    "aldehyde": 0.9858766792972786,
+    "alkene": 0.9767841788478074,
+    "alkyne": 0.9790622235328812,
+    "amide": 0.9236760124610591,
+    "amine": 0.8725067385444744,
+    "c_f_bond": 0.8528138528138528,
+    "carbonyl": 0.9854698851652215,
+    "ester": 0.9138461538461539,
+    "ether": 0.938616264955783,
+    "hydroxyl": 0.9978461928290892,
+    "imine": 0.9241846675137654,
+    "ketone": 0.9070053256861941,
+    "nitrile": 0.9763365468886942,
+    "nitro": 0.7999999999999999
+  },
+  "frozen_before_test_metrics": true
+}

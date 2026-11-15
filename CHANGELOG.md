@@ -270,3 +270,26 @@
 ### 下一步计划
 * 三模态信息画像（Line B）：IR/Raman在UVSPEC15标签上的baseline
 * naive fusion对照 → chemistry-aware routing（Line C）
+
+## 2026-11-15
+### 完成内容
+* 补齐 WBCE Seed 123 / 2026 训练，IR 达到 6 个独立模型（BCE/WBCE × seed 42/123/2026）
+* 新增 `training/diagnose_ir_batchnorm_full.py`（UVSPEC15 Full BN 诊断的 IR 移植，仅 Full，不含 Quick）
+* 完成 6 次 Full BN Diagnostic（严格串行），6 份 JSON 通过基线复现、参数不变性、BN 统计量与源文件保护检查
+* 新增 `training/save_ir_bn_checkpoint.py`，保存 6 份 Training-only BN 重估 checkpoint 与 manifest（源/重估 SHA256、配置摘要、数据规模、与诊断记录的一致性核验）
+* 新增 `training/calibrate_ir_original_thresholds.py` 与 `training/calibrate_ir_recalibrated_thresholds.py`，完成 12 次 Validation 逐标签 F1 阈值校准（6 Original + 6 Recalibrated），阈值在计算任何 Test 指标前落盘，Test 不参与拟合
+* 新增 `training/summarize_ir_ablation.py`，生成 24 条件消融汇总（24+24 条件、16 组 Mean±SD、84 条配对、672 行逐标签、48 条来源登记、6 份审计），全部只读、含 manifest 哈希链核验
+* 新增 `docs/experiments/IR_v1_experimental_strategy.md` 与 `docs/experiments/IR_v1_final_decision.md`
+* 新增 `docs/experiments/ir_ablation_registry.md` 与 `docs/experiments/ir_repro_protocol.md`（与 UVSPEC15 对齐的溯源登记表与复现协议）
+* 新增 `docs/experiments/UVSPEC15_v1_final_decision.md`（补齐 UVSPEC15 缺失的独立 Final Decision 文档；章节与统计口径同 IR，结论按 UVSPEC15 自身数据得出，正式配置维持 BCE + Recalibrated BN + Validation-F1）
+* 废弃脚本归档：`training/calibrate_ir_thresholds.py` 实现迁至 `archive/2026-11-15/calibrate_ir_thresholds.py`（内容未改，992 行）；原路径改为弃用入口，直接运行立即非零退出且不加载数据/不写文件；同步更新 `ir_repro_protocol.md`、`IR_v1_experimental_strategy.md`、`TODO.md`、`AGENTS.md` 中的引用
+* 废止并移除早期 IR 专属复杂方案（5×5 交叉拟合、P1–P5、L1/L2′/L3），IR 全面对齐 UVSPEC15 v1 已验证流程
+### 当前进度
+* **IR v1 冻结归档**：6/6 模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint、12/12 阈值校准、24/24 消融条件、48 条 split-level 与 672 条逐标签记录全部齐备
+* 最终配置：主方案 BCE + Original BN + Validation-F1（Validation Micro-F1 0.9505±0.0025；Test 0.9364±0.0054）；备选 BCE + Recalibrated BN + Validation-F1（Validation Macro-F1 0.9299±0.0035，mAP 0.9607±0.0067）；固定基线 BCE + Original BN + 0.5（Test Micro-F1 0.9405±0.0048）
+* 观察到阈值校准的 Validation 增益（+0.0035～+0.0071 Micro-F1）未稳定迁移至 Test（−0.0011～−0.0042），已如实记录并讨论，不以 Test 反向调整决策
+* 历史 `runs/IR-v1-FINAL/` 保持 2026-08-14 原样未改写
+### 下一步计划
+* **Raman 同构实验（下一步重点）**：Full BN Diagnostic → BN 重估 checkpoint → 12 次阈值校准 → 24 条件汇总，复用 IR 的四个脚本
+* 三模态信息画像（Line B）与 chemistry-aware 融合（Line C）
+* IR v1 归档提交（等待批准）

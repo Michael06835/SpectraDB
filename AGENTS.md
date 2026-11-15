@@ -62,8 +62,8 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - 结构标注：已完成。
 - scaffold split：已完成。
 - 官能团多标签（14 类）：已完成。
-- IR 1D-CNN：已完成，IR-v1 已冻结（test Micro-F1 0.9406，Macro-AUROC 0.9954）。
-- Raman 1D-CNN：已完成，Raman-v1 已冻结（test Micro-F1 0.9151，Macro-AUROC 0.9911）。
+- IR 1D-CNN：已完成，**IR-v1 已冻结归档**（6 模型 × 2 BN × 2 阈值 = 24 条件；主方案 BCE + Original BN + Validation-F1，Validation Micro-F1 0.9505±0.0025 / Test 0.9364±0.0054；备选 BCE + Recalibrated BN + Validation-F1；固定基线 BCE + Original BN + 0.5。决策记录见 `docs/experiments/IR_v1_final_decision.md`）。
+- Raman 1D-CNN：已完成，Raman-v1 已冻结（test Micro-F1 0.9151，Macro-AUROC 0.9911）；**Raman 的同构 BN 审计与 24 条件消融尚未开展，为下一步重点**。
 - UV-Vis 1D-CNN：已完成，UV-Vis-v1 已冻结（test Micro-F1 0.4892，Macro-AUROC 0.8501）。
 - 模态对比：待输出（三模态信息画像）。
 - UV-specific 化学语义标签：schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注（129817 全部成功，58 二值 + 73 数值），频数与 split 审计已完成；UVSPEC15（15 个 UV 专属标签）已选定并生成标签矩阵。
@@ -401,9 +401,17 @@ UVSPEC15 单模态基线训练脚本（每个随机种子一份；Weighted BCE �
 
 BN 诊断、BN 重校准模型保存与 BN 后阈值校准脚本。
 
-### `training/calibrate_ir_thresholds.py` / `training/finalize_ir_results.py`
+### `training/calibrate_ir_original_thresholds.py` / `training/calibrate_ir_recalibrated_thresholds.py`
 
-阈值校准与结果汇总脚本。
+IR v1 的 Original 与 Recalibrated BN 阈值校准（参数化：`--loss {bce,wbce} --seed {42,123,2026}`），输出至 `runs/IR-THRESHOLD-CALIBRATION/` 与 `runs/IR-BN-THRESHOLD-CALIBRATION/`。
+
+### `training/diagnose_ir_batchnorm_full.py` / `training/save_ir_bn_checkpoint.py` / `training/summarize_ir_ablation.py`
+
+IR v1 的 Full BN 诊断、BN 重估 checkpoint 保存与 24 条件消融汇总（均只读源码 + 防覆盖 + 独立落盘）。
+
+### `training/calibrate_ir_thresholds.py`（已废弃，仅弃用入口）
+
+原单 Seed 阈值校准实现已迁至 `archive/2026-11-15/calibrate_ir_thresholds.py`；当前文件直接运行会立即以非零状态退出，不做任何计算。历史汇总脚本 `training/finalize_ir_results.py` 保留（IR-v1 第一阶段汇总）。
 
 ---
 

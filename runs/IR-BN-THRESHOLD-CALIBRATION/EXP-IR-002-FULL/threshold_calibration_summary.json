@@ -1,0 +1,65 @@
+{
+  "experiment": "EXP-IR-002-FULL",
+  "loss": "wbce",
+  "seed": 42,
+  "bn_state": "recalibrated",
+  "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\IR-BN-RECALIBRATED\\EXP-IR-002-FULL\\best_model_bn_recalibrated.pt",
+  "checkpoint_sha256": "9433c97510f698e13ec463f33f2a68faa201b438929e46fd8c235154bcc17b3b",
+  "original_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-IR-002-FULL\\best_model.pt",
+  "original_sha256": "cda0b8019588874c33769f77741cb4cbe7804bb3cbac36b59458bfd4e0f4218c",
+  "bn_recalibration_manifest": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\IR-BN-RECALIBRATED\\EXP-IR-002-FULL\\bn_recalibration_manifest.json",
+  "checkpoint_epoch": 10,
+  "changed_bn_buffer_count": 36,
+  "label_set": "IR_FG14",
+  "num_labels": 14,
+  "batch_size": 512,
+  "num_workers": 4,
+  "normalization": "max",
+  "calibration": "per-label F1 optimization on validation split, refitted on the recalibrated BN probabilities",
+  "default_threshold": 0.5,
+  "validation_default": {
+    "micro_f1": 0.9343304819735602,
+    "macro_f1": 0.9061571058946962,
+    "micro_precision": 0.9294249316962375,
+    "micro_recall": 0.9392880904856953
+  },
+  "validation_calibrated": {
+    "micro_f1": 0.9399639949130427,
+    "macro_f1": 0.9217148143907838,
+    "micro_precision": 0.9333814412700495,
+    "micro_recall": 0.9466400532268796
+  },
+  "test_default": {
+    "micro_f1": 0.9276862464183381,
+    "macro_f1": 0.8982208329887368,
+    "micro_precision": 0.9121355120439498,
+    "micro_recall": 0.9437764174318612
+  },
+  "test_calibrated": {
+    "micro_f1": 0.9259550441339385,
+    "macro_f1": 0.9073798826578834,
+    "micro_precision": 0.9084566299698479,
+    "micro_recall": 0.9441407958023612
+  },
+  "test_threshold_free": {
+    "mAP": 0.9646336139030718,
+    "macro_AUROC": 0.9944826440573015
+  },
+  "diagnostic_reference": {
+    "diagnostic_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\IR-BN-DIAGNOSTICS\\EXP-IR-002-FULL\\batchnorm_full_diagnostic.json",
+    "max_abs_diff": 3.6437837049985156e-05,
+    "checked": [
+      "test.mAP",
+      "test.macro_AUROC",
+      "test.macro_f1",
+      "test.micro_f1",
+      "test.micro_precision",
+      "test.micro_recall",
+      "validation.macro_f1",
+      "validation.micro_f1",
+      "validation.micro_precision",
+      "validation.micro_recall"
+    ]
+  },
+  "note": "Thresholds were selected on validation data only and frozen before any test metric was computed. mAP and AUROC are threshold-free and therefore unchanged by the threshold choice. Original-BN thresholds were not reused."
+}

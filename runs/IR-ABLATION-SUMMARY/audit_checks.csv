@@ -1,0 +1,7 @@
+﻿run_name,loss,seed,original_baseline_reproduced,bn_saved_diagnostic_reproduced,label_order_verified,manifest_hash_chain_verified
+EXP-IR-001-FULL,BCE,42,True,True,True,True
+EXP-IR-001-SEED123,BCE,123,True,True,True,True
+EXP-IR-001-SEED2026,BCE,2026,True,True,True,True
+EXP-IR-002-FULL,WBCE,42,True,True,True,True
+EXP-IR-002-SEED123,WBCE,123,True,True,True,True
+EXP-IR-002-SEED2026,WBCE,2026,True,True,True,True

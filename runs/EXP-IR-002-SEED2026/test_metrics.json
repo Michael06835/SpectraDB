@@ -1,0 +1,12 @@
+{
+  "experiment": "EXP-IR-002-SEED2026",
+  "best_epoch": 11,
+  "best_val_mAP": 0.9564671883983994,
+  "test_loss": 0.07709685545858071,
+  "test_micro_f1": 0.931321596201917,
+  "test_macro_f1": 0.9067495764146856,
+  "test_micro_precision": 0.9194332990093385,
+  "test_micro_recall": 0.9435213525725112,
+  "test_mAP": 0.9626117385657017,
+  "test_macro_AUROC": 0.994563572225539
+}

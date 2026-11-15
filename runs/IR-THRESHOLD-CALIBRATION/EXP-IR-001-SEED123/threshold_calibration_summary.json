@@ -1,0 +1,44 @@
+{
+  "experiment": "EXP-IR-001-SEED123",
+  "loss": "bce",
+  "seed": 123,
+  "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-IR-001-SEED123\\best_model.pt",
+  "checkpoint_sha256": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+  "checkpoint_epoch": 30,
+  "label_set": "IR_FG14",
+  "num_labels": 14,
+  "batch_size": 512,
+  "num_workers": 4,
+  "normalization": "max",
+  "calibration": "per-label F1 optimization on validation split",
+  "default_threshold": 0.5,
+  "validation_default": {
+    "micro_f1": 0.9480130511168744,
+    "macro_f1": 0.9118152797729834,
+    "micro_precision": 0.9536778320148124,
+    "micro_recall": 0.9424151696606786
+  },
+  "validation_calibrated": {
+    "micro_f1": 0.9528221707467462,
+    "macro_f1": 0.9270224942228227,
+    "micro_precision": 0.9546198283634421,
+    "micro_recall": 0.9510312707917499
+  },
+  "test_default": {
+    "micro_f1": 0.9460319770085672,
+    "macro_f1": 0.9246113541439139,
+    "micro_precision": 0.9445029600842625,
+    "micro_recall": 0.9475659524850605
+  },
+  "test_calibrated": {
+    "micro_f1": 0.9426168731350032,
+    "macro_f1": 0.9273338923463725,
+    "micro_precision": 0.9357294172561129,
+    "micro_recall": 0.9496064713598601
+  },
+  "test_threshold_free": {
+    "mAP": 0.9731331493371563,
+    "macro_AUROC": 0.9961984083612305
+  },
+  "note": "Thresholds were selected on validation data only and frozen before any test metric was computed. mAP and AUROC are threshold-free and therefore unchanged by the threshold choice."
+}

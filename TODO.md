@@ -4,7 +4,7 @@
 
 **第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结；UV专属化学语义标注 v1.0.1 与 UVSPEC15 单模态基线（3 seeds + BN 重校准）已完成，UVSPEC15 v1 正式实验策略已归档。**
 
-注意：IR/Raman 的 Full BN 审计与后处理协议尚未同步完成，不得宣布其最终模型已按统一协议冻结；多模态融合尚未开始。shared vs specific 对照已成立（UV 在专属语义任务上显著变强）；当前进入三模态信息画像（Line B）与 chemistry-aware 多模态融合（Line C）。
+注意：**IR v1 已冻结归档**——6/6 独立模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint、12/12 Threshold Calibration、24/24 消融条件、48 条 split-level 与 672 条逐标签记录全部完成；最终配置已决策（主方案 BCE + Original BN + Validation-F1；备选 BCE + Recalibrated BN + Validation-F1；固定基线 BCE + Original BN + 0.5，见 `docs/experiments/IR_v1_final_decision.md`）。**Raman 的同构 BN 审计与 24 条件消融为下一步重点**。多模态融合尚未开始。shared vs specific 对照已成立（UV 在专属语义任务上显著变强）；当前进入三模态信息画像（Line B）与 chemistry-aware 多模态融合（Line C）。
 
 核心研究问题：不是把三条谱简单拼起来，而是让模型学会像化学家一样，知道什么时候该听谁——IR/Raman 承担振动结构证据，UV-Vis 承担共轭/发色团电子结构证据，通过化学证据驱动的自适应融合改善完整结构 Top-k 推断。
 
@@ -80,10 +80,22 @@
 
 ## 后续任务
 
-### IR/Raman BN 审计同步（未完成）
+### IR/Raman BN 审计同步（IR 已完成并冻结；Raman 待开展）
 
-- [ ] 对 IR、Raman 现有 checkpoint 执行 Full BN Diagnostic（不安排 Quick Diagnostic）。
-- [ ] 根据 Validation 结果决定是否保存 BN 重估版并重新校准阈值，生成与 UVSPEC15 同构的消融汇总与审计。
+IR 已对齐 UVSPEC15 v1 的实验规模（6 模型 × 2 BN × 2 阈值 = 24 条件），策略记录见 `docs/experiments/IR_v1_experimental_strategy.md`：
+
+- [x] 补齐 WBCE Seed 123 / 2026 训练，IR 达到 6 个独立模型（BCE/WBCE × 3 seeds），六份 checkpoint 通过一致性核验。
+- [x] IR Full BN Diagnostic 6 次（严格串行）：6/6 完成（2026-11-15），六份 JSON 通过基线复现、参数不变性、BN 统计量与文件保护检查。
+- [x] 六个 Original checkpoint 的 Validation 逐标签 F1 阈值校准：6/6 完成，输出新目录 `runs/IR-THRESHOLD-CALIBRATION/`，历史 BCE 42 产物保留未动。
+- [x] 保存 6 份 Training-only BN 重估 checkpoint（Original 全部保留）：**6/6 完成**。
+- [x] 6 个 Recalibrated checkpoint 的独立阈值校准：**6/6 完成**，24 条件矩阵齐备。
+- [x] 执行 `training/summarize_ir_ablation.py` 生成 24 条件汇总（48 条 split-level、672 行逐标签、审计表）：`runs/IR-ABLATION-SUMMARY/`，6 份 audit 全 True。
+- [x] 依据 Validation 多指标比较确定 IR v1 最终配置并冻结归档（`docs/experiments/IR_v1_final_decision.md`）：主方案 BCE + Original BN + Validation-F1；备选 BCE + Recalibrated BN + Validation-F1；固定基线 BCE + Original BN + 0.5。
+- [ ] **Raman 同构实验（下一步重点）**：6 模型 Full BN Diagnostic → 6 份 BN 重估 checkpoint → 12 次 Threshold Calibration → 24 条件消融汇总，复用 IR 的四个脚本与统计口径。
+- [ ] 12 次 Threshold Calibration（6 Original + 6 Recalibrated），原始阈值文件不得覆盖。
+- [ ] 生成 24 条件消融汇总与审计表（48 条 split-level、672 行逐标签），按 Validation 结果确定推荐方案。
+- [ ] 对 Raman 现有 checkpoint 执行同构的 Full BN Diagnostic（不安排 Quick Diagnostic）。
+- [x] 废弃脚本已归档（`archive/2026-11-15/calibrate_ir_thresholds.py`），原路径改为弃用入口；**不得运行归档版本**（`"w"` 模式覆盖写盘 + 硬编码 Seed 42 + 1024/0 推理）。
 
 ### 完整结构推断与 Top-k（Line D）
 
