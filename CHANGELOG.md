@@ -292,4 +292,19 @@
 ### 下一步计划
 * **Raman 同构实验（下一步重点）**：Full BN Diagnostic → BN 重估 checkpoint → 12 次阈值校准 → 24 条件汇总，复用 IR 的四个脚本
 * 三模态信息画像（Line B）与 chemistry-aware 融合（Line C）
-* IR v1 归档提交（等待批准）
+* IR v1 归档提交 → **已完成，见 2026-11-16 条目（`bbcdfa4`，已推送 GitHub main）**
+
+## 2026-11-16
+### 完成内容
+* IR v1 与 UVSPEC15 v1 的归档成果提交 Git（commit `bbcdfa4192580a9df6384cd8d24489cdfce24515`，提交时间 2026-11-16 00:16 UTC+8）并推送 GitHub `main`（推送完成日期 2026-11-16；远端 `refs/heads/main` 已指向该 commit）
+* 废弃脚本归档：`training/calibrate_ir_thresholds.py` 的 992 行实现迁入 `archive/2026-11-15/calibrate_ir_thresholds.py`（内容未改，blob `e93d3bb8`）；原路径改为弃用入口，直接运行立即非零退出且不加载数据、不写文件
+* 补齐 UVSPEC15 独立 Final Decision 文档（`docs/experiments/UVSPEC15_v1_final_decision.md`，6 模型 × 24 条件，主方案 BCE + Recalibrated BN + Validation-F1，Test Micro-F1 0.6568±0.0138）
+* 同步 `README.md` / `TODO.md` / `AGENTS.md` / `CHANGELOG.md`：修正首行时间戳（原为 2026-11-14 20:35）、更新里程碑与 IR/UVSPEC15 主方案指标口径、清理重复的 Raman 待办、补充 checkpoint 外部备份待办
+### 当前进度
+* IR v1 与 UVSPEC15 v1 均已冻结归档：各 6 模型、24 条件、48 条 split-level；逐标签 IR 672 行 / UVSPEC15 720 行
+* IR 历史基线（Test Micro-F1 0.9406）与新主方案（0.9364）口径已区分；UVSPEC15 历史"0.6580"实为 Recalibrated + 0.5 备选配置，主方案为 0.6568
+* Raman 仅有历史单模态基线；同构审计与 24 条件消融尚未开始
+### 下一步计划
+* Raman 资产审计（现有 4 个 run）→ 按需补齐 WBCE Seed 123/2026 → Full BN Diagnostic → BN 重估 checkpoint → 12 次阈值校准 → 24 条件消融
+* checkpoint 与原始光谱数据的仓库外独立备份
+* 三模态信息画像（Line B）与 chemistry-aware 融合（Line C）
