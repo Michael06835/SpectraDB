@@ -1,4 +1,4 @@
-# SpectraDB Agent 工作说明 最近修改：20:35 11/14/2026
+# SpectraDB Agent 工作说明 最近修改：2026-11-16 00:31 (UTC+8)
 
 ## 1. 项目定位
 
@@ -43,7 +43,7 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 
 当前处于：
 
-**第一阶段（数据体系与单模态模型）已完成；当前进入第二阶段准备（UV专属化学语义监督与 chemistry-aware 多模态融合）。**
+**第一阶段（数据体系与单模态模型）已完成；当前进入第二阶段准备（UV专属化学语义监督与 chemistry-aware 多模态融合）。当前即时任务是补齐 Raman 的同构资产审计与 24 条件消融。**
 
 第一阶段包括：
 
@@ -68,8 +68,10 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - 模态对比：待输出（三模态信息画像）。
 - UV-specific 化学语义标签：schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注（129817 全部成功，58 二值 + 73 数值），频数与 split 审计已完成；UVSPEC15（15 个 UV 专属标签）已选定并生成标签矩阵。
 - UVSPEC15 单模态基线：已完成（3 seeds，含阈值校准、BN 诊断、BN 重校准与 WBCE 对照）。
+- **UVSPEC15 v1 完整方法学消融**：已完成（6 模型 × 2 BN × 2 阈值 = 24 条件；48 条 split-level、720 条逐标签；主方案 BCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.6283±0.0059 / Test 0.6568±0.0138；Final Decision / Ablation Registry / Repro Protocol 均已归档，2026-11-15）。
 - shared vs specific 对照：已完成（`runs/UVSPEC15-ANALYSIS/`，UV 专属语义任务显著优于 shared 通用任务）。
-- 三模态信息画像（Line B）：下一步（当前最高优先级）。
+- **Raman 同构审计：下一步（当前最高优先级）**——Full BN Diagnostic、BN 重估 checkpoint、12 次阈值校准与 24 条件消融尚未开展，不得视为 Raman 六模型完整消融已完成。
+- 归档状态：IR v1 与 UVSPEC15 v1 的成果已提交 Git（`bbcdfa4`）并推送 GitHub `main`（2026-11-16）；12 份 IR checkpoint（约 140 MB）与原始光谱矩阵不进 Git，需仓库外独立备份。
 
 ---
 
@@ -530,11 +532,13 @@ Git 中不保存：
 当前最高优先级如下：
 
 1. 更新 `AGENTS.md` 和 `TODO.md`，明确当前阶段策略。
-2. 三模态信息画像：IR/Raman 在 UVSPEC15 标签上的 baseline + 与 UV 的 per-label 对比，识别各模态擅长与不擅长的结构子群（Line B）。
-3. chemistry-aware 融合：naive 对照 → generic gating → proposed routing + 消融（Line C，论文核心方法）。
-4. 完整结构 Top-k：融合证据成立后进入（Line D）。
-5. 鲁棒性与实验域：缺失/噪声模态、NIST/API-Raman 验证（Line F/G）。
-6. 开放集与可解释性分析（Line H/I）。
+2. **Raman 同构审计**：先审计现有 4 个 run（BCE ×3 + WBCE ×1），按需补齐 WBCE Seed 123/2026；再执行 Full BN Diagnostic → BN 重估 checkpoint → 12 次阈值校准 → 24 条件消融（复用 IR 的四个脚本，需改路径与实验映射）。
+3. 三模态信息画像：IR/Raman 在 UVSPEC15 标签上的 baseline + 与 UV 的 per-label 对比，识别各模态擅长与不擅长的结构子群（Line B）。
+4. chemistry-aware 融合：naive 对照 → generic gating → proposed routing + 消融（Line C，论文核心方法）。
+5. 完整结构 Top-k：融合证据成立后进入（Line D）。
+6. 鲁棒性与实验域：缺失/噪声模态、NIST/API-Raman 验证（Line F/G）。
+7. 开放集与可解释性分析（Line H/I）。
+8. checkpoint 与原始数据的仓库外独立备份（IR 12 份 checkpoint 约 140 MB，Git 仅保存轻量 JSON/CSV）。
 
 ---
 
