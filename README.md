@@ -1,4 +1,4 @@
-# 最后更新时间：20:35(UTC+8) 11/14/2026
+# 最后更新时间：2026-11-16 00:31 (UTC+8)
 
 # SpectraDB
 ## 项目简介
@@ -84,11 +84,14 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 5. UV-Vis 1D-CNN单模态基线（已完成）
 6. UV专属共轭/发色团化学语义标签（已完成）
 7. UV-specific单模态基线与shared/specific对照（已完成）
-8. 三模态信息画像与模态对比
-9. Chemistry-aware多模态融合
-10. 完整结构候选与Top-k
-11. 实验域数据（NIST、API-Raman）验证与微调
-12. 开放集识别与可解释性分析
+8. IR v1 完整方法学消融（6 模型 / 24 条件）与 Final Decision（已完成，2026-11-15）
+9. UVSPEC15 v1 完整方法学消融（6 模型 / 24 条件）与 Final Decision（已完成，2026-11-15）
+10. Raman 同构 BN 审计与 24 条件消融（下一步，未开始）
+11. 三模态信息画像与模态对比
+12. Chemistry-aware多模态融合
+13. 完整结构候选与Top-k
+14. 实验域数据（NIST、API-Raman）验证与微调
+15. 开放集识别与可解释性分析
 ## 开发环境
 ### 已有：
 * Python
@@ -103,4 +106,30 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 * HuggingFace
 * Lightning
 ## 项目状态
-IR、Raman、UV-Vis三个单模态基线已完成并冻结（IR-v1：test Micro-F1 0.9406，Macro-AUROC 0.9954；Raman-v1：0.9151，0.9911；UV-Vis-v1：0.4892，0.8501）；UV专属化学语义标注（schema v1.0 FINAL + builder v1.0.1）与UVSPEC15单模态基线（3 seeds，BN重校准版Micro-F1 0.6580，Macro-AUROC 0.9384）已完成；shared vs specific对照确认UV在专属语义任务上显著变强；UVSPEC15 v1正式实验策略已归档（普通BCE+Training-only BN重估+Validation阈值校准，三seed Mean±SD）；**IR v1 已按同一流程完成 24 条件全矩阵并冻结归档**（6 独立模型、6 次 Full BN Diagnostic、6 份 BN 重估 checkpoint、12 次阈值校准、24/24 条件、48 条 split-level 与 672 条逐标签记录；主方案 BCE + Original BN + Validation-F1，Validation Micro-F1 0.9505±0.0025 / Test 0.9364±0.0054；决策记录见 `docs/experiments/IR_v1_final_decision.md`）；Raman 的同构 BN 审计与 24 条件消融为下一步重点，多模态融合尚未开始；下一步开展三模态信息画像与chemistry-aware融合。
+
+> 最后同步 2026-11-16 00:31 (UTC+8)，对应 Git 提交 `bbcdfa4`（已推送 GitHub `main`）。
+
+### 单模态历史基线（2026-08-14 ~ 08-16 冻结，阈值 0.5，三随机种子 Mean）
+
+| 模型 | 标签集 | Test Micro-F1 | Test Macro-AUROC |
+|---|---|---|---|
+| IR-v1 | 14 类官能团 | 0.9406 | 0.9954 |
+| Raman-v1 | 14 类官能团 | 0.9151 | 0.9911 |
+| UV-Vis-v1 | 14 类官能团（shared） | 0.4892 | 0.8501 |
+
+### 已冻结的方法学消融（各 6 模型 × 24 条件）
+
+| 版本 | 主方案 | Validation Micro-F1 | Test Micro-F1 |
+|---|---|---|---|
+| **IR v1** | BCE + Original BN + Validation-F1 | 0.9505 ± 0.0025 | 0.9364 ± 0.0054 |
+| **UVSPEC15 v1** | BCE + Recalibrated BN + Validation-F1 | 0.6283 ± 0.0059 | 0.6568 ± 0.0138 |
+
+- IR v1 备选：BCE + Recalibrated BN + Validation-F1；固定基线：BCE + Original BN + 0.5（Test Micro-F1 0.9405 ± 0.0048）。记录见 `docs/experiments/IR_v1_final_decision.md`。
+- UVSPEC15 v1 备选：Recalibrated + 0.5（Test Micro-F1 0.6580 ± 0.0154）与 WBCE + Recalibrated + Validation-F1；**0.6580 属备选配置，不是主方案指标**。记录见 `docs/experiments/UVSPEC15_v1_final_decision.md`。
+- 两者均含 48 条 split-level 记录；逐标签 UVSPEC15 720 行、IR 672 行。
+
+### 进行中 / 尚未开展
+
+- **Raman 同构审计（当前下一步重点）**：Raman-v1 仅有历史基线；Full BN Diagnostic、6 份 BN 重估 checkpoint、12 次阈值校准与 24 条件消融**尚未完成**，不得视为已完成六模型消融。
+- 尚未开展：三模态信息画像（Line B）、chemistry-aware 融合（Line C）、完整结构 Top-k（Line D）、实验域迁移（Line G）、开放集拒识与 XAI（Line H/I）。
+- 待落实：12 份 IR checkpoint（约 140 MB）与原始光谱数据的**仓库外独立备份**（Git 仅保存轻量 JSON/CSV）。
