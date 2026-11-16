@@ -323,6 +323,7 @@
 * FP16 历史读数算术勘误：`GATE_POLICY["measured"]` 中 T1/T2 跨进程差值由误写的 `1.086e-3` 更正为 `1.080e-3`；`1.086e-3` 对应最初 Gate B 失败的另一对读数 `[0.945208, 0.946294]`。该字段仅为描述性元数据，不参与 Gate A/B、容差、分类或放行判断
 * 六份已冻结的历史 manifest **原样保留、不作事后覆盖**；勘误记录见 `docs/experiments/raman_ablation_registry.md` §9.5
 * 废弃脚本归档：`training/calibrate_raman_thresholds.py`、`training/finalize_raman_results.py` 实现迁入 `archive/2026-11-16/`，原路径改为立即非零退出的弃用入口
+* Raman v1 归档成果分两次提交并推送 GitHub `main`：代码、门禁与实验文档提交 `5588b81af93abd72219174926fc047a9fac754dc`（`feat: freeze Raman v1 code, gates and experiment documentation`）；轻量实验记录提交 `484f6af9cfd9bead43cb5e1f7e36063b28e1e9cd`（`feat: archive Raman v1 experiment records (24 conditions, 672 per-label rows)`）。两次提交均已推送至 GitHub `main`
 ### 当前进度
 * **Raman v1 冻结归档**：6/6 模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint、12/12 阈值校准、24/24 消融条件、48 条 split-level 与 672 条逐标签记录全部齐备
 * 最终配置（纯 Validation 决定）：主方案 **WBCE + Recalibrated BN + Validation-F1**（Validation Micro-F1 0.922034±0.002103；Test 0.914113±0.006869）；备选 WBCE + Original BN + Validation-F1（0.921640±0.002583）；BCE 家族最佳 BCE + Recalibrated BN + Validation-F1（0.920907±0.003517）；固定基线 BCE + Original BN + 0.5（Validation 0.910148±0.002418 / Test 0.915080±0.001382）
