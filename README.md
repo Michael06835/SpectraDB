@@ -1,4 +1,4 @@
-# 最后更新时间：2026-11-16 00:31 (UTC+8)
+# 最后更新时间：2026-11-16 21:05 (UTC+8)
 
 # SpectraDB
 ## 项目简介
@@ -86,7 +86,7 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 7. UV-specific单模态基线与shared/specific对照（已完成）
 8. IR v1 完整方法学消融（6 模型 / 24 条件）与 Final Decision（已完成，2026-11-15）
 9. UVSPEC15 v1 完整方法学消融（6 模型 / 24 条件）与 Final Decision（已完成，2026-11-15）
-10. Raman 同构 BN 审计与 24 条件消融（下一步，未开始）
+10. Raman 同构 BN 审计与 24 条件消融（已完成，2026-11-16）
 11. 三模态信息画像与模态对比
 12. Chemistry-aware多模态融合
 13. 完整结构候选与Top-k
@@ -107,7 +107,7 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 * Lightning
 ## 项目状态
 
-> 最后同步 2026-11-16 00:31 (UTC+8)，对应 Git 提交 `bbcdfa4`（已推送 GitHub `main`）。
+> 最后同步 2026-11-16 21:05 (UTC+8)，对应 Raman v1 冻结归档提交（SHA 见 `CHANGELOG.md` 的 Raman v1 条目）。
 
 ### 单模态历史基线（2026-08-14 ~ 08-16 冻结，阈值 0.5，三随机种子 Mean）
 
@@ -123,13 +123,16 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 |---|---|---|---|
 | **IR v1** | BCE + Original BN + Validation-F1 | 0.9505 ± 0.0025 | 0.9364 ± 0.0054 |
 | **UVSPEC15 v1** | BCE + Recalibrated BN + Validation-F1 | 0.6283 ± 0.0059 | 0.6568 ± 0.0138 |
+| **Raman v1** | WBCE + Recalibrated BN + Validation-F1 | 0.922034 ± 0.002103 | 0.914113 ± 0.006869 |
 
 - IR v1 备选：BCE + Recalibrated BN + Validation-F1；固定基线：BCE + Original BN + 0.5（Test Micro-F1 0.9405 ± 0.0048）。记录见 `docs/experiments/IR_v1_final_decision.md`。
 - UVSPEC15 v1 备选：Recalibrated + 0.5（Test Micro-F1 0.6580 ± 0.0154）与 WBCE + Recalibrated + Validation-F1；**0.6580 属备选配置，不是主方案指标**。记录见 `docs/experiments/UVSPEC15_v1_final_decision.md`。
-- 两者均含 48 条 split-level 记录；逐标签 UVSPEC15 720 行、IR 672 行。
+- Raman v1 备选：WBCE + Original BN + Validation-F1（Validation 0.921640 ± 0.002583）；BCE 家族最佳：BCE + Recalibrated BN + Validation-F1（0.920907 ± 0.003517）；固定基线：BCE + Original BN + 0.5（Validation 0.910148 ± 0.002418 / Test 0.915080 ± 0.001382）。记录见 `docs/experiments/Raman_v1_final_decision.md`。
+- 三者均含 48 条 split-level 记录；逐标签 IR 672 行、UVSPEC15 720 行、Raman 672 行。Raman 的 Test Micro-F1 在八组配置中排第 6（低于 Validation 第 1），属已记录现象，**未据此改选**。
 
 ### 进行中 / 尚未开展
 
-- **Raman 同构审计（当前下一步重点）**：Raman-v1 仅有历史基线；Full BN Diagnostic、6 份 BN 重估 checkpoint、12 次阈值校准与 24 条件消融**尚未完成**，不得视为已完成六模型消融。
-- 尚未开展：三模态信息画像（Line B）、chemistry-aware 融合（Line C）、完整结构 Top-k（Line D）、实验域迁移（Line G）、开放集拒识与 XAI（Line H/I）。
-- 待落实：12 份 IR checkpoint（约 140 MB）与原始光谱数据的**仓库外独立备份**（Git 仅保存轻量 JSON/CSV）。
+- **三模态信息画像（Line B）**：当前下一步重点。IR/Raman 在 UVSPEC15 标签上的 baseline 与逐标签对比尚未开展。
+- **Raman 已完成**：六模型训练、6 次 Full BN Diagnostic、6 份 Training-only BN 重估 checkpoint、12 次阈值校准、24 条件消融（48 条 split-level、672 条逐标签）与 Phase 7 决策/溯源/复现三份文档；数值门禁采用 Gate A（制品完整性 10 项）+ Gate B（官方 FP16 六指标 1e-3）双门，审计记录在 `runs/RAMAN-NUMERIC-AUDIT/`。
+- 尚未开展：chemistry-aware 融合（Line C）、完整结构 Top-k（Line D）、实验域迁移（Line G）、开放集拒识与 XAI（Line H/I）。
+- 待落实：12 份 IR checkpoint（约 140 MB）与 12 份 Raman checkpoint（约 140 MB）的**仓库外独立备份**（Git 仅保存轻量 JSON/CSV；Raman 备份已由项目决定跳过）。

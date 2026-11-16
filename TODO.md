@@ -2,9 +2,9 @@
 
 ## 当前阶段
 
-**第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结；UV专属化学语义标注 v1.0.1 已完成；IR v1 与 UVSPEC15 v1 的完整方法学消融（各 6 模型 × 24 条件）与 Final Decision 均已冻结归档（2026-11-15）。**
+**第一阶段（数据体系与单模态模型）已完成：IR、Raman、UV-Vis 三个单模态 1D-CNN 基线全部冻结；UV专属化学语义标注 v1.0.1 已完成；IR v1、UVSPEC15 v1 与 **Raman v1** 的完整方法学消融（各 6 模型 × 24 条件）与 Final Decision 均已冻结归档（2026-11-15 / 2026-11-16）。**
 
-注意（2026-11-16 同步）：**IR v1 已冻结归档并入库**——6/6 独立模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint、12/12 Threshold Calibration、24/24 消融条件、48 条 split-level 与 672 条逐标签记录全部完成；主方案 BCE + Original BN + Validation-F1，备选 BCE + Recalibrated BN + Validation-F1，固定基线 BCE + Original BN + 0.5（`docs/experiments/IR_v1_final_decision.md`）。**UVSPEC15 v1 亦已完成 24 条件消融与独立 Final Decision**（主方案 BCE + Recalibrated BN + Validation-F1，`docs/experiments/UVSPEC15_v1_final_decision.md`）。上述成果已提交 Git（`bbcdfa4`）并推送 GitHub main。**当前下一步是 Raman 的同构资产审计（Full BN Diagnostic、BN 重估 checkpoint、12 次阈值校准、24 条件消融尚未完成）；Raman 六模型完整消融不得视为已完成。** 多模态融合尚未开始；shared vs specific 对照已成立，Line B/C 排在 Raman 审计之后。
+注意（2026-11-16 同步）：**IR v1 已冻结归档并入库**——6/6 独立模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint、12/12 Threshold Calibration、24/24 消融条件、48 条 split-level 与 672 条逐标签记录全部完成；主方案 BCE + Original BN + Validation-F1，备选 BCE + Recalibrated BN + Validation-F1，固定基线 BCE + Original BN + 0.5（`docs/experiments/IR_v1_final_decision.md`）。**UVSPEC15 v1 亦已完成 24 条件消融与独立 Final Decision**（主方案 BCE + Recalibrated BN + Validation-F1，`docs/experiments/UVSPEC15_v1_final_decision.md`）。上述成果已提交 Git（`bbcdfa4`）并推送 GitHub main。**Raman v1 亦已完成同构审计并冻结归档（2026-11-16）**：6/6 模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint（gate policy v5：Gate A 10 项 + Gate B 六指标 1e-3）、12/12 阈值校准、24/24 消融条件、48 条 split-level 与 672 条逐标签记录；主方案 **WBCE + Recalibrated BN + Validation-F1**（Validation Micro-F1 0.922034±0.002103 / Test 0.914113±0.006869），备选 WBCE + Original BN + Validation-F1，固定基线 BCE + Original BN + 0.5；文档见 `docs/experiments/Raman_v1_final_decision.md`、`raman_ablation_registry.md`、`raman_repro_protocol.md`。**当前下一步是三模态信息画像（Line B）**；多模态融合尚未开始，shared vs specific 对照已成立。
 
 核心研究问题：不是把三条谱简单拼起来，而是让模型学会像化学家一样，知道什么时候该听谁——IR/Raman 承担振动结构证据，UV-Vis 承担共轭/发色团电子结构证据，通过化学证据驱动的自适应融合改善完整结构 Top-k 推断。
 
@@ -51,6 +51,13 @@
 - [x] 完成 IR v1 完整方法学消融（6 模型 × 2 BN × 2 阈值 = 24 条件；48 条 split-level、672 条逐标签）与 Final Decision / Ablation Registry / Repro Protocol。
 - [x] 归档废弃脚本 `training/calibrate_ir_thresholds.py`（迁入 `archive/2026-11-15/`，原路径改为立即非零退出的弃用入口）。
 - [x] IR/UVSPEC15 归档成果提交 Git（`bbcdfa4`）并推送 GitHub `main`（2026-11-16）。
+- [x] 补齐 Raman WBCE Seed 123 / 2026 训练与最终 Test 评估，Raman 达到 6 个独立模型（BCE/WBCE × 3 seeds）。
+- [x] Raman Full BN Diagnostic 6 次（严格串行）：6/6 完成，六份 JSON 通过基线复现、参数不变性、BN 统计量与文件保护检查。
+- [x] 保存 6 份 Training-only BN 重估 checkpoint（gate policy v5：Gate A 10 项 + Gate B 六指标 1e-3 双门）：6/6 `ARTIFACT_PASS__NUMERIC_PASS`、`ablation_release=ELIGIBLE`。
+- [x] Raman Original / Recalibrated 阈值校准各 6 次：12/12 完成，阈值在 Test 指标前落盘，两个阈值条件共用同一组概率并落盘 SHA256（`probability_artifacts.json`）。
+- [x] 执行 `training/summarize_raman_ablation.py` 生成 24 条件汇总（24+24 条件、48 条 split-level、672 行逐标签、11 个文件、6 份 audit 全 True）：`runs/RAMAN-ABLATION-SUMMARY/`。
+- [x] 完成 Raman v1 Final Decision / Ablation Registry / Repro Protocol 三份文档，并完成两轮审核修订与 FP16 元数据勘误（`raman_ablation_registry.md` §9.5）。
+- [x] Raman 归档成果提交 Git 并推送 GitHub `main`（2026-11-16）。
 
 ---
 
@@ -84,7 +91,7 @@
 
 ## 后续任务
 
-### IR/Raman BN 审计同步（IR 已完成并冻结；Raman 待开展）
+### IR/Raman BN 审计同步（IR 与 Raman 均已完成并冻结）
 
 IR 已对齐 UVSPEC15 v1 的实验规模（6 模型 × 2 BN × 2 阈值 = 24 条件），策略记录见 `docs/experiments/IR_v1_experimental_strategy.md`：
 
@@ -96,8 +103,8 @@ IR 已对齐 UVSPEC15 v1 的实验规模（6 模型 × 2 BN × 2 阈值 = 24 条
 - [x] 执行 `training/summarize_ir_ablation.py` 生成 24 条件汇总（48 条 split-level、672 行逐标签、审计表）：`runs/IR-ABLATION-SUMMARY/`，6 份 audit 全 True。
 - [x] 依据 Validation 多指标比较确定 IR v1 最终配置并冻结归档（`docs/experiments/IR_v1_final_decision.md`）：主方案 BCE + Original BN + Validation-F1；备选 BCE + Recalibrated BN + Validation-F1；固定基线 BCE + Original BN + 0.5。
 - [x] 归档成果提交 Git `bbcdfa4` 并推送 GitHub `main`（2026-11-16）。
-- [ ] **Raman 资产审计与同构实验（当前下一步重点，尚未开始）**：执行清单见文末"推荐执行顺序 → Step 4"；不得视为 Raman 六模型完整消融已完成。
-- [ ] checkpoint 与原始数据的仓库外独立备份（12 份 IR checkpoint 约 140 MB + 光谱/标签/划分矩阵；以 manifest 的 `saved_sha256` 作为校验依据）。
+- [x] **Raman 资产审计与同构实验：已完成并冻结（2026-11-16）**——6/6 模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint、12/12 阈值校准、24/24 消融条件、48 条 split-level 与 672 条逐标签记录齐备；主方案 WBCE + Recalibrated BN + Validation-F1（Validation Micro-F1 0.922034±0.002103 / Test 0.914113±0.006869），备选 WBCE + Original BN + Validation-F1，固定基线 BCE + Original BN + 0.5。决策见 `docs/experiments/Raman_v1_final_decision.md`。
+- [ ] checkpoint 与原始数据的仓库外独立备份（12 份 IR checkpoint 约 140 MB + 12 份 Raman checkpoint 约 140 MB + 光谱/标签/划分矩阵；以 manifest 的 `saved_sha256` 作为校验依据）。**Raman 备份用户已决定跳过（2026-11-16），IR 待定。**
 - [x] 废弃脚本已归档（`archive/2026-11-15/calibrate_ir_thresholds.py`），原路径改为弃用入口；**不得运行归档版本**（`"w"` 模式覆盖写盘 + 硬编码 Seed 42 + 1024/0 推理）。
 
 ### 完整结构推断与 Top-k（Line D）
@@ -163,11 +170,11 @@ IR 已对齐 UVSPEC15 v1 的实验规模（6 模型 × 2 BN × 2 阈值 = 24 条
 - [x] IR v1：6 模型 × 24 条件、12 次阈值校准、6 份 BN 重估 checkpoint、Ablation Registry 与 Repro Protocol（2026-11-15）。
 - [x] Git 提交 `bbcdfa4` 并推送 GitHub `main`（2026-11-16）。
 
-### Step 4：Raman 同构审计（当前下一步）
+### Step 4：Raman 同构审计——已完成
 
-- [ ] Raman 现有资产审计（4 个 run：BCE ×3 + WBCE ×1）。
-- [ ] 按需补齐 WBCE Seed 123/2026 训练。
-- [ ] 6 次 Full BN Diagnostic → 6 份 BN 重估 checkpoint → 12 次阈值校准 → 24 条件消融汇总。
+- [x] Raman 现有资产审计（4 个 run：BCE ×3 + WBCE ×1），并补齐 WBCE Seed 123 / 2026。
+- [x] 6 次 Full BN Diagnostic → 6 份 BN 重估 checkpoint → 12 次阈值校准 → 24 条件消融汇总（2026-11-16）。
+- [x] 依据 Validation 确定 Raman v1 配置并冻结归档（主方案 WBCE + Recalibrated BN + Validation-F1）。
 
 ### Step 5：模态对比与信息画像（Line B）
 

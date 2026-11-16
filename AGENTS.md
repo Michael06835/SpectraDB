@@ -43,7 +43,7 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 
 当前处于：
 
-**第一阶段（数据体系与单模态模型）已完成；当前进入第二阶段准备（UV专属化学语义监督与 chemistry-aware 多模态融合）。当前即时任务是补齐 Raman 的同构资产审计与 24 条件消融。**
+**第一阶段（数据体系与单模态模型）已完成；当前进入第二阶段准备（UV专属化学语义监督与 chemistry-aware 多模态融合）。Raman v1 的同构资产审计与 24 条件消融已于 2026-11-16 完成并冻结；当前即时任务是三模态信息画像（Line B）。**
 
 第一阶段包括：
 
@@ -63,15 +63,15 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - scaffold split：已完成。
 - 官能团多标签（14 类）：已完成。
 - IR 1D-CNN：已完成，**IR-v1 已冻结归档**（6 模型 × 2 BN × 2 阈值 = 24 条件；主方案 BCE + Original BN + Validation-F1，Validation Micro-F1 0.9505±0.0025 / Test 0.9364±0.0054；备选 BCE + Recalibrated BN + Validation-F1；固定基线 BCE + Original BN + 0.5。决策记录见 `docs/experiments/IR_v1_final_decision.md`）。
-- Raman 1D-CNN：已完成，Raman-v1 已冻结（test Micro-F1 0.9151，Macro-AUROC 0.9911）；**Raman 的同构 BN 审计与 24 条件消融尚未开展，为下一步重点**。
+- Raman 1D-CNN：已完成，**Raman-v1 已冻结归档**（历史基线 test Micro-F1 0.9151 / Macro-AUROC 0.9911；6 模型 × 2 BN × 2 阈值 = 24 条件；主方案 WBCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.922034±0.002103 / Test 0.914113±0.006869；备选 WBCE + Original BN + Validation-F1；固定基线 BCE + Original BN + 0.5。决策记录见 `docs/experiments/Raman_v1_final_decision.md`）。
 - UV-Vis 1D-CNN：已完成，UV-Vis-v1 已冻结（test Micro-F1 0.4892，Macro-AUROC 0.8501）。
 - 模态对比：待输出（三模态信息画像）。
 - UV-specific 化学语义标签：schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注（129817 全部成功，58 二值 + 73 数值），频数与 split 审计已完成；UVSPEC15（15 个 UV 专属标签）已选定并生成标签矩阵。
 - UVSPEC15 单模态基线：已完成（3 seeds，含阈值校准、BN 诊断、BN 重校准与 WBCE 对照）。
 - **UVSPEC15 v1 完整方法学消融**：已完成（6 模型 × 2 BN × 2 阈值 = 24 条件；48 条 split-level、720 条逐标签；主方案 BCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.6283±0.0059 / Test 0.6568±0.0138；Final Decision / Ablation Registry / Repro Protocol 均已归档，2026-11-15）。
 - shared vs specific 对照：已完成（`runs/UVSPEC15-ANALYSIS/`，UV 专属语义任务显著优于 shared 通用任务）。
-- **Raman 同构审计：下一步（当前最高优先级）**——Full BN Diagnostic、BN 重估 checkpoint、12 次阈值校准与 24 条件消融尚未开展，不得视为 Raman 六模型完整消融已完成。
-- 归档状态：IR v1 与 UVSPEC15 v1 的成果已提交 Git（`bbcdfa4`）并推送 GitHub `main`（2026-11-16）；12 份 IR checkpoint（约 140 MB）与原始光谱矩阵不进 Git，需仓库外独立备份。
+- **Raman v1 完整方法学消融**：已完成并冻结（2026-11-16；6 模型 × 2 BN × 2 阈值 = 24 条件；48 条 split-level、672 条逐标签；主方案 WBCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.922034±0.002103 / Test 0.914113±0.006869；Final Decision / Ablation Registry / Repro Protocol 均已归档）。三模态信息画像与融合尚未开始。
+- 归档状态：IR v1、UVSPEC15 v1、Raman v1 的成果均已提交 Git 并推送 GitHub `main`；12 份 IR checkpoint（约 140 MB）与 12 份 Raman checkpoint（约 140 MB）及原始光谱矩阵不进 Git，需仓库外独立备份（Raman 备份用户已决定跳过）。
 
 ---
 
@@ -415,6 +415,16 @@ IR v1 的 Full BN 诊断、BN 重估 checkpoint 保存与 24 条件消融汇总�
 
 原单 Seed 阈值校准实现已迁至 `archive/2026-11-15/calibrate_ir_thresholds.py`；当前文件直接运行会立即以非零状态退出，不做任何计算。历史汇总脚本 `training/finalize_ir_results.py` 保留（IR-v1 第一阶段汇总）。
 
+### Raman v1 后处理脚本（已完成，结果已归档）
+
+`training/train_raman_weighted_seed123.py` / `train_raman_weighted_seed2026.py`（WBCE 补种子，含防覆盖保护）、`training/diagnose_raman_batchnorm_full.py`、`training/save_raman_bn_checkpoint.py`、`training/raman_numeric_audit.py`（数值审计判据与放行状态的单一来源）、`training/calibrate_raman_original_thresholds.py`、`training/calibrate_raman_recalibrated_thresholds.py`、`training/summarize_raman_ablation.py`、`training/diagnose_raman_validation_repro.py`（T1/T2 复现探测）、`training/verify_raman_bn_reproducibility.py`（非门控确定性复现路径）、`training/test_raman_bn_gate_policy.py` / `test_raman_bn_reload_integrity.py`（CPU 回归测试）。输出根目录依次为 `runs/RAMAN-BN-DIAGNOSTICS/`、`runs/RAMAN-BN-RECALIBRATED/`、`runs/RAMAN-THRESHOLD-CALIBRATION/`、`runs/RAMAN-BN-THRESHOLD-CALIBRATION/`、`runs/RAMAN-ABLATION-SUMMARY/`，另有数值审计记录目录 `runs/RAMAN-NUMERIC-AUDIT/`。
+
+### 禁止直接执行（会覆盖既有冻结结果）
+
+- `training/evaluate_raman_checkpoint.py`、`evaluate_raman_seed123_checkpoint.py`、`evaluate_raman_seed2026_checkpoint.py`、`evaluate_raman_weighted_checkpoint.py`：以 `"w"` 模式**原地重写**对应 run 目录的 `test_metrics.json` 与 `test_per_label_metrics.csv`。如需复核，请先把 checkpoint 复制到临时目录。
+- `training/calibrate_raman_thresholds.py`、`training/finalize_raman_results.py`：已废弃，仅保留立即非零退出的弃用入口；实现见 `archive/2026-11-16/`。
+- `training/calibrate_ir_thresholds.py`：已废弃，实现见 `archive/2026-11-15/`。
+
 ---
 
 ## 12. Codex 工作方式
@@ -532,7 +542,7 @@ Git 中不保存：
 当前最高优先级如下：
 
 1. 更新 `AGENTS.md` 和 `TODO.md`，明确当前阶段策略。
-2. **Raman 同构审计**：先审计现有 4 个 run（BCE ×3 + WBCE ×1），按需补齐 WBCE Seed 123/2026；再执行 Full BN Diagnostic → BN 重估 checkpoint → 12 次阈值校准 → 24 条件消融（复用 IR 的四个脚本，需改路径与实验映射）。
+2. **Raman v1（已完成）**：六模型（BCE/WBCE × seed 42/123/2026）→ 6 次 Full BN Diagnostic → 6 份 Training-only BN 重估 checkpoint（gate policy v5：Gate A 10 项 + Gate B 六指标 1e-3）→ 12 次阈值校准 → 24 条件消融（48 条 split-level、672 条逐标签、11 个汇总文件）→ Phase 7 三份文档与 Final Decision，已于 2026-11-16 冻结归档。后续同类审计沿用该流程。
 3. 三模态信息画像：IR/Raman 在 UVSPEC15 标签上的 baseline + 与 UV 的 per-label 对比，识别各模态擅长与不擅长的结构子群（Line B）。
 4. chemistry-aware 融合：naive 对照 → generic gating → proposed routing + 消融（Line C，论文核心方法）。
 5. 完整结构 Top-k：融合证据成立后进入（Line D）。

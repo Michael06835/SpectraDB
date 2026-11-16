@@ -308,3 +308,28 @@
 * Raman 资产审计（现有 4 个 run）→ 按需补齐 WBCE Seed 123/2026 → Full BN Diagnostic → BN 重估 checkpoint → 12 次阈值校准 → 24 条件消融
 * checkpoint 与原始光谱数据的仓库外独立备份
 * 三模态信息画像（Line B）与 chemistry-aware 融合（Line C）
+
+## 2026-11-16 · Raman v1 冻结归档
+### 完成内容
+* 补齐 WBCE Seed 123 / 2026 训练与最终 Test 评估，Raman 达到 6 个独立模型（BCE / WBCE × seed 42 / 123 / 2026）
+* 完成 6 次 Full BN Diagnostic（`training/diagnose_raman_batchnorm_full.py`），6 份 JSON 通过基线复现、参数不变性、BN 统计量与源文件保护检查
+* 新增 `training/save_raman_bn_checkpoint.py`（gate policy v5）：Gate A 制品完整性 10 项确定性检查 + Gate B 官方 FP16 六指标 1e-3 数值复现，二者独立判定；保存 6 份 Training-only BN 重估 checkpoint 与 provenance manifest（源/重估 SHA256、配置摘要、数据规模、与诊断记录的一致性核验）；支持 `--finalize-existing` 复用既有制品、`--approve-release` 写入 sha 绑定的人工放行记录
+* 新增 `training/raman_numeric_audit.py`：数值审计判据与放行状态的单一来源（三分类 `PASS` / `MAP_ONLY_NUMERIC_MISMATCH` / `OTHER_ANOMALY`、首次观测即定论、断点续跑、冻结概率数组）
+* 完成 12 次 Validation 逐标签 F1 阈值校准（6 Original + 6 Recalibrated），阈值在计算任何 Test 指标前落盘，Test 不参与拟合；每个 (模型, BN) 只推理一次，两个阈值条件共用同一组概率，概率数组与 SHA256 落盘（`probability_artifacts.json`）
+* 新增 `training/summarize_raman_ablation.py`，生成 24 条件消融汇总（24 + 24 条件、16 组 Mean±SD、84 条配对、672 行逐标签、48 条来源登记、6 份审计），含 manifest 哈希链核验与 0.0025 交叉容差
+* 新增 `docs/experiments/Raman_v1_final_decision.md`、`docs/experiments/raman_ablation_registry.md`、`docs/experiments/raman_repro_protocol.md`（与 IR / UVSPEC15 同构）
+* 新增数值复现支撑脚本与测试：`training/diagnose_raman_validation_repro.py`（T1/T2 跨进程探测）、`training/verify_raman_bn_reproducibility.py`（非门控确定性复现路径）、`training/test_raman_bn_gate_policy.py` / `test_raman_bn_reload_integrity.py`（CPU 回归测试）
+* 修复 Gate A 第 09 项（`checkpoint_reload_integrity`）执行顺序缺陷：写盘前门禁曾评估仍处于 pending 的第 09 项，导致保存路径必然中止（BCE seed 123 首次暴露）；改为写盘前只排除 09、写盘后以完整清单判定，09 占位仍为 FAIL（fail-closed）
+* FP16 历史读数算术勘误：`GATE_POLICY["measured"]` 中 T1/T2 跨进程差值由误写的 `1.086e-3` 更正为 `1.080e-3`；`1.086e-3` 对应最初 Gate B 失败的另一对读数 `[0.945208, 0.946294]`。该字段仅为描述性元数据，不参与 Gate A/B、容差、分类或放行判断
+* 六份已冻结的历史 manifest **原样保留、不作事后覆盖**；勘误记录见 `docs/experiments/raman_ablation_registry.md` §9.5
+* 废弃脚本归档：`training/calibrate_raman_thresholds.py`、`training/finalize_raman_results.py` 实现迁入 `archive/2026-11-16/`，原路径改为立即非零退出的弃用入口
+### 当前进度
+* **Raman v1 冻结归档**：6/6 模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint、12/12 阈值校准、24/24 消融条件、48 条 split-level 与 672 条逐标签记录全部齐备
+* 最终配置（纯 Validation 决定）：主方案 **WBCE + Recalibrated BN + Validation-F1**（Validation Micro-F1 0.922034±0.002103；Test 0.914113±0.006869）；备选 WBCE + Original BN + Validation-F1（0.921640±0.002583）；BCE 家族最佳 BCE + Recalibrated BN + Validation-F1（0.920907±0.003517）；固定基线 BCE + Original BN + 0.5（Validation 0.910148±0.002418 / Test 0.915080±0.001382）
+* 主方案相对备选的 Validation 领先幅度（+0.0004 ~ +0.0018）低于跨 Seed SD，**不作显著性宣称**；Test Micro-F1 主方案排 6/8，**未据此改选**
+* 三个模态的单模态基线与方法学消融全部冻结（IR v1 / UVSPEC15 v1 / Raman v1）；三模态融合、完整结构推断、开放集与解释模块尚未开始
+* 12 份 Raman checkpoint（约 140 MB）与原始光谱矩阵不进 Git；仓库外备份已由项目决定跳过
+### 下一步计划
+* 三模态信息画像（Line B）：IR/Raman 在 UVSPEC15 标签上的 baseline 与逐标签对比
+* chemistry-aware 融合（Line C）：naive 对照 → generic gating → proposed routing + 消融
+* 完整结构 Top-k（Line D）、实验域验证（Line G）、开放集与可解释性（Line H/I）
