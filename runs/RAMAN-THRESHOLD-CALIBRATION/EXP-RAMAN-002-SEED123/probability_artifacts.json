@@ -1,0 +1,59 @@
+{
+  "tag": "EXP-RAMAN-002-SEED123",
+  "created_at": "2026-11-16T20:01:59+08:00",
+  "policy": "first observation is authoritative; later runs must load it",
+  "meta": {
+    "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-RAMAN-002-SEED123\\best_model.pt",
+    "checkpoint_sha256": "6f1de2eec40dc3331d87078744d5a08f0cfcfc4b55a96a629707094a82625fae",
+    "splits": {
+      "validation": 12981,
+      "test": 12981
+    },
+    "dtype": "float32",
+    "metric_basis": "official FP16 sigmoid at threshold 0.5 and threshold-free; both threshold conditions reuse the same array",
+    "label_names": [
+      "aldehyde",
+      "alkene",
+      "alkyne",
+      "amide",
+      "amine",
+      "c_f_bond",
+      "carbonyl",
+      "ester",
+      "ether",
+      "hydroxyl",
+      "imine",
+      "ketone",
+      "nitrile",
+      "nitro"
+    ],
+    "batch_size": 512,
+    "num_workers": 4,
+    "normalization": "max",
+    "amp": true
+  },
+  "arrays": {
+    "validation": {
+      "file": "EXP-RAMAN-002-SEED123__validation__probabilities.npy",
+      "sha256": "e58bf5e3cd630f5d1292e515f3daed0abce3188b6dc93cbdd053eeb39e33c634",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0
+    },
+    "test": {
+      "file": "EXP-RAMAN-002-SEED123__test__probabilities.npy",
+      "sha256": "1fcdd8b75701895ec1b9447a6c31c88c9604d5bd191e75a2fc498a7d0d4fa360",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0
+    }
+  }
+}

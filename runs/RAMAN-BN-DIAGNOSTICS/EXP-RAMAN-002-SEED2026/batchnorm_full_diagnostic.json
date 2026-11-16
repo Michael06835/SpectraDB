@@ -1,0 +1,340 @@
+{
+  "note": "DIAGNOSTIC ONLY. Recomputed BN on a COPY from TRAIN. Do not choose/publish a new checkpoint based on Test result.",
+  "baseline_test_reproduced": true,
+  "model_weights_unchanged": true,
+  "batch_size": 512,
+  "num_workers": 4,
+  "recalibration": {
+    "batchnorm_layers": 12,
+    "train_batches_used": 203,
+    "train_samples_used": 103855,
+    "recalibration": "train split only; reset running stats; cumulative batch momentum; no optimizer"
+  },
+  "batchnorm_before": [
+    {
+      "name": "encoder.stem.1",
+      "channels": 32,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 0.009002035483717918,
+      "min_running_var": 6.34053212706931e-05,
+      "max_running_var": 0.013155832886695862,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.0.bn1",
+      "channels": 32,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 0.4290163516998291,
+      "min_running_var": 0.24397210776805878,
+      "max_running_var": 9.073796272277832,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.0.bn2",
+      "channels": 32,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 0.4642479419708252,
+      "min_running_var": 0.13823428750038147,
+      "max_running_var": 2.699587345123291,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.1.bn1",
+      "channels": 64,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 0.7617225050926208,
+      "min_running_var": 0.5291693210601807,
+      "max_running_var": 19.979652404785156,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.1.bn2",
+      "channels": 64,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 1.141315221786499,
+      "min_running_var": 1.571310043334961,
+      "max_running_var": 40.63466262817383,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.1.shortcut.1",
+      "channels": 64,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 0.20429812371730804,
+      "min_running_var": 0.1048431396484375,
+      "max_running_var": 1.3019040822982788,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.2.bn1",
+      "channels": 128,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 1.2143287658691406,
+      "min_running_var": 0.6654707193374634,
+      "max_running_var": 10.533018112182617,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.2.bn2",
+      "channels": 128,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 1.5258619785308838,
+      "min_running_var": 1.3139861822128296,
+      "max_running_var": 19.33110237121582,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.2.shortcut.1",
+      "channels": 128,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 0.248582661151886,
+      "min_running_var": 0.15115083754062653,
+      "max_running_var": 1.603408694267273,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.3.bn1",
+      "channels": 128,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 1.8982139825820923,
+      "min_running_var": 1.8666679859161377,
+      "max_running_var": 11.526110649108887,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.3.bn2",
+      "channels": 128,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 0.7020488977432251,
+      "min_running_var": 0.5884634852409363,
+      "max_running_var": 1.747725009918213,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.3.shortcut.1",
+      "channels": 128,
+      "num_batches_tracked": 4466,
+      "mean_abs_mean": 0.24836969375610352,
+      "min_running_var": 0.18722079694271088,
+      "max_running_var": 0.6323914527893066,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    }
+  ],
+  "batchnorm_after": [
+    {
+      "name": "encoder.stem.1",
+      "channels": 32,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 0.009036524221301079,
+      "min_running_var": 6.428362394217402e-05,
+      "max_running_var": 0.013188290409743786,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.0.bn1",
+      "channels": 32,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 0.43799179792404175,
+      "min_running_var": 0.27791476249694824,
+      "max_running_var": 8.933638572692871,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.0.bn2",
+      "channels": 32,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 0.4650432765483856,
+      "min_running_var": 0.13307558000087738,
+      "max_running_var": 2.5643115043640137,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.1.bn1",
+      "channels": 64,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 0.7799802422523499,
+      "min_running_var": 0.4794887900352478,
+      "max_running_var": 21.383394241333008,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.1.bn2",
+      "channels": 64,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 1.1522586345672607,
+      "min_running_var": 1.693734049797058,
+      "max_running_var": 41.088077545166016,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.1.shortcut.1",
+      "channels": 64,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 0.20631566643714905,
+      "min_running_var": 0.10184918344020844,
+      "max_running_var": 1.3487645387649536,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.2.bn1",
+      "channels": 128,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 1.2196109294891357,
+      "min_running_var": 0.6893057823181152,
+      "max_running_var": 10.489256858825684,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.2.bn2",
+      "channels": 128,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 1.5320141315460205,
+      "min_running_var": 1.2938532829284668,
+      "max_running_var": 19.717119216918945,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.2.shortcut.1",
+      "channels": 128,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 0.2501418888568878,
+      "min_running_var": 0.14830653369426727,
+      "max_running_var": 1.5748924016952515,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.3.bn1",
+      "channels": 128,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 1.904299259185791,
+      "min_running_var": 1.967898964881897,
+      "max_running_var": 11.197007179260254,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.3.bn2",
+      "channels": 128,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 0.7058655023574829,
+      "min_running_var": 0.5898110866546631,
+      "max_running_var": 1.7279967069625854,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    },
+    {
+      "name": "encoder.blocks.3.shortcut.1",
+      "channels": 128,
+      "num_batches_tracked": 203,
+      "mean_abs_mean": 0.24911680817604065,
+      "min_running_var": 0.1828826367855072,
+      "max_running_var": 0.6380351185798645,
+      "nonfinite_mean": 0,
+      "nonfinite_var": 0,
+      "nonpositive_var": 0
+    }
+  ],
+  "before": {
+    "validation": {
+      "micro_f1": 0.9210337041063812,
+      "macro_f1": 0.9066366050514497,
+      "micro_precision": 0.9262237174095879,
+      "micro_recall": 0.9159015302727878,
+      "mAP": 0.9562274254029847,
+      "macro_AUROC": 0.9901145086323674
+    },
+    "test": {
+      "micro_f1": 0.9198695424977926,
+      "macro_f1": 0.9095126456088873,
+      "micro_precision": 0.9098848607992015,
+      "micro_recall": 0.9300757907010639,
+      "mAP": 0.9606733569163222,
+      "macro_AUROC": 0.9919155252605717
+    }
+  },
+  "after": {
+    "validation": {
+      "micro_f1": 0.9203462622466783,
+      "macro_f1": 0.9088903640939555,
+      "micro_precision": 0.9283200216596724,
+      "micro_recall": 0.9125083166999335,
+      "mAP": 0.9558937506395697,
+      "macro_AUROC": 0.9901707321879235
+    },
+    "test": {
+      "micro_f1": 0.9209831917585397,
+      "macro_f1": 0.912575205133722,
+      "micro_precision": 0.9136842860216596,
+      "micro_recall": 0.9283996501967643,
+      "mAP": 0.9613583084871495,
+      "macro_AUROC": 0.9918438849891903
+    }
+  },
+  "delta": {
+    "validation": {
+      "micro_f1": -0.0006874418597029308,
+      "macro_f1": 0.0022537590425057985,
+      "micro_precision": 0.0020963042500845575,
+      "micro_recall": -0.00339321357285427,
+      "mAP": -0.0003336747634149484,
+      "macro_AUROC": 5.622355555612302e-05
+    },
+    "test": {
+      "micro_f1": 0.001113649260747085,
+      "macro_f1": 0.003062559524834696,
+      "micro_precision": 0.0037994252224581304,
+      "micro_recall": -0.0016761405042996502,
+      "mAP": 0.0006849515708273746,
+      "macro_AUROC": -7.164027138140128e-05
+    }
+  },
+  "experiment": "EXP-RAMAN-002-SEED2026",
+  "loss": "wbce",
+  "source_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-RAMAN-002-SEED2026\\best_model.pt",
+  "requested_seed": 2026,
+  "checkpoint_config_seed": 2026
+}

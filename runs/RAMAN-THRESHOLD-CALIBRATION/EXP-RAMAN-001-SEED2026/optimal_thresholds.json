@@ -1,0 +1,43 @@
+{
+  "experiment": "EXP-RAMAN-001-SEED2026",
+  "loss": "bce",
+  "seed": 2026,
+  "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-RAMAN-001-SEED2026\\best_model.pt",
+  "checkpoint_sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+  "source": "validation split only",
+  "default_threshold": 0.5,
+  "thresholds": {
+    "aldehyde": 0.411376953125,
+    "alkene": 0.083740234375,
+    "alkyne": 0.425537109375,
+    "amide": 0.355224609375,
+    "amine": 0.1436767578125,
+    "c_f_bond": 0.27392578125,
+    "carbonyl": 0.556640625,
+    "ester": 0.69873046875,
+    "ether": 0.36279296875,
+    "hydroxyl": 0.923828125,
+    "imine": 0.857421875,
+    "ketone": 0.376953125,
+    "nitrile": 0.63916015625,
+    "nitro": 0.01525115966796875
+  },
+  "validation_best_f1": {
+    "aldehyde": 0.9781931464174455,
+    "alkene": 0.9793127030261582,
+    "alkyne": 0.9959136018680678,
+    "amide": 0.8626045400238949,
+    "amine": 0.8365081540359053,
+    "c_f_bond": 0.7999999999999999,
+    "carbonyl": 0.9831308245841689,
+    "ester": 0.8403908794788274,
+    "ether": 0.8230236027024656,
+    "hydroxyl": 0.9932647096200279,
+    "imine": 0.9008932369204594,
+    "ketone": 0.855606123293339,
+    "nitrile": 0.9964705882352941,
+    "nitro": 0.8181818181818182
+  },
+  "frozen_before_test_metrics": true,
+  "numeric_audit_policy": "raman-bn-gate-v5"
+}

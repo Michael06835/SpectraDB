@@ -1,0 +1,13 @@
+{
+  "experiment": "EXP-RAMAN-002-SEED2026",
+  "modality": "raman",
+  "best_epoch": 22,
+  "best_val_mAP": 0.9562277495083135,
+  "test_loss": 0.09020674894003167,
+  "test_micro_f1": 0.9198861179184086,
+  "test_macro_f1": 0.9095340398834788,
+  "test_micro_precision": 0.9099172964494511,
+  "test_micro_recall": 0.9300757907010639,
+  "test_mAP": 0.9606704134106165,
+  "test_macro_AUROC": 0.9919157589210751
+}

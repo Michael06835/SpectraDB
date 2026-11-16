@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "reason": "all audited metrics within tolerance",
+  "context": "Phase 4 EXP-RAMAN-002-SEED2026: Original BN, Test @0.5 vs test_metrics.json",
+  "tolerance": 0.001,
+  "gate_policy_version": "raman-bn-gate-v5",
+  "metrics": {
+    "test.micro_f1": {
+      "observed": 0.9198890050091896,
+      "recorded": 0.9198861179184086,
+      "delta": 2.8870907810008006e-06,
+      "abs_diff": 2.8870907810008006e-06,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.macro_f1": {
+      "observed": 0.9095241425716037,
+      "recorded": 0.9095340398834788,
+      "delta": -9.897311875062265e-06,
+      "abs_diff": 9.897311875062265e-06,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.micro_precision": {
+      "observed": 0.9098880730020674,
+      "recorded": 0.9099172964494511,
+      "delta": -2.922344738365279e-05,
+      "abs_diff": 2.922344738365279e-05,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.micro_recall": {
+      "observed": 0.9301122285381139,
+      "recorded": 0.9300757907010639,
+      "delta": 3.6437837049985156e-05,
+      "abs_diff": 3.6437837049985156e-05,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.mAP": {
+      "observed": 0.9606690470655315,
+      "recorded": 0.9606704134106165,
+      "delta": -1.366345085074272e-06,
+      "abs_diff": 1.366345085074272e-06,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.macro_AUROC": {
+      "observed": 0.9919153245226162,
+      "recorded": 0.9919157589210751,
+      "delta": -4.343984588706107e-07,
+      "abs_diff": 4.343984588706107e-07,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    }
+  },
+  "exceeding_metrics": [],
+  "missing_metrics": [],
+  "nonfinite_metrics": [],
+  "cause_not_established": false,
+  "magnitude_interpreted": false,
+  "all_labels_retained": true,
+  "evaluated_once": true,
+  "retry_policy": "single shot; re-running to obtain a different verdict is forbidden",
+  "phase": "original_thresholds",
+  "run_directory": "EXP-RAMAN-002-SEED2026",
+  "recorded_at": "2026-11-16T20:02:46+08:00",
+  "single_shot": true,
+  "note": "first observation for this (run, phase); later runs must reuse this verdict instead of replacing it"
+}

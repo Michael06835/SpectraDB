@@ -1,0 +1,451 @@
+{
+  "experiment": "EXP-RAMAN-001-SEED2026",
+  "loss": "bce",
+  "seed": 2026,
+  "bn_state": "recalibrated",
+  "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\RAMAN-BN-RECALIBRATED\\EXP-RAMAN-001-SEED2026\\best_model_bn_recalibrated.pt",
+  "checkpoint_sha256": "f86a1ac09bde8e8a62c1fceafff92442848a572ab8da8faa609aa78eda4c5693",
+  "original_checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\EXP-RAMAN-001-SEED2026\\best_model.pt",
+  "original_sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+  "bn_recalibration_manifest": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\RAMAN-BN-RECALIBRATED\\EXP-RAMAN-001-SEED2026\\bn_recalibration_manifest.json",
+  "checkpoint_epoch": 22,
+  "changed_bn_buffer_count": 36,
+  "label_set": "RAMAN_FG14",
+  "num_labels": 14,
+  "batch_size": 512,
+  "num_workers": 4,
+  "normalization": "max",
+  "calibration": "per-label F1 optimization on validation split, refitted on the recalibrated BN probabilities",
+  "default_threshold": 0.5,
+  "validation_default": {
+    "micro_f1": 0.9212212589521297,
+    "macro_f1": 0.8746695319975248,
+    "micro_precision": 0.9497633010669116,
+    "micro_recall": 0.8943446440452428
+  },
+  "validation_calibrated": {
+    "micro_f1": 0.9249456975772765,
+    "macro_f1": 0.9098953410058624,
+    "micro_precision": 0.929137294394092,
+    "micro_recall": 0.920791749833666
+  },
+  "test_default": {
+    "micro_f1": 0.9213470699014069,
+    "macro_f1": 0.8912390283055248,
+    "micro_precision": 0.9338648102402874,
+    "micro_recall": 0.9091604722343681
+  },
+  "test_calibrated": {
+    "micro_f1": 0.9166845993831145,
+    "macro_f1": 0.9028770330460608,
+    "micro_precision": 0.9025070621468927,
+    "micro_recall": 0.9313146771607638
+  },
+  "test_threshold_free": {
+    "mAP": 0.9564103425379707,
+    "macro_AUROC": 0.9918924410049491
+  },
+  "diagnostic_reference": {
+    "status": "PASS",
+    "reason": "all audited metrics within tolerance",
+    "context": "Phase 5 EXP-RAMAN-001-SEED2026: Recalibrated BN, 0.5 baseline vs Full BN Diagnostic",
+    "tolerance": 0.001,
+    "gate_policy_version": "raman-bn-gate-v5",
+    "metrics": {
+      "validation.micro_f1": {
+        "observed": 0.9212212589521297,
+        "recorded": 0.921186992427098,
+        "delta": 3.426652503168981e-05,
+        "abs_diff": 3.426652503168981e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.macro_f1": {
+        "observed": 0.8746695319975248,
+        "recorded": 0.8746564987758427,
+        "delta": 1.3033221682112739e-05,
+        "abs_diff": 1.3033221682112739e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.micro_precision": {
+        "observed": 0.9497633010669116,
+        "recorded": 0.9497279728679432,
+        "delta": 3.532819896845396e-05,
+        "abs_diff": 3.532819896845396e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.micro_recall": {
+        "observed": 0.8943446440452428,
+        "recorded": 0.894311377245509,
+        "delta": 3.326679973381097e-05,
+        "abs_diff": 3.326679973381097e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.micro_f1": {
+        "observed": 0.9213470699014069,
+        "recorded": 0.9213669848420508,
+        "delta": -1.9914940643905865e-05,
+        "abs_diff": 1.9914940643905865e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.macro_f1": {
+        "observed": 0.8912390283055248,
+        "recorded": 0.8912483566927619,
+        "delta": -9.328387237106384e-06,
+        "abs_diff": 9.328387237106384e-06,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.micro_precision": {
+        "observed": 0.9338648102402874,
+        "recorded": 0.9338672854522999,
+        "delta": -2.4752120124649224e-06,
+        "abs_diff": 2.4752120124649224e-06,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.micro_recall": {
+        "observed": 0.9091604722343681,
+        "recorded": 0.9091969100714181,
+        "delta": -3.6437837049985156e-05,
+        "abs_diff": 3.6437837049985156e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.mAP": {
+        "observed": 0.9564103425379707,
+        "recorded": 0.9564323905336314,
+        "delta": -2.2047995660634534e-05,
+        "abs_diff": 2.2047995660634534e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.macro_AUROC": {
+        "observed": 0.9918924410049491,
+        "recorded": 0.9918926460109675,
+        "delta": -2.0500601838335797e-07,
+        "abs_diff": 2.0500601838335797e-07,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      }
+    },
+    "exceeding_metrics": [],
+    "missing_metrics": [],
+    "nonfinite_metrics": [],
+    "cause_not_established": false,
+    "magnitude_interpreted": false,
+    "all_labels_retained": true,
+    "evaluated_once": true,
+    "retry_policy": "single shot; re-running to obtain a different verdict is forbidden",
+    "diagnostic_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\RAMAN-BN-DIAGNOSTICS\\EXP-RAMAN-001-SEED2026\\batchnorm_full_diagnostic.json",
+    "max_abs_diff": 3.6437837049985156e-05,
+    "checked": [
+      "test.mAP",
+      "test.macro_AUROC",
+      "test.macro_f1",
+      "test.micro_f1",
+      "test.micro_precision",
+      "test.micro_recall",
+      "validation.macro_f1",
+      "validation.micro_f1",
+      "validation.micro_precision",
+      "validation.micro_recall"
+    ]
+  },
+  "probability_artifacts": {
+    "tag": "EXP-RAMAN-001-SEED2026",
+    "created_at": "2026-11-16T20:09:36+08:00",
+    "policy": "first observation is authoritative; later runs must load it",
+    "meta": {
+      "checkpoint": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\RAMAN-BN-RECALIBRATED\\EXP-RAMAN-001-SEED2026\\best_model_bn_recalibrated.pt",
+      "checkpoint_sha256": "f86a1ac09bde8e8a62c1fceafff92442848a572ab8da8faa609aa78eda4c5693",
+      "original_checkpoint_sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+      "bn_state": "recalibrated",
+      "splits": {
+        "validation": 12981,
+        "test": 12981
+      },
+      "dtype": "float32",
+      "metric_basis": "official FP16 sigmoid at threshold 0.5 and threshold-free; both threshold conditions reuse the same array",
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "batch_size": 512,
+      "num_workers": 4,
+      "normalization": "max",
+      "amp": true
+    },
+    "arrays": {
+      "validation": {
+        "file": "EXP-RAMAN-001-SEED2026__validation__probabilities.npy",
+        "sha256": "efad9d46a535ff7c4264a716415ef08c7f355331ed39f556f70109941fcb576a",
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "min": 0.0,
+        "max": 1.0
+      },
+      "test": {
+        "file": "EXP-RAMAN-001-SEED2026__test__probabilities.npy",
+        "sha256": "7bee03b4b4ab068dc8355c979f7121ce219a49ce66a59a3cc4a80b4579a812c1",
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "min": 0.0,
+        "max": 1.0
+      }
+    }
+  },
+  "probability_source": "first_run",
+  "numeric_audit": {
+    "status": "PASS",
+    "reason": "all audited metrics within tolerance",
+    "context": "Phase 5 EXP-RAMAN-001-SEED2026: Recalibrated BN, 0.5 baseline vs Full BN Diagnostic",
+    "tolerance": 0.001,
+    "gate_policy_version": "raman-bn-gate-v5",
+    "metrics": {
+      "validation.micro_f1": {
+        "observed": 0.9212212589521297,
+        "recorded": 0.921186992427098,
+        "delta": 3.426652503168981e-05,
+        "abs_diff": 3.426652503168981e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.macro_f1": {
+        "observed": 0.8746695319975248,
+        "recorded": 0.8746564987758427,
+        "delta": 1.3033221682112739e-05,
+        "abs_diff": 1.3033221682112739e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.micro_precision": {
+        "observed": 0.9497633010669116,
+        "recorded": 0.9497279728679432,
+        "delta": 3.532819896845396e-05,
+        "abs_diff": 3.532819896845396e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.micro_recall": {
+        "observed": 0.8943446440452428,
+        "recorded": 0.894311377245509,
+        "delta": 3.326679973381097e-05,
+        "abs_diff": 3.326679973381097e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.micro_f1": {
+        "observed": 0.9213470699014069,
+        "recorded": 0.9213669848420508,
+        "delta": -1.9914940643905865e-05,
+        "abs_diff": 1.9914940643905865e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.macro_f1": {
+        "observed": 0.8912390283055248,
+        "recorded": 0.8912483566927619,
+        "delta": -9.328387237106384e-06,
+        "abs_diff": 9.328387237106384e-06,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.micro_precision": {
+        "observed": 0.9338648102402874,
+        "recorded": 0.9338672854522999,
+        "delta": -2.4752120124649224e-06,
+        "abs_diff": 2.4752120124649224e-06,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.micro_recall": {
+        "observed": 0.9091604722343681,
+        "recorded": 0.9091969100714181,
+        "delta": -3.6437837049985156e-05,
+        "abs_diff": 3.6437837049985156e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.mAP": {
+        "observed": 0.9564103425379707,
+        "recorded": 0.9564323905336314,
+        "delta": -2.2047995660634534e-05,
+        "abs_diff": 2.2047995660634534e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.macro_AUROC": {
+        "observed": 0.9918924410049491,
+        "recorded": 0.9918926460109675,
+        "delta": -2.0500601838335797e-07,
+        "abs_diff": 2.0500601838335797e-07,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      }
+    },
+    "exceeding_metrics": [],
+    "missing_metrics": [],
+    "nonfinite_metrics": [],
+    "cause_not_established": false,
+    "magnitude_interpreted": false,
+    "all_labels_retained": true,
+    "evaluated_once": true,
+    "retry_policy": "single shot; re-running to obtain a different verdict is forbidden",
+    "diagnostic_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\RAMAN-BN-DIAGNOSTICS\\EXP-RAMAN-001-SEED2026\\batchnorm_full_diagnostic.json",
+    "max_abs_diff": 3.6437837049985156e-05,
+    "checked": [
+      "test.mAP",
+      "test.macro_AUROC",
+      "test.macro_f1",
+      "test.micro_f1",
+      "test.micro_precision",
+      "test.micro_recall",
+      "validation.macro_f1",
+      "validation.micro_f1",
+      "validation.micro_precision",
+      "validation.micro_recall"
+    ]
+  },
+  "validation_release": {
+    "status": "PASS",
+    "evaluated_metrics": [
+      "validation.macro_f1",
+      "validation.micro_f1",
+      "validation.micro_precision",
+      "validation.micro_recall"
+    ],
+    "exceeding_metrics": [],
+    "metrics": {
+      "validation.micro_f1": {
+        "observed": 0.9212212589521297,
+        "recorded": 0.921186992427098,
+        "delta": 3.426652503168981e-05,
+        "abs_diff": 3.426652503168981e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.macro_f1": {
+        "observed": 0.8746695319975248,
+        "recorded": 0.8746564987758427,
+        "delta": 1.3033221682112739e-05,
+        "abs_diff": 1.3033221682112739e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.micro_precision": {
+        "observed": 0.9497633010669116,
+        "recorded": 0.9497279728679432,
+        "delta": 3.532819896845396e-05,
+        "abs_diff": 3.532819896845396e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "validation.micro_recall": {
+        "observed": 0.8943446440452428,
+        "recorded": 0.894311377245509,
+        "delta": 3.326679973381097e-05,
+        "abs_diff": 3.326679973381097e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      }
+    }
+  },
+  "test_anomaly": {
+    "status": "PASS",
+    "evaluated_metrics": [
+      "test.mAP",
+      "test.macro_AUROC",
+      "test.macro_f1",
+      "test.micro_f1",
+      "test.micro_precision",
+      "test.micro_recall"
+    ],
+    "exceeding_metrics": [],
+    "metrics": {
+      "test.micro_f1": {
+        "observed": 0.9213470699014069,
+        "recorded": 0.9213669848420508,
+        "delta": -1.9914940643905865e-05,
+        "abs_diff": 1.9914940643905865e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.macro_f1": {
+        "observed": 0.8912390283055248,
+        "recorded": 0.8912483566927619,
+        "delta": -9.328387237106384e-06,
+        "abs_diff": 9.328387237106384e-06,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.micro_precision": {
+        "observed": 0.9338648102402874,
+        "recorded": 0.9338672854522999,
+        "delta": -2.4752120124649224e-06,
+        "abs_diff": 2.4752120124649224e-06,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.micro_recall": {
+        "observed": 0.9091604722343681,
+        "recorded": 0.9091969100714181,
+        "delta": -3.6437837049985156e-05,
+        "abs_diff": 3.6437837049985156e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.mAP": {
+        "observed": 0.9564103425379707,
+        "recorded": 0.9564323905336314,
+        "delta": -2.2047995660634534e-05,
+        "abs_diff": 2.2047995660634534e-05,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      },
+      "test.macro_AUROC": {
+        "observed": 0.9918924410049491,
+        "recorded": 0.9918926460109675,
+        "delta": -2.0500601838335797e-07,
+        "abs_diff": 2.0500601838335797e-07,
+        "tolerance": 0.001,
+        "within_tolerance": true
+      }
+    }
+  },
+  "manifest_release": {
+    "status": "ELIGIBLE",
+    "approval": {
+      "present": false,
+      "valid": false,
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\RAMAN-BN-RECALIBRATED\\EXP-RAMAN-001-SEED2026\\manual_approval.json",
+      "reason": "no manual approval record found"
+    },
+    "manifest": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\RAMAN-BN-RECALIBRATED\\EXP-RAMAN-001-SEED2026\\bn_recalibration_manifest.json"
+  },
+  "resumed_from_frozen_thresholds": false,
+  "resumed_from_frozen_probabilities": false,
+  "note": "Thresholds were selected on validation data only and frozen before any test metric was computed. mAP and AUROC are threshold-free and therefore unchanged by the threshold choice. Original-BN thresholds were not reused."
+}

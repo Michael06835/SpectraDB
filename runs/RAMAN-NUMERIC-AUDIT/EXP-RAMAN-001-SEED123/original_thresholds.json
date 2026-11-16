@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "reason": "all audited metrics within tolerance",
+  "context": "Phase 4 EXP-RAMAN-001-SEED123: Original BN, Test @0.5 vs test_metrics.json",
+  "tolerance": 0.001,
+  "gate_policy_version": "raman-bn-gate-v5",
+  "metrics": {
+    "test.micro_f1": {
+      "observed": 0.9135302349561759,
+      "recorded": 0.9135302349561759,
+      "delta": 0.0,
+      "abs_diff": 0.0,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.macro_f1": {
+      "observed": 0.8975763185865006,
+      "recorded": 0.8975763185865006,
+      "delta": 0.0,
+      "abs_diff": 0.0,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.micro_precision": {
+      "observed": 0.9233918999404407,
+      "recorded": 0.9233918999404407,
+      "delta": 0.0,
+      "abs_diff": 0.0,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.micro_recall": {
+      "observed": 0.9038769858621192,
+      "recorded": 0.9038769858621192,
+      "delta": 0.0,
+      "abs_diff": 0.0,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.mAP": {
+      "observed": 0.9597717802836158,
+      "recorded": 0.9597717802836158,
+      "delta": 0.0,
+      "abs_diff": 0.0,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    },
+    "test.macro_AUROC": {
+      "observed": 0.9915742143329738,
+      "recorded": 0.9915742143329738,
+      "delta": 0.0,
+      "abs_diff": 0.0,
+      "tolerance": 0.001,
+      "within_tolerance": true
+    }
+  },
+  "exceeding_metrics": [],
+  "missing_metrics": [],
+  "nonfinite_metrics": [],
+  "cause_not_established": false,
+  "magnitude_interpreted": false,
+  "all_labels_retained": true,
+  "evaluated_once": true,
+  "retry_policy": "single shot; re-running to obtain a different verdict is forbidden",
+  "phase": "original_thresholds",
+  "run_directory": "EXP-RAMAN-001-SEED123",
+  "recorded_at": "2026-11-16T19:58:50+08:00",
+  "single_shot": true,
+  "note": "first observation for this (run, phase); later runs must reuse this verdict instead of replacing it"
+}

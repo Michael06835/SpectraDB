@@ -1,0 +1,16 @@
+{
+  "experiment": "EXP-RAMAN-002-SEED123",
+  "modality": "raman",
+  "weighted": true,
+  "pos_weight_transform": "sqrt",
+  "pos_weight_cap": 20.0,
+  "best_epoch": 24,
+  "best_val_mAP": 0.9572774580819127,
+  "test_loss": 0.09607320153816998,
+  "test_micro_f1": 0.915052053209948,
+  "test_macro_f1": 0.9138641891986753,
+  "test_micro_precision": 0.9078324487161096,
+  "test_micro_recall": 0.9223874070835155,
+  "test_mAP": 0.96633639777357,
+  "test_macro_AUROC": 0.9923411388458881
+}
