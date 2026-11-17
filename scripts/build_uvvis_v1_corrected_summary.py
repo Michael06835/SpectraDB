@@ -336,7 +336,10 @@ def build_summary(
         for seed in RUN_NAMES
     }
     b1_path = b1_metrics_path or (root / B1_METRICS_PATH.relative_to(ROOT))
-    uv_rows = validate_b1(root, b1_path, require=not test_only)
+    uv_rows = (
+        None if test_only
+        else validate_b1(root, b1_path, require=True)
+    )
 
     test = {seed: runs[seed]["test"] for seed in RUN_NAMES}
     per_label = {seed: runs[seed]["rows"] for seed in RUN_NAMES}
