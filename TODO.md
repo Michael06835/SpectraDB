@@ -31,7 +31,7 @@
 - [x] 完成 IR 类别不平衡消融实验与阈值校准实验（均保留 IR-v1 默认设置）。
 - [x] 训练 Raman 1D-CNN 基线并冻结 Raman-v1（test Micro-F1 0.9151±0.0014，Macro-AUROC 0.9911±0.0004）。
 - [x] 完成 Raman 类别不平衡消融实验与阈值校准实验（均保留 Raman-v1 默认设置）。
-- [x] 训练 UV-Vis 1D-CNN 基线并冻结 UVVIS-v1（test Micro-F1 0.4892±0.0406，Macro-AUROC 0.8501±0.0044）。
+- [x] 训练 UV-Vis 1D-CNN 基线并冻结 UVVIS-v1（corrected test Micro-F1 0.5158±0.0067，Macro-AUROC 0.8526±0.0016；旧 invalid Seed2026 三 Run 均值已弃用）。
 - [x] 完成 UV-Vis 类别不平衡、阈值校准与 BatchNorm 重校准诊断（均保留 UVVIS-v1 默认设置）。
 - [x] 弃用 GDB-9-Ex 为主训练数据，降级为备用外部域/方法迁移数据集。
 - [x] 冻结 UV-Vis 化学语义标注 schema v1.0 FINAL（8 层 166 features、48 条一致性规则、uv_pi_system_graph 定义）。
@@ -58,6 +58,8 @@
 - [x] 执行 `training/summarize_raman_ablation.py` 生成 24 条件汇总（24+24 条件、48 条 split-level、672 行逐标签、11 个文件、6 份 audit 全 True）：`runs/RAMAN-ABLATION-SUMMARY/`。
 - [x] 完成 Raman v1 Final Decision / Ablation Registry / Repro Protocol 三份文档，并完成两轮审核修订与 FP16 元数据勘误（`raman_ablation_registry.md` §9.5）。
 - [x] Raman 归档成果提交 Git 并推送 GitHub `main`（2026-11-16）。
+- [x] 完成 Line B Phase B0 只读资产审计、样本/标签一致性检查与实验协议草案（2026-11-17；未执行新的训练/推理、未改历史数据/checkpoint/指标），并完成 v0.2 方法学修订（`positive_or_fusion`/真实 Oracle 拆分、Bootstrap 解释、B0 Test 接触声明、UV 边际/互补拆分、B1–B5 阶段编号、文档 errata）；等待人工审核。
+- [x] 完成 Line B Phase B1 统一 FP32 Validation 导出与 Shared14 九模型评估（2026-11-18；6 个 CPU 测试通过，9/9 对齐/哈希/不可变性检查通过，FP32 重复推理 max_abs_diff=0）；并按授权完成 UV `EXP-UVVIS-001-SEED2026` 历史错误归档（实际 SEED=42）、脚本修正、真实 Seed 2026 重训、历史格式 FINAL TEST 与 B1 重导；报告见 `docs/experiments/line_b_b1_shared14_validation_report.md`。
 
 ---
 
@@ -74,10 +76,56 @@
 
 ### Priority B：三模态信息画像（Line B）
 
-- [ ] 共享 14 标签上三模态 per-label AP/F1 对比。
-- [ ] UV-specific 标签上三模态表现对比。
-- [ ] 标签共现/混淆与样本级 difficulty 分析。
-- [ ] 识别 UV 有额外价值与 UV 是噪声的结构子群。
+**B0：只读资产审计、协议设计与 v0.2 方法学修订（2026-11-17 完成，已通过人工验收）**
+
+- [x] 盘点 IR v1、Raman v1、UV-Vis shared、UVSPEC15 v1 的 checkpoint、阈值、逐标签结果、概率数组与汇总文件。
+- [x] 核查 IR/Raman 103855/12981/12981 与 UV 103853/12981/12981 的两行差异（row_index 13998/14000 全零 UV 谱），确认只在 IR/Raman train 中、val/test 逐元素相同。
+- [x] 以 `uvspec15_label_names.json` 为唯一权威核验 15 类列顺序、源矩阵列索引、checkpoint 输出头与 `label_names`。
+- [x] 核查归一化、谱轴、row_index、scaffold 零重叠、Test 使用纪律与泄漏风险。
+- [x] 生成审计/协议/矩阵文件；完成 v0.2 修订：`positive_or_fusion` 与真实 Oracle 拆分、Bootstrap 解释更正、B0 Test 接触声明、UV 边际/互补拆分、B1–B5 阶段编号、文档 errata。
+- [x] **人工审核 B0 v0.2 修订稿**：主比较统一 BCE + Original + 0.5；UVSPEC15 三模态统一 103853；首轮只 BCE；0.5 主 / Val-F1 次；Test 仅作 exploratory/post-hoc。
+
+**B1：预测导出基础设施 + Shared14 Validation（2026-11-18 完成，含 UV Seed 2026 纠错，待审核）**
+
+- [x] 实现统一导出/评估/审计脚本与 6 个 CPU 单元测试；合成数据 6/6 通过。
+- [x] 导出 Shared14 的 9 个模型 validation 概率、`row_index`、`y_true`、checkpoint/split/label/code 哈希。
+- [x] 计算 Shared14 validation AP/AUROC/F1/support；输出 `runs/LINE-B-METRICS/Shared14/` 与 `runs/LINE-B-MANIFESTS/B1/`。
+- [x] 9/9 行数、row_index、labels、标签顺序、概率范围、checkpoint/BN 不变性与 `test_split_accessed=False` 全部通过；FP32 重复推理 max_abs_diff=0。
+- [x] 归档并废弃 invalid `EXP-UVVIS-001-SEED2026`（实际 SEED=42），修正脚本为 SEED=2026，完整重训与历史格式 FINAL TEST，重导 B1 Validation，恢复 UV 三真实 Seed；详见 `docs/experiments/line_b_b1_shared14_validation_report.md`。
+- [ ] **人工审核 B1 结果与 UV Seed 2026 纠错记录**。
+
+**B2：六个 IR/Raman UVSPEC15 BCE 模型训练（未开始）**
+
+- [ ] 新训 IR UVSPEC15 3 seeds（seed 42/123/2026，BCE，Original BN，15 维头，UV split 103853）。
+- [ ] 新训 Raman UVSPEC15 3 seeds（同上）。
+- [ ] 保存 6 份 checkpoint、run manifest 与 SHA256；不加载 Test。
+
+**B3：全部 Validation、阈值与协议冻结（未开始）**
+
+- [ ] 导出 UVSPEC15 的 9 个模型 validation 概率（UV 3 + 新 IR/Raman 6）。
+- [ ] 计算全部 18 个模型的 validation 指标。
+- [ ] 统一 Validation-only 逐标签 F1 阈值拟合（不复制历史阈值）。
+- [ ] 写 `FREEZE.json` 并校验哈希链；本阶段不接触 Test。
+- [ ] **B3-A**：条件互补性拆分 FN rescue / FP correction / new errors，不以 rescue_rate > UV 总体准确率作为必要判据。
+- [ ] **B3-B**：Shared14 WBCE S-03 仅作历史描述性结果，不得在 B4 的 18 模型矩阵外临时新增 Test 推理。
+- [ ] **B3-C**：Bootstrap、互补性、结构子群与报告指标代码在 FREEZE 前实现并完成合成数据测试。
+- [x] **B3-D**：UV `EXP-UVVIS-001-SEED2026` 历史问题已解决——原实验已归档废弃，修正脚本后以 Seed 2026 完整重训，新 checkpoint/config seed=2026，B1 已重导并恢复三真实 Seed（42/123/2026）。
+
+**B4：Test 导出与完整分析（未开始）**
+
+- [ ] 18 个模型各导出一次 Test 概率（需 FREEZE；写 test_access_log）。
+- [ ] 逐标签 AP/AUROC/F1/support、Macro/Micro、3 Seed Mean±SD。
+- [ ] scaffold 聚类配对 Bootstrap（同一重采样索引；undefined 计数）。
+- [ ] 相同样本的错误互补性、`positive_or_fusion`、真实 Oracle 正确性、McNemar。
+- [ ] 标签共现、结构子群、典型分子分析。
+- [ ] `runs/LINE-B-FINAL/` 报告与图表。
+
+**B5：报告与归档（未开始）**
+
+- [ ] 形成三模态信息画像结论，明确支持/不支持 H1–H4 的证据。
+- [ ] 给出是否进入 chemistry-aware 融合（Line C）的建议。
+- [ ] 完成文件清单、哈希与归档记录。
+- [ ] 禁止把已开启 Test 的探索性结果写成确认性结论。
 
 ### Priority C：Chemistry-aware 融合（Line C，论文核心方法）
 
