@@ -1,4 +1,4 @@
-# SpectraDB Agent 工作说明 最近修改：2026-11-16 00:31 (UTC+8)
+# SpectraDB Agent 工作说明 最近修改：2026-11-18 00:53 (UTC+8)
 
 ## 1. 项目定位
 
@@ -64,7 +64,7 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - 官能团多标签（14 类）：已完成。
 - IR 1D-CNN：已完成，**IR-v1 已冻结归档**（6 模型 × 2 BN × 2 阈值 = 24 条件；主方案 BCE + Original BN + Validation-F1，Validation Micro-F1 0.9505±0.0025 / Test 0.9364±0.0054；备选 BCE + Recalibrated BN + Validation-F1；固定基线 BCE + Original BN + 0.5。决策记录见 `docs/experiments/IR_v1_final_decision.md`）。
 - Raman 1D-CNN：已完成，**Raman-v1 已冻结归档**（历史基线 test Micro-F1 0.9151 / Macro-AUROC 0.9911；6 模型 × 2 BN × 2 阈值 = 24 条件；主方案 WBCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.922034±0.002103 / Test 0.914113±0.006869；备选 WBCE + Original BN + Validation-F1；固定基线 BCE + Original BN + 0.5。决策记录见 `docs/experiments/Raman_v1_final_decision.md`）。
-- UV-Vis 1D-CNN：已完成，UV-Vis-v1 已冻结（test Micro-F1 0.4892，Macro-AUROC 0.8501）。
+- UV-Vis 1D-CNN：已完成，UV-Vis-v1 已冻结（corrected test Micro-F1 0.5158，Macro-AUROC 0.8526；旧 invalid Seed2026 三 Run 均值已弃用）。
 - 模态对比：待输出（三模态信息画像）。
 - UV-specific 化学语义标签：schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注（129817 全部成功，58 二值 + 73 数值），频数与 split 审计已完成；UVSPEC15（15 个 UV 专属标签）已选定并生成标签矩阵。
 - UVSPEC15 单模态基线：已完成（3 seeds，含阈值校准、BN 诊断、BN 重校准与 WBCE 对照）。
