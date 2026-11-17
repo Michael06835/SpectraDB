@@ -26,6 +26,8 @@
 
 **15 类标签**：acyclic_conjugated_system、alpha_beta_unsaturated_carbonyl、aryl_carbonyl、cyclic_conjugated_system、donor_acceptor_same_conjugated_system、has_acceptor_substituted_pi_system、has_aromatic_system、has_conjugation、has_donor_substituted_pi_system、has_nonaromatic_conjugation、heteroaromatic、mixed_aromatic_nonaromatic_conjugation、pi_conjugated_carbonyl、pi_conjugated_imine、pi_conjugated_nitrile。标签**非互斥**（同一分子可同时属于多个共轭/芳香子体系类别）。
 
+> **列顺序说明（2026-11-17 勘误）**：本段按**字母序**列举标签，仅为叙述顺序，**不是**模型输出列顺序。真实列顺序/输出头顺序以 `processed/qm9s/prepared/uvspec15_label_names.json` 为唯一权威；不得根据本段顺序或任何文档中的标签列举顺序推断张量列索引。
+
 **评价指标**：Micro-F1、Macro-F1、Micro-Precision、Micro-Recall、mAP、Macro-AUROC；另记录逐标签 Precision/Recall/F1。mAP 与 Macro-AUROC 为阈值无关指标。
 
 **数据使用纪律**：Training 用于参数训练与 BN 统计量重估；Validation 用于 Early Stopping、方法比较与逐标签阈值拟合；Test 仅用于最终评价、记录与一致性核验。本文档第 6 节的配置选择**全部基于 Validation**；Test 数值在第 7 节独立报告，**未用于**改变任何配置、阈值或 Seed 选择。

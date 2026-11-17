@@ -1,10 +1,10 @@
 # UV-Vis shared vs specific 标签对照分析（UVSPEC15）
 
-状态：**结果口径已冻结（2026-11-14）**
+状态：**结果口径已冻结（2026-11-14）；UV-v1 shared 列于 2026-11-18 更正为真实 Seed2026 三 Seed 结果，旧 invalid 三 Run 均值已弃用**
 
 ## 0. 来源与可复现性
 
-- UV-v1（shared 14 官能团标签）：`runs/UVVIS-v1-FINAL/`
+- UV-v1（shared 14 官能团标签）：`runs/UVVIS-v1-FINAL/`（旧版快照在 archive `superseded_uvvis_v1_final/`）
 - UVSPEC15（specific 15 个 UV 专属共轭/发色团标签）：`runs/EXP-UVVIS-003-UVSPEC15-*`
 - BN 重校准版：`runs/UVSPEC15-BN-RECALIBRATED/`
 - Weighted BCE 消融：`runs/EXP-UVVIS-004-UVSPEC15-WBCE-*`
@@ -20,16 +20,16 @@
 
 ## 2. 主结果（3 seeds，test，mean ± sample SD）
 
-| 指标 | UV-v1 shared（14 标签） | UVSPEC15 原始（15 标签） | UVSPEC15 BN 重校准 |
+| 指标 | UV-v1 shared（14 标签，corrected） | UVSPEC15 原始（15 标签） | UVSPEC15 BN 重校准 |
 |---|---:|---:|---:|
-| Micro-F1 | 0.4892 ± 0.0406 | 0.6136 ± 0.0845 | **0.6580 ± 0.0154** |
-| Macro-F1 | 0.3737 ± 0.0566 | 0.4397 ± 0.0743 | 0.5395（校准阈值） |
-| mAP | 0.5053 ± 0.0127 | 0.5389 ± 0.0599 | **0.5728 ± 0.0203** |
-| Macro-AUROC | 0.8501 ± 0.0044 | 0.9259 ± 0.0204 | **0.9384 ± 0.0040** |
-| 平均 per-label AP | 0.5053 | 0.5389 | — |
-| 平均 per-label AUROC | 0.8501 | 0.9259 | — |
+| Micro-F1 | 0.5158 ± 0.0067 | 0.6136 ± 0.0845 | **0.6580 ± 0.0154** |
+| Macro-F1 | 0.4130 ± 0.0232 | 0.4397 ± 0.0743 | 0.5395（校准阈值） |
+| mAP | 0.5126 ± 0.0011 | 0.5389 ± 0.0599 | **0.5728 ± 0.0203** |
+| Macro-AUROC | 0.8526 ± 0.0016 | 0.9259 ± 0.0204 | **0.9384 ± 0.0040** |
+| 平均 per-label AP | 0.5126 | 0.5389 | — |
+| 平均 per-label AUROC | 0.8526 | 0.9259 | — |
 
-注：shared 与 specific 标签集不同，Micro-F1/Macro-F1 不完全可比；主证据为 mAP、AUROC 与平均 per-label AP。
+注：UV-v1 shared 列已于 2026-11-18 更正为真实 Seed2026 的 3-seed 结果；旧 invalid Seed2026（实际 SEED=42）结果与旧均值已弃用。shared 与 specific 标签集不同，Micro-F1/Macro-F1 不完全可比；主证据为 mAP、AUROC 与平均 per-label AP。
 
 ## 3. 结论
 

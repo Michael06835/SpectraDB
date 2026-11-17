@@ -12,7 +12,7 @@
 |---|---|---|---|---|---|
 | 0 | has_conjugation | B1 | 存在共轭 π 体系 | uv_pi_system_graph 中至少一个共轭/离域体系 | 31,266 / 24.1% |
 | 1 | has_nonaromatic_conjugation | B1 | 存在非芳香共轭 | 至少一个共轭体系含非芳香显式 π 单元 | 9,282 / 7.2% |
-| 2 | acyclic_conjugated_system | B1 | 无环共轭体系 | 至少一个共轭体系不含环键 | 3,889 / 3.0% |
+| 2 | acyclic_conjugated_system | B1 | 无环共轭体系 | 至少一个共轭体系不含环键 | 3,891 / 3.0% |
 | 3 | cyclic_conjugated_system | B1 | 环状共轭体系 | 至少一个共轭体系含环键 | 27,375 / 21.1% |
 | 4 | has_aromatic_system | B2 | 存在芳香体系 | 芳香子图中至少一个芳香原子 | 22,186 / 17.1% |
 | 5 | heteroaromatic | B2 | 杂芳香体系 | 至少一个芳香体系含非碳原子 | 21,916 / 16.9% |
