@@ -107,15 +107,17 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 * Lightning
 ## 项目状态
 
-> 最后同步 2026-11-16 21:05 (UTC+8)，对应 Raman v1 冻结归档提交（SHA 见 `CHANGELOG.md` 的 Raman v1 条目）。
+> 最后同步 2026-11-18，包含 UV Shared14 Seed2026 配置纠错与 B1 文档收尾。
 
-### 单模态历史基线（2026-08-14 ~ 08-16 冻结，阈值 0.5，三随机种子 Mean）
+### 单模态基线（IR/Raman 2026-08 冻结；UV-Vis corrected 2026-11-18；阈值 0.5，三随机种子 Mean）
 
 | 模型 | 标签集 | Test Micro-F1 | Test Macro-AUROC |
 |---|---|---|---|
 | IR-v1 | 14 类官能团 | 0.9406 | 0.9954 |
 | Raman-v1 | 14 类官能团 | 0.9151 | 0.9911 |
-| UV-Vis-v1 | 14 类官能团（shared） | 0.4892 | 0.8501 |
+| UV-Vis-v1（corrected） | 14 类官能团（shared） | 0.5158 | 0.8526 |
+
+> UV-Vis-v1 原三 Run 均值包含 invalid Seed2026（实际 SEED=42），旧版快照已移入 `archive/2026-11-17/UVVIS-SHARED14-INVALID-SEED2026/superseded_uvvis_v1_final/`；上表为 corrected 三真实 Seed 结果，见 `runs/UVVIS-v1-FINAL/`。
 
 ### 已冻结的方法学消融（各 6 模型 × 24 条件）
 
