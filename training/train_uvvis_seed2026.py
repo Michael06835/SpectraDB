@@ -44,7 +44,7 @@ RUN_DIR = ROOT / "runs" / "EXP-UVVIS-001-SEED2026"
 # EXP-UVVIS-001-SEED2026 configuration
 # ============================================================
 
-SEED = 42
+SEED = 2026
 
 # ------------------------------------------------------------
 # Hardware / DataLoader
@@ -328,6 +328,12 @@ def main():
     # --------------------------------------------------------
     # Initialization
     # --------------------------------------------------------
+
+    # Safety: never silently overwrite a non-empty experiment directory.
+    if RUN_DIR.exists() and any(RUN_DIR.iterdir()):
+        raise FileExistsError(
+            f"Refusing to overwrite non-empty run directory: {RUN_DIR}"
+        )
 
     RUN_DIR.mkdir(
         parents=True,

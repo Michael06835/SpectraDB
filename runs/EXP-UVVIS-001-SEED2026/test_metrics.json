@@ -1,13 +1,13 @@
 {
   "experiment": "EXP-UVVIS-001-SEED2026",
   "modality": "uvvis",
-  "best_epoch": 7,
-  "best_val_mAP": 0.4943173545923222,
-  "test_loss": 0.2875372735008181,
-  "test_micro_f1": 0.4425173082912105,
-  "test_macro_f1": 0.311809084715883,
-  "test_micro_precision": 0.6459192950555983,
-  "test_micro_recall": 0.3365398629937327,
-  "test_mAP": 0.4906948088740748,
-  "test_macro_AUROC": 0.8452668761503324
+  "best_epoch": 17,
+  "best_val_mAP": 0.5097539899587329,
+  "test_loss": 0.26906054794636836,
+  "test_micro_f1": 0.5223396509498489,
+  "test_macro_f1": 0.4295953995093783,
+  "test_micro_precision": 0.6620616365568545,
+  "test_micro_recall": 0.4313146771607637,
+  "test_mAP": 0.5123699907740301,
+  "test_macro_AUROC": 0.8528167198753484
 }

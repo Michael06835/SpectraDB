@@ -52,6 +52,16 @@ OUTPUT_DIR = (
     RUNS / "UVVIS-v1-FINAL"
 )
 
+# The normalized/corrected FINAL is authoritative.  This legacy finalizer must
+# not overwrite it; use scripts/build_uvvis_v1_corrected_summary.py only after
+# an explicit review of the source files.
+if OUTPUT_DIR.exists() and any(OUTPUT_DIR.iterdir()):
+    raise FileExistsError(
+        f"Refusing to overwrite non-empty FINAL directory: {OUTPUT_DIR}. "
+        "Use the archived pre-correction snapshot or an explicitly reviewed "
+        "summary rebuild instead."
+    )
+
 OUTPUT_DIR.mkdir(
     parents=True,
     exist_ok=True,
