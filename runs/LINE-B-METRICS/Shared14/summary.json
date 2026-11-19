@@ -1,0 +1,493 @@
+{
+  "task": "Shared14",
+  "phase": "B1",
+  "split": "validation",
+  "threshold": 0.5,
+  "n_models": 9,
+  "modalities": [
+    "ir",
+    "raman",
+    "uvvis"
+  ],
+  "n_per_modality": {
+    "ir": 3,
+    "raman": 3,
+    "uvvis": 3
+  },
+  "label_names": [
+    "aldehyde",
+    "alkene",
+    "alkyne",
+    "amide",
+    "amine",
+    "c_f_bond",
+    "carbonyl",
+    "ester",
+    "ether",
+    "hydroxyl",
+    "imine",
+    "ketone",
+    "nitrile",
+    "nitro"
+  ],
+  "predictions_root": "runs\\LINE-B-PREDICTIONS\\Shared14",
+  "label_names_path": "processed\\qm9s\\prepared\\functional_group_label_names.json",
+  "label_names_sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942",
+  "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+  "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+  "n_samples": 12981,
+  "no_test_access": true,
+  "seed_audit": [
+    {
+      "run_name": "EXP-IR-001-FULL",
+      "modality": "ir",
+      "seed_run_label": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-IR-001-SEED123",
+      "modality": "ir",
+      "seed_run_label": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-IR-001-SEED2026",
+      "modality": "ir",
+      "seed_run_label": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-RAMAN-001-FULL",
+      "modality": "raman",
+      "seed_run_label": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-RAMAN-001-SEED123",
+      "modality": "raman",
+      "seed_run_label": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-RAMAN-001-SEED2026",
+      "modality": "raman",
+      "seed_run_label": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-UVVIS-001-FULL",
+      "modality": "uvvis",
+      "seed_run_label": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-UVVIS-001-SEED123",
+      "modality": "uvvis",
+      "seed_run_label": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-UVVIS-001-SEED2026",
+      "modality": "uvvis",
+      "seed_run_label": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false
+    }
+  ],
+  "unique_config_seeds": {
+    "ir": [
+      42,
+      123,
+      2026
+    ],
+    "raman": [
+      42,
+      123,
+      2026
+    ],
+    "uvvis": [
+      42,
+      123,
+      2026
+    ]
+  },
+  "per_model": [
+    {
+      "run_name": "EXP-IR-001-FULL",
+      "modality": "ir",
+      "seed": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.9541887,
+      "micro_recall": 0.94234864,
+      "micro_f1": 0.94823171,
+      "macro_precision": 0.95060561,
+      "macro_recall": 0.90333141,
+      "macro_f1": 0.92411917,
+      "macro_ap": 0.96855356,
+      "macro_auroc": 0.99604635,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-IR-001-SEED123",
+      "modality": "ir",
+      "seed": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.95377571,
+      "micro_recall": 0.94244844,
+      "micro_f1": 0.94807824,
+      "macro_precision": 0.94740172,
+      "macro_recall": 0.89237336,
+      "macro_f1": 0.91205419,
+      "macro_ap": 0.95866725,
+      "macro_auroc": 0.99598001,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-IR-001-SEED2026",
+      "modality": "ir",
+      "seed": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.94983367,
+      "micro_recall": 0.94038589,
+      "micro_f1": 0.94508617,
+      "macro_precision": 0.93119008,
+      "macro_recall": 0.90043051,
+      "macro_f1": 0.91389205,
+      "macro_ap": 0.95682223,
+      "macro_auroc": 0.99558927,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-RAMAN-001-FULL",
+      "modality": "raman",
+      "seed": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.93736842,
+      "micro_recall": 0.88872255,
+      "micro_f1": 0.91239754,
+      "macro_precision": 0.93100206,
+      "macro_recall": 0.83421399,
+      "macro_f1": 0.86827677,
+      "macro_ap": 0.94649394,
+      "macro_auroc": 0.98834055,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-RAMAN-001-SEED123",
+      "modality": "raman",
+      "seed": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.9353882,
+      "micro_recall": 0.88133733,
+      "micro_f1": 0.90755871,
+      "macro_precision": 0.92230931,
+      "macro_recall": 0.86733371,
+      "macro_f1": 0.88803634,
+      "macro_ap": 0.95055993,
+      "macro_auroc": 0.98824329,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-RAMAN-001-SEED2026",
+      "modality": "raman",
+      "seed": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.93828991,
+      "micro_recall": 0.884165,
+      "micro_f1": 0.91042373,
+      "macro_precision": 0.93005792,
+      "macro_recall": 0.83952873,
+      "macro_f1": 0.86658114,
+      "macro_ap": 0.94565046,
+      "macro_auroc": 0.98838109,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-UVVIS-001-FULL",
+      "modality": "uvvis",
+      "seed": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.6835303,
+      "micro_recall": 0.3905855,
+      "micro_f1": 0.49711032,
+      "macro_precision": 0.59162114,
+      "macro_recall": 0.33961807,
+      "macro_f1": 0.40055496,
+      "macro_ap": 0.51386872,
+      "macro_auroc": 0.84971803,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-UVVIS-001-SEED123",
+      "modality": "uvvis",
+      "seed": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.67221243,
+      "micro_recall": 0.40592149,
+      "micro_f1": 0.50618103,
+      "macro_precision": 0.6085009,
+      "macro_recall": 0.31299175,
+      "macro_f1": 0.37820097,
+      "macro_ap": 0.51577564,
+      "macro_auroc": 0.84807381,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-UVVIS-001-SEED2026",
+      "modality": "uvvis",
+      "seed": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 14,
+      "threshold": 0.5,
+      "micro_precision": 0.67340124,
+      "micro_recall": 0.40249501,
+      "micro_f1": 0.50384159,
+      "macro_precision": 0.58585046,
+      "macro_recall": 0.33018945,
+      "macro_f1": 0.40508589,
+      "macro_ap": 0.50974759,
+      "macro_auroc": 0.84889323,
+      "n_defined_ap": 14,
+      "n_defined_auroc": 14,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    }
+  ],
+  "modality_metrics": [
+    {
+      "modality": "ir",
+      "metric": "micro_precision",
+      "mean": 0.95259936,
+      "sd": 0.00240404,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "micro_recall",
+      "mean": 0.94172766,
+      "sd": 0.00116307,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "micro_f1",
+      "mean": 0.94713204,
+      "sd": 0.00177344,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_precision",
+      "mean": 0.9430658,
+      "sd": 0.01040869,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_recall",
+      "mean": 0.89871176,
+      "sd": 0.00567761,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_f1",
+      "mean": 0.91668847,
+      "sd": 0.00650045,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_ap",
+      "mean": 0.96134768,
+      "sd": 0.00630829,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_auroc",
+      "mean": 0.99587188,
+      "sd": 0.00024698,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "micro_precision",
+      "mean": 0.93701551,
+      "sd": 0.0014827,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "micro_recall",
+      "mean": 0.88474163,
+      "sd": 0.00372622,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "micro_f1",
+      "mean": 0.91012666,
+      "sd": 0.00243306,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_precision",
+      "mean": 0.92778976,
+      "sd": 0.00476963,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_recall",
+      "mean": 0.84702548,
+      "sd": 0.01778707,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_f1",
+      "mean": 0.87429808,
+      "sd": 0.01192785,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_ap",
+      "mean": 0.94756811,
+      "sd": 0.00262509,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_auroc",
+      "mean": 0.98832164,
+      "sd": 7.082e-05,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "micro_precision",
+      "mean": 0.67638132,
+      "sd": 0.00621966,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "micro_recall",
+      "mean": 0.39966733,
+      "sd": 0.00804953,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "micro_f1",
+      "mean": 0.50237765,
+      "sd": 0.00470922,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_precision",
+      "mean": 0.59532417,
+      "sd": 0.01177051,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_recall",
+      "mean": 0.32759976,
+      "sd": 0.01350074,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_f1",
+      "mean": 0.39461394,
+      "sd": 0.01439345,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_ap",
+      "mean": 0.51313065,
+      "sd": 0.00308106,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_auroc",
+      "mean": 0.84889502,
+      "sd": 0.00082211,
+      "n_seeds": 3
+    }
+  ],
+  "generated_at": "2026-11-18T00:15:36+08:00"
+}

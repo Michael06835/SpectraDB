@@ -1,0 +1,250 @@
+{
+  "task": "Shared14",
+  "label_set": "shared14",
+  "subgroup": "functional_group=carbonyl",
+  "dimension": "functional_group_types",
+  "bin": "carbonyl",
+  "case": "correct",
+  "row_index": 65219,
+  "seed": 42,
+  "threshold": 0.5,
+  "selection_rule": "correct: min |confidence - subgroup median|; tie row_index asc",
+  "confidence": 0.9466443061828613,
+  "subgroup_median_confidence": 0.9465305805206299,
+  "n_subgroup_samples": 3898,
+  "n_correct_candidates": 415,
+  "n_error_candidates": 3483,
+  "positive_counts": {
+    "aldehyde": 1284,
+    "alkene": 536,
+    "alkyne": 332,
+    "amide": 1053,
+    "amine": 966,
+    "c_f_bond": 4,
+    "carbonyl": 3898,
+    "ester": 622,
+    "ether": 1007,
+    "hydroxyl": 904,
+    "imine": 500,
+    "ketone": 1272,
+    "nitrile": 239,
+    "nitro": 0
+  },
+  "true_labels": {
+    "aldehyde": 0,
+    "alkene": 0,
+    "alkyne": 0,
+    "amide": 0,
+    "amine": 1,
+    "c_f_bond": 0,
+    "carbonyl": 1,
+    "ester": 0,
+    "ether": 0,
+    "hydroxyl": 0,
+    "imine": 0,
+    "ketone": 1,
+    "nitrile": 0,
+    "nitro": 0
+  },
+  "predictions": {
+    "ir": {
+      "aldehyde": 0,
+      "alkene": 0,
+      "alkyne": 0,
+      "amide": 0,
+      "amine": 1,
+      "c_f_bond": 0,
+      "carbonyl": 1,
+      "ester": 0,
+      "ether": 0,
+      "hydroxyl": 0,
+      "imine": 0,
+      "ketone": 1,
+      "nitrile": 0,
+      "nitro": 0
+    },
+    "raman": {
+      "aldehyde": 0,
+      "alkene": 0,
+      "alkyne": 0,
+      "amide": 0,
+      "amine": 1,
+      "c_f_bond": 0,
+      "carbonyl": 1,
+      "ester": 0,
+      "ether": 0,
+      "hydroxyl": 0,
+      "imine": 0,
+      "ketone": 1,
+      "nitrile": 0,
+      "nitro": 0
+    },
+    "uvvis": {
+      "aldehyde": 0,
+      "alkene": 0,
+      "alkyne": 0,
+      "amide": 0,
+      "amine": 1,
+      "c_f_bond": 0,
+      "carbonyl": 1,
+      "ester": 0,
+      "ether": 0,
+      "hydroxyl": 0,
+      "imine": 0,
+      "ketone": 1,
+      "nitrile": 0,
+      "nitro": 0
+    }
+  },
+  "probabilities": {
+    "ir": {
+      "aldehyde": 2.3410360938669328e-07,
+      "alkene": 3.7211026437944383e-07,
+      "alkyne": 1.3993364689213195e-08,
+      "amide": 0.0036668707616627216,
+      "amine": 0.6075731515884399,
+      "c_f_bond": 1.8947851621042844e-10,
+      "carbonyl": 0.9999997615814209,
+      "ester": 8.780399411989492e-07,
+      "ether": 0.014136216603219509,
+      "hydroxyl": 2.117022432912563e-07,
+      "imine": 3.183046715093951e-07,
+      "ketone": 0.9991257786750793,
+      "nitrile": 4.286966870381548e-08,
+      "nitro": 1.2442259895995011e-11
+    },
+    "raman": {
+      "aldehyde": 5.533432124505723e-14,
+      "alkene": 7.49156647827931e-09,
+      "alkyne": 1.9710361814917476e-13,
+      "amide": 0.032691504806280136,
+      "amine": 0.8757544755935669,
+      "c_f_bond": 1.7446775361223965e-12,
+      "carbonyl": 0.999998927116394,
+      "ester": 0.003674772335216403,
+      "ether": 0.000520958798006177,
+      "hydroxyl": 9.644166709676938e-08,
+      "imine": 1.2959129946921166e-07,
+      "ketone": 0.8615766763687134,
+      "nitrile": 4.3408935113120606e-08,
+      "nitro": 1.3529767380776082e-15
+    },
+    "uvvis": {
+      "aldehyde": 0.4103004038333893,
+      "alkene": 0.024022679775953293,
+      "alkyne": 0.004964339081197977,
+      "amide": 0.011465364135801792,
+      "amine": 0.925871729850769,
+      "c_f_bond": 0.0014459958765655756,
+      "carbonyl": 0.9959841966629028,
+      "ester": 0.005597518756985664,
+      "ether": 0.2719668447971344,
+      "hydroxyl": 0.2742416262626648,
+      "imine": 0.030725210905075073,
+      "ketone": 0.6402038335800171,
+      "nitrile": 0.057591453194618225,
+      "nitro": 1.4825058315182105e-05
+    }
+  },
+  "errors": {
+    "ir": [],
+    "raman": [],
+    "uvvis": []
+  },
+  "exact_match": {
+    "ir": true,
+    "raman": true,
+    "uvvis": true
+  },
+  "canonical_smiles": "CC12C(=O)CC1N1CC12",
+  "structure_library_smiles": "CC12C(=O)CC1N1CC12",
+  "molecular_formula": "C7H9NO",
+  "qm9_number": "67525",
+  "atom_labels": {
+    "1": "C1",
+    "2": "O1",
+    "3": "C2",
+    "4": "C3",
+    "5": "C4",
+    "6": "C5",
+    "7": "C6",
+    "8": "N1",
+    "9": "C7"
+  },
+  "structure_files": {
+    "png": "structure.png",
+    "svg": "structure.svg",
+    "renderer": "RDKit rdMolDraw2D"
+  },
+  "spectra_files": {
+    "png": "spectra.png"
+  },
+  "spectra_axes": {
+    "ir": {
+      "file": "processed\\qm9s\\prepared\\ir_axis.npy",
+      "n_points": 3501,
+      "min": 500.0,
+      "max": 4000.0,
+      "units": "not recorded in prepared metadata"
+    },
+    "raman": {
+      "file": "processed\\qm9s\\prepared\\raman_axis.npy",
+      "n_points": 3501,
+      "min": 500.0,
+      "max": 4000.0,
+      "units": "not recorded in prepared metadata"
+    },
+    "uvvis": {
+      "file": "processed\\qm9s\\prepared\\uvvis_axis.npy",
+      "n_points": 701,
+      "min": 1.0,
+      "max": 15.0,
+      "units": "not recorded in prepared metadata"
+    }
+  },
+  "spectra_matrices": {
+    "ir": {
+      "file": "processed\\qm9s\\prepared\\ir_float32.npy",
+      "sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53",
+      "shape": [
+        129817,
+        3501
+      ],
+      "dtype": "float32"
+    },
+    "raman": {
+      "file": "processed\\qm9s\\prepared\\raman_float32.npy",
+      "sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+      "shape": [
+        129817,
+        3501
+      ],
+      "dtype": "float32"
+    },
+    "uvvis": {
+      "file": "processed\\qm9s\\prepared\\uvvis_float32.npy",
+      "sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a",
+      "shape": [
+        129817,
+        701
+      ],
+      "dtype": "float32"
+    }
+  },
+  "source_hashes": {
+    "structure_library": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9",
+    "structure_library_file": "processed\\qm9s\\structures\\qm9s_structure_library.csv",
+    "d1_definitions": "1c3dea3a99d05d380c6da092f4c2ddbb21e79b5183ca46b2a66fd7f497cf2d53",
+    "d1_summary": "17f22993c61d8fb04a9a4cd8a31f0c813e1c6fd6d935dc264fd914d34ecb07d6",
+    "b4_1_prediction_manifest": {
+      "ir": "73a35e86ea0764ec44b325cf5eca4d1182e8c3ea500f4deed9a86a05d9a06f75",
+      "raman": "26ad8ff4a89a80ec2b016dcd67f95e163a426df43d2b969b331f1d8e3a1ded44",
+      "uvvis": "e69e27186839200dc6aa6ca9ce3e8784940aa33dc15b6a494c823330ccae93f2"
+    },
+    "b4_1_probabilities": {
+      "ir": "6e2ca3cfd331ee1686813fccab1f05beb9c16b958412844ca792cc81a946a9f9",
+      "raman": "4080cd493815b058d659b291f4187c45ad55eb01a7a5b58e66240e5152f3cb58",
+      "uvvis": "f1306655f0885c119035dcbe0df7dcd207b09b9917e0c84eec19d7524b4300cc"
+    }
+  }
+}

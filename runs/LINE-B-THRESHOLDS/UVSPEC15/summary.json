@@ -1,0 +1,121 @@
+{
+  "phase": "B3",
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "split": "validation",
+  "n_models": 9,
+  "n_labels": 15,
+  "n_threshold_records": 135,
+  "expected_threshold_records": 135,
+  "n_undefined_threshold_records": 0,
+  "undefined_records": [],
+  "default_threshold": 0.5,
+  "primary_threshold": 0.5,
+  "secondary_threshold": "validation_f1_per_label",
+  "calibration_method": "precision_recall_curve observed-probability candidates; np.nanargmax first maximum; ascending thresholds -> smallest threshold on tie; single-class labels fallback to 0.5 with undefined status",
+  "partial": false,
+  "expected_models": 9,
+  "no_test_access": true,
+  "all_checks_pass": true,
+  "validation_f1_note": "Validation-F1 thresholds are fitted on the same Validation split; their F1 is in-sample optimistic and is not a Test estimate.",
+  "output_hashes": {
+    "threshold_records.csv": "080dc309d003f584408b4c330e25b3fee27209e7ed372594c1a2832cfddff3ae",
+    "per_label_calibration.csv": "a408c7bcad3e7d263f9194761a1864ba822380f0d94160c5bd883fef415457d2",
+    "model_metrics.csv": "f26099cfcbad5f4223a6e7871053d96f6d5bec4620c484d68212601aa33c3a92",
+    "modality_mean_sd.csv": "a73b9a5099676ece1d572d03254b9cb338014260c7193c107eb03198127a93d4",
+    "per_label_mean_sd.csv": "772e55647f14f4f1217c3827b060753858c3687413605152d94a675c05886e17"
+  },
+  "models": [
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-FULL",
+      "modality": "ir",
+      "seed": 42,
+      "checkpoint_sha256": "68c976d92b1b5f82c5d493b3ebab44b9e9953f1738d62f0ba760b3e6e79992fe",
+      "probabilities_sha256": "67b13d2143455269ada77160573019a74034fe7fa87a863e9a13fe978e0dd07f",
+      "thresholds_sha256": "98e062029560be910526e8516b70531d3ef4e8c9a109cbedb3d9ed8a3a467110",
+      "default_macro_f1": 0.8984682838877204,
+      "calibrated_macro_f1": 0.9061739426943832
+    },
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+      "modality": "ir",
+      "seed": 123,
+      "checkpoint_sha256": "7a977c63a8d52315e88c7497fd8c44b47f997985f1f2f8ab1392f38cc14eee63",
+      "probabilities_sha256": "37509dc5dd8a17b9985a6584b2cc93e58b7a61da27da05792a3fabe2833de98d",
+      "thresholds_sha256": "267c7cee9b6046bb64c185f7d049c73cfee77c9003381208ae284544c5af3609",
+      "default_macro_f1": 0.8736489256159252,
+      "calibrated_macro_f1": 0.8913123062803626
+    },
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+      "modality": "ir",
+      "seed": 2026,
+      "checkpoint_sha256": "410c41d1413f2d1c8f697aa19504e765836a171aea61f258e3d4b88c282c19db",
+      "probabilities_sha256": "3c7d3b770816984f18db118d42e95b34a00c02f9f02ab687d0b7208228e4834d",
+      "thresholds_sha256": "2525d76d41448125b7f600a488169a6030cf4f0dad6c5c1259e183b950e36c1e",
+      "default_macro_f1": 0.9008029471594319,
+      "calibrated_macro_f1": 0.9100509918101733
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+      "modality": "raman",
+      "seed": 42,
+      "checkpoint_sha256": "20e0264f5411dbef57ba23559c0db68aadcc39d324e5b21ee84f3e7e9b88f761",
+      "probabilities_sha256": "44fd311fde58975bd27d8dc4981d7edccce36b8c089986ad4751f3a998f1c161",
+      "thresholds_sha256": "941f1edf5c0d282abcce5e4f34fc77dbe4535ad45893d502c978170394a226d9",
+      "default_macro_f1": 0.8951327392464701,
+      "calibrated_macro_f1": 0.9081262622191095
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "modality": "raman",
+      "seed": 123,
+      "checkpoint_sha256": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+      "probabilities_sha256": "e218e70e8f48b263709a76784c1cb76bccc47abe573351a44a3db076424c6171",
+      "thresholds_sha256": "2c7ded918193796cacb91ba71c3102049f5f51d6bdacc648aa51047ab52a6814",
+      "default_macro_f1": 0.9046919359803108,
+      "calibrated_macro_f1": 0.9137624593459694
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "modality": "raman",
+      "seed": 2026,
+      "checkpoint_sha256": "781b47422630899f1f234695dea49af71f4c6401594380da868e7bd17d8e022a",
+      "probabilities_sha256": "749763a8e79666cc411a1acf912a2ec69997f10f5355a1d951c026ff3575bda7",
+      "thresholds_sha256": "72a694f85d428aa56293216baf05eb08e32e5bb68f90ee91b45ad3efadd48f18",
+      "default_macro_f1": 0.9030023508045972,
+      "calibrated_macro_f1": 0.9102728347605438
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+      "modality": "uvvis",
+      "seed": 42,
+      "checkpoint_sha256": "11f2a467e863ac4f943f0ce2509342ae058b297da742daaf19a3a6cf41280ace",
+      "probabilities_sha256": "f4f9a606eeec454838d6c9726eece836f63f9a7a312e5f037b73f8119a47afcc",
+      "thresholds_sha256": "78f5609df0813ddefd43ddffce37eb2109cab900af0056fb840588a3825fbd92",
+      "default_macro_f1": 0.43315665356693633,
+      "calibrated_macro_f1": 0.5047635759496795
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+      "modality": "uvvis",
+      "seed": 123,
+      "checkpoint_sha256": "ded92d1d29ac26db56b3967f322fdbcca1143a527deb26abbafc0e9c3a54bdc8",
+      "probabilities_sha256": "35d770b075251e64d0fcb351ae7ac2f2ace8f563d7e318cfdf9cccfa29c72d0f",
+      "thresholds_sha256": "26e0ccc6e079aeed6c80b541f6b7ef3a2943aa3113e2551b78e6e7b6c1ab0cf0",
+      "default_macro_f1": 0.35234164248315947,
+      "calibrated_macro_f1": 0.44190892440856205
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "modality": "uvvis",
+      "seed": 2026,
+      "checkpoint_sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+      "probabilities_sha256": "b4d40eaf82b9e83776fc81ebcfa66814b8e13b32237df8bc1c087d042fb58e85",
+      "thresholds_sha256": "7601afc4dfded6c470471518bd3bce208cfaee681da3693ed3f2c73fb0272b82",
+      "default_macro_f1": 0.4527984660738754,
+      "calibrated_macro_f1": 0.5247771102943164
+    }
+  ],
+  "generated_at": "2026-11-18T18:17:23+08:00"
+}

@@ -1,0 +1,113 @@
+{
+  "phase": "B4.4",
+  "generated_at": "2026-11-20T03:23:28+08:00",
+  "classification": {
+    "status": "exploratory/post-hoc",
+    "blind_test_claim": false,
+    "confirmatory_significance": false,
+    "positive_or_is_oracle": false
+  },
+  "config": {
+    "bootstrap_reps_conditional": 2000,
+    "bootstrap_reps_subgroup": 500,
+    "b4_3_draws_sha256": "1c2e7e92e92371b1f528e2e4561ee2d58e1f4dbfabc28838b2bfe1d7a899f3b6",
+    "b4_3_draws_reconstructed_match": true,
+    "rng_seed": 20261117,
+    "hc_fp_prob": 0.9,
+    "hc_fn_prob": 0.1,
+    "hard_fraction": 0.1,
+    "support_min_n": 100,
+    "support_min_positive": 30,
+    "best_single": {
+      "Shared14": "ir",
+      "UVSPEC15": "raman"
+    },
+    "conditional_ci_percentiles": [
+      2.5,
+      97.5
+    ]
+  },
+  "preflight": {
+    "protocol_sha256": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a",
+    "freeze_sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c",
+    "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+    "n_models": 18
+  },
+  "counts": {
+    "pairwise_rows": 558,
+    "mcnemar_rows": 522,
+    "oracle_rows": 174,
+    "conditional_rows": 120,
+    "sample_rows": 36,
+    "subgroup_metric_rows": 11484,
+    "subgroup_complementarity_rows": 2112,
+    "subgroup_bootstrap_rows": 504
+  },
+  "sources": {
+    "b4_1": {
+      "predictions_root": "runs\\LINE-B-TEST-PREDICTIONS",
+      "prediction_manifests": [
+        "73a35e86ea0764ec44b325cf5eca4d1182e8c3ea500f4deed9a86a05d9a06f75",
+        "fe0bcc14b533e1ad455ce05c022234617e0ab66711a7565259e1e334d77b0d9b",
+        "d1c043d810cf7cfe848d441c8b8b75afb141343ecf47803fd152c4d65c72c3b6",
+        "26ad8ff4a89a80ec2b016dcd67f95e163a426df43d2b969b331f1d8e3a1ded44",
+        "e9d524e2da4181e88b04a39ea5396a63032ea8b383469f2279aff4eec87ee8fb",
+        "c37c5542028d5087d5ca9eaff7bf464f5598972dbe01f2272eb8ee769187a0b2",
+        "e69e27186839200dc6aa6ca9ce3e8784940aa33dc15b6a494c823330ccae93f2",
+        "4c5c6df0c42106bf3cb8db5e767c798a06231e9503e57b27f078e3aa9ec90204",
+        "bc1dbfc7dfc51f7c39cad17eea47a2e412282db215d12c43e4f1ea6b54a3b361",
+        "caa257101923ba6b923eed735b778b15ece764607665faf66b1c76ce9a1ca157",
+        "f2f6fa54969981855bade9958dbe81a02e46f990cafc133d41f619eeeae86771",
+        "c855350241efdedb7d95fafa97669c88a83005801622a74518ddeabb03a008d3",
+        "5bfc6ff21794b5cd5203511aa75fa500c0cb982959a746e1d61cd00d00d00db8",
+        "6685e34a6d75d30bee9b390efa3feb25830e6d2e8f59992031cae2f476055540",
+        "fa9544fbdbb8cabf01c65d9cd2ebafd138cdfabf9a4296678e21d50cba7226e0",
+        "ea8a1cd22debd4d12be22a6234c884e7e3c773ab3ce93d2f94a95750f4ac9d89",
+        "94aa319464149d7a25036204d9c54b343440b6209f78f8041b86c3d432c60bfa",
+        "3f836f487b1de4a6d946a8c9b49ed79f5f395381a942612fc52c61fd9781ae0f"
+      ]
+    },
+    "b4_2": {
+      "analysis_manifest": "d809e140437c1865e4b43212caae3d8a6ba0f61861d015138710228b35664d06",
+      "verification": "334eb9ef58c8745fbb25233acb9512e324e9dd4cb4153ea58eb339ad5ae401ce"
+    },
+    "b4_3": {
+      "analysis_manifest": "8e95fe5691795ece0fba5dd8838288b97a082e1efad5ea1214b03f59a1c3c3ae",
+      "verification": "ca57a505764dba4012c3269d424bf7ef72b1f70281a2778efc609007a110b34b"
+    },
+    "test_access_log": {
+      "path": "runs/LINE-B-MANIFESTS/test_access_log.json",
+      "sha256": "e7b0bd49dccf816504afcca1438755e2cc82522f4dda688d6b20c5afc740580a"
+    },
+    "structure_library": {
+      "path": "processed\\qm9s\\structures\\qm9s_structure_library.csv",
+      "sha256": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9"
+    },
+    "scaffold_manifest": {
+      "path": "processed\\qm9s\\prepared\\qm9s_manifest_prepared.csv",
+      "sha256": "e5fd1710bde44fe7e5c57bc7115d8d69751ac36cb70ea01e6e6351f48013e51c"
+    },
+    "d1_training_cooccurrence": {
+      "Shared14": {
+        "training_cooccurrence_counts.csv": "70ccf5d16f51917a9cb74b168a39240254189793b44110914aa3704100236935",
+        "training_cooccurrence_phi.csv": "8de4a43580d026c660e1c3ea781e05b4758bf32b715a759f307ebb399ebeac23",
+        "training_cooccurrence_cramers_v.csv": "8f24c12ce4768b21d5fa86670908ae988e4dc39f30a58dd4220f2d5474c2ac32",
+        "training_cooccurrence_support.csv": "c477614575b9b2e2ca170efc98a2921a91fe07dc145856f5b65e7d73371f744d"
+      },
+      "UVSPEC15": {
+        "training_cooccurrence_counts.csv": "9ad8e47f2531e23009a9ba9dc2df8c07f762f2a2e55c66b337ad8df3e66fed38",
+        "training_cooccurrence_phi.csv": "ab670080f5e0eaa2d43e2899f48bbcdcd373a7371dcc8571eb8580f9d67732d0",
+        "training_cooccurrence_cramers_v.csv": "e0beb5fa97f679f151fb1007d0dd55407422befd3f283565a66afee7d4b2d09d",
+        "training_cooccurrence_support.csv": "56b17a041f0f0026c54a159e9586792b5632e13aa12d4d02e779dd22467aff59"
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.9.0",
+    "cwd": "E:\\Projects\\曦源计划\\数据\\SpectraDB"
+  },
+  "elapsed_seconds": 767.0
+}

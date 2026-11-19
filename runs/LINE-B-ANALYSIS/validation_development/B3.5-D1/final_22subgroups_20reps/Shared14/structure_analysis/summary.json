@@ -1,0 +1,360 @@
+{
+  "phase": "B3.5-D1",
+  "task": "Shared14",
+  "label_set": "shared14",
+  "validation_development": true,
+  "no_test_access": true,
+  "split": "validation",
+  "formal_b4": false,
+  "n_models": 9,
+  "n_labels": 14,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "threshold_policies": {
+    "primary": "fixed_0.5",
+    "secondary": "validation_f1"
+  },
+  "best_single": "ir",
+  "inputs": {
+    "accepted": {
+      "verification_path": "runs\\LINE-B-MANIFESTS\\B3\\b3_5b_manifest_verification_v2.json",
+      "verification_sha256": "73aee141a2936e2f27f9843b08521b57c95572734ead616d19e5346f7f04b986",
+      "manifest": {
+        "path": "processed\\qm9s\\prepared\\qm9s_manifest_prepared.csv",
+        "sha256": "e5fd1710bde44fe7e5c57bc7115d8d69751ac36cb70ea01e6e6351f48013e51c",
+        "used_in_computation": true
+      },
+      "structure_library": {
+        "path": "processed/qm9s/structures/qm9s_structure_library.csv",
+        "sha256": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9",
+        "used_in_computation": false
+      },
+      "metrics": {
+        "path": "runs\\LINE-B-METRICS\\Shared14\\model_metrics.csv",
+        "sha256": "1c24cbe40a057d8cbfa578fc094534005d61829f0c2df947b495f1e93a8e10a3",
+        "used_in_computation": false
+      },
+      "b3a": {
+        "path": "summary.json",
+        "sha256": "f057dcb7030ffea5fa71cc72cbc731a91cc0388d7ee1d28b1749608d28d7086d",
+        "best_single": "ir"
+      },
+      "code_provenance": {
+        "path": "runs\\LINE-B-MANIFESTS\\B3\\code_provenance.json",
+        "sha256": "b1c5d2eb65b16f719dae971819c6f3623bcc1a355dc5eb89e687a25145e20e90",
+        "n_models": 9,
+        "records": [
+          {
+            "task": "Shared14",
+            "run_name": "EXP-IR-001-FULL",
+            "probabilities_sha256": "2152f0c2904faf5c0d28cc071fb9deaba373a1010c4ddb204d52e0ede7c6f291",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "627a9ddf95256bb60c6fb4da7e718e8802517ce001bd3bb612deeede1f0b6e49",
+            "thresholds_sha256": "1cc92a75bb2e1f8b299fcf6333c01ec06d5749031383f65443fabb0096ed63c1"
+          },
+          {
+            "task": "Shared14",
+            "run_name": "EXP-IR-001-SEED123",
+            "probabilities_sha256": "6fd3bf245ea1fc94588e9a2d6089cb759ff656eea1f834f86df66159f1d3458a",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "15d824710bc6bd7869835386dcc4a063f408afd7b697ce58a4d5b0dadc615915",
+            "thresholds_sha256": "f24079970a2e04ea10e8241285ef089cfda5ba5fca103141e6a885768be773a6"
+          },
+          {
+            "task": "Shared14",
+            "run_name": "EXP-IR-001-SEED2026",
+            "probabilities_sha256": "a69c1f9ad5b74565e82a198ae331e7268e445c65c397bb0f374ffc2b92b73789",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "9e2c3b4b8d03e2acd27434369265ea4463962a57cdf5fe04f0751c41ceba190c",
+            "thresholds_sha256": "18e8136f8019b43458a1780bb4094351829a1d0365f24e2bfaa4a4c63fea935d"
+          },
+          {
+            "task": "Shared14",
+            "run_name": "EXP-RAMAN-001-FULL",
+            "probabilities_sha256": "466aca4de0d2909753b70abbfa2b25ca7db52774a90847fbe5af46ed3066e39e",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "2318df1cc7d8a76b2c2047f7ba5155e9dfa228b022874099a8575c46f82b355c",
+            "thresholds_sha256": "621992ca32363720ad435c510d6124e883cac84f54d6235009d3d97150467689"
+          },
+          {
+            "task": "Shared14",
+            "run_name": "EXP-RAMAN-001-SEED123",
+            "probabilities_sha256": "5698017cf7d6facac41b09b33f3aa7ba2b5c28f6b4f183db4727e019421652de",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "1f746a75cee2e27664a13c53025a78292eb2f8e1e5b84ebfcc16fa9cf5c7f842",
+            "thresholds_sha256": "3be96864317a058d7aa19e7ffaee96e92a6494761d9a6092879b96fd117df04b"
+          },
+          {
+            "task": "Shared14",
+            "run_name": "EXP-RAMAN-001-SEED2026",
+            "probabilities_sha256": "b1717418fd64e8838ab57dd5cd792365eb6800ed6d9b2dd5cad74f893c017a74",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "1aa05855b6754e1e3939738b78389945768d4b31d597cf8d96df0d7ae8717181",
+            "thresholds_sha256": "18829f9157e7877b7077403d1c542011f233ec3a31baa347af7ec661b9f25440"
+          },
+          {
+            "task": "Shared14",
+            "run_name": "EXP-UVVIS-001-FULL",
+            "probabilities_sha256": "62169f375dde7a5017f043dfe6a9b9b6b17dc7a87be79da20ca05c3d25e140e9",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "95e7efbdb942b908334ccba3abb9840827950d1a804b6e9d5cd87f02592fe6bb",
+            "thresholds_sha256": "39a6eb5cce8db19982051f15a21809dda4aee0eed51a80cc7dbcdb603ea154bc"
+          },
+          {
+            "task": "Shared14",
+            "run_name": "EXP-UVVIS-001-SEED123",
+            "probabilities_sha256": "6375f7e284d58e3e4b377daf7f1bd3b67ea641d25d6e2290b25e144f2b1b6e61",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "f4685e3b2b732cc708d0d469bbfcb07d18bcc747708d42037c95a704d2a58659",
+            "thresholds_sha256": "ffe4d3e9c25d9f3ce2f94f0761a3d8eb25c57ba5cc83838ea3e70aab5b296c14"
+          },
+          {
+            "task": "Shared14",
+            "run_name": "EXP-UVVIS-001-SEED2026",
+            "probabilities_sha256": "6e9b67b605c02c5b3b8fb3ac6ea4aaa6b2b86f5859712f2a766e397b42512054",
+            "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+            "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+            "manifest_sha256": "50f9bb796602c2ee6296833dd25cd5c61c0f2356b264285a3a981df5bc718589",
+            "thresholds_sha256": "4cd32c5767344752e470f0636ac43d7b1e6e63bd7710bf24d9ebfc633a5c0cde"
+          }
+        ]
+      }
+    },
+    "files": {
+      "qm9s_manifest_prepared.csv": {
+        "path": "processed\\qm9s\\prepared\\qm9s_manifest_prepared.csv",
+        "sha256": "e5fd1710bde44fe7e5c57bc7115d8d69751ac36cb70ea01e6e6351f48013e51c"
+      },
+      "qm9s_structure_library.csv": {
+        "path": "processed\\qm9s\\structures\\qm9s_structure_library.csv",
+        "sha256": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9"
+      },
+      "functional_group_labels.npy": {
+        "path": "processed\\qm9s\\prepared\\functional_group_labels.npy",
+        "sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4"
+      },
+      "functional_group_label_names.json": {
+        "path": "processed\\qm9s\\prepared\\functional_group_label_names.json",
+        "sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942"
+      },
+      "ir_scaffold_split_valid.npz": {
+        "path": "processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610"
+      },
+      "raman_scaffold_split_valid.npz": {
+        "path": "processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610"
+      },
+      "uvvis_scaffold_split_valid.npz": {
+        "path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb"
+      }
+    }
+  },
+  "training": {
+    "common_n": 103853,
+    "coverage": {
+      "rule": "intersection of ir/raman/uvvis authoritative Training indices; Test indices are never read",
+      "per_modality_train_n": {
+        "ir": 103855,
+        "raman": 103855,
+        "uvvis": 103853
+      },
+      "common_train_n": 103853,
+      "excluded_from_common": {
+        "ir": 2,
+        "raman": 2,
+        "uvvis": 0
+      }
+    }
+  },
+  "subgroups": {
+    "n_definitions": 26,
+    "n_nonempty": 22,
+    "n_main_support": 21,
+    "n_main_support_definition": "subgroups with at least one label meeting n>=100 and positive>=30; not all labels",
+    "heavy_atom": {
+      "heavy_atom_quartiles": {
+        "q1": 9.0,
+        "q2": 9.0,
+        "q3": 9.0
+      },
+      "duplicate_boundaries": {
+        "q1_eq_q2": true,
+        "q2_eq_q3": true,
+        "all_equal": true
+      },
+      "degenerate_partition": true,
+      "heavy_atom_bin_counts": {
+        "Q1": 12981,
+        "Q2": 0,
+        "Q3": 0,
+        "Q4": 0
+      },
+      "coverage": {
+        "ring_count": {
+          "n_samples": 12981,
+          "sum_bin_memberships": 12981,
+          "all_rows_exactly_one": true
+        },
+        "aromatic_ring_count": {
+          "n_samples": 12981,
+          "sum_bin_memberships": 12981,
+          "all_rows_exactly_one": true
+        },
+        "n_o_f": {
+          "n_samples": 12981,
+          "sum_bin_memberships": 12981,
+          "all_rows_exactly_one": true
+        },
+        "heavy_atom_count": {
+          "n_samples": 12981,
+          "sum_bin_memberships": 12981,
+          "all_rows_exactly_one": true
+        },
+        "rotatable_bond_count": {
+          "n_samples": 12981,
+          "sum_bin_memberships": 12981,
+          "all_rows_exactly_one": true
+        },
+        "fraction_csp3": {
+          "n_samples": 12981,
+          "sum_bin_memberships": 12981,
+          "all_rows_exactly_one": true
+        }
+      },
+      "rule": "Training common-set linear quartiles; <= boundaries, duplicate boundaries preserved; no equal-heavy-atom splitting",
+      "val_n": 12981
+    }
+  },
+  "protocol": {
+    "path": "docs/experiments/line_b_protocol_draft.md",
+    "sha256": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a",
+    "version": "B0 v0.2"
+  },
+  "bootstrap_config": {
+    "rng": 20261117,
+    "reps": 20,
+    "ci": "95% percentile",
+    "resampling_unit": "murcko_scaffold",
+    "sampling": "with replacement",
+    "paired_across_models_and_seeds": true,
+    "weighting": "scaffold draw count",
+    "split": "validation",
+    "formal_b4": false,
+    "no_test_access": true
+  },
+  "subgroup_bootstrap": {
+    "selected_subgroups": [
+      "aromatic_ring_count=0",
+      "aromatic_ring_count=1",
+      "aromatic_ring_count=>=2",
+      "fraction_csp3=<0.5",
+      "fraction_csp3=>=0.5",
+      "functional_group=alkyne",
+      "functional_group=amine",
+      "functional_group=carbonyl",
+      "functional_group=hydroxyl",
+      "functional_group=nitrile",
+      "heavy_atom_count=Q1",
+      "n_o_f=0",
+      "n_o_f=1",
+      "n_o_f=2",
+      "n_o_f=>=3",
+      "ring_count=0",
+      "ring_count=1",
+      "ring_count=2",
+      "ring_count=>=3",
+      "rotatable_bond_count=0",
+      "rotatable_bond_count=1",
+      "rotatable_bond_count=>=2"
+    ],
+    "all_predefined_subgroups": [
+      "ring_count=0",
+      "ring_count=1",
+      "ring_count=2",
+      "ring_count=>=3",
+      "aromatic_ring_count=0",
+      "aromatic_ring_count=1",
+      "aromatic_ring_count=>=2",
+      "n_o_f=0",
+      "n_o_f=1",
+      "n_o_f=2",
+      "n_o_f=>=3",
+      "heavy_atom_count=Q1",
+      "rotatable_bond_count=0",
+      "rotatable_bond_count=1",
+      "rotatable_bond_count=>=2",
+      "fraction_csp3=<0.5",
+      "fraction_csp3=>=0.5",
+      "functional_group=carbonyl",
+      "functional_group=nitrile",
+      "functional_group=alkyne",
+      "functional_group=amine",
+      "functional_group=hydroxyl"
+    ],
+    "n_selected": 22,
+    "n_nonempty": 22,
+    "reps": 20,
+    "status": "sanity_only_not_formal_2000",
+    "rows": 21120,
+    "macro_count_rows": 21120,
+    "sanity_limited": false
+  },
+  "outputs": {
+    "training_cooccurrence_support.csv": "c477614575b9b2e2ca170efc98a2921a91fe07dc145856f5b65e7d73371f744d",
+    "training_cooccurrence_counts.csv": "70ccf5d16f51917a9cb74b168a39240254189793b44110914aa3704100236935",
+    "training_cooccurrence_conditional.csv": "6a6f329f6502a1d40ff629287714c2cbd729a3202b6072f7ff4101c59b815232",
+    "training_cooccurrence_phi.csv": "8de4a43580d026c660e1c3ea781e05b4758bf32b715a759f307ebb399ebeac23",
+    "training_cooccurrence_cramers_v.csv": "8f24c12ce4768b21d5fa86670908ae988e4dc39f30a58dd4220f2d5474c2ac32",
+    "training_hierarchy_pairs.csv": "99a0971eb3e71c5c7db1bd94d845191c70f88c1fcc7f860ae9c0275f45ca5ec3",
+    "training_semantic_groups.csv": "2567437ad23b5c0fbc4fbd00a5d0061cfe42e5ee3a6e015cfc654ec04aa7d036",
+    "training_coverage.csv": "e689b53389e1196186c1a6960c5d499629bf0b2174960116c56dfd84e5488364",
+    "subgroup_definitions.csv": "1c3dea3a99d05d380c6da092f4c2ddbb21e79b5183ca46b2a66fd7f497cf2d53",
+    "subgroup_metrics.csv": "f980ddcc96b8162715c39e2f8957f92c34bc760c556cf1232212ddfab57e6d0c",
+    "subgroup_metrics_main.csv": "01d1921088bef6987847ab1df3555841331ba6dc3c865a6b8319c090699582d7",
+    "subgroup_metrics_three_seed.csv": "b78ca029ded7c63fc07e6d8ba843faf7abb14f37ba2c4030df15c2803317b85c",
+    "subgroup_conditional_summary.csv": "11255cc2bd6a3adf436fec84da9eee6da0b37635721fd44cf2b59c061cd6a4db",
+    "subgroup_conditional_by_label.csv": "cc2023b0e8f695fc71bdfd06cc79ceca62a265164573944d0355271dcbbe49d3",
+    "subgroup_conditional_three_seed.csv": "6b1b62bd72932adbaa12e63f5601849a8c7d5f16b75d9447825e06a3e7af6456",
+    "subgroup_oracle_summary.csv": "b647262f208a01dde4c352f363a83d0a3fedf25f1dbf757e3aed409bc43a8dd2",
+    "subgroup_oracle_by_label.csv": "f23ae72ff4170f8ef688d88a0c18a430dddae607c56200874532190d3c8be8d7",
+    "subgroup_oracle_by_label_three_seed.csv": "3d1571f2d53a11c6fbe8a9a75a7ce7a292613e85f5401ae8c85b6a942baf4abc",
+    "subgroup_oracle_three_seed.csv": "0e391cbe27364e9934810aef6cd502d4b7c6d2a5a89f2fa8734ce34df5f88e87",
+    "subgroup_or_gain.csv": "e9228f89fb341dba94c89ae78351bced9fdd8897aa6a58265844a57d04de4c71",
+    "subgroup_or_gain_three_seed.csv": "f5f13c9f1be62848130d1457de99ab90f6c8a12dcd2d692aaae46d8d0c6375e0",
+    "subgroup_molecule_exact.csv": "db6d11a2b192cea861cf6c5dabd5e5fcb5d33fba183f6561880ca75c9a34bb22",
+    "subgroup_molecule_exact_three_seed.csv": "9b37312003412279172981a3ec60244d8f1bace57545e14b2649dc21d2bf1f50",
+    "subgroup_bootstrap_sanity.csv": "7012c57dc9e12bc065338883f5fd4287a54215485314d418adf48321f7aca883",
+    "subgroup_bootstrap_macro_counts.csv": "13c1f2ace659f2de71fa4a9360ca1d29932101fb9148f66715a755e3bff1ebbf"
+  },
+  "code_sha256": {
+    "training/line_b/analyze_line_b_structure.py": "9804da6d93bc3da89d0d442d3962f720ea2673eb05771bc1412b9cb505097c71",
+    "training/line_b/analyze_line_b_complementarity.py": "f0ff92d8f7f5e67df24b7b03178adbdda9d92eb99e885f3b1b574d5c84bedb4c",
+    "training/line_b/analyze_line_b_complementarity_extended.py": "9777c0578545c8c9d3ff2e8bdad7e66b806fb0d56efe8e0042295f843a1cfc83",
+    "training/line_b/bootstrap_line_b_scaffold.py": "90efcecde2651c84b437fad46e3eab5d0e7ed0d4ac88a29615ea4e2312cafb73"
+  },
+  "environment": {
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "cwd": "E:\\Projects\\曦源计划\\数据\\SpectraDB"
+  },
+  "generated_at": "2026-11-19T19:12:27+08:00",
+  "caveats": [
+    "Co-occurrence uses the intersection of three authoritative Training modality-valid indices; rule is development-pending human confirmation.",
+    "Subgroups use structure-library descriptors, never model predictions.",
+    "Validation subgroup metrics are exploratory and do not select models, thresholds, seeds or labels.",
+    "No Test index or Test prediction is accessed."
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "phase": "B3.5-C2",
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "split": "validation",
+  "validation_development": true,
+  "no_test_access": true,
+  "n_models": 9,
+  "n_labels": 15,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "threshold_policies": {
+    "primary": "fixed_0.5",
+    "secondary": "validation_f1"
+  },
+  "best_single": "raman",
+  "inputs": {
+    "verification_path": "runs\\LINE-B-MANIFESTS\\B3\\b3_5b_manifest_verification_v2.json",
+    "verification_sha256": "73aee141a2936e2f27f9843b08521b57c95572734ead616d19e5346f7f04b986",
+    "manifest": {
+      "path": "processed\\qm9s\\prepared\\qm9s_manifest_prepared.csv",
+      "sha256": "e5fd1710bde44fe7e5c57bc7115d8d69751ac36cb70ea01e6e6351f48013e51c",
+      "used_in_computation": true
+    },
+    "structure_library": {
+      "path": "processed/qm9s/structures/qm9s_structure_library.csv",
+      "sha256": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9",
+      "used_in_computation": false
+    },
+    "metrics": {
+      "path": "runs\\LINE-B-METRICS\\UVSPEC15\\model_metrics.csv",
+      "sha256": "b1d033463234128d262eb6cbcf697d76da4194134c867cc0ab88c87823c885de",
+      "used_in_computation": false
+    },
+    "b3a": {
+      "path": "summary.json",
+      "sha256": "af1c34b522d93b80453731bf27b71c6e2eb52872736c3b01ea7c413711624ec8",
+      "best_single": "raman"
+    },
+    "code_provenance": {
+      "path": "runs\\LINE-B-MANIFESTS\\B3\\code_provenance.json",
+      "sha256": "b1c5d2eb65b16f719dae971819c6f3623bcc1a355dc5eb89e687a25145e20e90",
+      "n_models": 9,
+      "records": [
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-IR-003-UVSPEC15-FULL",
+          "probabilities_sha256": "67b13d2143455269ada77160573019a74034fe7fa87a863e9a13fe978e0dd07f",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "d930886c5a61de5f5940f36dfd6509cbae4260f31624a5ffff1a271d63e1277a",
+          "thresholds_sha256": "98e062029560be910526e8516b70531d3ef4e8c9a109cbedb3d9ed8a3a467110"
+        },
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+          "probabilities_sha256": "37509dc5dd8a17b9985a6584b2cc93e58b7a61da27da05792a3fabe2833de98d",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "f4630d36d22bd9a0be02fa1ad9ac87b139b63641bd6bbaca40b16feea1b6a3f3",
+          "thresholds_sha256": "267c7cee9b6046bb64c185f7d049c73cfee77c9003381208ae284544c5af3609"
+        },
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+          "probabilities_sha256": "3c7d3b770816984f18db118d42e95b34a00c02f9f02ab687d0b7208228e4834d",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "f3cba2829b153eb4e3753d28d9a5d43a231879e66ef8ba432015ad14fad9df11",
+          "thresholds_sha256": "2525d76d41448125b7f600a488169a6030cf4f0dad6c5c1259e183b950e36c1e"
+        },
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+          "probabilities_sha256": "44fd311fde58975bd27d8dc4981d7edccce36b8c089986ad4751f3a998f1c161",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "6792cca85a4f3d37a2985b0d30506dd4a6ae9bcb7c4f7931194b74a9faba5478",
+          "thresholds_sha256": "941f1edf5c0d282abcce5e4f34fc77dbe4535ad45893d502c978170394a226d9"
+        },
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+          "probabilities_sha256": "e218e70e8f48b263709a76784c1cb76bccc47abe573351a44a3db076424c6171",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "e6b935c213fe39ae6173d1adbb579a800f3cc5f08143e0335b089f251c69603a",
+          "thresholds_sha256": "2c7ded918193796cacb91ba71c3102049f5f51d6bdacc648aa51047ab52a6814"
+        },
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+          "probabilities_sha256": "749763a8e79666cc411a1acf912a2ec69997f10f5355a1d951c026ff3575bda7",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "8558c6534e997f4fe9bc42c857c1cfc263ae6478c0d8bbf33b6cab56b86b2625",
+          "thresholds_sha256": "72a694f85d428aa56293216baf05eb08e32e5bb68f90ee91b45ad3efadd48f18"
+        },
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+          "probabilities_sha256": "f4f9a606eeec454838d6c9726eece836f63f9a7a312e5f037b73f8119a47afcc",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "e8222dd7c205a4da69ec8ad75409fae17c1157d6486f60b1fd3368797c61f9fd",
+          "thresholds_sha256": "78f5609df0813ddefd43ddffce37eb2109cab900af0056fb840588a3825fbd92"
+        },
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+          "probabilities_sha256": "35d770b075251e64d0fcb351ae7ac2f2ace8f563d7e318cfdf9cccfa29c72d0f",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "ee25728a832d9100e39fa8a49b7fae1a9d289a69ee4728d5876d0e1401c7ddc8",
+          "thresholds_sha256": "26e0ccc6e079aeed6c80b541f6b7ef3a2943aa3113e2551b78e6e7b6c1ab0cf0"
+        },
+        {
+          "task": "UVSPEC15",
+          "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+          "probabilities_sha256": "b4d40eaf82b9e83776fc81ebcfa66814b8e13b32237df8bc1c087d042fb58e85",
+          "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+          "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+          "manifest_sha256": "898db9673fd68ade6d07eb412a2f325c856a29f3fc43287caf2c73dcbf5892fd",
+          "thresholds_sha256": "7601afc4dfded6c470471518bd3bce208cfaee681da3693ed3f2c73fb0272b82"
+        }
+      ]
+    }
+  },
+  "code_sha256": {
+    "training/line_b/analyze_line_b_complementarity_extended.py": "9777c0578545c8c9d3ff2e8bdad7e66b806fb0d56efe8e0042295f843a1cfc83",
+    "training/line_b/analyze_line_b_complementarity.py": "f0ff92d8f7f5e67df24b7b03178adbdda9d92eb99e885f3b1b574d5c84bedb4c",
+    "training/line_b/common.py": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+    "training/line_b/metrics.py": "e773f52da281d5ea69cf89c4e61b40ebbbdfca9ee00d5abb901401b42a105ac9",
+    "training/line_b/bootstrap_line_b_scaffold.py": "90efcecde2651c84b437fad46e3eab5d0e7ed0d4ac88a29615ea4e2312cafb73"
+  },
+  "mcnemar": {
+    "test": "two-sided exact McNemar/equal-probability binomial, p=0.5",
+    "directions": [
+      "IR-Raman",
+      "UV-IR",
+      "UV-Raman"
+    ],
+    "family": "task x seed x threshold_policy; 3 unordered modality pairs x all labels",
+    "family_sizes": [
+      45
+    ],
+    "exploratory_only": true,
+    "seed_pvalues_not_averaged": true
+  },
+  "pairwise": {
+    "directions": [
+      "IR-Raman",
+      "IR-UV",
+      "Raman-IR",
+      "Raman-UV",
+      "UV-IR",
+      "UV-Raman"
+    ],
+    "n_directions": 6,
+    "n_summary_rows": 36,
+    "n_by_label_rows": 540,
+    "conditional_rate_rule": "aggregate other_only_correct / base_wrong counts; never average per-label ratios",
+    "error_jaccard_rule": "aggregate error intersection / error union; dual-empty sets map to Jaccard 1 with explicit flag"
+  },
+  "or_gain": {
+    "comparisons": [
+      "three_modality_vs_best_single",
+      "IR-Raman",
+      "UV-IR",
+      "UV-Raman"
+    ],
+    "n_rows": 24,
+    "best_single": "raman"
+  },
+  "three_seed_summary": {
+    "path": "three_seed_summary.csv",
+    "n_rows": 282,
+    "rule": "mean and sample SD across 3 seeds; n_valid/n_undefined; McNemar/Holm p-values excluded",
+    "cross_seed_molecule_file": "sample_error_three_seed.csv"
+  },
+  "output_file_count": 18,
+  "hard_sample": {
+    "fraction": 0.1,
+    "n_per_seed_policy": 1299,
+    "tie_rule": "n_errors descending, then authoritative row_index ascending; ceil(0.10*N)",
+    "boundary_tie_note": "Jaccard can be unstable when a large tie set defines the top-10% boundary"
+  },
+  "high_confidence": {
+    "fp": "FP and p >= 0.90",
+    "fn": "FN and p <= 0.10",
+    "unit": "sample-label pair",
+    "caveat": "raw sigmoid outputs are not calibrated probabilities; diagnostic only"
+  },
+  "undefined": {
+    "spearman_constant": "None with explicit reason",
+    "rates": "None when denominator is zero; never replaced with 0"
+  },
+  "outputs": {
+    "mcnemar_holm.csv": "d70575c46d1c50d4a366a0f92de292ac2e6894cdb0cca341b14cb83d94b7169f",
+    "sample_errors.csv": "9bc04859c31cf2147027c6e5c1e4dadf563ab9fb554349d7d69a7aad246c7b4f",
+    "sample_error_summary.csv": "720b5eafedeadf04fbd4a1e7908fbcf532cbdf0f19f90201a1330b9b5f861bdd",
+    "sample_error_three_seed.csv": "70a393920342fd15ca8b5c7aa72f23a845aa59011df27fc585f9ab5c41dddd62",
+    "spearman.csv": "78fb2fc5ebd45dd05ca23cd43cc11fd0e3c95009a712c64f6339f4655cea1ecc",
+    "hard_samples.csv": "b0b6281dd6f41bfb07536e43d6f7400256b575bf3050e8f6152aea5b0eb14d48",
+    "hard_sample_pairs.csv": "7db5ab845459f2b66ca081601ce9911ac389670dc5299ad4544b9c9b24c1524b",
+    "hard_sample_membership.csv": "8e3329f37419cf7c3da59495cf09ec58ebe396a378340ddebfb23a543c8a0698",
+    "molecule_exact_match.csv": "198203b5e4f24074cf7d9fb03feaa0c0d508656cb08b22987b0007fb0be3dba4",
+    "molecule_exact_summary.csv": "6de464af4a27c66e0eca4f1fac0a41f8f05c2ba9fd36d058d2da42e598b0f90d",
+    "oracle_sample_label_summary.csv": "87720b0dbd54636e4d1c2878b652e39c3e440522b5c064cb8aa06c13d532a49d",
+    "oracle_sample_label.csv": "6d6aa917d9d39a88bd78be67704c4d69b6351f7b1a547df6fa036c893243a125",
+    "or_gain_summary.csv": "5692d19d121f325a6c94bd1d25eda59bdaf72c072795ba4bef4c5896c0ffd95e",
+    "pairwise_summary.csv": "088c4ccfef1f8f25169875d6e55bd879ec7ed0cea79e0d71df00104656205af7",
+    "pairwise_by_label.csv": "7f32675cac55a34f03b10d3a28400dca071fef10e26a34d520f969e817b786a7",
+    "three_seed_summary.csv": "d12f0e4ebd18f1c3378c2fa2539203b677ab45eee138970b4948487512fee213",
+    "high_confidence_errors.csv": "1ac11e67b50b52c2679a562264b38831420e6343b2c61b3fa40a4b8591982cc8"
+  },
+  "environment": {
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "python_version": "3.12.13",
+    "numpy": "2.4.6",
+    "cwd": "E:\\Projects\\曦源计划\\数据\\SpectraDB"
+  },
+  "generated_at": "2026-11-19T13:48:55+08:00",
+  "caveats": [
+    "McNemar/Holm are exploratory; scaffold correlation precludes confirmatory claims.",
+    "Molecular exact_match and sample-label Oracle are distinct and both reported.",
+    "positive_or_fusion is not the true Oracle and its F1 gain is not fusion evidence.",
+    "High-confidence outputs are uncalibrated sigmoid extremes, not calibrated posterior reliability."
+  ]
+}

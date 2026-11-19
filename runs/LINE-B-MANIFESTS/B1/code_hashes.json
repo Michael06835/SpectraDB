@@ -1,0 +1,21 @@
+{
+  "phase": "B1",
+  "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "files": {
+    "training/line_b/__init__.py": "38066fdca66fc35c1f055a75798910847d9e99df166a1fc256461702f7987b25",
+    "training/line_b/common.py": "3ac26dcf424785d29de29213604dc35d47c02af2420a366050325508eae95b76",
+    "training/line_b/metrics.py": "e773f52da281d5ea69cf89c4e61b40ebbbdfca9ee00d5abb901401b42a105ac9",
+    "training/line_b/export_line_b_predictions.py": "564dee0b335f2447171ea0ae8ec6c26a96c4296ff0edbdbbb08a7bc961307056",
+    "training/line_b/evaluate_line_b_multilabel.py": "8835ea8fbab807231bbbca74ad06ad54a457fab262ddaeedb12479a7c60ee037",
+    "training/line_b/summarize_b1_exports.py": "9e50dd26d9788a48efef5e2d33a4f1647fd6fadf21277c165e0b311291f30c1a",
+    "training/line_b/tests/test_metrics.py": "5985bffb0ba9c849cac9416384b095540f312d85c5a7b58c5d6143bf5591784b",
+    "training/line_b/tests/test_export_pipeline.py": "22b02a483900f601d0ace0b29a7dc82390684f454a7400966c135fb3858797f6",
+    "training/line_b/tests/test_evaluate_pipeline.py": "64eea5dd65e6f0542eb592f71b48d93aafc0a04bb1d4af1b3c517a1339749f9c",
+    "training/datasets/qm9s_spectrum_dataset.py": "42ec169ae8413f3124b907f8fecd3da24f6f7a033697c2952d35ea7dd74f4b0c",
+    "training/models/spectrum_cnn1d.py": "8e19d7d6d651084fa3f17702632c185850ebdceca7dabe5e78a7df4647786936",
+    "training/train_uvvis_seed2026.py": "0d33be13b2c8f08105e0b8f6711a1be0bb65e7cd0327a3e8dfb8caa606d7762d",
+    "scripts/archive_invalid_uvvis_seed2026.py": "2655a74d0850b78c37dd385cd6d3b158ce8c58d4d5a7632de062359e7ff27f8d"
+  }
+}

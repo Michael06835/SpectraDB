@@ -1,0 +1,3178 @@
+{
+  "generated_by": "scripts/audit_line_b_phase_b0.py",
+  "repository_root": "E:\\Projects\\曦源计划\\数据\\SpectraDB",
+  "split_files": {
+    "canonical_ir": "processed\\qm9s\\prepared\\scaffold_split_80_10_10.npz",
+    "ir_valid": "processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+    "raman_valid": "processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+    "uvvis_valid": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+    "multimodal_complete": "processed\\qm9s\\prepared\\multimodal_complete_scaffold_split.npz"
+  },
+  "splits": {
+    "canonical_ir": {
+      "train": {
+        "length": 103855,
+        "min": 0,
+        "max": 129815,
+        "unique": 103855
+      },
+      "val": {
+        "length": 12981,
+        "min": 13,
+        "max": 129810,
+        "unique": 12981
+      },
+      "test": {
+        "length": 12981,
+        "min": 4,
+        "max": 129816,
+        "unique": 12981
+      }
+    },
+    "ir_valid": {
+      "train": {
+        "length": 103855,
+        "min": 0,
+        "max": 129815,
+        "unique": 103855
+      },
+      "val": {
+        "length": 12981,
+        "min": 13,
+        "max": 129810,
+        "unique": 12981
+      },
+      "test": {
+        "length": 12981,
+        "min": 4,
+        "max": 129816,
+        "unique": 12981
+      }
+    },
+    "raman_valid": {
+      "train": {
+        "length": 103855,
+        "min": 0,
+        "max": 129815,
+        "unique": 103855
+      },
+      "val": {
+        "length": 12981,
+        "min": 13,
+        "max": 129810,
+        "unique": 12981
+      },
+      "test": {
+        "length": 12981,
+        "min": 4,
+        "max": 129816,
+        "unique": 12981
+      }
+    },
+    "uvvis_valid": {
+      "train": {
+        "length": 103853,
+        "min": 0,
+        "max": 129815,
+        "unique": 103853
+      },
+      "val": {
+        "length": 12981,
+        "min": 13,
+        "max": 129810,
+        "unique": 12981
+      },
+      "test": {
+        "length": 12981,
+        "min": 4,
+        "max": 129816,
+        "unique": 12981
+      }
+    },
+    "multimodal_complete": {
+      "train": {
+        "length": 103853,
+        "min": 0,
+        "max": 129815,
+        "unique": 103853
+      },
+      "val": {
+        "length": 12981,
+        "min": 13,
+        "max": 129810,
+        "unique": 12981
+      },
+      "test": {
+        "length": 12981,
+        "min": 4,
+        "max": 129816,
+        "unique": 12981
+      }
+    }
+  },
+  "split_comparisons": {
+    "ir_valid__vs__raman_valid": {
+      "train": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 103855
+      },
+      "val": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      },
+      "test": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      }
+    },
+    "ir_valid__vs__uvvis_valid": {
+      "train": {
+        "equal_order": false,
+        "equal_set": false,
+        "only_a": 2,
+        "only_b": 0,
+        "intersection": 103853
+      },
+      "val": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      },
+      "test": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      }
+    },
+    "raman_valid__vs__uvvis_valid": {
+      "train": {
+        "equal_order": false,
+        "equal_set": false,
+        "only_a": 2,
+        "only_b": 0,
+        "intersection": 103853
+      },
+      "val": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      },
+      "test": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      }
+    },
+    "uvvis_valid__vs__multimodal_complete": {
+      "train": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 103853
+      },
+      "val": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      },
+      "test": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      }
+    },
+    "canonical_ir__vs__ir_valid": {
+      "train": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 103855
+      },
+      "val": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      },
+      "test": {
+        "equal_order": true,
+        "equal_set": true,
+        "only_a": 0,
+        "only_b": 0,
+        "intersection": 12981
+      }
+    }
+  },
+  "split_internal_overlap": {
+    "canonical_ir": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0,
+      "union_size": 129817
+    },
+    "ir_valid": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0,
+      "union_size": 129817
+    },
+    "raman_valid": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0,
+      "union_size": 129817
+    },
+    "uvvis_valid": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0,
+      "union_size": 129815
+    },
+    "multimodal_complete": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0,
+      "union_size": 129815
+    }
+  },
+  "uv_zero_spectra": {
+    "shape": [
+      129817,
+      701
+    ],
+    "zero_rows": [
+      13998,
+      14000
+    ],
+    "zero_row_membership": {
+      "13998": {
+        "canonical_ir": {
+          "train": true,
+          "val": false,
+          "test": false
+        },
+        "ir_valid": {
+          "train": true,
+          "val": false,
+          "test": false
+        },
+        "raman_valid": {
+          "train": true,
+          "val": false,
+          "test": false
+        },
+        "uvvis_valid": {
+          "train": false,
+          "val": false,
+          "test": false
+        },
+        "multimodal_complete": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "14000": {
+        "canonical_ir": {
+          "train": true,
+          "val": false,
+          "test": false
+        },
+        "ir_valid": {
+          "train": true,
+          "val": false,
+          "test": false
+        },
+        "raman_valid": {
+          "train": true,
+          "val": false,
+          "test": false
+        },
+        "uvvis_valid": {
+          "train": false,
+          "val": false,
+          "test": false
+        },
+        "multimodal_complete": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      }
+    },
+    "row_13998_values": {
+      "absmax": 0.0,
+      "nonzero": 0
+    },
+    "row_14000_values": {
+      "absmax": 0.0,
+      "nonzero": 0
+    }
+  },
+  "labels": {
+    "functional_group": {
+      "shape": [
+        129817,
+        14
+      ],
+      "dtype": "int8",
+      "names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "positive_counts": [
+        13488,
+        16461,
+        16985,
+        13550,
+        39167,
+        2080,
+        44517,
+        7018,
+        51428,
+        41241,
+        15731,
+        14706,
+        16372,
+        130
+      ],
+      "positive_rate": [
+        0.1039,
+        0.126802,
+        0.130838,
+        0.104378,
+        0.301709,
+        0.016023,
+        0.342921,
+        0.054061,
+        0.396158,
+        0.317686,
+        0.121178,
+        0.113283,
+        0.126116,
+        0.001001
+      ],
+      "no_train_positives": [],
+      "positive_counts_train": [
+        10757,
+        11802,
+        13761,
+        11200,
+        31948,
+        1706,
+        36381,
+        5763,
+        40374,
+        32958,
+        13245,
+        12211,
+        13157,
+        104
+      ],
+      "positive_rate_train": [
+        0.103579,
+        0.113641,
+        0.132505,
+        0.107845,
+        0.307627,
+        0.016427,
+        0.350312,
+        0.055492,
+        0.388761,
+        0.317352,
+        0.127536,
+        0.11758,
+        0.126689,
+        0.001001
+      ],
+      "positive_counts_val": [
+        1447,
+        2914,
+        1708,
+        1297,
+        3728,
+        230,
+        4238,
+        633,
+        5794,
+        3949,
+        1191,
+        1223,
+        1697,
+        11
+      ],
+      "positive_rate_val": [
+        0.111471,
+        0.224482,
+        0.131577,
+        0.099915,
+        0.287189,
+        0.017718,
+        0.326477,
+        0.048764,
+        0.446345,
+        0.304214,
+        0.091749,
+        0.094215,
+        0.13073,
+        0.000847
+      ],
+      "positive_counts_test": [
+        1284,
+        1745,
+        1514,
+        1053,
+        3491,
+        144,
+        3898,
+        622,
+        5260,
+        4334,
+        1295,
+        1272,
+        1517,
+        15
+      ],
+      "positive_rate_test": [
+        0.098914,
+        0.134427,
+        0.116632,
+        0.081119,
+        0.268932,
+        0.011093,
+        0.300285,
+        0.047916,
+        0.405208,
+        0.333873,
+        0.099761,
+        0.097989,
+        0.116863,
+        0.001156
+      ]
+    },
+    "uvspec15": {
+      "shape": [
+        129817,
+        15
+      ],
+      "dtype": "int8",
+      "names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "positive_counts": [
+        31266,
+        9282,
+        3891,
+        27375,
+        22186,
+        21916,
+        7227,
+        11084,
+        2686,
+        2027,
+        2544,
+        2477,
+        25006,
+        13012,
+        4207
+      ],
+      "positive_rate": [
+        0.240847,
+        0.071501,
+        0.029973,
+        0.210874,
+        0.170902,
+        0.168822,
+        0.055671,
+        0.085382,
+        0.020691,
+        0.015614,
+        0.019597,
+        0.019081,
+        0.192625,
+        0.100233,
+        0.032407
+      ],
+      "no_train_positives": [],
+      "positive_counts_train": [
+        25117,
+        7334,
+        3200,
+        21917,
+        17941,
+        17683,
+        5896,
+        8874,
+        1986,
+        1694,
+        2182,
+        1973,
+        20923,
+        10416,
+        3519
+      ],
+      "positive_rate_train": [
+        0.241851,
+        0.070619,
+        0.030813,
+        0.211039,
+        0.172754,
+        0.17027,
+        0.056773,
+        0.085448,
+        0.019123,
+        0.016312,
+        0.02101,
+        0.018998,
+        0.201467,
+        0.100296,
+        0.033884
+      ],
+      "positive_counts_val": [
+        3147,
+        1137,
+        382,
+        2765,
+        2037,
+        2035,
+        636,
+        1174,
+        392,
+        155,
+        214,
+        281,
+        1945,
+        1380,
+        318
+      ],
+      "positive_rate_val": [
+        0.242431,
+        0.08759,
+        0.029428,
+        0.213004,
+        0.156922,
+        0.156768,
+        0.048995,
+        0.09044,
+        0.030198,
+        0.011941,
+        0.016486,
+        0.021647,
+        0.149834,
+        0.106309,
+        0.024497
+      ],
+      "positive_counts_test": [
+        3000,
+        809,
+        307,
+        2693,
+        2208,
+        2198,
+        695,
+        1036,
+        308,
+        178,
+        148,
+        222,
+        2138,
+        1215,
+        370
+      ],
+      "positive_rate_test": [
+        0.231107,
+        0.062322,
+        0.02365,
+        0.207457,
+        0.170095,
+        0.169324,
+        0.05354,
+        0.079809,
+        0.023727,
+        0.013712,
+        0.011401,
+        0.017102,
+        0.164702,
+        0.093598,
+        0.028503
+      ]
+    }
+  },
+  "label_checks": {
+    "fg_row_count_matches_manifest": true,
+    "uv15_matches_source_columns": true,
+    "uv15_matches_source_names": true,
+    "uv15_binary_only": true,
+    "source_labels_shape": [
+      129817,
+      58
+    ],
+    "source_columns_used": [
+      0,
+      1,
+      11,
+      12,
+      17,
+      24,
+      15,
+      32,
+      33,
+      35,
+      42,
+      45,
+      55,
+      56,
+      57
+    ],
+    "source_names_at_used_columns": [
+      "has_conjugation",
+      "has_nonaromatic_conjugation",
+      "acyclic_conjugated_system",
+      "cyclic_conjugated_system",
+      "has_aromatic_system",
+      "heteroaromatic",
+      "mixed_aromatic_nonaromatic_conjugation",
+      "pi_conjugated_carbonyl",
+      "alpha_beta_unsaturated_carbonyl",
+      "aryl_carbonyl",
+      "pi_conjugated_imine",
+      "pi_conjugated_nitrile",
+      "has_donor_substituted_pi_system",
+      "has_acceptor_substituted_pi_system",
+      "donor_acceptor_same_conjugated_system"
+    ],
+    "source_binary_sha256": "6de1918823ab0cd856c2c9bd339cd1641180fec262e286b50efb8a1dacc7dcec",
+    "manifest_source_binary_sha256": "6de1918823ab0cd856c2c9bd339cd1641180fec262e286b50efb8a1dacc7dcec",
+    "uv15_binary_sha256": "f08170df62972828076b4cfdb1136b2890b86a4eec36f280466180f5c64f1705",
+    "hierarchy_checks": {
+      "has_nonaromatic_conjugation__implies__has_conjugation": {
+        "violations": 0,
+        "example_rows": []
+      },
+      "acyclic_conjugated_system__implies__has_conjugation": {
+        "violations": 0,
+        "example_rows": []
+      },
+      "cyclic_conjugated_system__implies__has_conjugation": {
+        "violations": 0,
+        "example_rows": []
+      },
+      "mixed_aromatic_nonaromatic_conjugation__implies__has_conjugation": {
+        "violations": 0,
+        "example_rows": []
+      },
+      "heteroaromatic__implies__has_aromatic_system": {
+        "violations": 0,
+        "example_rows": []
+      },
+      "alpha_beta_unsaturated_carbonyl__implies__pi_conjugated_carbonyl": {
+        "violations": 0,
+        "example_rows": []
+      },
+      "aryl_carbonyl__implies__pi_conjugated_carbonyl": {
+        "violations": 0,
+        "example_rows": []
+      },
+      "donor_acceptor_same_conjugated_system__implies__has_donor_substituted_pi_system": {
+        "violations": 0,
+        "example_rows": []
+      },
+      "donor_acceptor_same_conjugated_system__implies__has_acceptor_substituted_pi_system": {
+        "violations": 0,
+        "example_rows": []
+      }
+    }
+  },
+  "split_alignment": {
+    "manifest_row_index_is_0_based_contiguous": true,
+    "npz_vs_manifest_split": {
+      "train": {
+        "npz_size": 103853,
+        "csv_size": 103855,
+        "npz_only": 0,
+        "csv_only": 2,
+        "identical": false
+      },
+      "val": {
+        "npz_size": 12981,
+        "csv_size": 12981,
+        "npz_only": 0,
+        "csv_only": 0,
+        "identical": true
+      },
+      "test": {
+        "npz_size": 12981,
+        "csv_size": 12981,
+        "npz_only": 0,
+        "csv_only": 0,
+        "identical": true
+      }
+    },
+    "scaffold_overlap": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0,
+      "n_scaffolds_train": 22796,
+      "n_scaffolds_val": 2852,
+      "n_scaffolds_test": 2853,
+      "n_scaffolds_total": 28501
+    },
+    "zero_rows_in_manifest": {
+      "13998": {
+        "manifest_split": "train",
+        "scaffold": "ACYCLIC::C#CC#CC#CC#C"
+      },
+      "14000": {
+        "manifest_split": "train",
+        "scaffold": "ACYCLIC::N#CC#CC#CC#N"
+      }
+    }
+  },
+  "runs": {
+    "ir_shared_bce_original": {
+      "EXP-IR-001-FULL": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 42,
+          "modality": null,
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103855,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.9679726684984443,
+          "checkpoint_config": {
+            "experiment": "EXP-IR-001-FULL",
+            "seed": 42,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103855,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\IR-THRESHOLD-CALIBRATION\\EXP-IR-001-FULL",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "aldehyde",
+          "alkene",
+          "alkyne",
+          "amide",
+          "amine",
+          "c_f_bond",
+          "carbonyl",
+          "ester",
+          "ether",
+          "hydroxyl",
+          "imine",
+          "ketone",
+          "nitrile",
+          "nitro"
+        ],
+        "threshold_values": {
+          "aldehyde": 0.43115234375,
+          "alkene": 0.452880859375,
+          "alkyne": 0.634765625,
+          "amide": 0.57373046875,
+          "amine": 0.330322265625,
+          "c_f_bond": 0.227294921875,
+          "carbonyl": 0.336181640625,
+          "ester": 0.2265625,
+          "ether": 0.71142578125,
+          "hydroxyl": 0.443115234375,
+          "imine": 0.46630859375,
+          "ketone": 0.341796875,
+          "nitrile": 0.78173828125,
+          "nitro": 0.26123046875
+        }
+      },
+      "EXP-IR-001-SEED123": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": false,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 123,
+          "modality": null,
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103855,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.9567552281676337,
+          "checkpoint_config": {
+            "experiment": "EXP-IR-001-SEED123",
+            "seed": 123,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103855,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\IR-THRESHOLD-CALIBRATION\\EXP-IR-001-SEED123",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "aldehyde",
+          "alkene",
+          "alkyne",
+          "amide",
+          "amine",
+          "c_f_bond",
+          "carbonyl",
+          "ester",
+          "ether",
+          "hydroxyl",
+          "imine",
+          "ketone",
+          "nitrile",
+          "nitro"
+        ],
+        "threshold_values": {
+          "aldehyde": 0.437255859375,
+          "alkene": 0.1019287109375,
+          "alkyne": 0.60400390625,
+          "amide": 0.169921875,
+          "amine": 0.2418212890625,
+          "c_f_bond": 0.0226287841796875,
+          "carbonyl": 0.80126953125,
+          "ester": 0.477783203125,
+          "ether": 0.517578125,
+          "hydroxyl": 0.95751953125,
+          "imine": 0.88134765625,
+          "ketone": 0.8876953125,
+          "nitrile": 0.25341796875,
+          "nitro": 0.1644287109375
+        }
+      },
+      "EXP-IR-001-SEED2026": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": false,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 2026,
+          "modality": null,
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103855,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.9565836696364902,
+          "checkpoint_config": {
+            "experiment": "EXP-IR-001-SEED2026",
+            "seed": 2026,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103855,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\IR-THRESHOLD-CALIBRATION\\EXP-IR-001-SEED2026",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "aldehyde",
+          "alkene",
+          "alkyne",
+          "amide",
+          "amine",
+          "c_f_bond",
+          "carbonyl",
+          "ester",
+          "ether",
+          "hydroxyl",
+          "imine",
+          "ketone",
+          "nitrile",
+          "nitro"
+        ],
+        "threshold_values": {
+          "aldehyde": 0.2381591796875,
+          "alkene": 0.1773681640625,
+          "alkyne": 0.430908203125,
+          "amide": 0.394287109375,
+          "amine": 0.46484375,
+          "c_f_bond": 0.42236328125,
+          "carbonyl": 0.62646484375,
+          "ester": 0.58251953125,
+          "ether": 0.728515625,
+          "hydroxyl": 0.69677734375,
+          "imine": 0.6962890625,
+          "ketone": 0.25048828125,
+          "nitrile": 0.55419921875,
+          "nitro": 0.292236328125
+        }
+      }
+    },
+    "raman_shared_bce_original": {
+      "EXP-RAMAN-001-FULL": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [
+          "EXP-RAMAN-001-FULL__test__probabilities.npy",
+          "EXP-RAMAN-001-FULL__validation__probabilities.npy"
+        ],
+        "config": {
+          "seed": 42,
+          "modality": "raman",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103855,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.9458209367581863,
+          "checkpoint_config": {
+            "experiment": "EXP-RAMAN-001-FULL",
+            "modality": "raman",
+            "seed": 42,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103855,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-FULL",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": true,
+        "threshold_names": [
+          "aldehyde",
+          "alkene",
+          "alkyne",
+          "amide",
+          "amine",
+          "c_f_bond",
+          "carbonyl",
+          "ester",
+          "ether",
+          "hydroxyl",
+          "imine",
+          "ketone",
+          "nitrile",
+          "nitro"
+        ],
+        "threshold_values": {
+          "aldehyde": 0.66015625,
+          "alkene": 0.4091796875,
+          "alkyne": 0.80322265625,
+          "amide": 0.433349609375,
+          "amine": 0.1649169921875,
+          "c_f_bond": 0.0297088623046875,
+          "carbonyl": 0.666015625,
+          "ester": 0.394775390625,
+          "ether": 0.1790771484375,
+          "hydroxyl": 0.232177734375,
+          "imine": 0.6875,
+          "ketone": 0.439697265625,
+          "nitrile": 0.6875,
+          "nitro": 0.017852783203125
+        }
+      },
+      "EXP-RAMAN-001-SEED123": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": false,
+        "probability_artifacts": [
+          "EXP-RAMAN-001-SEED123__test__probabilities.npy",
+          "EXP-RAMAN-001-SEED123__validation__probabilities.npy"
+        ],
+        "config": {
+          "seed": 123,
+          "modality": "raman",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103855,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.9503295969183438,
+          "checkpoint_config": {
+            "experiment": "EXP-RAMAN-001-SEED123",
+            "modality": "raman",
+            "seed": 123,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103855,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED123",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": true,
+        "threshold_names": [
+          "aldehyde",
+          "alkene",
+          "alkyne",
+          "amide",
+          "amine",
+          "c_f_bond",
+          "carbonyl",
+          "ester",
+          "ether",
+          "hydroxyl",
+          "imine",
+          "ketone",
+          "nitrile",
+          "nitro"
+        ],
+        "threshold_values": {
+          "aldehyde": 0.755859375,
+          "alkene": 0.0457763671875,
+          "alkyne": 0.947265625,
+          "amide": 0.5732421875,
+          "amine": 0.304931640625,
+          "c_f_bond": 0.1373291015625,
+          "carbonyl": 0.685546875,
+          "ester": 0.833984375,
+          "ether": 0.171630859375,
+          "hydroxyl": 0.7705078125,
+          "imine": 0.75,
+          "ketone": 0.20263671875,
+          "nitrile": 0.1412353515625,
+          "nitro": 0.2459716796875
+        }
+      },
+      "EXP-RAMAN-001-SEED2026": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": false,
+        "probability_artifacts": [
+          "EXP-RAMAN-001-SEED2026__test__probabilities.npy",
+          "EXP-RAMAN-001-SEED2026__validation__probabilities.npy"
+        ],
+        "config": {
+          "seed": 2026,
+          "modality": "raman",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103855,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.9454331390409161,
+          "checkpoint_config": {
+            "experiment": "EXP-RAMAN-001-SEED2026",
+            "modality": "raman",
+            "seed": 2026,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103855,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED2026",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": true,
+        "threshold_names": [
+          "aldehyde",
+          "alkene",
+          "alkyne",
+          "amide",
+          "amine",
+          "c_f_bond",
+          "carbonyl",
+          "ester",
+          "ether",
+          "hydroxyl",
+          "imine",
+          "ketone",
+          "nitrile",
+          "nitro"
+        ],
+        "threshold_values": {
+          "aldehyde": 0.411376953125,
+          "alkene": 0.083740234375,
+          "alkyne": 0.425537109375,
+          "amide": 0.355224609375,
+          "amine": 0.1436767578125,
+          "c_f_bond": 0.27392578125,
+          "carbonyl": 0.556640625,
+          "ester": 0.69873046875,
+          "ether": 0.36279296875,
+          "hydroxyl": 0.923828125,
+          "imine": 0.857421875,
+          "ketone": 0.376953125,
+          "nitrile": 0.63916015625,
+          "nitro": 0.01525115966796875
+        }
+      }
+    },
+    "uvvis_shared_bce_original": {
+      "EXP-UVVIS-001-FULL": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 42,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.5160956495568406,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-001-FULL",
+            "modality": "uvvis",
+            "seed": 42,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-001-FULL",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [],
+        "threshold_values": {}
+      },
+      "EXP-UVVIS-001-SEED123": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": false,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 123,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.5138050844337781,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-001-SEED123",
+            "modality": "uvvis",
+            "seed": 123,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-001-SEED123",
+        "threshold_artifact_exists": false,
+        "calibration_probabilities_exist": false
+      },
+      "EXP-UVVIS-001-SEED2026": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": false,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 42,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 14,
+          "label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            14,
+            256
+          ],
+          "head_bias_shape": [
+            14
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ],
+          "best_val_mAP": 0.4943173545923222,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-001-SEED2026",
+            "modality": "uvvis",
+            "seed": 42,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "aldehyde",
+              "alkene",
+              "alkyne",
+              "amide",
+              "amine",
+              "c_f_bond",
+              "carbonyl",
+              "ester",
+              "ether",
+              "hydroxyl",
+              "imine",
+              "ketone",
+              "nitrile",
+              "nitro"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-001-SEED2026",
+        "threshold_artifact_exists": false,
+        "calibration_probabilities_exist": false
+      }
+    },
+    "uvvis_uvspec15_bce_original": {
+      "EXP-UVVIS-003-UVSPEC15-FULL": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 42,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 15,
+          "label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            15,
+            256
+          ],
+          "head_bias_shape": [
+            15
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ],
+          "best_val_mAP": 0.5174797744090351,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-003-UVSPEC15-FULL",
+            "modality": "uvvis",
+            "seed": 42,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "has_conjugation",
+              "has_nonaromatic_conjugation",
+              "acyclic_conjugated_system",
+              "cyclic_conjugated_system",
+              "has_aromatic_system",
+              "heteroaromatic",
+              "mixed_aromatic_nonaromatic_conjugation",
+              "pi_conjugated_carbonyl",
+              "alpha_beta_unsaturated_carbonyl",
+              "aryl_carbonyl",
+              "pi_conjugated_imine",
+              "pi_conjugated_nitrile",
+              "has_donor_substituted_pi_system",
+              "has_acceptor_substituted_pi_system",
+              "donor_acceptor_same_conjugated_system"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-003-UVSPEC15-FULL",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "has_conjugation",
+          "has_nonaromatic_conjugation",
+          "acyclic_conjugated_system",
+          "cyclic_conjugated_system",
+          "has_aromatic_system",
+          "heteroaromatic",
+          "mixed_aromatic_nonaromatic_conjugation",
+          "pi_conjugated_carbonyl",
+          "alpha_beta_unsaturated_carbonyl",
+          "aryl_carbonyl",
+          "pi_conjugated_imine",
+          "pi_conjugated_nitrile",
+          "has_donor_substituted_pi_system",
+          "has_acceptor_substituted_pi_system",
+          "donor_acceptor_same_conjugated_system"
+        ],
+        "threshold_values": {
+          "has_conjugation": 0.5859375,
+          "has_nonaromatic_conjugation": 0.317626953125,
+          "acyclic_conjugated_system": 0.34912109375,
+          "cyclic_conjugated_system": 0.376953125,
+          "has_aromatic_system": 0.447265625,
+          "heteroaromatic": 0.417724609375,
+          "mixed_aromatic_nonaromatic_conjugation": 0.25,
+          "pi_conjugated_carbonyl": 0.344482421875,
+          "alpha_beta_unsaturated_carbonyl": 0.20556640625,
+          "aryl_carbonyl": 0.229248046875,
+          "pi_conjugated_imine": 0.1763916015625,
+          "pi_conjugated_nitrile": 0.11358642578125,
+          "has_donor_substituted_pi_system": 0.371337890625,
+          "has_acceptor_substituted_pi_system": 0.2900390625,
+          "donor_acceptor_same_conjugated_system": 0.27294921875
+        }
+      },
+      "EXP-UVVIS-003-UVSPEC15-SEED123": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 123,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 15,
+          "label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            15,
+            256
+          ],
+          "head_bias_shape": [
+            15
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ],
+          "best_val_mAP": 0.4503972633354555,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-003-UVSPEC15-FULL",
+            "modality": "uvvis",
+            "seed": 123,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "has_conjugation",
+              "has_nonaromatic_conjugation",
+              "acyclic_conjugated_system",
+              "cyclic_conjugated_system",
+              "has_aromatic_system",
+              "heteroaromatic",
+              "mixed_aromatic_nonaromatic_conjugation",
+              "pi_conjugated_carbonyl",
+              "alpha_beta_unsaturated_carbonyl",
+              "aryl_carbonyl",
+              "pi_conjugated_imine",
+              "pi_conjugated_nitrile",
+              "has_donor_substituted_pi_system",
+              "has_acceptor_substituted_pi_system",
+              "donor_acceptor_same_conjugated_system"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-003-UVSPEC15-SEED123",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "has_conjugation",
+          "has_nonaromatic_conjugation",
+          "acyclic_conjugated_system",
+          "cyclic_conjugated_system",
+          "has_aromatic_system",
+          "heteroaromatic",
+          "mixed_aromatic_nonaromatic_conjugation",
+          "pi_conjugated_carbonyl",
+          "alpha_beta_unsaturated_carbonyl",
+          "aryl_carbonyl",
+          "pi_conjugated_imine",
+          "pi_conjugated_nitrile",
+          "has_donor_substituted_pi_system",
+          "has_acceptor_substituted_pi_system",
+          "donor_acceptor_same_conjugated_system"
+        ],
+        "threshold_values": {
+          "has_conjugation": 0.8359375,
+          "has_nonaromatic_conjugation": 0.52685546875,
+          "acyclic_conjugated_system": 0.23583984375,
+          "cyclic_conjugated_system": 0.68603515625,
+          "has_aromatic_system": 0.55078125,
+          "heteroaromatic": 0.444091796875,
+          "mixed_aromatic_nonaromatic_conjugation": 0.32080078125,
+          "pi_conjugated_carbonyl": 0.89892578125,
+          "alpha_beta_unsaturated_carbonyl": 0.6435546875,
+          "aryl_carbonyl": 0.54931640625,
+          "pi_conjugated_imine": 0.23095703125,
+          "pi_conjugated_nitrile": 0.033966064453125,
+          "has_donor_substituted_pi_system": 0.2366943359375,
+          "has_acceptor_substituted_pi_system": 0.79150390625,
+          "donor_acceptor_same_conjugated_system": 0.4443359375
+        }
+      },
+      "EXP-UVVIS-003-UVSPEC15-SEED2026": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 2026,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 15,
+          "label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            15,
+            256
+          ],
+          "head_bias_shape": [
+            15
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ],
+          "best_val_mAP": 0.5371503207890312,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-003-UVSPEC15-FULL",
+            "modality": "uvvis",
+            "seed": 2026,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": false,
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "has_conjugation",
+              "has_nonaromatic_conjugation",
+              "acyclic_conjugated_system",
+              "cyclic_conjugated_system",
+              "has_aromatic_system",
+              "heteroaromatic",
+              "mixed_aromatic_nonaromatic_conjugation",
+              "pi_conjugated_carbonyl",
+              "alpha_beta_unsaturated_carbonyl",
+              "aryl_carbonyl",
+              "pi_conjugated_imine",
+              "pi_conjugated_nitrile",
+              "has_donor_substituted_pi_system",
+              "has_acceptor_substituted_pi_system",
+              "donor_acceptor_same_conjugated_system"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-003-UVSPEC15-SEED2026",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "has_conjugation",
+          "has_nonaromatic_conjugation",
+          "acyclic_conjugated_system",
+          "cyclic_conjugated_system",
+          "has_aromatic_system",
+          "heteroaromatic",
+          "mixed_aromatic_nonaromatic_conjugation",
+          "pi_conjugated_carbonyl",
+          "alpha_beta_unsaturated_carbonyl",
+          "aryl_carbonyl",
+          "pi_conjugated_imine",
+          "pi_conjugated_nitrile",
+          "has_donor_substituted_pi_system",
+          "has_acceptor_substituted_pi_system",
+          "donor_acceptor_same_conjugated_system"
+        ],
+        "threshold_values": {
+          "has_conjugation": 0.6318359375,
+          "has_nonaromatic_conjugation": 0.15673828125,
+          "acyclic_conjugated_system": 0.3564453125,
+          "cyclic_conjugated_system": 0.55224609375,
+          "has_aromatic_system": 0.6513671875,
+          "heteroaromatic": 0.640625,
+          "mixed_aromatic_nonaromatic_conjugation": 0.472900390625,
+          "pi_conjugated_carbonyl": 0.2548828125,
+          "alpha_beta_unsaturated_carbonyl": 0.052825927734375,
+          "aryl_carbonyl": 0.2225341796875,
+          "pi_conjugated_imine": 0.1131591796875,
+          "pi_conjugated_nitrile": 0.1300048828125,
+          "has_donor_substituted_pi_system": 0.40673828125,
+          "has_acceptor_substituted_pi_system": 0.240234375,
+          "donor_acceptor_same_conjugated_system": 0.1964111328125
+        }
+      }
+    },
+    "uvvis_uvspec15_wbce_original": {
+      "EXP-UVVIS-004-UVSPEC15-WBCE": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 42,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 15,
+          "label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            15,
+            256
+          ],
+          "head_bias_shape": [
+            15
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ],
+          "best_val_mAP": 0.46226894566016313,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-004-UVSPEC15-WBCE",
+            "modality": "uvvis",
+            "seed": 42,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": true,
+            "pos_weight_transform": "sqrt",
+            "pos_weight_cap": 20.0,
+            "final_pos_weights": {
+              "has_conjugation": 1.770527958869934,
+              "has_nonaromatic_conjugation": 3.6277382373809814,
+              "acyclic_conjugated_system": 5.608392238616943,
+              "cyclic_conjugated_system": 1.9335118532180786,
+              "has_aromatic_system": 2.1882834434509277,
+              "heteroaromatic": 2.2074968814849854,
+              "mixed_aromatic_nonaromatic_conjugation": 4.076045513153076,
+              "pi_conjugated_carbonyl": 3.2715539932250977,
+              "alpha_beta_unsaturated_carbonyl": 7.161881446838379,
+              "aryl_carbonyl": 7.76571798324585,
+              "pi_conjugated_imine": 6.826076984405518,
+              "pi_conjugated_nitrile": 7.185895919799805,
+              "has_donor_substituted_pi_system": 1.9908744096755981,
+              "has_acceptor_substituted_pi_system": 2.9950835704803467,
+              "donor_acceptor_same_conjugated_system": 5.339670181274414
+            },
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "has_conjugation",
+              "has_nonaromatic_conjugation",
+              "acyclic_conjugated_system",
+              "cyclic_conjugated_system",
+              "has_aromatic_system",
+              "heteroaromatic",
+              "mixed_aromatic_nonaromatic_conjugation",
+              "pi_conjugated_carbonyl",
+              "alpha_beta_unsaturated_carbonyl",
+              "aryl_carbonyl",
+              "pi_conjugated_imine",
+              "pi_conjugated_nitrile",
+              "has_donor_substituted_pi_system",
+              "has_acceptor_substituted_pi_system",
+              "donor_acceptor_same_conjugated_system"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-004-UVSPEC15-WBCE",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "has_conjugation",
+          "has_nonaromatic_conjugation",
+          "acyclic_conjugated_system",
+          "cyclic_conjugated_system",
+          "has_aromatic_system",
+          "heteroaromatic",
+          "mixed_aromatic_nonaromatic_conjugation",
+          "pi_conjugated_carbonyl",
+          "alpha_beta_unsaturated_carbonyl",
+          "aryl_carbonyl",
+          "pi_conjugated_imine",
+          "pi_conjugated_nitrile",
+          "has_donor_substituted_pi_system",
+          "has_acceptor_substituted_pi_system",
+          "donor_acceptor_same_conjugated_system"
+        ],
+        "threshold_values": {
+          "has_conjugation": 0.720703125,
+          "has_nonaromatic_conjugation": 0.0953369140625,
+          "acyclic_conjugated_system": 0.06085205078125,
+          "cyclic_conjugated_system": 0.6318359375,
+          "has_aromatic_system": 0.6220703125,
+          "heteroaromatic": 0.7392578125,
+          "mixed_aromatic_nonaromatic_conjugation": 0.1343994140625,
+          "pi_conjugated_carbonyl": 0.012054443359375,
+          "alpha_beta_unsaturated_carbonyl": 0.0125732421875,
+          "aryl_carbonyl": 0.1104736328125,
+          "pi_conjugated_imine": 0.047088623046875,
+          "pi_conjugated_nitrile": 0.10760498046875,
+          "has_donor_substituted_pi_system": 0.2568359375,
+          "has_acceptor_substituted_pi_system": 0.02203369140625,
+          "donor_acceptor_same_conjugated_system": 0.10467529296875
+        }
+      },
+      "EXP-UVVIS-004-UVSPEC15-WBCE-SEED123": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 123,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 15,
+          "label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            15,
+            256
+          ],
+          "head_bias_shape": [
+            15
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ],
+          "best_val_mAP": 0.4972868538936961,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-004-UVSPEC15-WBCE",
+            "modality": "uvvis",
+            "seed": 123,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": true,
+            "pos_weight_transform": "sqrt",
+            "pos_weight_cap": 20.0,
+            "final_pos_weights": {
+              "has_conjugation": 1.770527958869934,
+              "has_nonaromatic_conjugation": 3.6277382373809814,
+              "acyclic_conjugated_system": 5.608392238616943,
+              "cyclic_conjugated_system": 1.9335118532180786,
+              "has_aromatic_system": 2.1882834434509277,
+              "heteroaromatic": 2.2074968814849854,
+              "mixed_aromatic_nonaromatic_conjugation": 4.076045513153076,
+              "pi_conjugated_carbonyl": 3.2715539932250977,
+              "alpha_beta_unsaturated_carbonyl": 7.161881446838379,
+              "aryl_carbonyl": 7.76571798324585,
+              "pi_conjugated_imine": 6.826076984405518,
+              "pi_conjugated_nitrile": 7.185895919799805,
+              "has_donor_substituted_pi_system": 1.9908744096755981,
+              "has_acceptor_substituted_pi_system": 2.9950835704803467,
+              "donor_acceptor_same_conjugated_system": 5.339670181274414
+            },
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "has_conjugation",
+              "has_nonaromatic_conjugation",
+              "acyclic_conjugated_system",
+              "cyclic_conjugated_system",
+              "has_aromatic_system",
+              "heteroaromatic",
+              "mixed_aromatic_nonaromatic_conjugation",
+              "pi_conjugated_carbonyl",
+              "alpha_beta_unsaturated_carbonyl",
+              "aryl_carbonyl",
+              "pi_conjugated_imine",
+              "pi_conjugated_nitrile",
+              "has_donor_substituted_pi_system",
+              "has_acceptor_substituted_pi_system",
+              "donor_acceptor_same_conjugated_system"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-004-UVSPEC15-WBCE-SEED123",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "has_conjugation",
+          "has_nonaromatic_conjugation",
+          "acyclic_conjugated_system",
+          "cyclic_conjugated_system",
+          "has_aromatic_system",
+          "heteroaromatic",
+          "mixed_aromatic_nonaromatic_conjugation",
+          "pi_conjugated_carbonyl",
+          "alpha_beta_unsaturated_carbonyl",
+          "aryl_carbonyl",
+          "pi_conjugated_imine",
+          "pi_conjugated_nitrile",
+          "has_donor_substituted_pi_system",
+          "has_acceptor_substituted_pi_system",
+          "donor_acceptor_same_conjugated_system"
+        ],
+        "threshold_values": {
+          "has_conjugation": 0.869140625,
+          "has_nonaromatic_conjugation": 0.88134765625,
+          "acyclic_conjugated_system": 0.75439453125,
+          "cyclic_conjugated_system": 0.734375,
+          "has_aromatic_system": 0.447265625,
+          "heteroaromatic": 0.3974609375,
+          "mixed_aromatic_nonaromatic_conjugation": 0.8125,
+          "pi_conjugated_carbonyl": 0.96533203125,
+          "alpha_beta_unsaturated_carbonyl": 0.89306640625,
+          "aryl_carbonyl": 0.810546875,
+          "pi_conjugated_imine": 0.87158203125,
+          "pi_conjugated_nitrile": 0.433837890625,
+          "has_donor_substituted_pi_system": 0.560546875,
+          "has_acceptor_substituted_pi_system": 0.90625,
+          "donor_acceptor_same_conjugated_system": 0.8681640625
+        }
+      },
+      "EXP-UVVIS-004-UVSPEC15-WBCE-SEED2026": {
+        "run_dir_exists": true,
+        "config_exists": true,
+        "checkpoint_exists": true,
+        "test_metrics_exists": true,
+        "test_per_label_exists": true,
+        "thresholds_in_run_exists": true,
+        "probability_artifacts": [],
+        "config": {
+          "seed": 2026,
+          "modality": "uvvis",
+          "loss": "BCEWithLogitsLoss",
+          "normalization": "max",
+          "threshold": 0.5,
+          "train_size": 103853,
+          "val_size": 12981,
+          "test_size": 12981,
+          "num_labels": 15,
+          "label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ]
+        },
+        "checkpoint": {
+          "keys": [
+            "best_val_mAP",
+            "config",
+            "epoch",
+            "label_names",
+            "model_state_dict",
+            "optimizer_state_dict",
+            "val_metrics"
+          ],
+          "head_weight_shape": [
+            15,
+            256
+          ],
+          "head_bias_shape": [
+            15
+          ],
+          "bn_running_mean_layers": 12,
+          "checkpoint_label_names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ],
+          "best_val_mAP": 0.5023295393145848,
+          "checkpoint_config": {
+            "experiment": "EXP-UVVIS-004-UVSPEC15-WBCE",
+            "modality": "uvvis",
+            "seed": 2026,
+            "batch_size": 512,
+            "num_workers": 4,
+            "max_epochs": 50,
+            "early_stopping_patience": 8,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "embedding_dim": 256,
+            "normalization": "max",
+            "threshold": 0.5,
+            "use_pos_weight": true,
+            "pos_weight_transform": "sqrt",
+            "pos_weight_cap": 20.0,
+            "final_pos_weights": {
+              "has_conjugation": 1.770527958869934,
+              "has_nonaromatic_conjugation": 3.6277382373809814,
+              "acyclic_conjugated_system": 5.608392238616943,
+              "cyclic_conjugated_system": 1.9335118532180786,
+              "has_aromatic_system": 2.1882834434509277,
+              "heteroaromatic": 2.2074968814849854,
+              "mixed_aromatic_nonaromatic_conjugation": 4.076045513153076,
+              "pi_conjugated_carbonyl": 3.2715539932250977,
+              "alpha_beta_unsaturated_carbonyl": 7.161881446838379,
+              "aryl_carbonyl": 7.76571798324585,
+              "pi_conjugated_imine": 6.826076984405518,
+              "pi_conjugated_nitrile": 7.185895919799805,
+              "has_donor_substituted_pi_system": 1.9908744096755981,
+              "has_acceptor_substituted_pi_system": 2.9950835704803467,
+              "donor_acceptor_same_conjugated_system": 5.339670181274414
+            },
+            "loss": "BCEWithLogitsLoss",
+            "optimizer": "AdamW",
+            "amp": true,
+            "train_size": 103853,
+            "val_size": 12981,
+            "test_size": 12981,
+            "label_names": [
+              "has_conjugation",
+              "has_nonaromatic_conjugation",
+              "acyclic_conjugated_system",
+              "cyclic_conjugated_system",
+              "has_aromatic_system",
+              "heteroaromatic",
+              "mixed_aromatic_nonaromatic_conjugation",
+              "pi_conjugated_carbonyl",
+              "alpha_beta_unsaturated_carbonyl",
+              "aryl_carbonyl",
+              "pi_conjugated_imine",
+              "pi_conjugated_nitrile",
+              "has_donor_substituted_pi_system",
+              "has_acceptor_substituted_pi_system",
+              "donor_acceptor_same_conjugated_system"
+            ]
+          }
+        },
+        "threshold_artifact_dir": "runs\\EXP-UVVIS-004-UVSPEC15-WBCE-SEED2026",
+        "threshold_artifact_exists": true,
+        "calibration_probabilities_exist": false,
+        "threshold_names": [
+          "has_conjugation",
+          "has_nonaromatic_conjugation",
+          "acyclic_conjugated_system",
+          "cyclic_conjugated_system",
+          "has_aromatic_system",
+          "heteroaromatic",
+          "mixed_aromatic_nonaromatic_conjugation",
+          "pi_conjugated_carbonyl",
+          "alpha_beta_unsaturated_carbonyl",
+          "aryl_carbonyl",
+          "pi_conjugated_imine",
+          "pi_conjugated_nitrile",
+          "has_donor_substituted_pi_system",
+          "has_acceptor_substituted_pi_system",
+          "donor_acceptor_same_conjugated_system"
+        ],
+        "threshold_values": {
+          "has_conjugation": 0.6630859375,
+          "has_nonaromatic_conjugation": 0.1558837890625,
+          "acyclic_conjugated_system": 0.56103515625,
+          "cyclic_conjugated_system": 0.6767578125,
+          "has_aromatic_system": 0.673828125,
+          "heteroaromatic": 0.71533203125,
+          "mixed_aromatic_nonaromatic_conjugation": 0.517578125,
+          "pi_conjugated_carbonyl": 0.2490234375,
+          "alpha_beta_unsaturated_carbonyl": 0.05792236328125,
+          "aryl_carbonyl": 0.30908203125,
+          "pi_conjugated_imine": 0.32958984375,
+          "pi_conjugated_nitrile": 0.23583984375,
+          "has_donor_substituted_pi_system": 0.3701171875,
+          "has_acceptor_substituted_pi_system": 0.269775390625,
+          "donor_acceptor_same_conjugated_system": 0.304443359375
+        }
+      }
+    }
+  },
+  "label_order_issues": [],
+  "probability_inventory": [
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-FULL\\EXP-RAMAN-001-FULL__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-FULL\\EXP-RAMAN-001-FULL__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED123\\EXP-RAMAN-001-SEED123__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED123\\EXP-RAMAN-001-SEED123__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED2026\\EXP-RAMAN-001-SEED2026__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED2026\\EXP-RAMAN-001-SEED2026__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-FULL\\EXP-RAMAN-002-FULL__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-FULL\\EXP-RAMAN-002-FULL__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-SEED123\\EXP-RAMAN-002-SEED123__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-SEED123\\EXP-RAMAN-002-SEED123__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-SEED2026\\EXP-RAMAN-002-SEED2026__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-BN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-SEED2026\\EXP-RAMAN-002-SEED2026__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-FULL\\EXP-RAMAN-001-FULL__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-FULL\\EXP-RAMAN-001-FULL__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED123\\EXP-RAMAN-001-SEED123__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED123\\EXP-RAMAN-001-SEED123__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED2026\\EXP-RAMAN-001-SEED2026__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-001-SEED2026\\EXP-RAMAN-001-SEED2026__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-FULL\\EXP-RAMAN-002-FULL__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-FULL\\EXP-RAMAN-002-FULL__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-SEED123\\EXP-RAMAN-002-SEED123__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-SEED123\\EXP-RAMAN-002-SEED123__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-SEED2026\\EXP-RAMAN-002-SEED2026__test__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    },
+    {
+      "path": "runs\\RAMAN-THRESHOLD-CALIBRATION\\EXP-RAMAN-002-SEED2026\\EXP-RAMAN-002-SEED2026__validation__probabilities.npy",
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "size_bytes": 727064
+    }
+  ],
+  "valid_masks": {
+    "path": "processed\\qm9s\\prepared\\modality_valid_masks.npz",
+    "valid_ir": 129817,
+    "valid_raman": 129817,
+    "valid_uvvis": 129815,
+    "valid_multimodal_complete": 129815
+  }
+}

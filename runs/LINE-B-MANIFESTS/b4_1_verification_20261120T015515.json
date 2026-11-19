@@ -1,0 +1,2656 @@
+{
+  "phase": "B4.1-verification",
+  "generated_at": "2026-11-20T01:55:15+08:00",
+  "freeze": {
+    "path": "runs\\LINE-B-MANIFESTS\\FREEZE.json",
+    "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c",
+    "protocol_version": "B0 v0.2",
+    "protocol_sha256": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a"
+  },
+  "predictions_root": "runs\\LINE-B-TEST-PREDICTIONS",
+  "summary": {
+    "status": "PASS",
+    "n_models": 18,
+    "n_checks": 466,
+    "n_failed": 0,
+    "test_samples": 12981,
+    "n_files": 72,
+    "total_bytes": 18969279,
+    "file_counts": {
+      "labels.npy": 18,
+      "prediction_manifest.json": 18,
+      "probabilities.npy": 18,
+      "row_index.npy": 18
+    }
+  },
+  "models": [
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-FULL",
+      "seed": 42,
+      "n_samples": 12981,
+      "probabilities_sha256": "6e2ca3cfd331ee1686813fccab1f05beb9c16b958412844ca792cc81a946a9f9",
+      "probabilities_file_sha256": "feefeda5e118199f8cbdcc49c63d75e88437cd18b4fac9c2a50553182bb1aa4e",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "d60cc7b159891728d46597d15826f29028d00a84801475ab07120f3255613239",
+      "manifest_sha256": "73a35e86ea0764ec44b325cf5eca4d1182e8c3ea500f4deed9a86a05d9a06f75",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-FULL\\test"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-SEED123",
+      "seed": 123,
+      "n_samples": 12981,
+      "probabilities_sha256": "d149dad1c897ca89c38b4d5999cfedfff28a526802fdcf9f341b3c2a0c9b86d0",
+      "probabilities_file_sha256": "af7acfe5110d96c6e39eb14701959cfa8206daf29366efccb6d1c1556bbac3a7",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+      "manifest_sha256": "fe0bcc14b533e1ad455ce05c022234617e0ab66711a7565259e1e334d77b0d9b",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED123\\test"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-SEED2026",
+      "seed": 2026,
+      "n_samples": 12981,
+      "probabilities_sha256": "2e9ecc4f71c98f1cfb3007e08c7bb32ea5630cb917222b82562fbcfc7a1b5660",
+      "probabilities_file_sha256": "7bf8281a765c79a31958041ca5ff2b8df148173b578bc2591c45649c83b26a5d",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "d7945c78d432fa907bbc0c8b39e3f4e7ae78088a1185931e625a8eb06cc4a274",
+      "manifest_sha256": "d1c043d810cf7cfe848d441c8b8b75afb141343ecf47803fd152c4d65c72c3b6",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED2026\\test"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-FULL",
+      "seed": 42,
+      "n_samples": 12981,
+      "probabilities_sha256": "4080cd493815b058d659b291f4187c45ad55eb01a7a5b58e66240e5152f3cb58",
+      "probabilities_file_sha256": "fa8246d8e96194a04f22a4d627a227b61cbcfab125c1168c55a781b0e69a7528",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "573ae7e2a3351252c5f1ad7e0ec060c77435468d3c7bddb37a641e1206cdfcd3",
+      "manifest_sha256": "26ad8ff4a89a80ec2b016dcd67f95e163a426df43d2b969b331f1d8e3a1ded44",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-FULL\\test"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-SEED123",
+      "seed": 123,
+      "n_samples": 12981,
+      "probabilities_sha256": "41680f1eadb0c14f440f1345833752bfd324e902541e469693b561091fe57cbc",
+      "probabilities_file_sha256": "47d0ec13884fe876b99f18d9c45ea5e45c68e2e44ce7766b45b801d6dffb29b4",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "84334c5e013490de75bc23f0f844880062150759947835cb29e18e80c9158298",
+      "manifest_sha256": "e9d524e2da4181e88b04a39ea5396a63032ea8b383469f2279aff4eec87ee8fb",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED123\\test"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-SEED2026",
+      "seed": 2026,
+      "n_samples": 12981,
+      "probabilities_sha256": "617bc8cb9278181c7ffca0b901241ac137386a1acb664a1e3f39576f12854db2",
+      "probabilities_file_sha256": "2f43d7ad4ac9ae53841f10e09572c0195ac5a8b4781915cd963e46235ee7b3e3",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+      "manifest_sha256": "c37c5542028d5087d5ca9eaff7bf464f5598972dbe01f2272eb8ee769187a0b2",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED2026\\test"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-FULL",
+      "seed": 42,
+      "n_samples": 12981,
+      "probabilities_sha256": "f1306655f0885c119035dcbe0df7dcd207b09b9917e0c84eec19d7524b4300cc",
+      "probabilities_file_sha256": "9aa36e15be2c9d2b38353d34d7eb33112b5fde25ee59e3d53aaa2b1d63dc09db",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "e8056dc4bbc5c4321514dcdd95d84b492a7d2c65a5772c2a953a79627cad2387",
+      "manifest_sha256": "e69e27186839200dc6aa6ca9ce3e8784940aa33dc15b6a494c823330ccae93f2",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-FULL\\test"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-SEED123",
+      "seed": 123,
+      "n_samples": 12981,
+      "probabilities_sha256": "1cebbcfc19312af37e6df0eaabed2002390d0bbabf5fd1ae30f896221f53c7f5",
+      "probabilities_file_sha256": "d54d07feca671c9303fb9196c52fa2eb0798701761003efd850900281aedae34",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "3c4af7df5b2440ba179b57e419dc8f3f10c26be78f4f542a337ab5ba58ac4acf",
+      "manifest_sha256": "4c5c6df0c42106bf3cb8db5e767c798a06231e9503e57b27f078e3aa9ec90204",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-SEED123\\test"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-SEED2026",
+      "seed": 2026,
+      "n_samples": 12981,
+      "probabilities_sha256": "0acf21d642c1e6ae7b3b06b758ad543a55b406c929c689f2b2cde7cd38320569",
+      "probabilities_file_sha256": "bd49a65412fc63dd42f806948e8b80a070d524d54c5b119cba841d01e4d9e566",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "checkpoint_sha256": "9e2b0dd81cb5319e5c4f1aa6f2bb550bf23f6b6a3045e478ac1aa2f97f88e01d",
+      "manifest_sha256": "bc1dbfc7dfc51f7c39cad17eea47a2e412282db215d12c43e4f1ea6b54a3b361",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-SEED2026\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-FULL",
+      "seed": 42,
+      "n_samples": 12981,
+      "probabilities_sha256": "d5b524b34de8d5e7fe12739b35bdb1c6578f84b76c79c42be12d98763da4b0f7",
+      "probabilities_file_sha256": "b2e5617347a0d7b8222a03a0c9da49e10698be4d6440da92c104b283b23ddaa6",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "68c976d92b1b5f82c5d493b3ebab44b9e9953f1738d62f0ba760b3e6e79992fe",
+      "manifest_sha256": "caa257101923ba6b923eed735b778b15ece764607665faf66b1c76ce9a1ca157",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+      "seed": 123,
+      "n_samples": 12981,
+      "probabilities_sha256": "5aa19bcbc2a5102f49c5d080414f5db7052cfdd6d4b1949f915ff1099f81a7b1",
+      "probabilities_file_sha256": "7defe702490604e33be6373f35bca2af570a57ffca41863ad32ffe816fc44451",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "7a977c63a8d52315e88c7497fd8c44b47f997985f1f2f8ab1392f38cc14eee63",
+      "manifest_sha256": "f2f6fa54969981855bade9958dbe81a02e46f990cafc133d41f619eeeae86771",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-SEED123\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+      "seed": 2026,
+      "n_samples": 12981,
+      "probabilities_sha256": "48f4aa8c97e004fb328437278ec0482acf513d4abc68a56b2aac2c9fc2385339",
+      "probabilities_file_sha256": "fd0402e2374cd811669b162b3eaf68327fd5e840b2f09cd0f83a98959e6de21d",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "410c41d1413f2d1c8f697aa19504e765836a171aea61f258e3d4b88c282c19db",
+      "manifest_sha256": "c855350241efdedb7d95fafa97669c88a83005801622a74518ddeabb03a008d3",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-SEED2026\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+      "seed": 42,
+      "n_samples": 12981,
+      "probabilities_sha256": "6796369d19b817dd40c850b481731e8f659f0e8e23a1083dc0966c7e706e2e2f",
+      "probabilities_file_sha256": "e661d776bd55c1183c80ced240c9ab3d571bbd140b23bee5e230813c58ed76d8",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "20e0264f5411dbef57ba23559c0db68aadcc39d324e5b21ee84f3e7e9b88f761",
+      "manifest_sha256": "5bfc6ff21794b5cd5203511aa75fa500c0cb982959a746e1d61cd00d00d00db8",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-FULL\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "seed": 123,
+      "n_samples": 12981,
+      "probabilities_sha256": "76a6a6b7381d964172eb250a1155f6105011260834fc2574d6c839c96a0fb9f3",
+      "probabilities_file_sha256": "16247fd0c3a21f5486dbeba0e1ef5ac1d5dce002370a58806a04c034b6922cbf",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+      "manifest_sha256": "6685e34a6d75d30bee9b390efa3feb25830e6d2e8f59992031cae2f476055540",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-SEED123\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "seed": 2026,
+      "n_samples": 12981,
+      "probabilities_sha256": "47282e9d32669b8b102e2da5961a483b4ff2ae0af517c9b5c6daded608db59c9",
+      "probabilities_file_sha256": "cb3dd1716fa72aee655f972a68d4dafcf779208443f8ecbe65b07eb0aef36a8c",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "781b47422630899f1f234695dea49af71f4c6401594380da868e7bd17d8e022a",
+      "manifest_sha256": "fa9544fbdbb8cabf01c65d9cd2ebafd138cdfabf9a4296678e21d50cba7226e0",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-SEED2026\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+      "seed": 42,
+      "n_samples": 12981,
+      "probabilities_sha256": "04d87dfe89257d201082e4aeb7a7b6eae84d533bf67f46729b7a7cb3ff2f628d",
+      "probabilities_file_sha256": "cea3e50c43c80a75a79a775398f80dc90e0ced9c1baaa5eb61bf5fe68688dc06",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "11f2a467e863ac4f943f0ce2509342ae058b297da742daaf19a3a6cf41280ace",
+      "manifest_sha256": "ea8a1cd22debd4d12be22a6234c884e7e3c773ab3ce93d2f94a95750f4ac9d89",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-FULL\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+      "seed": 123,
+      "n_samples": 12981,
+      "probabilities_sha256": "bd9679856917768314ad44054a5328a3e4428e9a6a430b283ab9c0ad0c773cbb",
+      "probabilities_file_sha256": "39f5ea0ca59cb3fc0bc92c914b07b1553e5d2350c460c551ba74a28fcb6a78bb",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "ded92d1d29ac26db56b3967f322fdbcca1143a527deb26abbafc0e9c3a54bdc8",
+      "manifest_sha256": "94aa319464149d7a25036204d9c54b343440b6209f78f8041b86c3d432c60bfa",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED123\\test"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "seed": 2026,
+      "n_samples": 12981,
+      "probabilities_sha256": "08e2833274349e0e1407c99a66e97ad092ef033c7ab2af12dd24a3078a9110bc",
+      "probabilities_file_sha256": "0ed7c3153adf31bed0a8132af7671ca677c390c22d70c8d70b1842ce4e51d254",
+      "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "checkpoint_sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+      "manifest_sha256": "3f836f487b1de4a6d946a8c9b49ed79f5f395381a942612fc52c61fd9781ae0f",
+      "output_dir": "runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED2026\\test"
+    }
+  ],
+  "access_log": {
+    "path": "runs\\LINE-B-MANIFESTS\\test_access_log.json",
+    "sha256": "e7b0bd49dccf816504afcca1438755e2cc82522f4dda688d6b20c5afc740580a",
+    "n_entries": 18,
+    "n_unique_models": 18,
+    "freeze_sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c",
+    "historical_exposure": {
+      "historical_test_information_read_before_b4": true,
+      "historical_read_scope": "B0 stage consistency audit of existing per-label Test CSVs and existing Raman Test probabilities",
+      "user_attestation_no_operational_interference": true,
+      "blind_test_claim": false,
+      "result_classification": "exploratory/post-hoc"
+    },
+    "access_policy": {
+      "one_export_per_model": true,
+      "test_driven_tuning": false,
+      "threshold_refit_on_test": false,
+      "bootstrap_run": false,
+      "freeze_hash_required": true
+    }
+  },
+  "frozen_assets_checked": 108,
+  "checks": [
+    {
+      "id": "Shared14/EXP-IR-001-FULL.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-FULL\\test"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-FULL\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-FULL.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED123\\test"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED123\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED123.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED2026\\test"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED2026\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-IR-001-SEED2026.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-FULL\\test"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-FULL\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-FULL.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED123\\test"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED123\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED123.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED2026\\test"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED2026\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-RAMAN-001-SEED2026.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-FULL\\test"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-FULL\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-FULL.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-SEED123\\test"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-SEED123\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED123.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-SEED2026\\test"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-SEED2026\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.shapes",
+      "ok": true,
+      "detail": "(12981, 14)/(12981,)/(12981, 14)"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "Shared14/EXP-UVVIS-001-SEED2026.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-FULL.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-SEED123\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-SEED123\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED123.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-SEED2026\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-SEED2026\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-FULL\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-FULL\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-SEED123\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-SEED123\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-SEED2026\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-SEED2026\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-FULL\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-FULL\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED123\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED123\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.dir",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED2026\\test"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.manifest",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-TEST-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED2026\\test\\prediction_manifest.json"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.identity",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.checkpoint_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.checkpoint_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.config_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.split_freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.split_disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.shapes",
+      "ok": true,
+      "detail": "(12981, 15)/(12981,)/(12981, 15)"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.dtypes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.probabilities_finite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.probabilities_range",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.row_index_unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.row_index_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.labels_frozen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.array_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.file_sha.probabilities",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.file_sha.row_index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.file_sha.labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.manifest_checks",
+      "ok": true,
+      "detail": "{\"n_rows_equals_test_size\": true, \"row_index_equals_frozen_test\": true, \"row_index_unique\": true, \"labels_equal_frozen_label_matrix\": true, \"probabilities_finite\": true, \"probabilities_in_unit_interval\": true, \"label_order_equals_freeze\": true, \"head_dim_equals_label_count\": true, \"checkpoint_label_order_verified\": true, \"checkpoint_sha256_equals_freeze\": true, \"freeze_sha256_verified\": true, \"test_split_accessed\": true, \"checkpoint_file_unchanged\": true, \"model_state_unchanged\": true, \"bn_buffers_unchanged\": true, \"checkpoint_mutated\": false, \"bn_buffers_mutated\": false}"
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.repeat_bitwise",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026.test_access_disclosed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "models.count_18",
+      "ok": true,
+      "detail": "18"
+    },
+    {
+      "id": "cross_model.row_index_identical",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.exists",
+      "ok": true,
+      "detail": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-MANIFESTS\\test_access_log.json"
+    },
+    {
+      "id": "access_log.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.n_entries_18",
+      "ok": true,
+      "detail": "18"
+    },
+    {
+      "id": "access_log.unique_models_18",
+      "ok": true,
+      "detail": "18"
+    },
+    {
+      "id": "access_log.historical_disclosure",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.policy",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-IR-001-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-IR-001-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-IR-001-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-IR-001-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-IR-001-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-IR-001-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-RAMAN-001-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-RAMAN-001-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-RAMAN-001-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-RAMAN-001-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-RAMAN-001-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-RAMAN-001-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-UVVIS-001-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-UVVIS-001-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-UVVIS-001-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-UVVIS-001-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.Shared14.EXP-UVVIS-001-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.Shared14.EXP-UVVIS-001-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-IR-003-UVSPEC15-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-IR-003-UVSPEC15-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-IR-003-UVSPEC15-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-IR-003-UVSPEC15-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-IR-003-UVSPEC15-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-IR-003-UVSPEC15-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-RAMAN-003-UVSPEC15-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-RAMAN-003-UVSPEC15-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-RAMAN-003-UVSPEC15-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-RAMAN-003-UVSPEC15-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-UVVIS-003-UVSPEC15-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-UVVIS-003-UVSPEC15-FULL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-UVVIS-003-UVSPEC15-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-UVVIS-003-UVSPEC15-SEED123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry.UVSPEC15.EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "access_log.entry_match.UVSPEC15.EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.validation_manifests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.validation_arrays",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.thresholds",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.calibrations",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.threshold_summary.Shared14",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.threshold_summary.UVSPEC15",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.b3a_files",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "inventory.manifest_count_18",
+      "ok": true,
+      "detail": "18"
+    }
+  ],
+  "failures": [],
+  "status_counts": {
+    "PASS": 466
+  }
+}

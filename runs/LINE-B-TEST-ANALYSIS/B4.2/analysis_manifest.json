@@ -1,0 +1,449 @@
+{
+  "phase": "B4.2",
+  "generated_at": "2026-11-20T02:09:16+08:00",
+  "classification": {
+    "status": "exploratory/post-hoc",
+    "blind_test_claim": false,
+    "historical_test_information_read_before_b4": true,
+    "test_driven_tuning": false,
+    "threshold_refit_on_test": false,
+    "bootstrap_run": false
+  },
+  "freeze": {
+    "path": "runs\\LINE-B-MANIFESTS\\FREEZE.json",
+    "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c",
+    "status": "FROZEN",
+    "protocol_version": "B0 v0.2",
+    "protocol_sha256": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a"
+  },
+  "inputs": {
+    "test_predictions": [
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "ir",
+        "run_name": "EXP-IR-001-FULL",
+        "seed": 42,
+        "manifest_sha256": "73a35e86ea0764ec44b325cf5eca4d1182e8c3ea500f4deed9a86a05d9a06f75",
+        "probabilities_sha256": "6e2ca3cfd331ee1686813fccab1f05beb9c16b958412844ca792cc81a946a9f9",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "d60cc7b159891728d46597d15826f29028d00a84801475ab07120f3255613239",
+        "split_path": "processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+        "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-FULL\\optimal_thresholds.json",
+        "threshold_sha256": "1cc92a75bb2e1f8b299fcf6333c01ec06d5749031383f65443fabb0096ed63c1"
+      },
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "ir",
+        "run_name": "EXP-IR-001-SEED123",
+        "seed": 123,
+        "manifest_sha256": "fe0bcc14b533e1ad455ce05c022234617e0ab66711a7565259e1e334d77b0d9b",
+        "probabilities_sha256": "d149dad1c897ca89c38b4d5999cfedfff28a526802fdcf9f341b3c2a0c9b86d0",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+        "split_path": "processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+        "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-SEED123\\optimal_thresholds.json",
+        "threshold_sha256": "f24079970a2e04ea10e8241285ef089cfda5ba5fca103141e6a885768be773a6"
+      },
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "ir",
+        "run_name": "EXP-IR-001-SEED2026",
+        "seed": 2026,
+        "manifest_sha256": "d1c043d810cf7cfe848d441c8b8b75afb141343ecf47803fd152c4d65c72c3b6",
+        "probabilities_sha256": "2e9ecc4f71c98f1cfb3007e08c7bb32ea5630cb917222b82562fbcfc7a1b5660",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "d7945c78d432fa907bbc0c8b39e3f4e7ae78088a1185931e625a8eb06cc4a274",
+        "split_path": "processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+        "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-SEED2026\\optimal_thresholds.json",
+        "threshold_sha256": "18e8136f8019b43458a1780bb4094351829a1d0365f24e2bfaa4a4c63fea935d"
+      },
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "raman",
+        "run_name": "EXP-RAMAN-001-FULL",
+        "seed": 42,
+        "manifest_sha256": "26ad8ff4a89a80ec2b016dcd67f95e163a426df43d2b969b331f1d8e3a1ded44",
+        "probabilities_sha256": "4080cd493815b058d659b291f4187c45ad55eb01a7a5b58e66240e5152f3cb58",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "573ae7e2a3351252c5f1ad7e0ec060c77435468d3c7bddb37a641e1206cdfcd3",
+        "split_path": "processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+        "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-FULL\\optimal_thresholds.json",
+        "threshold_sha256": "621992ca32363720ad435c510d6124e883cac84f54d6235009d3d97150467689"
+      },
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "raman",
+        "run_name": "EXP-RAMAN-001-SEED123",
+        "seed": 123,
+        "manifest_sha256": "e9d524e2da4181e88b04a39ea5396a63032ea8b383469f2279aff4eec87ee8fb",
+        "probabilities_sha256": "41680f1eadb0c14f440f1345833752bfd324e902541e469693b561091fe57cbc",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "84334c5e013490de75bc23f0f844880062150759947835cb29e18e80c9158298",
+        "split_path": "processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+        "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-SEED123\\optimal_thresholds.json",
+        "threshold_sha256": "3be96864317a058d7aa19e7ffaee96e92a6494761d9a6092879b96fd117df04b"
+      },
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "raman",
+        "run_name": "EXP-RAMAN-001-SEED2026",
+        "seed": 2026,
+        "manifest_sha256": "c37c5542028d5087d5ca9eaff7bf464f5598972dbe01f2272eb8ee769187a0b2",
+        "probabilities_sha256": "617bc8cb9278181c7ffca0b901241ac137386a1acb664a1e3f39576f12854db2",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+        "split_path": "processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+        "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-SEED2026\\optimal_thresholds.json",
+        "threshold_sha256": "18829f9157e7877b7077403d1c542011f233ec3a31baa347af7ec661b9f25440"
+      },
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "uvvis",
+        "run_name": "EXP-UVVIS-001-FULL",
+        "seed": 42,
+        "manifest_sha256": "e69e27186839200dc6aa6ca9ce3e8784940aa33dc15b6a494c823330ccae93f2",
+        "probabilities_sha256": "f1306655f0885c119035dcbe0df7dcd207b09b9917e0c84eec19d7524b4300cc",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "e8056dc4bbc5c4321514dcdd95d84b492a7d2c65a5772c2a953a79627cad2387",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-FULL\\optimal_thresholds.json",
+        "threshold_sha256": "39a6eb5cce8db19982051f15a21809dda4aee0eed51a80cc7dbcdb603ea154bc"
+      },
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "uvvis",
+        "run_name": "EXP-UVVIS-001-SEED123",
+        "seed": 123,
+        "manifest_sha256": "4c5c6df0c42106bf3cb8db5e767c798a06231e9503e57b27f078e3aa9ec90204",
+        "probabilities_sha256": "1cebbcfc19312af37e6df0eaabed2002390d0bbabf5fd1ae30f896221f53c7f5",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "3c4af7df5b2440ba179b57e419dc8f3f10c26be78f4f542a337ab5ba58ac4acf",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-SEED123\\optimal_thresholds.json",
+        "threshold_sha256": "ffe4d3e9c25d9f3ce2f94f0761a3d8eb25c57ba5cc83838ea3e70aab5b296c14"
+      },
+      {
+        "task": "Shared14",
+        "label_set": "shared14",
+        "modality": "uvvis",
+        "run_name": "EXP-UVVIS-001-SEED2026",
+        "seed": 2026,
+        "manifest_sha256": "bc1dbfc7dfc51f7c39cad17eea47a2e412282db215d12c43e4f1ea6b54a3b361",
+        "probabilities_sha256": "0acf21d642c1e6ae7b3b06b758ad543a55b406c929c689f2b2cde7cd38320569",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+        "checkpoint_sha256": "9e2b0dd81cb5319e5c4f1aa6f2bb550bf23f6b6a3045e478ac1aa2f97f88e01d",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-SEED2026\\optimal_thresholds.json",
+        "threshold_sha256": "4cd32c5767344752e470f0636ac43d7b1e6e63bd7710bf24d9ebfc633a5c0cde"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "ir",
+        "run_name": "EXP-IR-003-UVSPEC15-FULL",
+        "seed": 42,
+        "manifest_sha256": "caa257101923ba6b923eed735b778b15ece764607665faf66b1c76ce9a1ca157",
+        "probabilities_sha256": "d5b524b34de8d5e7fe12739b35bdb1c6578f84b76c79c42be12d98763da4b0f7",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "68c976d92b1b5f82c5d493b3ebab44b9e9953f1738d62f0ba760b3e6e79992fe",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-FULL\\optimal_thresholds.json",
+        "threshold_sha256": "98e062029560be910526e8516b70531d3ef4e8c9a109cbedb3d9ed8a3a467110"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "ir",
+        "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+        "seed": 123,
+        "manifest_sha256": "f2f6fa54969981855bade9958dbe81a02e46f990cafc133d41f619eeeae86771",
+        "probabilities_sha256": "5aa19bcbc2a5102f49c5d080414f5db7052cfdd6d4b1949f915ff1099f81a7b1",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "7a977c63a8d52315e88c7497fd8c44b47f997985f1f2f8ab1392f38cc14eee63",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+        "threshold_sha256": "267c7cee9b6046bb64c185f7d049c73cfee77c9003381208ae284544c5af3609"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "ir",
+        "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+        "seed": 2026,
+        "manifest_sha256": "c855350241efdedb7d95fafa97669c88a83005801622a74518ddeabb03a008d3",
+        "probabilities_sha256": "48f4aa8c97e004fb328437278ec0482acf513d4abc68a56b2aac2c9fc2385339",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "410c41d1413f2d1c8f697aa19504e765836a171aea61f258e3d4b88c282c19db",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+        "threshold_sha256": "2525d76d41448125b7f600a488169a6030cf4f0dad6c5c1259e183b950e36c1e"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "raman",
+        "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+        "seed": 42,
+        "manifest_sha256": "5bfc6ff21794b5cd5203511aa75fa500c0cb982959a746e1d61cd00d00d00db8",
+        "probabilities_sha256": "6796369d19b817dd40c850b481731e8f659f0e8e23a1083dc0966c7e706e2e2f",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "20e0264f5411dbef57ba23559c0db68aadcc39d324e5b21ee84f3e7e9b88f761",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-FULL\\optimal_thresholds.json",
+        "threshold_sha256": "941f1edf5c0d282abcce5e4f34fc77dbe4535ad45893d502c978170394a226d9"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "raman",
+        "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+        "seed": 123,
+        "manifest_sha256": "6685e34a6d75d30bee9b390efa3feb25830e6d2e8f59992031cae2f476055540",
+        "probabilities_sha256": "76a6a6b7381d964172eb250a1155f6105011260834fc2574d6c839c96a0fb9f3",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+        "threshold_sha256": "2c7ded918193796cacb91ba71c3102049f5f51d6bdacc648aa51047ab52a6814"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "raman",
+        "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+        "seed": 2026,
+        "manifest_sha256": "fa9544fbdbb8cabf01c65d9cd2ebafd138cdfabf9a4296678e21d50cba7226e0",
+        "probabilities_sha256": "47282e9d32669b8b102e2da5961a483b4ff2ae0af517c9b5c6daded608db59c9",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "781b47422630899f1f234695dea49af71f4c6401594380da868e7bd17d8e022a",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+        "threshold_sha256": "72a694f85d428aa56293216baf05eb08e32e5bb68f90ee91b45ad3efadd48f18"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "uvvis",
+        "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+        "seed": 42,
+        "manifest_sha256": "ea8a1cd22debd4d12be22a6234c884e7e3c773ab3ce93d2f94a95750f4ac9d89",
+        "probabilities_sha256": "04d87dfe89257d201082e4aeb7a7b6eae84d533bf67f46729b7a7cb3ff2f628d",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "11f2a467e863ac4f943f0ce2509342ae058b297da742daaf19a3a6cf41280ace",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-FULL\\optimal_thresholds.json",
+        "threshold_sha256": "78f5609df0813ddefd43ddffce37eb2109cab900af0056fb840588a3825fbd92"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "uvvis",
+        "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+        "seed": 123,
+        "manifest_sha256": "94aa319464149d7a25036204d9c54b343440b6209f78f8041b86c3d432c60bfa",
+        "probabilities_sha256": "bd9679856917768314ad44054a5328a3e4428e9a6a430b283ab9c0ad0c773cbb",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "ded92d1d29ac26db56b3967f322fdbcca1143a527deb26abbafc0e9c3a54bdc8",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+        "threshold_sha256": "26e0ccc6e079aeed6c80b541f6b7ef3a2943aa3113e2551b78e6e7b6c1ab0cf0"
+      },
+      {
+        "task": "UVSPEC15",
+        "label_set": "uvspec15",
+        "modality": "uvvis",
+        "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+        "seed": 2026,
+        "manifest_sha256": "3f836f487b1de4a6d946a8c9b49ed79f5f395381a942612fc52c61fd9781ae0f",
+        "probabilities_sha256": "08e2833274349e0e1407c99a66e97ad092ef033c7ab2af12dd24a3078a9110bc",
+        "row_index_sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+        "labels_sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+        "checkpoint_sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+        "split_path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+        "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "threshold_path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+        "threshold_sha256": "7601afc4dfded6c470471518bd3bce208cfaee681da3693ed3f2c73fb0272b82"
+      }
+    ],
+    "test_access_log": {
+      "path": "runs\\LINE-B-MANIFESTS\\test_access_log.json",
+      "sha256": "e7b0bd49dccf816504afcca1438755e2cc82522f4dda688d6b20c5afc740580a",
+      "n_entries": 18,
+      "historical_exposure": {
+        "historical_test_information_read_before_b4": true,
+        "historical_read_scope": "B0 stage consistency audit of existing per-label Test CSVs and existing Raman Test probabilities",
+        "user_attestation_no_operational_interference": true,
+        "blind_test_claim": false,
+        "result_classification": "exploratory/post-hoc"
+      }
+    },
+    "validation_label_matrix": {
+      "path": "processed/qm9s/prepared/functional_group_labels.npy",
+      "sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4"
+    }
+  },
+  "counts": {
+    "n_models": 18,
+    "n_tasks": 2,
+    "n_labels_shared14": 14,
+    "n_labels_uvspec15": 15,
+    "test_samples": 12981,
+    "n_overall_rows": 36,
+    "n_per_label_rows": 522,
+    "n_seed_rows": 288
+  },
+  "metrics": {
+    "definitions": "training/line_b/metrics.py",
+    "overall_metrics": [
+      "micro_precision",
+      "micro_recall",
+      "micro_f1",
+      "macro_precision",
+      "macro_recall",
+      "macro_f1",
+      "macro_ap",
+      "macro_auroc"
+    ],
+    "policies": [
+      "fixed_0.5",
+      "validation_f1"
+    ],
+    "primary_policy": "fixed_0.5",
+    "secondary_policy": "validation_f1 (frozen per-label thresholds)"
+  },
+  "code": {
+    "analysis_script": "training/line_b/evaluate_b4_test_metrics.py",
+    "analysis_script_sha256": "8c4be972aabc5dc23b55d32ce8511e0ea83e283e84a506a6a877d47e967b9e5c",
+    "metrics_sha256": "e773f52da281d5ea69cf89c4e61b40ebbbdfca9ee00d5abb901401b42a105ac9",
+    "plots_sha256": "ce7bd3b1ad3d39c7b240a248906307a3a53986e0365adacecee8e487efb1cdfe",
+    "common_sha256": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+    "verifier": "training/line_b/verify_b4_2_analysis.py",
+    "verifier_sha256": "d803b9cfc69eaed2dfe6bda6c8599bef3fd898ec5ae25097494490dbdac12014"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.9.0",
+    "pillow": "12.2.0",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "outputs": [
+    {
+      "path": "figures/fig1_overall_heatmap.png",
+      "sha256": "12e6a3b846920a120f842cdc2160c5be729ac6c7b9d8c9ec0dac25c6476af7af",
+      "size_bytes": 81670
+    },
+    {
+      "path": "figures/fig2_f1_comparison.png",
+      "sha256": "74db582e8b65dea0980d3726183f7c6e9cc99bbdb887bbdc12229c7068b5806f",
+      "size_bytes": 21459
+    },
+    {
+      "path": "figures/fig3_map_auroc_comparison.png",
+      "sha256": "641ce11b0fb1d801f28c1b26669a371b566809f65ffba17015b939b2ae21f20a",
+      "size_bytes": 23422
+    },
+    {
+      "path": "figures/fig4_per_label_f1_heatmap.png",
+      "sha256": "c1fed60211791eb429b3d3fe943fa6b282b9e4452d2fc8ad36272877e13194a5",
+      "size_bytes": 95791
+    },
+    {
+      "path": "figures/fig5_per_label_ap_heatmap.png",
+      "sha256": "2e5ba6a16539f37738eb5e84154acfddb68e88fb9d66a9edc152e3193e62560f",
+      "size_bytes": 91314
+    },
+    {
+      "path": "figures/fig6_seed_stability.png",
+      "sha256": "50644669cdc1a81f3e18fcf474ae657d91b236d59d300bd24aeefcfcd4ee1b5a",
+      "size_bytes": 37072
+    },
+    {
+      "path": "figures/fig7_task_comparison.png",
+      "sha256": "0b331514d48545740b6282d90f18b88177b523d013cf9685de437b61195e52aa",
+      "size_bytes": 24080
+    },
+    {
+      "path": "modality_comparison.csv",
+      "sha256": "587fe6f71bc395642edbf8e447a8efe78637d31a6efbab1c09435d4d52abfb64",
+      "size_bytes": 7090
+    },
+    {
+      "path": "overall_mean_sd.csv",
+      "sha256": "f1028ee0162fc207e835cfbb42bcfed7c6f3d354364864005a83cfbac41c7f74",
+      "size_bytes": 5995
+    },
+    {
+      "path": "overall_metrics.csv",
+      "sha256": "59e4a27e3ad77dc6447a42ca3d764fff029df355a42a03715cc83d6277ea8c0b",
+      "size_bytes": 6953
+    },
+    {
+      "path": "per_label_metrics.csv",
+      "sha256": "4d3e4bfd7ed1f3dddea168dc8cef05a1e47dfb2585d6b56256a50239d052a90e",
+      "size_bytes": 111829
+    },
+    {
+      "path": "per_label_modality_comparison.csv",
+      "sha256": "9d033d575c92b43e9978c3131e8f4b51b5b65bc72c80b9626a80ebffe00e651e",
+      "size_bytes": 3537
+    },
+    {
+      "path": "per_label_modality_mean_sd.csv",
+      "sha256": "0649288c6de0f72404d12f1111bb36c4e494513543fbf530436cdd39e4d93a93",
+      "size_bytes": 15338
+    },
+    {
+      "path": "report.md",
+      "sha256": "bc6d950265f4cc909db192fa202c2d5453fe1b399e3e3303d48064c7de14dc8e",
+      "size_bytes": 12086
+    },
+    {
+      "path": "seed_comparison.csv",
+      "sha256": "1cad636a7b7e39dff13c638fd7c29126657738dcf9c9a4dc12d7009cb9b8dcd2",
+      "size_bytes": 15295
+    }
+  ]
+}

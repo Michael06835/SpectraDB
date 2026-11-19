@@ -1,0 +1,235 @@
+{
+  "phase": "B3-A",
+  "task": "Shared14",
+  "label_set": "shared14",
+  "split": "validation",
+  "n_models": 9,
+  "n_labels": 14,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "modalities": [
+    "ir",
+    "raman",
+    "uvvis"
+  ],
+  "threshold_policies": [
+    "fixed_0.5",
+    "validation_f1"
+  ],
+  "primary_threshold": 0.5,
+  "secondary_threshold": "validation_f1_per_label",
+  "best_single_modality": "ir",
+  "best_single_selection": "maximum mean Validation Macro AP at 0.5 from frozen B3 model metrics",
+  "modality_macro_ap": {
+    "ir": 0.96134768,
+    "raman": 0.94756811,
+    "uvvis": 0.51313065
+  },
+  "n_model_rows": 252,
+  "n_pairwise_rows": 504,
+  "n_three_modality_rows": 84,
+  "n_error_jaccard_undefined": 0,
+  "partial": false,
+  "no_test_access": true,
+  "all_checks_pass": true,
+  "definitions": {
+    "fn_rescue": "A FN and B predicts positive for the same sample-label pair",
+    "fp_correction": "A FP and B predicts negative for the same sample-label pair",
+    "new_fp": "A true-negative and B false-positive",
+    "new_fn": "A true-positive and B false-negative",
+    "conditional_correct": "P(other correct | base wrong)",
+    "common_fn": "IR and Raman are both FN on the same sample-label pair",
+    "common_fp": "IR and Raman are both FP on the same sample-label pair",
+    "uv_common_fn_rescue": "UV is correct on an IR/Raman common-FN pair",
+    "uv_common_fp_correction": "UV is correct on an IR/Raman common-FP pair",
+    "uv_extra_oracle_correct": "three-modality any-correct minus IR/Raman any-correct, in sample-label pairs",
+    "error_jaccard": "|(FP_A union FN_A) intersect (FP_B union FN_B)| / |union|; 1 when both error sets empty, flagged",
+    "double_or_vs_triple_or": "IR/Raman positive OR versus three-modality positive OR; fixed rules, not Oracle",
+    "positive_or_fusion": "OR of individual positive predictions; not Oracle",
+    "oracle": "uses the true label to determine whether each modality is correct; diagnostic only"
+  },
+  "validation_f1_note": "Validation-F1 thresholds are in-sample fits on the same Validation split; complementarity at that policy is secondary/exploratory.",
+  "interpretation_boundary": "positive_or_fusion is a fixed prediction rule, not Oracle; Oracle uses y_true and is diagnostic only; conditional complementarity is not a direct estimate of deployable fusion gain.",
+  "provenance": {
+    "models": [
+      {
+        "run_name": "EXP-IR-001-FULL",
+        "modality": "ir",
+        "seed": 42,
+        "checkpoint_sha256": "d60cc7b159891728d46597d15826f29028d00a84801475ab07120f3255613239",
+        "probabilities_sha256": "2152f0c2904faf5c0d28cc071fb9deaba373a1010c4ddb204d52e0ede7c6f291",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "1cc92a75bb2e1f8b299fcf6333c01ec06d5749031383f65443fabb0096ed63c1",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-FULL\\validation\\prediction_manifest.json",
+          "sha256": "627a9ddf95256bb60c6fb4da7e718e8802517ce001bd3bb612deeede1f0b6e49"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-FULL\\optimal_thresholds.json",
+          "sha256": "1cc92a75bb2e1f8b299fcf6333c01ec06d5749031383f65443fabb0096ed63c1"
+        }
+      },
+      {
+        "run_name": "EXP-IR-001-SEED123",
+        "modality": "ir",
+        "seed": 123,
+        "checkpoint_sha256": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+        "probabilities_sha256": "6fd3bf245ea1fc94588e9a2d6089cb759ff656eea1f834f86df66159f1d3458a",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "f24079970a2e04ea10e8241285ef089cfda5ba5fca103141e6a885768be773a6",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED123\\validation\\prediction_manifest.json",
+          "sha256": "15d824710bc6bd7869835386dcc4a063f408afd7b697ce58a4d5b0dadc615915"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-SEED123\\optimal_thresholds.json",
+          "sha256": "f24079970a2e04ea10e8241285ef089cfda5ba5fca103141e6a885768be773a6"
+        }
+      },
+      {
+        "run_name": "EXP-IR-001-SEED2026",
+        "modality": "ir",
+        "seed": 2026,
+        "checkpoint_sha256": "d7945c78d432fa907bbc0c8b39e3f4e7ae78088a1185931e625a8eb06cc4a274",
+        "probabilities_sha256": "a69c1f9ad5b74565e82a198ae331e7268e445c65c397bb0f374ffc2b92b73789",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "18e8136f8019b43458a1780bb4094351829a1d0365f24e2bfaa4a4c63fea935d",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED2026\\validation\\prediction_manifest.json",
+          "sha256": "9e2c3b4b8d03e2acd27434369265ea4463962a57cdf5fe04f0751c41ceba190c"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-SEED2026\\optimal_thresholds.json",
+          "sha256": "18e8136f8019b43458a1780bb4094351829a1d0365f24e2bfaa4a4c63fea935d"
+        }
+      },
+      {
+        "run_name": "EXP-RAMAN-001-FULL",
+        "modality": "raman",
+        "seed": 42,
+        "checkpoint_sha256": "573ae7e2a3351252c5f1ad7e0ec060c77435468d3c7bddb37a641e1206cdfcd3",
+        "probabilities_sha256": "466aca4de0d2909753b70abbfa2b25ca7db52774a90847fbe5af46ed3066e39e",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "621992ca32363720ad435c510d6124e883cac84f54d6235009d3d97150467689",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-FULL\\validation\\prediction_manifest.json",
+          "sha256": "2318df1cc7d8a76b2c2047f7ba5155e9dfa228b022874099a8575c46f82b355c"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-FULL\\optimal_thresholds.json",
+          "sha256": "621992ca32363720ad435c510d6124e883cac84f54d6235009d3d97150467689"
+        }
+      },
+      {
+        "run_name": "EXP-RAMAN-001-SEED123",
+        "modality": "raman",
+        "seed": 123,
+        "checkpoint_sha256": "84334c5e013490de75bc23f0f844880062150759947835cb29e18e80c9158298",
+        "probabilities_sha256": "5698017cf7d6facac41b09b33f3aa7ba2b5c28f6b4f183db4727e019421652de",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "3be96864317a058d7aa19e7ffaee96e92a6494761d9a6092879b96fd117df04b",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED123\\validation\\prediction_manifest.json",
+          "sha256": "1f746a75cee2e27664a13c53025a78292eb2f8e1e5b84ebfcc16fa9cf5c7f842"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-SEED123\\optimal_thresholds.json",
+          "sha256": "3be96864317a058d7aa19e7ffaee96e92a6494761d9a6092879b96fd117df04b"
+        }
+      },
+      {
+        "run_name": "EXP-RAMAN-001-SEED2026",
+        "modality": "raman",
+        "seed": 2026,
+        "checkpoint_sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+        "probabilities_sha256": "b1717418fd64e8838ab57dd5cd792365eb6800ed6d9b2dd5cad74f893c017a74",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "18829f9157e7877b7077403d1c542011f233ec3a31baa347af7ec661b9f25440",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED2026\\validation\\prediction_manifest.json",
+          "sha256": "1aa05855b6754e1e3939738b78389945768d4b31d597cf8d96df0d7ae8717181"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-SEED2026\\optimal_thresholds.json",
+          "sha256": "18829f9157e7877b7077403d1c542011f233ec3a31baa347af7ec661b9f25440"
+        }
+      },
+      {
+        "run_name": "EXP-UVVIS-001-FULL",
+        "modality": "uvvis",
+        "seed": 42,
+        "checkpoint_sha256": "e8056dc4bbc5c4321514dcdd95d84b492a7d2c65a5772c2a953a79627cad2387",
+        "probabilities_sha256": "62169f375dde7a5017f043dfe6a9b9b6b17dc7a87be79da20ca05c3d25e140e9",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "39a6eb5cce8db19982051f15a21809dda4aee0eed51a80cc7dbcdb603ea154bc",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-FULL\\validation\\prediction_manifest.json",
+          "sha256": "95e7efbdb942b908334ccba3abb9840827950d1a804b6e9d5cd87f02592fe6bb"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-FULL\\optimal_thresholds.json",
+          "sha256": "39a6eb5cce8db19982051f15a21809dda4aee0eed51a80cc7dbcdb603ea154bc"
+        }
+      },
+      {
+        "run_name": "EXP-UVVIS-001-SEED123",
+        "modality": "uvvis",
+        "seed": 123,
+        "checkpoint_sha256": "3c4af7df5b2440ba179b57e419dc8f3f10c26be78f4f542a337ab5ba58ac4acf",
+        "probabilities_sha256": "6375f7e284d58e3e4b377daf7f1bd3b67ea641d25d6e2290b25e144f2b1b6e61",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "ffe4d3e9c25d9f3ce2f94f0761a3d8eb25c57ba5cc83838ea3e70aab5b296c14",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-SEED123\\validation\\prediction_manifest.json",
+          "sha256": "f4685e3b2b732cc708d0d469bbfcb07d18bcc747708d42037c95a704d2a58659"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-SEED123\\optimal_thresholds.json",
+          "sha256": "ffe4d3e9c25d9f3ce2f94f0761a3d8eb25c57ba5cc83838ea3e70aab5b296c14"
+        }
+      },
+      {
+        "run_name": "EXP-UVVIS-001-SEED2026",
+        "modality": "uvvis",
+        "seed": 2026,
+        "checkpoint_sha256": "9e2b0dd81cb5319e5c4f1aa6f2bb550bf23f6b6a3045e478ac1aa2f97f88e01d",
+        "probabilities_sha256": "6e9b67b605c02c5b3b8fb3ac6ea4aaa6b2b86f5859712f2a766e397b42512054",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+        "thresholds_sha256": "4cd32c5767344752e470f0636ac43d7b1e6e63bd7710bf24d9ebfc633a5c0cde",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\UVVis\\EXP-UVVIS-001-SEED2026\\validation\\prediction_manifest.json",
+          "sha256": "50f9bb796602c2ee6296833dd25cd5c61c0f2356b264285a3a981df5bc718589"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-SEED2026\\optimal_thresholds.json",
+          "sha256": "4cd32c5767344752e470f0636ac43d7b1e6e63bd7710bf24d9ebfc633a5c0cde"
+        }
+      }
+    ],
+    "frozen_b3_metrics": {
+      "path": "runs\\LINE-B-METRICS\\Shared14\\model_metrics.csv",
+      "sha256": "1c24cbe40a057d8cbfa578fc094534005d61829f0c2df947b495f1e93a8e10a3"
+    }
+  },
+  "outputs": {
+    "model_metrics.csv": "d79f03e9697745d73239996d10ff836d8075151b9883439a740a72c4b05c16dd",
+    "pairwise_metrics.csv": "8cdb554dd16e9946b0411a770515bd8d6ce5ae50313e6fcee12fb0630f37927c",
+    "three_modality_metrics.csv": "156ab416a8bb6419b6c73a54461c07d237878223a501a1ce9cf0d52bdc402653",
+    "model_mean_sd.csv": "9433b2d89b30065d0125cd4dfd99917a743b3b5bfc78d9ecdbf376bfeb55cfea",
+    "pairwise_mean_sd.csv": "18d733464ac3f53d7c462de4bc8b8f74597db665b0110318b1c47bc13af4b0e5",
+    "three_modality_mean_sd.csv": "30771af4150e6b58f64e64b1a0a8a831321c6b3f006227dfd388aa2e92da2676"
+  },
+  "generated_at": "2026-11-18T20:33:48+08:00"
+}

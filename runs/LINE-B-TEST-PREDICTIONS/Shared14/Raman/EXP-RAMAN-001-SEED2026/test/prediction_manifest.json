@@ -1,0 +1,255 @@
+{
+  "task": "Shared14",
+  "label_set": "shared14",
+  "modality": "raman",
+  "run_name": "EXP-RAMAN-001-SEED2026",
+  "split": "test",
+  "split_key": "test",
+  "n_samples": 12981,
+  "label_names": [
+    "aldehyde",
+    "alkene",
+    "alkyne",
+    "amide",
+    "amine",
+    "c_f_bond",
+    "carbonyl",
+    "ester",
+    "ether",
+    "hydroxyl",
+    "imine",
+    "ketone",
+    "nitrile",
+    "nitro"
+  ],
+  "label_order_verified": true,
+  "task_config": {
+    "expected_train_size": 103855,
+    "input_points": 3501,
+    "n_labels": 14
+  },
+  "checkpoint": {
+    "path": "runs\\EXP-RAMAN-001-SEED2026\\best_model.pt",
+    "sha256_before": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+    "sha256_after": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+    "sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+    "checkpoint_type": "original",
+    "best_val_mAP": 0.9454331390409161,
+    "val_metrics": {
+      "loss": 0.08319531362074732,
+      "micro_f1": 0.9102739726027397,
+      "macro_f1": 0.8664581037009026,
+      "mAP": 0.9454331390409161,
+      "macro_AUROC": 0.9883167784991164
+    },
+    "config": {
+      "experiment": "EXP-RAMAN-001-SEED2026",
+      "modality": "raman",
+      "seed": 2026,
+      "batch_size": 512,
+      "num_workers": 4,
+      "max_epochs": 50,
+      "early_stopping_patience": 8,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "embedding_dim": 256,
+      "normalization": "max",
+      "threshold": 0.5,
+      "use_pos_weight": false,
+      "loss": "BCEWithLogitsLoss",
+      "optimizer": "AdamW",
+      "amp": true,
+      "train_size": 103855,
+      "val_size": 12981,
+      "test_size": 12981,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ]
+    }
+  },
+  "split_file": {
+    "path": "processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+    "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+    "key": "test"
+  },
+  "label_files": {
+    "names_path": "processed\\qm9s\\prepared\\functional_group_label_names.json",
+    "names_sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942",
+    "matrix_path": "processed\\qm9s\\prepared\\functional_group_labels.npy",
+    "matrix_sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4"
+  },
+  "spectra_file": {
+    "path": "processed\\qm9s\\prepared\\raman_float32.npy",
+    "sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+    "shape": [
+      129817,
+      3501
+    ],
+    "dtype": "float32",
+    "size_bytes": 1817957396
+  },
+  "model": {
+    "head_dim": 14,
+    "embedding_dim": 256,
+    "bn_running_mean_layers": 12,
+    "num_batches_tracked": [
+      4466
+    ]
+  },
+  "inference": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "batch_size": 512,
+    "num_workers": 0,
+    "dtype": "float32",
+    "autocast": false,
+    "model_eval": true,
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "resources": {
+      "elapsed_seconds": 1.86587,
+      "process_rss_start_mb": 974.648,
+      "process_peak_rss_mb": 1200.059,
+      "system_available_start_mb": 7718.465,
+      "system_available_min_mb": 7461.344,
+      "gpu_peak_allocated_mb": 788.826,
+      "gpu_peak_reserved_mb": 904.0
+    }
+  },
+  "repeat_check": {
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "bitwise_equal": true,
+    "allclose_atol_1e-6": true,
+    "second_pass_resources": {
+      "elapsed_seconds": 1.760983,
+      "process_rss_start_mb": 1188.34,
+      "process_peak_rss_mb": 1200.07,
+      "system_available_start_mb": 7472.742,
+      "system_available_min_mb": 7446.156,
+      "gpu_peak_allocated_mb": 788.826,
+      "gpu_peak_reserved_mb": 904.0
+    }
+  },
+  "arrays": {
+    "probabilities": {
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "sha256": "617bc8cb9278181c7ffca0b901241ac137386a1acb664a1e3f39576f12854db2",
+      "finite": true,
+      "min": 9.006114495001257e-28,
+      "max": 1.0,
+      "file_sha256": "2f43d7ad4ac9ae53841f10e09572c0195ac5a8b4781915cd963e46235ee7b3e3",
+      "file_size_bytes": 727064
+    },
+    "row_index": {
+      "shape": [
+        12981
+      ],
+      "dtype": "int64",
+      "sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "finite": true,
+      "min": 4.0,
+      "max": 129816.0,
+      "file_sha256": "a7cb3a4de9d4217ffceaec9802ec3237fe6caad21f7d509bdd195d362d9e71f9",
+      "file_size_bytes": 103976
+    },
+    "labels": {
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "uint8",
+      "sha256": "cc503f759b8bafbeb11540f9b950654bf1879108ddb6949ef66c216c270b4186",
+      "finite": true,
+      "min": 0.0,
+      "max": 1.0,
+      "file_sha256": "8ddbc9cb074828196c1bbfad981f7252984384655162255b89d7320bb46d0b59",
+      "file_size_bytes": 181862
+    }
+  },
+  "checks": {
+    "n_rows_equals_test_size": true,
+    "row_index_equals_frozen_test": true,
+    "row_index_unique": true,
+    "labels_equal_frozen_label_matrix": true,
+    "probabilities_finite": true,
+    "probabilities_in_unit_interval": true,
+    "label_order_equals_freeze": true,
+    "head_dim_equals_label_count": true,
+    "checkpoint_label_order_verified": true,
+    "checkpoint_sha256_equals_freeze": true,
+    "freeze_sha256_verified": true,
+    "test_split_accessed": true,
+    "checkpoint_file_unchanged": true,
+    "model_state_unchanged": true,
+    "bn_buffers_unchanged": true,
+    "checkpoint_mutated": false,
+    "bn_buffers_mutated": false
+  },
+  "freeze": {
+    "path": "runs\\LINE-B-MANIFESTS\\FREEZE.json",
+    "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c",
+    "status": "FROZEN",
+    "phase": "B3",
+    "protocol_version": "B0 v0.2",
+    "protocol_sha256": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a",
+    "model_identity": {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-SEED2026",
+      "seed": 2026,
+      "checkpoint_sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+      "config_sha256": "f68eb4017780de47e43b1cbf4063d09ffebc7b73c335d2e99a677c165b6f476d",
+      "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "threshold_sha256": "18829f9157e7877b7077403d1c542011f233ec3a31baa347af7ec661b9f25440"
+    },
+    "checks": {
+      "checkpoint_path": true,
+      "checkpoint_sha256": true,
+      "config_sha256": true,
+      "split_path": true,
+      "split_sha256": true,
+      "label_names_sha256": true,
+      "label_matrix_sha256": true,
+      "threshold_sha256": true,
+      "calibration_manifest_sha256": true,
+      "label_order": true
+    }
+  },
+  "test_access": {
+    "historical_test_information_read_before_b4": true,
+    "historical_read_scope": "B0 stage consistency audit of existing per-label Test CSVs and existing Raman Test probabilities",
+    "user_attestation_no_operational_interference": true,
+    "blind_test_claim": false,
+    "result_classification": "exploratory/post-hoc",
+    "access_logged": true,
+    "access_log_path": "runs\\LINE-B-MANIFESTS\\test_access_log.json"
+  },
+  "code": {
+    "exporter_path": "training\\line_b\\export_line_b_predictions.py",
+    "exporter_sha256": "a5a7d15f69aaa4adbae612288fdce86e3aff1822e23999c7d45e7ab24ec8fc26",
+    "common_sha256": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+    "dataset_sha256": "42ec169ae8413f3124b907f8fecd3da24f6f7a033697c2952d35ea7dd74f4b0c",
+    "model_sha256": "8e19d7d6d651084fa3f17702632c185850ebdceca7dabe5e78a7df4647786936"
+  }
+}

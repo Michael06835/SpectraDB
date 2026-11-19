@@ -1,0 +1,5656 @@
+{
+  "phase": "B4.4-verification",
+  "generated_at": "2026-11-20T03:25:15+08:00",
+  "status": "PASS",
+  "analysis_manifest": {
+    "path": "runs\\LINE-B-TEST-ANALYSIS\\B4.4\\analysis_manifest.json",
+    "sha256": "9afd176c0951c5084cb454e234a87d9de58f41773ac0ce29d79fae266e7c7c4f"
+  },
+  "freeze": {
+    "path": "runs\\LINE-B-MANIFESTS\\FREEZE.json",
+    "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c"
+  },
+  "summary": {
+    "n_checks": 1127,
+    "n_failed": 0,
+    "subgroup_rows_checked": 311
+  },
+  "checks": [
+    {
+      "id": "freeze.status",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "freeze.protocol",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "summary.phase",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "summary.classification",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "manifest.outputs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "models.count_18",
+      "ok": true,
+      "detail": "18"
+    },
+    {
+      "id": "labels.count.Shared14",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "labels.count.UVSPEC15",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.IR-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-IR.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.fixed_0.5.UV-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.IR-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-IR.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.42.validation_f1.UV-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.IR-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-IR.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.fixed_0.5.UV-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.IR-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-IR.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.123.validation_f1.UV-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.IR-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-IR.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.fixed_0.5.UV-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.IR-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-IR.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.aldehyde",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.alkene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.alkyne",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.amide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.amine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.c_f_bond",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.ester",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.ether",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.hydroxyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.ketone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.Shared14.2026.validation_f1.UV-Raman.nitro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.IR-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-IR.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.fixed_0.5.UV-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.IR-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-IR.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.42.validation_f1.UV-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.IR-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-IR.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.fixed_0.5.UV-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.IR-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-IR.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.123.validation_f1.UV-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.IR-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-IR.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.fixed_0.5.UV-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.IR-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-IR.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.has_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.has_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.acyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.cyclic_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.has_aromatic_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.heteroaromatic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.mixed_aromatic_nonaromatic_conjugation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.pi_conjugated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.alpha_beta_unsaturated_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.aryl_carbonyl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.pi_conjugated_imine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.pi_conjugated_nitrile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.has_donor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.has_acceptor_substituted_pi_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pair.counts.UVSPEC15.2026.validation_f1.UV-Raman.donor_acceptor_same_conjugated_system",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "pairwise.max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "mcnemar.family_size.('Shared14', 42, 'fixed_0.5')",
+      "ok": true,
+      "detail": "42"
+    },
+    {
+      "id": "mcnemar.family_size.('Shared14', 42, 'validation_f1')",
+      "ok": true,
+      "detail": "42"
+    },
+    {
+      "id": "mcnemar.family_size.('Shared14', 123, 'fixed_0.5')",
+      "ok": true,
+      "detail": "42"
+    },
+    {
+      "id": "mcnemar.family_size.('Shared14', 123, 'validation_f1')",
+      "ok": true,
+      "detail": "42"
+    },
+    {
+      "id": "mcnemar.family_size.('Shared14', 2026, 'fixed_0.5')",
+      "ok": true,
+      "detail": "42"
+    },
+    {
+      "id": "mcnemar.family_size.('Shared14', 2026, 'validation_f1')",
+      "ok": true,
+      "detail": "42"
+    },
+    {
+      "id": "mcnemar.family_size.('UVSPEC15', 42, 'fixed_0.5')",
+      "ok": true,
+      "detail": "45"
+    },
+    {
+      "id": "mcnemar.family_size.('UVSPEC15', 42, 'validation_f1')",
+      "ok": true,
+      "detail": "45"
+    },
+    {
+      "id": "mcnemar.family_size.('UVSPEC15', 123, 'fixed_0.5')",
+      "ok": true,
+      "detail": "45"
+    },
+    {
+      "id": "mcnemar.family_size.('UVSPEC15', 123, 'validation_f1')",
+      "ok": true,
+      "detail": "45"
+    },
+    {
+      "id": "mcnemar.family_size.('UVSPEC15', 2026, 'fixed_0.5')",
+      "ok": true,
+      "detail": "45"
+    },
+    {
+      "id": "mcnemar.family_size.('UVSPEC15', 2026, 'validation_f1')",
+      "ok": true,
+      "detail": "45"
+    },
+    {
+      "id": "mcnemar.max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "or.max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "three_or.max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "oracle.max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "conditional.point_max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|conditional|ir|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|delta|ir|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|conditional|raman|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|delta|raman|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|conditional|uvvis|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|delta|uvvis|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|conditional|ir|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|delta|ir|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|conditional|uvvis|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|delta|uvvis|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|conditional|raman|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|delta|raman|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|uv_marginal||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|both_wrong_uv||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|rescue||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|fixed_0.5|rescue_delta||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|conditional|ir|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|delta|ir|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|conditional|raman|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|delta|raman|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|conditional|uvvis|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|delta|uvvis|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|conditional|ir|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|delta|ir|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|conditional|uvvis|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|delta|uvvis|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|conditional|raman|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|delta|raman|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|uv_marginal||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|both_wrong_uv||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|rescue||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.Shared14|validation_f1|rescue_delta||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|conditional|ir|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|delta|ir|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|conditional|raman|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|delta|raman|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|conditional|uvvis|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|delta|uvvis|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|conditional|ir|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|delta|ir|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|conditional|uvvis|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|delta|uvvis|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|conditional|raman|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|delta|raman|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|uv_marginal||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|both_wrong_uv||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|rescue||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|fixed_0.5|rescue_delta||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|conditional|ir|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|delta|ir|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|conditional|raman|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|delta|raman|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|conditional|uvvis|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|delta|uvvis|ir",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|conditional|ir|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|delta|ir|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|conditional|uvvis|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|delta|uvvis|raman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|conditional|raman|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|delta|raman|uvvis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|uv_marginal||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|both_wrong_uv||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|rescue||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.valid.UVSPEC15|validation_f1|rescue_delta||",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "conditional.ci_max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "sample.max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "subgroup.sample_metric_max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00 (311 rows)"
+    },
+    {
+      "id": "subgroup.support_membership",
+      "ok": true,
+      "detail": "0/311 mismatches"
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=0|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=2|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|ring_count=>=3|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=0|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|aromatic_ring_count=1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=0|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=2|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|n_o_f=>=3|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|heavy_atom_count=Q1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=0|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|rotatable_bond_count=>=2|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=<0.5|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|fraction_csp3=>=0.5|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=carbonyl|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=nitrile|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=alkyne|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=amine|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.Shared14|functional_group=hydroxyl|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=0|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=2|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|ring_count=>=3|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=0|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|aromatic_ring_count=1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=0|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=2|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|n_o_f=>=3|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|heavy_atom_count=Q1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=0|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=1|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|rotatable_bond_count=>=2|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=<0.5|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|fraction_csp3=>=0.5|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=carbonyl|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=nitrile|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=alkyne|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=amine|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|threshold_free|IR-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|threshold_free|IR-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|fixed_0.5|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|validation_f1|IR-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|threshold_free|UV-IR|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|threshold_free|UV-IR|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|fixed_0.5|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|validation_f1|UV-IR|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|threshold_free|UV-Raman|AP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|threshold_free|UV-Raman|AUROC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|fixed_0.5|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.valid.UVSPEC15|functional_group=hydroxyl|validation_f1|UV-Raman|F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "subgroup_boot.ci_max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "frozen.freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.b42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.b43",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.b42_outputs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.b43_outputs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.test_access_log",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,496 @@
+{
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "phase": "B3",
+  "split": "validation",
+  "threshold": 0.5,
+  "n_models": 9,
+  "n_labels": 15,
+  "modalities": [
+    "ir",
+    "raman",
+    "uvvis"
+  ],
+  "n_per_modality": {
+    "ir": 3,
+    "raman": 3,
+    "uvvis": 3
+  },
+  "label_names": [
+    "has_conjugation",
+    "has_nonaromatic_conjugation",
+    "acyclic_conjugated_system",
+    "cyclic_conjugated_system",
+    "has_aromatic_system",
+    "heteroaromatic",
+    "mixed_aromatic_nonaromatic_conjugation",
+    "pi_conjugated_carbonyl",
+    "alpha_beta_unsaturated_carbonyl",
+    "aryl_carbonyl",
+    "pi_conjugated_imine",
+    "pi_conjugated_nitrile",
+    "has_donor_substituted_pi_system",
+    "has_acceptor_substituted_pi_system",
+    "donor_acceptor_same_conjugated_system"
+  ],
+  "predictions_root": "runs\\LINE-B-PREDICTIONS\\UVSPEC15",
+  "label_names_path": "processed\\qm9s\\prepared\\uvspec15_label_names.json",
+  "label_names_sha256": "c759f3d8e21ad841daf0e9ccb63e743acb36f39226b6b7f738a8d0e723cd9afc",
+  "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+  "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+  "n_samples": 12981,
+  "no_test_access": true,
+  "seed_audit": [
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-FULL",
+      "modality": "ir",
+      "seed_run_label": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+      "modality": "ir",
+      "seed_run_label": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+      "modality": "ir",
+      "seed_run_label": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+      "modality": "raman",
+      "seed_run_label": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "modality": "raman",
+      "seed_run_label": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "modality": "raman",
+      "seed_run_label": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+      "modality": "uvvis",
+      "seed_run_label": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+      "modality": "uvvis",
+      "seed_run_label": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "modality": "uvvis",
+      "seed_run_label": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false
+    }
+  ],
+  "unique_config_seeds": {
+    "ir": [
+      42,
+      123,
+      2026
+    ],
+    "raman": [
+      42,
+      123,
+      2026
+    ],
+    "uvvis": [
+      42,
+      123,
+      2026
+    ]
+  },
+  "per_model": [
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-FULL",
+      "modality": "ir",
+      "seed": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.94261513,
+      "micro_recall": 0.9336593,
+      "micro_f1": 0.93811584,
+      "macro_precision": 0.90776024,
+      "macro_recall": 0.89163581,
+      "macro_f1": 0.89846828,
+      "macro_ap": 0.95397678,
+      "macro_auroc": 0.99693752,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+      "modality": "ir",
+      "seed": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.95409407,
+      "micro_recall": 0.89148794,
+      "micro_f1": 0.92172914,
+      "macro_precision": 0.92137703,
+      "macro_recall": 0.83430387,
+      "macro_f1": 0.87364893,
+      "macro_ap": 0.94180381,
+      "macro_auroc": 0.99600136,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+      "modality": "ir",
+      "seed": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.949435,
+      "micro_recall": 0.92432492,
+      "micro_f1": 0.93671171,
+      "macro_precision": 0.9283115,
+      "macro_recall": 0.87768873,
+      "macro_f1": 0.90080295,
+      "macro_ap": 0.95478028,
+      "macro_auroc": 0.99679772,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+      "modality": "raman",
+      "seed": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.92829457,
+      "micro_recall": 0.93149239,
+      "micro_f1": 0.92989073,
+      "macro_precision": 0.90167565,
+      "macro_recall": 0.89366206,
+      "macro_f1": 0.89513274,
+      "macro_ap": 0.95515613,
+      "macro_auroc": 0.9959707,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "modality": "raman",
+      "seed": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.94496705,
+      "micro_recall": 0.93210357,
+      "micro_f1": 0.93849123,
+      "macro_precision": 0.91326737,
+      "macro_recall": 0.8997495,
+      "macro_f1": 0.90469194,
+      "macro_ap": 0.95622241,
+      "macro_auroc": 0.99633956,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "modality": "raman",
+      "seed": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.9386845,
+      "micro_recall": 0.93565952,
+      "micro_f1": 0.93716957,
+      "macro_precision": 0.90299937,
+      "macro_recall": 0.90439013,
+      "macro_f1": 0.90300235,
+      "macro_ap": 0.95581985,
+      "macro_auroc": 0.99669162,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+      "modality": "uvvis",
+      "seed": 42,
+      "seed_config": 42,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.67537566,
+      "micro_recall": 0.55439493,
+      "micro_f1": 0.60893446,
+      "macro_precision": 0.66083345,
+      "macro_recall": 0.38347166,
+      "macro_f1": 0.43315665,
+      "macro_ap": 0.5169203,
+      "macro_auroc": 0.92115809,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+      "modality": "uvvis",
+      "seed": 123,
+      "seed_config": 123,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.40227133,
+      "micro_recall": 0.65340593,
+      "micro_f1": 0.49796748,
+      "macro_precision": 0.41524134,
+      "macro_recall": 0.47130935,
+      "macro_f1": 0.35234164,
+      "macro_ap": 0.44593108,
+      "macro_auroc": 0.88997101,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    },
+    {
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "modality": "uvvis",
+      "seed": 2026,
+      "seed_config": 2026,
+      "seed_metadata_mismatch": false,
+      "n_samples": 12981,
+      "n_labels": 15,
+      "threshold": 0.5,
+      "micro_precision": 0.6204596,
+      "micro_recall": 0.60456717,
+      "micro_f1": 0.6124103,
+      "macro_precision": 0.65145816,
+      "macro_recall": 0.42203255,
+      "macro_f1": 0.45279847,
+      "macro_ap": 0.54131155,
+      "macro_auroc": 0.92299128,
+      "n_defined_ap": 15,
+      "n_defined_auroc": 15,
+      "undefined_ap_labels": "",
+      "undefined_auroc_labels": ""
+    }
+  ],
+  "modality_metrics": [
+    {
+      "modality": "ir",
+      "metric": "micro_precision",
+      "mean": 0.94871473,
+      "sd": 0.00577327,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "micro_recall",
+      "mean": 0.91649072,
+      "sd": 0.02215033,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "micro_f1",
+      "mean": 0.93218556,
+      "sd": 0.0090827,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_precision",
+      "mean": 0.91914959,
+      "sd": 0.01045513,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_recall",
+      "mean": 0.86787614,
+      "sd": 0.02989905,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_f1",
+      "mean": 0.89097339,
+      "sd": 0.01504876,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_ap",
+      "mean": 0.95018696,
+      "sd": 0.00727113,
+      "n_seeds": 3
+    },
+    {
+      "modality": "ir",
+      "metric": "macro_auroc",
+      "mean": 0.99657887,
+      "sd": 0.000505,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "micro_precision",
+      "mean": 0.93731537,
+      "sd": 0.00842014,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "micro_recall",
+      "mean": 0.93308516,
+      "sd": 0.00225031,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "micro_f1",
+      "mean": 0.93518384,
+      "sd": 0.00463136,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_precision",
+      "mean": 0.9059808,
+      "sd": 0.00634497,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_recall",
+      "mean": 0.89926723,
+      "sd": 0.00538027,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_f1",
+      "mean": 0.90094234,
+      "sd": 0.0051017,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_ap",
+      "mean": 0.9557328,
+      "sd": 0.00053844,
+      "n_seeds": 3
+    },
+    {
+      "modality": "raman",
+      "metric": "macro_auroc",
+      "mean": 0.99633396,
+      "sd": 0.00036049,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "micro_precision",
+      "mean": 0.56603553,
+      "sd": 0.14445753,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "micro_recall",
+      "mean": 0.60412268,
+      "sd": 0.049507,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "micro_f1",
+      "mean": 0.57310408,
+      "sd": 0.06509341,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_precision",
+      "mean": 0.57584432,
+      "sd": 0.13916523,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_recall",
+      "mean": 0.42560452,
+      "sd": 0.04402765,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_f1",
+      "mean": 0.41276559,
+      "sd": 0.05324228,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_ap",
+      "mean": 0.50138764,
+      "sd": 0.04955105,
+      "n_seeds": 3
+    },
+    {
+      "modality": "uvvis",
+      "metric": "macro_auroc",
+      "mean": 0.91137346,
+      "sd": 0.01855772,
+      "n_seeds": 3
+    }
+  ],
+  "generated_at": "2026-11-18T17:52:29+08:00"
+}

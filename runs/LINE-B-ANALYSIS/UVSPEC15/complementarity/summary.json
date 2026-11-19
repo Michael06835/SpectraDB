@@ -1,0 +1,235 @@
+{
+  "phase": "B3-A",
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "split": "validation",
+  "n_models": 9,
+  "n_labels": 15,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "modalities": [
+    "ir",
+    "raman",
+    "uvvis"
+  ],
+  "threshold_policies": [
+    "fixed_0.5",
+    "validation_f1"
+  ],
+  "primary_threshold": 0.5,
+  "secondary_threshold": "validation_f1_per_label",
+  "best_single_modality": "raman",
+  "best_single_selection": "maximum mean Validation Macro AP at 0.5 from frozen B3 model metrics",
+  "modality_macro_ap": {
+    "ir": 0.9501869566666666,
+    "raman": 0.9557327966666667,
+    "uvvis": 0.5013876433333333
+  },
+  "n_model_rows": 270,
+  "n_pairwise_rows": 540,
+  "n_three_modality_rows": 90,
+  "n_error_jaccard_undefined": 0,
+  "partial": false,
+  "no_test_access": true,
+  "all_checks_pass": true,
+  "definitions": {
+    "fn_rescue": "A FN and B predicts positive for the same sample-label pair",
+    "fp_correction": "A FP and B predicts negative for the same sample-label pair",
+    "new_fp": "A true-negative and B false-positive",
+    "new_fn": "A true-positive and B false-negative",
+    "conditional_correct": "P(other correct | base wrong)",
+    "common_fn": "IR and Raman are both FN on the same sample-label pair",
+    "common_fp": "IR and Raman are both FP on the same sample-label pair",
+    "uv_common_fn_rescue": "UV is correct on an IR/Raman common-FN pair",
+    "uv_common_fp_correction": "UV is correct on an IR/Raman common-FP pair",
+    "uv_extra_oracle_correct": "three-modality any-correct minus IR/Raman any-correct, in sample-label pairs",
+    "error_jaccard": "|(FP_A union FN_A) intersect (FP_B union FN_B)| / |union|; 1 when both error sets empty, flagged",
+    "double_or_vs_triple_or": "IR/Raman positive OR versus three-modality positive OR; fixed rules, not Oracle",
+    "positive_or_fusion": "OR of individual positive predictions; not Oracle",
+    "oracle": "uses the true label to determine whether each modality is correct; diagnostic only"
+  },
+  "validation_f1_note": "Validation-F1 thresholds are in-sample fits on the same Validation split; complementarity at that policy is secondary/exploratory.",
+  "interpretation_boundary": "positive_or_fusion is a fixed prediction rule, not Oracle; Oracle uses y_true and is diagnostic only; conditional complementarity is not a direct estimate of deployable fusion gain.",
+  "provenance": {
+    "models": [
+      {
+        "run_name": "EXP-IR-003-UVSPEC15-FULL",
+        "modality": "ir",
+        "seed": 42,
+        "checkpoint_sha256": "68c976d92b1b5f82c5d493b3ebab44b9e9953f1738d62f0ba760b3e6e79992fe",
+        "probabilities_sha256": "67b13d2143455269ada77160573019a74034fe7fa87a863e9a13fe978e0dd07f",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "98e062029560be910526e8516b70531d3ef4e8c9a109cbedb3d9ed8a3a467110",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\validation\\prediction_manifest.json",
+          "sha256": "d930886c5a61de5f5940f36dfd6509cbae4260f31624a5ffff1a271d63e1277a"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-FULL\\optimal_thresholds.json",
+          "sha256": "98e062029560be910526e8516b70531d3ef4e8c9a109cbedb3d9ed8a3a467110"
+        }
+      },
+      {
+        "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+        "modality": "ir",
+        "seed": 123,
+        "checkpoint_sha256": "7a977c63a8d52315e88c7497fd8c44b47f997985f1f2f8ab1392f38cc14eee63",
+        "probabilities_sha256": "37509dc5dd8a17b9985a6584b2cc93e58b7a61da27da05792a3fabe2833de98d",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "267c7cee9b6046bb64c185f7d049c73cfee77c9003381208ae284544c5af3609",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-SEED123\\validation\\prediction_manifest.json",
+          "sha256": "f4630d36d22bd9a0be02fa1ad9ac87b139b63641bd6bbaca40b16feea1b6a3f3"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+          "sha256": "267c7cee9b6046bb64c185f7d049c73cfee77c9003381208ae284544c5af3609"
+        }
+      },
+      {
+        "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+        "modality": "ir",
+        "seed": 2026,
+        "checkpoint_sha256": "410c41d1413f2d1c8f697aa19504e765836a171aea61f258e3d4b88c282c19db",
+        "probabilities_sha256": "3c7d3b770816984f18db118d42e95b34a00c02f9f02ab687d0b7208228e4834d",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "2525d76d41448125b7f600a488169a6030cf4f0dad6c5c1259e183b950e36c1e",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-SEED2026\\validation\\prediction_manifest.json",
+          "sha256": "f3cba2829b153eb4e3753d28d9a5d43a231879e66ef8ba432015ad14fad9df11"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+          "sha256": "2525d76d41448125b7f600a488169a6030cf4f0dad6c5c1259e183b950e36c1e"
+        }
+      },
+      {
+        "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+        "modality": "raman",
+        "seed": 42,
+        "checkpoint_sha256": "20e0264f5411dbef57ba23559c0db68aadcc39d324e5b21ee84f3e7e9b88f761",
+        "probabilities_sha256": "44fd311fde58975bd27d8dc4981d7edccce36b8c089986ad4751f3a998f1c161",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "941f1edf5c0d282abcce5e4f34fc77dbe4535ad45893d502c978170394a226d9",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-FULL\\validation\\prediction_manifest.json",
+          "sha256": "6792cca85a4f3d37a2985b0d30506dd4a6ae9bcb7c4f7931194b74a9faba5478"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-FULL\\optimal_thresholds.json",
+          "sha256": "941f1edf5c0d282abcce5e4f34fc77dbe4535ad45893d502c978170394a226d9"
+        }
+      },
+      {
+        "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+        "modality": "raman",
+        "seed": 123,
+        "checkpoint_sha256": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+        "probabilities_sha256": "e218e70e8f48b263709a76784c1cb76bccc47abe573351a44a3db076424c6171",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "2c7ded918193796cacb91ba71c3102049f5f51d6bdacc648aa51047ab52a6814",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-SEED123\\validation\\prediction_manifest.json",
+          "sha256": "e6b935c213fe39ae6173d1adbb579a800f3cc5f08143e0335b089f251c69603a"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+          "sha256": "2c7ded918193796cacb91ba71c3102049f5f51d6bdacc648aa51047ab52a6814"
+        }
+      },
+      {
+        "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+        "modality": "raman",
+        "seed": 2026,
+        "checkpoint_sha256": "781b47422630899f1f234695dea49af71f4c6401594380da868e7bd17d8e022a",
+        "probabilities_sha256": "749763a8e79666cc411a1acf912a2ec69997f10f5355a1d951c026ff3575bda7",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "72a694f85d428aa56293216baf05eb08e32e5bb68f90ee91b45ad3efadd48f18",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\Raman\\EXP-RAMAN-003-UVSPEC15-SEED2026\\validation\\prediction_manifest.json",
+          "sha256": "8558c6534e997f4fe9bc42c857c1cfc263ae6478c0d8bbf33b6cab56b86b2625"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+          "sha256": "72a694f85d428aa56293216baf05eb08e32e5bb68f90ee91b45ad3efadd48f18"
+        }
+      },
+      {
+        "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+        "modality": "uvvis",
+        "seed": 42,
+        "checkpoint_sha256": "11f2a467e863ac4f943f0ce2509342ae058b297da742daaf19a3a6cf41280ace",
+        "probabilities_sha256": "f4f9a606eeec454838d6c9726eece836f63f9a7a312e5f037b73f8119a47afcc",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "78f5609df0813ddefd43ddffce37eb2109cab900af0056fb840588a3825fbd92",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-FULL\\validation\\prediction_manifest.json",
+          "sha256": "e8222dd7c205a4da69ec8ad75409fae17c1157d6486f60b1fd3368797c61f9fd"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-FULL\\optimal_thresholds.json",
+          "sha256": "78f5609df0813ddefd43ddffce37eb2109cab900af0056fb840588a3825fbd92"
+        }
+      },
+      {
+        "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+        "modality": "uvvis",
+        "seed": 123,
+        "checkpoint_sha256": "ded92d1d29ac26db56b3967f322fdbcca1143a527deb26abbafc0e9c3a54bdc8",
+        "probabilities_sha256": "35d770b075251e64d0fcb351ae7ac2f2ace8f563d7e318cfdf9cccfa29c72d0f",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "26e0ccc6e079aeed6c80b541f6b7ef3a2943aa3113e2551b78e6e7b6c1ab0cf0",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED123\\validation\\prediction_manifest.json",
+          "sha256": "ee25728a832d9100e39fa8a49b7fae1a9d289a69ee4728d5876d0e1401c7ddc8"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+          "sha256": "26e0ccc6e079aeed6c80b541f6b7ef3a2943aa3113e2551b78e6e7b6c1ab0cf0"
+        }
+      },
+      {
+        "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+        "modality": "uvvis",
+        "seed": 2026,
+        "checkpoint_sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+        "probabilities_sha256": "b4d40eaf82b9e83776fc81ebcfa66814b8e13b32237df8bc1c087d042fb58e85",
+        "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+        "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+        "thresholds_sha256": "7601afc4dfded6c470471518bd3bce208cfaee681da3693ed3f2c73fb0272b82",
+        "prediction_manifest": {
+          "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED2026\\validation\\prediction_manifest.json",
+          "sha256": "898db9673fd68ade6d07eb412a2f325c856a29f3fc43287caf2c73dcbf5892fd"
+        },
+        "thresholds": {
+          "path": "runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+          "sha256": "7601afc4dfded6c470471518bd3bce208cfaee681da3693ed3f2c73fb0272b82"
+        }
+      }
+    ],
+    "frozen_b3_metrics": {
+      "path": "runs\\LINE-B-METRICS\\UVSPEC15\\model_metrics.csv",
+      "sha256": "b1d033463234128d262eb6cbcf697d76da4194134c867cc0ab88c87823c885de"
+    }
+  },
+  "outputs": {
+    "model_metrics.csv": "3a9e271da0b97e93478f99b331d0bd21e1f9c24afd4ef745fa8735fee9896369",
+    "pairwise_metrics.csv": "a7ffc1a7af03c41991ddf8ff00dbf0cd30c101e76b4d5e49bbacc64c3e89fd21",
+    "three_modality_metrics.csv": "17f5fc346d46f3ebe275346643f9cb2988cc1bc04c554f9a696ebccea39e2ee0",
+    "model_mean_sd.csv": "c9849b45e0c247e3ca4e119f3d9e1c36559eb855415ab47ffe2b278f50cfc9a4",
+    "pairwise_mean_sd.csv": "4265f49abb454bf36e0c6936dc34d852e9d33287777d70b190113017caf3713f",
+    "three_modality_mean_sd.csv": "25d20a1f40e27d22db8c28e55a72169b422d3e2d527361e4dee1b409a8a6fadd"
+  },
+  "generated_at": "2026-11-18T20:33:49+08:00"
+}

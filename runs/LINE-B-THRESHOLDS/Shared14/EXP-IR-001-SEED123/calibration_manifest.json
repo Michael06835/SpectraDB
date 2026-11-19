@@ -1,0 +1,51 @@
+{
+  "task": "Shared14",
+  "label_set": "shared14",
+  "run_name": "EXP-IR-001-SEED123",
+  "modality": "ir",
+  "seed": 123,
+  "split": "validation",
+  "test_split_accessed": false,
+  "calibration_split": "validation",
+  "in_sample_validation_f1": true,
+  "inputs": {
+    "prediction_manifest": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED123\\validation\\prediction_manifest.json",
+      "sha256": "15d824710bc6bd7869835386dcc4a063f408afd7b697ce58a4d5b0dadc615915"
+    },
+    "probabilities": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED123\\validation\\probabilities.npy",
+      "sha256": "27ae5d341cfce89f7a097b9b21e0299cd77b7e8e440eb7b183a12f600c47d860"
+    },
+    "row_index": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED123\\validation\\row_index.npy",
+      "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4"
+    },
+    "labels": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED123\\validation\\labels.npy",
+      "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e"
+    },
+    "checkpoint": {
+      "path": "runs\\EXP-IR-001-SEED123\\best_model.pt",
+      "sha256": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2"
+    },
+    "split": {
+      "path": "processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+      "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610"
+    },
+    "label_names": {
+      "path": "processed\\qm9s\\prepared\\functional_group_label_names.json",
+      "sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942"
+    },
+    "label_matrix": {
+      "path": "processed\\qm9s\\prepared\\functional_group_labels.npy",
+      "sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4"
+    }
+  },
+  "outputs": {
+    "optimal_thresholds": "f24079970a2e04ea10e8241285ef089cfda5ba5fca103141e6a885768be773a6",
+    "validation_overall": "05a580d1125513922a56259e0705fc0c0cf384a3928ef4363c10224982ae44f2",
+    "validation_per_label_comparison": "2ebf82c4b79509fc40327fc832ba1fff27db6011256fd233efd3fcd1496b12a8"
+  },
+  "all_checks_pass": true
+}

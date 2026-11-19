@@ -1,0 +1,6 @@
+﻿task,semantic_group,members,n_members,union_support,definition_support
+Shared14,carbonyl,aldehyde;amide;carbonyl;ester;ketone,5,36381,semantic_group_only
+Shared14,nitrogen,amide;amine;imine;nitrile;nitro,5,55348,semantic_group_only
+Shared14,oxygen,aldehyde;carbonyl;ester;ether;hydroxyl;ketone,6,82845,semantic_group_only
+Shared14,unsaturation,alkene;alkyne;imine;nitrile,4,45290,semantic_group_only
+Shared14,heteroatom,c_f_bond;nitro,2,1810,semantic_group_only

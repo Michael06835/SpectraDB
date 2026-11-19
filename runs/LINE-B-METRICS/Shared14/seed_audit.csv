@@ -1,0 +1,10 @@
+run_name,modality,seed_run_label,seed_config,seed_metadata_mismatch
+EXP-IR-001-FULL,ir,42,42,False
+EXP-IR-001-SEED123,ir,123,123,False
+EXP-IR-001-SEED2026,ir,2026,2026,False
+EXP-RAMAN-001-FULL,raman,42,42,False
+EXP-RAMAN-001-SEED123,raman,123,123,False
+EXP-RAMAN-001-SEED2026,raman,2026,2026,False
+EXP-UVVIS-001-FULL,uvvis,42,42,False
+EXP-UVVIS-001-SEED123,uvvis,123,123,False
+EXP-UVVIS-001-SEED2026,uvvis,2026,2026,False

@@ -1,0 +1,38 @@
+{
+  "phase": "B3-FREEZE-postwrite-recheck",
+  "generated_at": "2026-11-20T01:44:17+08:00",
+  "freeze_path": "runs/LINE-B-MANIFESTS/FREEZE.json",
+  "freeze_sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c",
+  "counts": {
+    "n_assets_rechecked": 212,
+    "n_missing": 0,
+    "n_sha256_mismatch": 0,
+    "n_models": 18,
+    "n_shared14_models": 9,
+    "n_uvspec15_models": 9,
+    "n_checkpoints": 18,
+    "n_probability_arrays": 18,
+    "n_threshold_files": 18,
+    "n_calibration_manifests": 18,
+    "threshold_records": 261,
+    "b3a_csv_files": 12
+  },
+  "checks": {
+    "json_parses": true,
+    "status_frozen": true,
+    "phase_b3": true,
+    "protocol_sha256_matches": true,
+    "preflight_sha256_matches": true,
+    "all_assets_exist": true,
+    "all_sha256_match": true,
+    "n_assets_rechecked": 212,
+    "n_models_18": true,
+    "threshold_records_261": true,
+    "b3a_csv_files_12": true,
+    "test_access_during_freeze_false": true,
+    "no_new_test_inference": true
+  },
+  "missing": [],
+  "sha256_mismatch": [],
+  "all_checks_pass": true
+}

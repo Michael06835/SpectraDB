@@ -1,0 +1,55 @@
+{
+  "phase": "B3",
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "split": "validation",
+  "n_models": 9,
+  "n_labels": 15,
+  "n_per_modality": {
+    "ir": 3,
+    "raman": 3,
+    "uvvis": 3
+  },
+  "n_samples": 12981,
+  "label_names": [
+    "has_conjugation",
+    "has_nonaromatic_conjugation",
+    "acyclic_conjugated_system",
+    "cyclic_conjugated_system",
+    "has_aromatic_system",
+    "heteroaromatic",
+    "mixed_aromatic_nonaromatic_conjugation",
+    "pi_conjugated_carbonyl",
+    "alpha_beta_unsaturated_carbonyl",
+    "aryl_carbonyl",
+    "pi_conjugated_imine",
+    "pi_conjugated_nitrile",
+    "has_donor_substituted_pi_system",
+    "has_acceptor_substituted_pi_system",
+    "donor_acceptor_same_conjugated_system"
+  ],
+  "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+  "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+  "no_test_access": true,
+  "all_checks_pass": true,
+  "max_repeat_abs_diff": 0.0,
+  "seed_metadata_mismatches": [],
+  "unique_config_seeds": {
+    "ir": [
+      42,
+      123,
+      2026
+    ],
+    "raman": [
+      42,
+      123,
+      2026
+    ],
+    "uvvis": [
+      42,
+      123,
+      2026
+    ]
+  },
+  "generated_at": "2026-11-18T17:51:04+08:00"
+}

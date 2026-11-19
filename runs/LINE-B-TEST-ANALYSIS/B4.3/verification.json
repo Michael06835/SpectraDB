@@ -1,0 +1,5757 @@
+{
+  "phase": "B4.3-verification",
+  "generated_at": "2026-11-20T02:50:18+08:00",
+  "status": "PASS",
+  "analysis_manifest": {
+    "path": "runs\\LINE-B-TEST-ANALYSIS\\B4.3\\analysis_manifest.json",
+    "sha256": "8e95fe5691795ece0fba5dd8838288b97a082e1efad5ea1214b03f59a1c3c3ae"
+  },
+  "freeze": {
+    "path": "runs\\LINE-B-MANIFESTS\\FREEZE.json",
+    "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c"
+  },
+  "summary": {
+    "n_checks": 1144,
+    "n_failed": 0,
+    "reps_verified": 2000,
+    "sample_reps": [
+      0,
+      1,
+      2,
+      17,
+      250,
+      777,
+      1500,
+      1999
+    ],
+    "point_max_abs_diff": 3.7816971776294395e-16,
+    "b42_max_abs_diff": 4.999647473802327e-09,
+    "sample_rep_max_abs_diff": 9.048317650695026e-14,
+    "ci_max_abs_diff": 0.0,
+    "seed_sd_max_abs_diff": 1.6653345369377348e-16,
+    "n_scaffolds": 2853
+  },
+  "checks": [
+    {
+      "id": "models.count_18",
+      "ok": true,
+      "detail": "18"
+    },
+    {
+      "id": "summary.phase",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "summary.reps_2000",
+      "ok": true,
+      "detail": "2000"
+    },
+    {
+      "id": "summary.rng_seed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "summary.classification",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "manifest.phase",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "manifest.freeze_pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "manifest.outputs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "manifest.outputs_count",
+      "ok": true,
+      "detail": "7"
+    },
+    {
+      "id": "scaffolds.count",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "scaffolds.singletons",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "scaffolds.sizes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "draws.sha256",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "csv.point_rows",
+      "ok": true,
+      "detail": "1488"
+    },
+    {
+      "id": "csv.ci_per_seed_rows",
+      "ok": true,
+      "detail": "1116"
+    },
+    {
+      "id": "csv.ci_three_rows",
+      "ok": true,
+      "detail": "372"
+    },
+    {
+      "id": "npz.arrays",
+      "ok": true,
+      "detail": "1488"
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AP|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|AUROC|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|fixed_0.5|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|IR-Raman|F1|validation_f1|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AP|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|AUROC|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|fixed_0.5|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-IR|F1|validation_f1|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|aldehyde|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|alkene|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|alkyne|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|amide|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|amine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|c_f_bond|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ester|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ether|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|hydroxyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ketone|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|nitro|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|aldehyde|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|alkene|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|alkyne|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|amide|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|amine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|c_f_bond|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ester|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ether|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|hydroxyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ketone|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|nitro|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AP|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|AUROC|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|fixed_0.5|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|aldehyde|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|alkene|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|alkyne|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|amide|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|amine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|c_f_bond|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ester|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ether|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|hydroxyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|ketone|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|label|nitro|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.Shared14|UV-Raman|F1|validation_f1|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AP|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|AUROC|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|fixed_0.5|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|IR-Raman|F1|validation_f1|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AP|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|AUROC|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|fixed_0.5|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-IR|F1|validation_f1|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|acyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|cyclic_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_aromatic_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|heteroaromatic|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|aryl_carbonyl|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_imine|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_nitrile|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_donor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_acceptor_substituted_pi_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|donor_acceptor_same_conjugated_system|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|macro|__macro__|42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|acyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|cyclic_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_aromatic_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|heteroaromatic|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|aryl_carbonyl|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_imine|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_nitrile|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_donor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_acceptor_substituted_pi_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|donor_acceptor_same_conjugated_system|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|macro|__macro__|123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AP|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|AUROC|threshold_free|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|fixed_0.5|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|acyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|cyclic_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_aromatic_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|heteroaromatic|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|mixed_aromatic_nonaromatic_conjugation|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|alpha_beta_unsaturated_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|aryl_carbonyl|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_imine|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|pi_conjugated_nitrile|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_donor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|has_acceptor_substituted_pi_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|label|donor_acceptor_same_conjugated_system|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.present.UVSPEC15|UV-Raman|F1|validation_f1|macro|__macro__|2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "point.max_abs_diff",
+      "ok": true,
+      "detail": "3.782e-16"
+    },
+    {
+      "id": "b42.point_consistency",
+      "ok": true,
+      "detail": "5.000e-09"
+    },
+    {
+      "id": "replicates.sample_max_abs_diff",
+      "ok": true,
+      "detail": "9.048e-14"
+    },
+    {
+      "id": "ci.max_abs_diff",
+      "ok": true,
+      "detail": "0.000e+00"
+    },
+    {
+      "id": "ci.valid_counts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "seed_sd.ddof1",
+      "ok": true,
+      "detail": "1.665e-16"
+    },
+    {
+      "id": "frozen.freeze_sha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.prediction_files_72",
+      "ok": true,
+      "detail": "72"
+    },
+    {
+      "id": "frozen.b42_outputs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.b42_verification",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.test_access_log",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

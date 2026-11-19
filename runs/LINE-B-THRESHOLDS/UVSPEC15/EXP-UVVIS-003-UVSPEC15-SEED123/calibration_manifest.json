@@ -1,0 +1,51 @@
+{
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+  "modality": "uvvis",
+  "seed": 123,
+  "split": "validation",
+  "test_split_accessed": false,
+  "calibration_split": "validation",
+  "in_sample_validation_f1": true,
+  "inputs": {
+    "prediction_manifest": {
+      "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED123\\validation\\prediction_manifest.json",
+      "sha256": "ee25728a832d9100e39fa8a49b7fae1a9d289a69ee4728d5876d0e1401c7ddc8"
+    },
+    "probabilities": {
+      "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED123\\validation\\probabilities.npy",
+      "sha256": "bff138f92fa90f6a16769591d342bdb0631ccc10ebbb8228f7f35066736fcc36"
+    },
+    "row_index": {
+      "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED123\\validation\\row_index.npy",
+      "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4"
+    },
+    "labels": {
+      "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\UVVis\\EXP-UVVIS-003-UVSPEC15-SEED123\\validation\\labels.npy",
+      "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b"
+    },
+    "checkpoint": {
+      "path": "runs\\EXP-UVVIS-003-UVSPEC15-SEED123\\best_model.pt",
+      "sha256": "ded92d1d29ac26db56b3967f322fdbcca1143a527deb26abbafc0e9c3a54bdc8"
+    },
+    "split": {
+      "path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+      "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb"
+    },
+    "label_names": {
+      "path": "processed\\qm9s\\prepared\\uvspec15_label_names.json",
+      "sha256": "c759f3d8e21ad841daf0e9ccb63e743acb36f39226b6b7f738a8d0e723cd9afc"
+    },
+    "label_matrix": {
+      "path": "processed\\qm9s\\prepared\\uvspec15_labels.npy",
+      "sha256": "f08170df62972828076b4cfdb1136b2890b86a4eec36f280466180f5c64f1705"
+    }
+  },
+  "outputs": {
+    "optimal_thresholds": "26e0ccc6e079aeed6c80b541f6b7ef3a2943aa3113e2551b78e6e7b6c1ab0cf0",
+    "validation_overall": "386b4fd2c9cf6db3ca0fbb4e9b34f8e305bd4a18772093ab11e380c72162a8da",
+    "validation_per_label_comparison": "658567174439af2c0883f51e2d93592701f6784a0deda091dd69d8164a748efd"
+  },
+  "all_checks_pass": true
+}

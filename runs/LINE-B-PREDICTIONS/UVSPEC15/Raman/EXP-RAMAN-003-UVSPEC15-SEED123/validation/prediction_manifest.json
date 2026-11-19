@@ -1,0 +1,217 @@
+{
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "modality": "raman",
+  "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+  "split": "validation",
+  "split_key": "val",
+  "n_samples": 12981,
+  "label_names": [
+    "has_conjugation",
+    "has_nonaromatic_conjugation",
+    "acyclic_conjugated_system",
+    "cyclic_conjugated_system",
+    "has_aromatic_system",
+    "heteroaromatic",
+    "mixed_aromatic_nonaromatic_conjugation",
+    "pi_conjugated_carbonyl",
+    "alpha_beta_unsaturated_carbonyl",
+    "aryl_carbonyl",
+    "pi_conjugated_imine",
+    "pi_conjugated_nitrile",
+    "has_donor_substituted_pi_system",
+    "has_acceptor_substituted_pi_system",
+    "donor_acceptor_same_conjugated_system"
+  ],
+  "label_order_verified": true,
+  "task_config": {
+    "expected_train_size": 103853,
+    "input_points": 3501,
+    "n_labels": 15
+  },
+  "checkpoint": {
+    "path": "runs\\EXP-RAMAN-003-UVSPEC15-SEED123\\best_model.pt",
+    "sha256_before": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+    "sha256_after": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+    "sha256": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+    "checkpoint_type": "original",
+    "best_val_mAP": 0.9535802036746914,
+    "val_metrics": {
+      "loss": 0.0456359838799541,
+      "micro_f1": 0.9385734265734266,
+      "macro_f1": 0.9048961099089398,
+      "mAP": 0.9535802036746914,
+      "macro_AUROC": 0.9953209580572318
+    },
+    "config": {
+      "experiment": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "run_id": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "phase": "B2",
+      "modality": "raman",
+      "seed": 123,
+      "label_set": "uvspec15",
+      "n_labels": 15,
+      "batch_size": 512,
+      "num_workers": 4,
+      "max_epochs": 50,
+      "early_stopping_patience": 8,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "embedding_dim": 256,
+      "normalization": "max",
+      "threshold": 0.5,
+      "selection_metric": "validation_mAP",
+      "use_pos_weight": false,
+      "loss": "BCEWithLogitsLoss",
+      "optimizer": "AdamW",
+      "amp": true,
+      "train_size": 103853,
+      "val_size": 12981,
+      "test_size": 12981,
+      "test_split_accessed": false,
+      "split_file": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+      "label_file": "processed\\qm9s\\prepared\\uvspec15_labels.npy",
+      "label_names_file": "processed\\qm9s\\prepared\\uvspec15_label_names.json",
+      "spectra_file": "processed\\qm9s\\prepared\\raman_float32.npy",
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ]
+    }
+  },
+  "split_file": {
+    "path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+    "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+    "key": "val"
+  },
+  "label_files": {
+    "names_path": "processed\\qm9s\\prepared\\uvspec15_label_names.json",
+    "names_sha256": "c759f3d8e21ad841daf0e9ccb63e743acb36f39226b6b7f738a8d0e723cd9afc",
+    "matrix_path": "processed\\qm9s\\prepared\\uvspec15_labels.npy",
+    "matrix_sha256": "f08170df62972828076b4cfdb1136b2890b86a4eec36f280466180f5c64f1705"
+  },
+  "spectra_file": {
+    "path": "processed\\qm9s\\prepared\\raman_float32.npy",
+    "sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+    "shape": [
+      129817,
+      3501
+    ],
+    "dtype": "float32",
+    "size_bytes": 1817957396
+  },
+  "model": {
+    "head_dim": 15,
+    "embedding_dim": 256,
+    "bn_running_mean_layers": 12,
+    "num_batches_tracked": [
+      6090
+    ]
+  },
+  "inference": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "batch_size": 512,
+    "num_workers": 0,
+    "dtype": "float32",
+    "autocast": false,
+    "model_eval": true,
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "resources": {
+      "elapsed_seconds": 1.537696,
+      "process_rss_start_mb": 640.887,
+      "process_peak_rss_mb": 1202.062,
+      "system_available_start_mb": 12119.773,
+      "system_available_min_mb": 11575.969,
+      "gpu_peak_allocated_mb": 788.829,
+      "gpu_peak_reserved_mb": 904.0
+    }
+  },
+  "repeat_check": {
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "bitwise_equal": true,
+    "allclose_atol_1e-6": true,
+    "second_pass_resources": {
+      "elapsed_seconds": 1.375046,
+      "process_rss_start_mb": 1190.34,
+      "process_peak_rss_mb": 1210.91,
+      "system_available_start_mb": 11585.52,
+      "system_available_min_mb": 11362.742,
+      "gpu_peak_allocated_mb": 788.829,
+      "gpu_peak_reserved_mb": 904.0
+    }
+  },
+  "arrays": {
+    "probabilities": {
+      "shape": [
+        12981,
+        15
+      ],
+      "dtype": "float32",
+      "sha256": "e218e70e8f48b263709a76784c1cb76bccc47abe573351a44a3db076424c6171",
+      "finite": true,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "row_index": {
+      "shape": [
+        12981
+      ],
+      "dtype": "int64",
+      "sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "finite": true,
+      "min": 13.0,
+      "max": 129810.0
+    },
+    "labels": {
+      "shape": [
+        12981,
+        15
+      ],
+      "dtype": "uint8",
+      "sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "finite": true,
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "checks": {
+    "n_rows_equals_validation_size": true,
+    "row_index_equals_frozen_validation": true,
+    "labels_equal_frozen_label_matrix": true,
+    "probabilities_finite": true,
+    "probabilities_in_unit_interval": true,
+    "head_dim_equals_label_count": true,
+    "checkpoint_label_order_verified": true,
+    "test_split_accessed": false,
+    "checkpoint_file_unchanged": true,
+    "model_state_unchanged": true,
+    "bn_buffers_unchanged": true,
+    "checkpoint_mutated": false,
+    "bn_buffers_mutated": false
+  },
+  "code": {
+    "exporter_path": "training\\line_b\\export_line_b_predictions.py",
+    "exporter_sha256": "c98245edbd1859664f5e684db5d677e96b4af52e6c7ca36ef50736fec762dec7",
+    "common_sha256": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+    "dataset_sha256": "42ec169ae8413f3124b907f8fecd3da24f6f7a033697c2952d35ea7dd74f4b0c",
+    "model_sha256": "8e19d7d6d651084fa3f17702632c185850ebdceca7dabe5e78a7df4647786936"
+  }
+}

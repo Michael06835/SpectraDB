@@ -1,0 +1,51 @@
+{
+  "task": "Shared14",
+  "label_set": "shared14",
+  "run_name": "EXP-IR-001-SEED2026",
+  "modality": "ir",
+  "seed": 2026,
+  "split": "validation",
+  "test_split_accessed": false,
+  "calibration_split": "validation",
+  "in_sample_validation_f1": true,
+  "inputs": {
+    "prediction_manifest": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED2026\\validation\\prediction_manifest.json",
+      "sha256": "9e2c3b4b8d03e2acd27434369265ea4463962a57cdf5fe04f0751c41ceba190c"
+    },
+    "probabilities": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED2026\\validation\\probabilities.npy",
+      "sha256": "0eaf262838828c6824fe5bde2d3a3e46d63c836bbe98d31df028d043fd9e18af"
+    },
+    "row_index": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED2026\\validation\\row_index.npy",
+      "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4"
+    },
+    "labels": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-SEED2026\\validation\\labels.npy",
+      "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e"
+    },
+    "checkpoint": {
+      "path": "runs\\EXP-IR-001-SEED2026\\best_model.pt",
+      "sha256": "d7945c78d432fa907bbc0c8b39e3f4e7ae78088a1185931e625a8eb06cc4a274"
+    },
+    "split": {
+      "path": "processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+      "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610"
+    },
+    "label_names": {
+      "path": "processed\\qm9s\\prepared\\functional_group_label_names.json",
+      "sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942"
+    },
+    "label_matrix": {
+      "path": "processed\\qm9s\\prepared\\functional_group_labels.npy",
+      "sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4"
+    }
+  },
+  "outputs": {
+    "optimal_thresholds": "18e8136f8019b43458a1780bb4094351829a1d0365f24e2bfaa4a4c63fea935d",
+    "validation_overall": "18569e44448117029be58dba929834a453c5864298ae99e940cd3f2b7463fa5c",
+    "validation_per_label_comparison": "cea4c4bd35f013a7aedf77f8e3b2a6873d62663f1f9c77d5de4557e53f3c1728"
+  },
+  "all_checks_pass": true
+}

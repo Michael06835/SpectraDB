@@ -1,0 +1,105 @@
+{
+  "phase": "B4.3",
+  "generated_at": "2026-11-20T02:49:44+08:00",
+  "classification": {
+    "status": "exploratory/post-hoc",
+    "blind_test_claim": false,
+    "confirmatory_significance": false
+  },
+  "config": {
+    "reps": 2000,
+    "rng_seed": 20261117,
+    "rng": "numpy.random.default_rng; per replicate: bincount(rng.integers(0, n_scaffolds, n_scaffolds))",
+    "ci_percentiles": [
+      2.5,
+      97.5
+    ],
+    "seed_sd_ddof": 1,
+    "comparisons": [
+      "IR-Raman",
+      "UV-IR",
+      "UV-Raman"
+    ],
+    "policies": [
+      "fixed_0.5",
+      "validation_f1"
+    ],
+    "draws_sha256": "1c2e7e92e92371b1f528e2e4561ee2d58e1f4dbfabc28838b2bfe1d7a899f3b6"
+  },
+  "scaffolds": [
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "n_test_rows": 12981,
+      "n_scaffolds": 2853,
+      "scaffold_size_min": 1,
+      "scaffold_size_median": 1.0,
+      "scaffold_size_max": 1792,
+      "scaffold_size_mean": 4.549947423764459,
+      "singleton_scaffolds": 2517,
+      "missing_scaffold_rows": 0,
+      "blank_scaffold_molecules": 0,
+      "reps": 2000,
+      "rng_seed": 20261117,
+      "resampled_molecules_min": 7948.0,
+      "resampled_molecules_mean": 12864.6625,
+      "resampled_molecules_max": 23863.0,
+      "draw_count_min": 0,
+      "draw_count_mean": 1.0,
+      "draw_count_max": 10
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "n_test_rows": 12981,
+      "n_scaffolds": 2853,
+      "scaffold_size_min": 1,
+      "scaffold_size_median": 1.0,
+      "scaffold_size_max": 1792,
+      "scaffold_size_mean": 4.549947423764459,
+      "singleton_scaffolds": 2517,
+      "missing_scaffold_rows": 0,
+      "blank_scaffold_molecules": 0,
+      "reps": 2000,
+      "rng_seed": 20261117,
+      "resampled_molecules_min": 7948.0,
+      "resampled_molecules_mean": 12864.6625,
+      "resampled_molecules_max": 23863.0,
+      "draw_count_min": 0,
+      "draw_count_mean": 1.0,
+      "draw_count_max": 10
+    }
+  ],
+  "undefined_summary": {
+    "Shared14|AP|three_seed": 762,
+    "Shared14|AUROC|three_seed": 762
+  },
+  "point_consistency": {
+    "Shared14": {
+      "max_abs_diff_vs_b4_2": 4.982738888159588e-09,
+      "tolerance": 1e-06
+    },
+    "UVSPEC15": {
+      "max_abs_diff_vs_b4_2": 4.999647473802327e-09,
+      "tolerance": 1e-06
+    }
+  },
+  "counts": {
+    "tasks": 2,
+    "models": 18,
+    "seeds": 3,
+    "labels_shared14": 14,
+    "labels_uvspec15": 15,
+    "point_rows": 1488,
+    "ci_per_seed_rows": 1116,
+    "ci_three_seed_rows": 372
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.9.0",
+    "cwd": "E:\\Projects\\曦源计划\\数据\\SpectraDB"
+  },
+  "elapsed_seconds": 437.927
+}

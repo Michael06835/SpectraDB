@@ -1,0 +1,5 @@
+﻿task,parent,child,parent_support,child_support,both,p_child_given_parent,p_parent_given_child,child_positive_parent_negative,strict_containment,definition_support
+Shared14,carbonyl,aldehyde,36381,10757,10757,0.2956763145597977,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+Shared14,carbonyl,amide,36381,11200,11200,0.30785300019240813,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+Shared14,carbonyl,ester,36381,5763,5763,0.15840686072400428,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+Shared14,carbonyl,ketone,36381,12211,12211,0.3356422308347764,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation

@@ -1,0 +1,2118 @@
+{
+  "phase": "B5",
+  "generated_at": "2026-11-20T05:16:58+08:00",
+  "classification": {
+    "status": "exploratory/post-hoc",
+    "blind_test": false,
+    "confirmatory": false
+  },
+  "inputs": {
+    "protocol": {
+      "path": "docs\\experiments\\line_b_protocol_draft.md",
+      "sha256": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a"
+    },
+    "freeze": {
+      "path": "runs\\LINE-B-MANIFESTS\\FREEZE.json",
+      "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c"
+    },
+    "test_access_log": {
+      "path": "runs\\LINE-B-MANIFESTS\\test_access_log.json",
+      "sha256": "e7b0bd49dccf816504afcca1438755e2cc82522f4dda688d6b20c5afc740580a"
+    },
+    "b4_2": {
+      "manifest": "d809e140437c1865e4b43212caae3d8a6ba0f61861d015138710228b35664d06",
+      "verification": "334eb9ef58c8745fbb25233acb9512e324e9dd4cb4153ea58eb339ad5ae401ce"
+    },
+    "b4_3": {
+      "manifest": "8e95fe5691795ece0fba5dd8838288b97a082e1efad5ea1214b03f59a1c3c3ae",
+      "verification": "ca57a505764dba4012c3269d424bf7ef72b1f70281a2778efc609007a110b34b"
+    },
+    "b4_4": {
+      "manifest": "9afd176c0951c5084cb454e234a87d9de58f41773ac0ce29d79fae266e7c7c4f",
+      "verification": "f4e10b86737671b358ae31002b783d616a5014a4a1f3da3593df60d1fa0dadd3",
+      "tree_sha256": "d3e69052171ae753849a47139f21a03460ba7f772bd8d95e5143f749b9007a69"
+    },
+    "supplement": {
+      "manifest": "404ef19b8c9d41374f9fb80a8ffb8cf7632a7d8408fb8166891b8033cb297224",
+      "verification": "063808b8ecf1e28922662aa20f729d066feae2d828fd925d6055a61134d8584d"
+    },
+    "b4_1_seed_models": [
+      {
+        "task": "Shared14",
+        "modality": "ir",
+        "seed": 42,
+        "prediction_manifest": "73a35e86ea0764ec44b325cf5eca4d1182e8c3ea500f4deed9a86a05d9a06f75"
+      },
+      {
+        "task": "Shared14",
+        "modality": "ir",
+        "seed": 123,
+        "prediction_manifest": "fe0bcc14b533e1ad455ce05c022234617e0ab66711a7565259e1e334d77b0d9b"
+      },
+      {
+        "task": "Shared14",
+        "modality": "ir",
+        "seed": 2026,
+        "prediction_manifest": "d1c043d810cf7cfe848d441c8b8b75afb141343ecf47803fd152c4d65c72c3b6"
+      },
+      {
+        "task": "Shared14",
+        "modality": "raman",
+        "seed": 42,
+        "prediction_manifest": "26ad8ff4a89a80ec2b016dcd67f95e163a426df43d2b969b331f1d8e3a1ded44"
+      },
+      {
+        "task": "Shared14",
+        "modality": "raman",
+        "seed": 123,
+        "prediction_manifest": "e9d524e2da4181e88b04a39ea5396a63032ea8b383469f2279aff4eec87ee8fb"
+      },
+      {
+        "task": "Shared14",
+        "modality": "raman",
+        "seed": 2026,
+        "prediction_manifest": "c37c5542028d5087d5ca9eaff7bf464f5598972dbe01f2272eb8ee769187a0b2"
+      },
+      {
+        "task": "Shared14",
+        "modality": "uvvis",
+        "seed": 42,
+        "prediction_manifest": "e69e27186839200dc6aa6ca9ce3e8784940aa33dc15b6a494c823330ccae93f2"
+      },
+      {
+        "task": "Shared14",
+        "modality": "uvvis",
+        "seed": 123,
+        "prediction_manifest": "4c5c6df0c42106bf3cb8db5e767c798a06231e9503e57b27f078e3aa9ec90204"
+      },
+      {
+        "task": "Shared14",
+        "modality": "uvvis",
+        "seed": 2026,
+        "prediction_manifest": "bc1dbfc7dfc51f7c39cad17eea47a2e412282db215d12c43e4f1ea6b54a3b361"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "ir",
+        "seed": 42,
+        "prediction_manifest": "caa257101923ba6b923eed735b778b15ece764607665faf66b1c76ce9a1ca157"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "ir",
+        "seed": 123,
+        "prediction_manifest": "f2f6fa54969981855bade9958dbe81a02e46f990cafc133d41f619eeeae86771"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "ir",
+        "seed": 2026,
+        "prediction_manifest": "c855350241efdedb7d95fafa97669c88a83005801622a74518ddeabb03a008d3"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "raman",
+        "seed": 42,
+        "prediction_manifest": "5bfc6ff21794b5cd5203511aa75fa500c0cb982959a746e1d61cd00d00d00db8"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "raman",
+        "seed": 123,
+        "prediction_manifest": "6685e34a6d75d30bee9b390efa3feb25830e6d2e8f59992031cae2f476055540"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "raman",
+        "seed": 2026,
+        "prediction_manifest": "fa9544fbdbb8cabf01c65d9cd2ebafd138cdfabf9a4296678e21d50cba7226e0"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "uvvis",
+        "seed": 42,
+        "prediction_manifest": "ea8a1cd22debd4d12be22a6234c884e7e3c773ab3ce93d2f94a95750f4ac9d89"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "uvvis",
+        "seed": 123,
+        "prediction_manifest": "94aa319464149d7a25036204d9c54b343440b6209f78f8041b86c3d432c60bfa"
+      },
+      {
+        "task": "UVSPEC15",
+        "modality": "uvvis",
+        "seed": 2026,
+        "prediction_manifest": "3f836f487b1de4a6d946a8c9b49ed79f5f395381a942612fc52c61fd9781ae0f"
+      }
+    ],
+    "source_tables": {
+      "overall_metrics.csv": "59e4a27e3ad77dc6447a42ca3d764fff029df355a42a03715cc83d6277ea8c0b",
+      "seed_mean_sd.csv": "f1028ee0162fc207e835cfbb42bcfed7c6f3d354364864005a83cfbac41c7f74",
+      "per_label_metrics.csv": "4d3e4bfd7ed1f3dddea168dc8cef05a1e47dfb2585d6b56256a50239d052a90e",
+      "paired_differences_three_seed.csv": "eee02a244f567fe0113725ffc21bff73bf9a98ee56bc1ac99223643e583abff5",
+      "paired_differences_per_seed.csv": "3d5b4673c625c93d76d001ba218a896501d1879006bd8aae2162ee94bf31d78f",
+      "pairwise_error_complementarity.csv": "80f6767975f9dfcde42660c22c2e23b7df6038ba8d5abcfca94f6eaef14d179e",
+      "pairwise_or_and.csv": "d9453ddfe384795c3799933ed3fc972436c472e8eb35d6096cd131d15aaa1de0",
+      "three_modality_or.csv": "be6989c611b6b29e4e6d73b8b0f0bd32707f6983ab5bd73d238d05617018ed43",
+      "true_oracle_summary.csv": "d6913aaea54fa37e8e2fa46c3734c44ee3a2e703bd38913e22dd90930e65a698",
+      "true_oracle_per_label.csv": "315a17772cd159fea885179f0168516e002ef77e98de141b4c4a0c260656c80c",
+      "conditional_complementarity.csv": "f4a243b1c4019c8e7da1ef839d1010b09e79bd37ac3dafd8fe9c26628678cba4",
+      "conditional_bootstrap_ci.csv": "bc3db92ce06a6853991fb1b49065deadf9151ef57d1d8c256e0b61fa324698b3",
+      "subgroup_metrics.csv": "04ab07fe6ef84b87622a4db8ff9284970d0dabd5148326267dea700b4b847bc6",
+      "subgroup_bootstrap_ci.csv": "292dc740eac0ca96e8162ce93142a672625dcc4d0f2a1736b53dc7284ca59ec0",
+      "mcnemar_holm.csv": "a765ec6ddd3a26253f51bca43f9f748e2db23a2ad32933cf24bedda3444ff31e",
+      "sample_error_summary.csv": "e08d128b7676c67d2b6cbfa156e1ef95a1730119fdf79f8d140054116cd629ce"
+    }
+  },
+  "counts": {
+    "models": 18,
+    "seeds": 3,
+    "tasks": 2,
+    "labels": {
+      "Shared14": 14,
+      "UVSPEC15": 15
+    },
+    "representative_cases": 88,
+    "tables": 19,
+    "figures": 11
+  },
+  "outputs": [
+    {
+      "path": "figures/fig01_overall_performance.png",
+      "sha256": "8b2f30d487fbfd35d1ecdcac22854123e452218f4e8d6d7d3ea0d0ec793cc77c",
+      "size_bytes": 33983
+    },
+    {
+      "path": "figures/fig02_per_label_ap_heatmap.png",
+      "sha256": "dea2c8eb20d7c2eb4404e9fe8d246a5494d0655f207ae92eeff72267bd859d8e",
+      "size_bytes": 69397
+    },
+    {
+      "path": "figures/fig03_per_label_f1_heatmap.png",
+      "sha256": "1ea3e9e35bbaca6642510bd1b14a0a076f426f6f87bff3036e34a92c13e29ef2",
+      "size_bytes": 139827
+    },
+    {
+      "path": "figures/fig04_seed_stability_Shared14.png",
+      "sha256": "dfe71f318f49689e966959f8549145933bef761961503ea81635bf140080efc1",
+      "size_bytes": 22118
+    },
+    {
+      "path": "figures/fig04_seed_stability_UVSPEC15.png",
+      "sha256": "56ca8ec7022cc43ec243ae8692e0773d778ac418578a8abd74e6736f3416c619",
+      "size_bytes": 22925
+    },
+    {
+      "path": "figures/fig05_paired_bootstrap_forest.png",
+      "sha256": "803e3a55be50cccbe4acc5bc25d22954f29492fad5cd392fe871820b1a775bc2",
+      "size_bytes": 79964
+    },
+    {
+      "path": "figures/fig06_error_complementarity.png",
+      "sha256": "274fbdbd29bd73c42e6d2c5d8c846b525f0b6ae63fa9be9ae928e1cf2d24b1ce",
+      "size_bytes": 30714
+    },
+    {
+      "path": "figures/fig07_or_oracle.png",
+      "sha256": "f3ace26fad00630440d38621877671b61d6b694b7270909062c95a047b2bef66",
+      "size_bytes": 25312
+    },
+    {
+      "path": "figures/fig08_conditional_complementarity.png",
+      "sha256": "5d2bc36a04ef7b1e19937c283d9cddbad97110ad31fa85282c898d384dd8f566",
+      "size_bytes": 24913
+    },
+    {
+      "path": "figures/fig09_subgroup_performance_heatmap.png",
+      "sha256": "149bdc98756eb4a591155e5800821db1f568e1951a8458afd510af04f4b2c278",
+      "size_bytes": 95183
+    },
+    {
+      "path": "figures/fig10_representative_molecules.png",
+      "sha256": "c9e0d044b555e04915cdc9bf6530487c73db1d787728e27a6692f3210204bc71",
+      "size_bytes": 164079
+    },
+    {
+      "path": "line_b_final_report.md",
+      "sha256": "398c0481586550577f52d3e614be8bb66b42916e27894ddc4514af84978397d2",
+      "size_bytes": 15322
+    },
+    {
+      "path": "README_summary.txt",
+      "sha256": "9e6c13b7b076f8e476a463a8440b9c4209b037ded2b626d7bdb626b594b659de",
+      "size_bytes": 1405
+    },
+    {
+      "path": "representative_molecules/index.csv",
+      "sha256": "df80538580960fedd6021d91153deee189d4969755872f329443abf60e1c2e07",
+      "size_bytes": 14221
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_0/row_000004/metadata.json",
+      "sha256": "08516fba4a45b67b91b2de8aaba0b51191353983dc9719d5fd5593b28df876b8",
+      "size_bytes": 6547
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_0/row_000004/spectra.png",
+      "sha256": "16b9ed91feaf4e65272990279c7cf4fd860e9ea41b8a141e807d95e7f79b5292",
+      "size_bytes": 45617
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_0/row_000004/structure.png",
+      "sha256": "700b5eb012471ee026451e9d737c9081e113c9a2c9055ff724d2e5b612cafc50",
+      "size_bytes": 7171
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_0/row_000004/structure.svg",
+      "sha256": "eada576ff764453c22c2c603aaae533bd429b66cba3a7328844444b869e8c25d",
+      "size_bytes": 2918
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_0/row_032039/metadata.json",
+      "sha256": "04ca2f61032f31ebc03f38a58e88c870b3d203645c3ba966bbc14995bed1d217",
+      "size_bytes": 6561
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_0/row_032039/spectra.png",
+      "sha256": "a80596f5db7b809cd494b6d44bde6171c0b097a8fa569cd1724bc7f2af08f429",
+      "size_bytes": 52360
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_0/row_032039/structure.png",
+      "sha256": "dbccd9356ddc7ae1afccc75d5fdf12f9f9071a10781cd7554b64cd964fb9c7db",
+      "size_bytes": 50341
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_0/row_032039/structure.svg",
+      "sha256": "8f83999a62f2a18bad87e342d930dda2eec90bea151dd2dd67409a08bf518416",
+      "size_bytes": 12649
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_1/row_122082/metadata.json",
+      "sha256": "24ef6cd19a9ddc7e70a4493dc7d82f1b11259a5be3faa3719cb909eff7a1a770",
+      "size_bytes": 6579
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_1/row_122082/spectra.png",
+      "sha256": "4002d819669d2e4b90f9572c48d9949aa9c13d2c9ad4e37d2f7ac2075a14e5eb",
+      "size_bytes": 51834
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_1/row_122082/structure.png",
+      "sha256": "bb4a39308530138942747ae8abd967695807db9491253c5a92397f6ba1f8fd04",
+      "size_bytes": 40944
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_1/row_122082/structure.svg",
+      "sha256": "939320772c010ad91fd9f8231b3591341378d98b3b0527238502b3714f7dcc34",
+      "size_bytes": 12526
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_1/row_126811/metadata.json",
+      "sha256": "203e30e1ff8265a7d6000325a250f8ba1672333be6ae8bf972d1ba10df42b298",
+      "size_bytes": 6584
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_1/row_126811/spectra.png",
+      "sha256": "ec2321120be7b993820245b247093b302877311c5ce913b2ca3f9c44e0692076",
+      "size_bytes": 51175
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_1/row_126811/structure.png",
+      "sha256": "31671bdd73a19d29174b03e3364fc7b851097707d055f9036eedd44c322265ea",
+      "size_bytes": 40404
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_1/row_126811/structure.svg",
+      "sha256": "caa6d8bc4d4babea441fbaf51d84bc6cde2a29c167e4ad4e874b51fcdbc98e05",
+      "size_bytes": 13089
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_ge2/row_023665/metadata.json",
+      "sha256": "1f83c3a64f1b566c20ab222ea4c030247d249626f9538dd4a7889ccf1dec882e",
+      "size_bytes": 6564
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_ge2/row_023665/spectra.png",
+      "sha256": "495c4f72ace43ae2fb93a301cd41913542cc043dac53cd8d135e7181174f1e18",
+      "size_bytes": 52995
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_ge2/row_023665/structure.png",
+      "sha256": "32d29743bbe0b30f55d2548619e3a260be41869d6a50fced1d9de80e42191355",
+      "size_bytes": 44369
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_ge2/row_023665/structure.svg",
+      "sha256": "93b78a0a3a1cc354360fc6fbbc0e19ad15e38d69d0d88c3e0a2957c0416eb567",
+      "size_bytes": 12327
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_ge2/row_121897/metadata.json",
+      "sha256": "458fbb249703eb6548adc84e0d78fd8e44c0f8abb92213bcd93f177058c5dc14",
+      "size_bytes": 6562
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_ge2/row_121897/spectra.png",
+      "sha256": "79ccb26d38f23fc86aed1b7fd5ac3ba612a78704e52e524cc6bccc41daf37f8a",
+      "size_bytes": 52582
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_ge2/row_121897/structure.png",
+      "sha256": "d0202e412a027fb9f697fcde66b232e2168c210e01784f411827a620b1d78f17",
+      "size_bytes": 46315
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/aromatic_ring_count_ge2/row_121897/structure.svg",
+      "sha256": "adf5316659dfd76cff1808b474a545978a9150d46798ce4ffff3a7c3a77ce415",
+      "size_bytes": 12926
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_ge0.5/row_005627/metadata.json",
+      "sha256": "6a82f9eed61239b8ece9492f176a1303aa8cf17596c3d3b06e019e556f1ba7ee",
+      "size_bytes": 6578
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_ge0.5/row_005627/spectra.png",
+      "sha256": "e8268b4a26202ff785b82c443b7f5327dc8f087269160aea621d102db78691d7",
+      "size_bytes": 51559
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_ge0.5/row_005627/structure.png",
+      "sha256": "ed1985f5e27c76f2ee3ccf7333c9acef89bd2a62c89927280af2765b3f99f02b",
+      "size_bytes": 29440
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_ge0.5/row_005627/structure.svg",
+      "sha256": "28aa49a6b4ffc33dde717d22aa67ae65f814744924b1a9708642517198b9d483",
+      "size_bytes": 9684
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_ge0.5/row_108838/metadata.json",
+      "sha256": "1262a15ee9e50cbe92cd9a82c0e8d02065982be05fb8e7877f7fbb88f78407fc",
+      "size_bytes": 6564
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_ge0.5/row_108838/spectra.png",
+      "sha256": "ace5875be447afb43586705adc61af89f31cc5850c02bd4f0da2697c7e6771c2",
+      "size_bytes": 51680
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_ge0.5/row_108838/structure.png",
+      "sha256": "23812acc07298285d7f8293397ed4e98429e1a2475e9f0ad9d563a85e34613d8",
+      "size_bytes": 39365
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_ge0.5/row_108838/structure.svg",
+      "sha256": "28f7e0178f60b615121ad484082b7525d22a3ad922e53eac00db49f316da3f32",
+      "size_bytes": 12847
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_lt0.5/row_000004/metadata.json",
+      "sha256": "0fc50d0f5a976399a3f20a7b0cfa091f82b548e5f3e3266a3ed59acce8da40de",
+      "size_bytes": 6532
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_lt0.5/row_000004/spectra.png",
+      "sha256": "16b9ed91feaf4e65272990279c7cf4fd860e9ea41b8a141e807d95e7f79b5292",
+      "size_bytes": 45617
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_lt0.5/row_000004/structure.png",
+      "sha256": "700b5eb012471ee026451e9d737c9081e113c9a2c9055ff724d2e5b612cafc50",
+      "size_bytes": 7171
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_lt0.5/row_000004/structure.svg",
+      "sha256": "eada576ff764453c22c2c603aaae533bd429b66cba3a7328844444b869e8c25d",
+      "size_bytes": 2918
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_lt0.5/row_030344/metadata.json",
+      "sha256": "a13ced6a5ff93b77f789022a8fdd98c92c696e05d24f04ec22eb03fdaadb49d7",
+      "size_bytes": 6572
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_lt0.5/row_030344/spectra.png",
+      "sha256": "ffcb6a5254d3a6ab0eb2a44760b745a1d1a7a3d10196d9465195445210ed2094",
+      "size_bytes": 51099
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_lt0.5/row_030344/structure.png",
+      "sha256": "9dc9fbeeaa1465e33e931d9363a004902a2c8a5cf4d858fadaa58f38f61a43d3",
+      "size_bytes": 35593
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/fraction_csp3_lt0.5/row_030344/structure.svg",
+      "sha256": "e17f9898679605c61f2309d89948dc618985d1e69b393e66b358681cae5f59aa",
+      "size_bytes": 11422
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_alkyne/row_051782/metadata.json",
+      "sha256": "124b3b8a81ba6f7f1620249152f02f6db3a540306e491327282029593b4eab29",
+      "size_bytes": 6574
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_alkyne/row_051782/spectra.png",
+      "sha256": "456ae6b6b7e0d09136811c273ce9bed4fc3ab187d63d23796dbf28a55bf3b801",
+      "size_bytes": 51785
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_alkyne/row_051782/structure.png",
+      "sha256": "28b13e9c188db6e1a549fcec05a1e1ee8301b367a5bb166f2245c967029e398d",
+      "size_bytes": 26722
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_alkyne/row_051782/structure.svg",
+      "sha256": "3009c8eac53f8f7924d5b31c83cdf2603c48bc7502dece6ebb2e49ac708afb00",
+      "size_bytes": 12062
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_alkyne/row_126789/metadata.json",
+      "sha256": "b6db1066afd05ffcf99ef320df8dbc476e7ef3c3fe36577be359b66a8bae3c67",
+      "size_bytes": 6603
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_alkyne/row_126789/spectra.png",
+      "sha256": "712cc35f3cf06a6fa690982ab4e24363fe2424410c342b1a8a5ae0d8b0ad2c3f",
+      "size_bytes": 52933
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_alkyne/row_126789/structure.png",
+      "sha256": "b622f373764dba90e499420d1f329943ba602e0d680e76c47ba4b307048e0658",
+      "size_bytes": 27288
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_alkyne/row_126789/structure.svg",
+      "sha256": "338513e7ca244c0a374414e21eb98d208db1fe769496bf7bd53862c1eb0c8f8d",
+      "size_bytes": 12911
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_amine/row_026342/metadata.json",
+      "sha256": "f4b03197a79de4d9073fab4abd5a759e3d44f908575626f30a818ed94f410781",
+      "size_bytes": 6585
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_amine/row_026342/spectra.png",
+      "sha256": "1f31707cdd9e5cc7d77f2a9fa6e49d220dd3409fcdd541ca3462f940c6186c06",
+      "size_bytes": 51460
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_amine/row_026342/structure.png",
+      "sha256": "1d6780f7f1dc07bed60a096e27a1cb07d2f6991ab170ef88dc7be9c873ca0338",
+      "size_bytes": 45912
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_amine/row_026342/structure.svg",
+      "sha256": "d4729475c0af3afcce025aa6c36d919a24f996ec9777e0bc77e2de2c94d084ac",
+      "size_bytes": 11545
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_amine/row_122526/metadata.json",
+      "sha256": "042a801f25e37892ce4b89765adfa1f656672e46cd105a3250b8012bcae6cc3f",
+      "size_bytes": 6586
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_amine/row_122526/spectra.png",
+      "sha256": "e880c9cf5c95135e342ffcbb67d6f17708237753d5872de118eaf54fd054b96a",
+      "size_bytes": 52831
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_amine/row_122526/structure.png",
+      "sha256": "f67d80e885e6a849c048ba31a17b178e6263096c8bc5de2b448e68859e07ca17",
+      "size_bytes": 45403
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_amine/row_122526/structure.svg",
+      "sha256": "c393b1d71d1c6a196203e6192c2e78d98a396a861ce3dc58ce20c871e0a963e8",
+      "size_bytes": 11558
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_carbonyl/row_001360/metadata.json",
+      "sha256": "acdb21f065deec9235029a22f415ad774c88952dc263e97d37e59e27ea3e40e5",
+      "size_bytes": 6548
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_carbonyl/row_001360/spectra.png",
+      "sha256": "26aab65b034af20cbf636083aee40c49f4a520919ce6e0bc9877837a62409dd2",
+      "size_bytes": 50621
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_carbonyl/row_001360/structure.png",
+      "sha256": "b176a5c709d1069469fadd9d5ece7bc5f1de831458d2554a9c77f3dae10aff1d",
+      "size_bytes": 29989
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_carbonyl/row_001360/structure.svg",
+      "sha256": "bd2732614b81706fa64d82800ad8fababb361409b9144328464bab50ede9606e",
+      "size_bytes": 9699
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_carbonyl/row_065219/metadata.json",
+      "sha256": "4b8d555baa5a4b43c08da561d7c20670885fac2a37b277531747b7db1b184dbd",
+      "size_bytes": 6588
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_carbonyl/row_065219/spectra.png",
+      "sha256": "8a05ae4744604a82063928b2ec9e415284f62de0edd678febc1091682a0d4bfc",
+      "size_bytes": 52676
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_carbonyl/row_065219/structure.png",
+      "sha256": "9f2c7cf4bc9ba5fc1a2dd8054dbbd597ea3685832ff8b6749ebf2193d4b84b63",
+      "size_bytes": 42509
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_carbonyl/row_065219/structure.svg",
+      "sha256": "74cedae46ad77232c14344498aab78fe7caf35e18293d27af628c6c0e1ecbeec",
+      "size_bytes": 11879
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_hydroxyl/row_083727/metadata.json",
+      "sha256": "70ff21e5f45a5c46d2a8f056188a18461c232e7a6d07ef86f01876e0b7f7d8b1",
+      "size_bytes": 6578
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_hydroxyl/row_083727/spectra.png",
+      "sha256": "b3cb9be3f38edd406dfee313dd6bbfc3696b5141c53bdbe47070e6194998d31c",
+      "size_bytes": 52082
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_hydroxyl/row_083727/structure.png",
+      "sha256": "851246f4934c677bd0777536858333cadc281efcbdb117057cdbafc041dfce9a",
+      "size_bytes": 36075
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_hydroxyl/row_083727/structure.svg",
+      "sha256": "2dc74df90fc1b1cf863fc179dcada0a6ed23e6f434e427797fe45350aaab2d0c",
+      "size_bytes": 11064
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_hydroxyl/row_118709/metadata.json",
+      "sha256": "3ea8a61d0711a86bbe25efa616c3e09082156f99aa4476f489f6bb0c863cf842",
+      "size_bytes": 6591
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_hydroxyl/row_118709/spectra.png",
+      "sha256": "b0a5c1b7f55dca99bc2e2647af67e9a19344b4e46660719369b3e66ac895eb28",
+      "size_bytes": 51930
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_hydroxyl/row_118709/structure.png",
+      "sha256": "ef8f8dd51d2c1eacfc08b57ca0012911c47eeda29e2dac899d4b97a8d1c9d417",
+      "size_bytes": 29161
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_hydroxyl/row_118709/structure.svg",
+      "sha256": "93bd16514848f314e8ce900a8257e2565a65ef97c9ed75df06bbd7802df0f785",
+      "size_bytes": 11213
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_nitrile/row_000004/metadata.json",
+      "sha256": "d6937e9f23720f492ed31c4f77bc9530adf4c5aea8772beb635176999dfd51b9",
+      "size_bytes": 6541
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_nitrile/row_000004/spectra.png",
+      "sha256": "16b9ed91feaf4e65272990279c7cf4fd860e9ea41b8a141e807d95e7f79b5292",
+      "size_bytes": 45617
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_nitrile/row_000004/structure.png",
+      "sha256": "700b5eb012471ee026451e9d737c9081e113c9a2c9055ff724d2e5b612cafc50",
+      "size_bytes": 7171
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_nitrile/row_000004/structure.svg",
+      "sha256": "eada576ff764453c22c2c603aaae533bd429b66cba3a7328844444b869e8c25d",
+      "size_bytes": 2918
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_nitrile/row_002418/metadata.json",
+      "sha256": "5691ef8c0c7158ab94008cb5c758fb1ca3cc02b9fb85595a184e91aed107ccf7",
+      "size_bytes": 6541
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_nitrile/row_002418/spectra.png",
+      "sha256": "26b7aef88e1fe26fe21edfdcce2b0b7e97c19ef4026c79741752e30693afcef9",
+      "size_bytes": 49596
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_nitrile/row_002418/structure.png",
+      "sha256": "b033168335f99828fe5ca9fea251afeb7959e604099dee5b15a89f703746c1cd",
+      "size_bytes": 32421
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/functional_group_nitrile/row_002418/structure.svg",
+      "sha256": "5d5b140117a8cf20aecb5bfa4dfed4c9c9de48d3874579317a16dc3e2187b16d",
+      "size_bytes": 9249
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/heavy_atom_count_Q1/row_000004/metadata.json",
+      "sha256": "6883ba654fadb596df0f0df4c02bcb7593a41c999e853f508985f9871a6d5244",
+      "size_bytes": 6548
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/heavy_atom_count_Q1/row_000004/spectra.png",
+      "sha256": "16b9ed91feaf4e65272990279c7cf4fd860e9ea41b8a141e807d95e7f79b5292",
+      "size_bytes": 45617
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/heavy_atom_count_Q1/row_000004/structure.png",
+      "sha256": "700b5eb012471ee026451e9d737c9081e113c9a2c9055ff724d2e5b612cafc50",
+      "size_bytes": 7171
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/heavy_atom_count_Q1/row_000004/structure.svg",
+      "sha256": "eada576ff764453c22c2c603aaae533bd429b66cba3a7328844444b869e8c25d",
+      "size_bytes": 2918
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/heavy_atom_count_Q1/row_043675/metadata.json",
+      "sha256": "12ab05038ca1fcca106a7b8f13c716cc9382d7a5091a798905840d6485332768",
+      "size_bytes": 6570
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/heavy_atom_count_Q1/row_043675/spectra.png",
+      "sha256": "eaba5d4053aed3bf8ce939496f2091146bbcfbf4969f4ea86f23b6bf7414bbb5",
+      "size_bytes": 52208
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/heavy_atom_count_Q1/row_043675/structure.png",
+      "sha256": "33f78cfd4c86b1c0bc4c5b51760c233eb427b2700cf3c8877f9128753cf0b04a",
+      "size_bytes": 37006
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/heavy_atom_count_Q1/row_043675/structure.svg",
+      "sha256": "afc2a9ff2e2f9943526ba4c3f0789b2134215d2412573c3bd5e018bbfe6e4bf0",
+      "size_bytes": 12115
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_0/row_001787/metadata.json",
+      "sha256": "42425ed98129d303c2930a9b3c28ca757604f2ab490cc23d7cf414d3ca834869",
+      "size_bytes": 6507
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_0/row_001787/spectra.png",
+      "sha256": "263f28061b5a2993fb7c506f75a3b97edb45e798475de0a00d8101b595fa63ba",
+      "size_bytes": 48339
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_0/row_001787/structure.png",
+      "sha256": "de45c165cc4204e13c3c7c3a6422182b7c66dc8646aff1a040b1811d5ef78dd6",
+      "size_bytes": 28000
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_0/row_001787/structure.svg",
+      "sha256": "9f9f4e5ee16fd636e8e6b6abe81099c4b7de063546173de01d382bacfa366144",
+      "size_bytes": 8542
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_0/row_087980/metadata.json",
+      "sha256": "29441d3a9d8a9b4cd7efd3181577c5240ef4374daa7e24e9a760312b217dda4b",
+      "size_bytes": 6498
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_0/row_087980/spectra.png",
+      "sha256": "b32724845751d696cffc098bf67209e8586919aa440bf21be258efa6865a5a4d",
+      "size_bytes": 52628
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_0/row_087980/structure.png",
+      "sha256": "762d41d4e3f804df994a00c129e667b71f4ce23ebf118432a8a43edf334e1522",
+      "size_bytes": 39848
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_0/row_087980/structure.svg",
+      "sha256": "1d2030da01bf1af5844ec82a1b8d35ef1c194f1cac889fed1acdfcc22ddf6780",
+      "size_bytes": 12406
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_1/row_000004/metadata.json",
+      "sha256": "9ca87ed6ba4b043e5da71cfb9fc6bf63b6ac96c9824f05838c5dae14459e3ac6",
+      "size_bytes": 6502
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_1/row_000004/spectra.png",
+      "sha256": "16b9ed91feaf4e65272990279c7cf4fd860e9ea41b8a141e807d95e7f79b5292",
+      "size_bytes": 45617
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_1/row_000004/structure.png",
+      "sha256": "700b5eb012471ee026451e9d737c9081e113c9a2c9055ff724d2e5b612cafc50",
+      "size_bytes": 7171
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_1/row_000004/structure.svg",
+      "sha256": "eada576ff764453c22c2c603aaae533bd429b66cba3a7328844444b869e8c25d",
+      "size_bytes": 2918
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_1/row_086662/metadata.json",
+      "sha256": "670da785f4b92c2fa506e02abe4d032594d30a98b54712a337df96025045ef60",
+      "size_bytes": 6524
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_1/row_086662/spectra.png",
+      "sha256": "ce374f18e67c8151c3eaa7bc333fd9cb3a95ac0299c3e451f32d3335d08e2a7e",
+      "size_bytes": 51361
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_1/row_086662/structure.png",
+      "sha256": "fdf19f1be44b8852bbd516f4a7a347fbf4046b7fdfed4793d7f2b0ccad6441cd",
+      "size_bytes": 40405
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_1/row_086662/structure.svg",
+      "sha256": "693075dd1875f79c159795d222d5c290c5ec23b7ebd1a0e0d62fcafdde31f9a0",
+      "size_bytes": 11581
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_2/row_041338/metadata.json",
+      "sha256": "812a0375bdb46f67f3713a6bfe4f512dcd4581714aa82c6ba65de55ac5b19687",
+      "size_bytes": 6515
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_2/row_041338/spectra.png",
+      "sha256": "bef57fd3cef8f3cdd3d23ed4921786136a1c2a71626964642d6bab80349ff7f6",
+      "size_bytes": 49934
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_2/row_041338/structure.png",
+      "sha256": "50dbb3635c564bf5f594926e95585674d5ddda008322f79aa67bb60f86147868",
+      "size_bytes": 38115
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_2/row_041338/structure.svg",
+      "sha256": "38953cd46864ea5f1921c98609687a42b0336c8b1f96a61c64242a0ede552d67",
+      "size_bytes": 12025
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_2/row_049151/metadata.json",
+      "sha256": "e1219f0f1e168bcaca74d5b0c1e198be5f269c179ad96b5ca8840fbd498c944a",
+      "size_bytes": 6526
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_2/row_049151/spectra.png",
+      "sha256": "26d7bc4cf3e77e311f9296e801b8062064e9b82e176a622ac38c1f06bf4fc0ef",
+      "size_bytes": 50381
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_2/row_049151/structure.png",
+      "sha256": "e4f589d5c0307982311abe25d5620fba1ab99ebf28deba92ef33cae19a2f93cb",
+      "size_bytes": 33985
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_2/row_049151/structure.svg",
+      "sha256": "2e0dbe52e837c0879602d161e364d5b3268dafe800337646cf0f37086091daab",
+      "size_bytes": 11914
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_ge3/row_001360/metadata.json",
+      "sha256": "8be46418d24b9c10c82ac273337df20fe2d6cee95e01f30674718c2345eda9e6",
+      "size_bytes": 6513
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_ge3/row_001360/spectra.png",
+      "sha256": "26aab65b034af20cbf636083aee40c49f4a520919ce6e0bc9877837a62409dd2",
+      "size_bytes": 50621
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_ge3/row_001360/structure.png",
+      "sha256": "b176a5c709d1069469fadd9d5ece7bc5f1de831458d2554a9c77f3dae10aff1d",
+      "size_bytes": 29989
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_ge3/row_001360/structure.svg",
+      "sha256": "bd2732614b81706fa64d82800ad8fababb361409b9144328464bab50ede9606e",
+      "size_bytes": 9699
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_ge3/row_123035/metadata.json",
+      "sha256": "ef09e11c309c357915ee48cfa2cb7f9df368cf3593bda702c5254ceb86245396",
+      "size_bytes": 6567
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_ge3/row_123035/spectra.png",
+      "sha256": "7b6f1348f680d838803dfdbd5076d599a38ba68f32db4c8eeb880ef5463178b6",
+      "size_bytes": 52241
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_ge3/row_123035/structure.png",
+      "sha256": "d34f3315db33fb6b02652fada07f3dcada72bd4cb7d3586d4c1acaf3881c064b",
+      "size_bytes": 34264
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/n_o_f_ge3/row_123035/structure.svg",
+      "sha256": "10988aad194a2ab605ff280757244352622df30a4b4908118a430cf6deb461ff",
+      "size_bytes": 12634
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_0/row_000004/metadata.json",
+      "sha256": "0c9aedc82c311af35434f64d20ff7d1bd64ab2dec690175fd86dba103e4a323e",
+      "size_bytes": 6516
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_0/row_000004/spectra.png",
+      "sha256": "16b9ed91feaf4e65272990279c7cf4fd860e9ea41b8a141e807d95e7f79b5292",
+      "size_bytes": 45617
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_0/row_000004/structure.png",
+      "sha256": "700b5eb012471ee026451e9d737c9081e113c9a2c9055ff724d2e5b612cafc50",
+      "size_bytes": 7171
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_0/row_000004/structure.svg",
+      "sha256": "eada576ff764453c22c2c603aaae533bd429b66cba3a7328844444b869e8c25d",
+      "size_bytes": 2918
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_0/row_119771/metadata.json",
+      "sha256": "4c8a16d025199bab1658303e8d363bfd39f85dfad6a0b6be2cf2f4c627453ba4",
+      "size_bytes": 6516
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_0/row_119771/spectra.png",
+      "sha256": "d7ef2d78fd6ff2c0278885978c6693c16ad74b67792854589ca796b19a5c9ed6",
+      "size_bytes": 49939
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_0/row_119771/structure.png",
+      "sha256": "652fe26fe22694633c181a41b4e2fd1041860315139c90e86c1d857a87c7c369",
+      "size_bytes": 21674
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_0/row_119771/structure.svg",
+      "sha256": "39c0008d0a894383d580415ebbe8db6ed8b13bdcbe273b35e5abc49cbf8f80d1",
+      "size_bytes": 12028
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_1/row_029716/metadata.json",
+      "sha256": "b01d60ca8c88b8ff2dc8c99ad3dc51559611c2a5f72f59b442c80c8f578f6063",
+      "size_bytes": 6539
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_1/row_029716/spectra.png",
+      "sha256": "68dfd4b1e6a6faf048a804aa8caf6772d99cd2623ef06acd15df6dc08930da30",
+      "size_bytes": 53299
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_1/row_029716/structure.png",
+      "sha256": "3568805e272f9abfab24df1ad2eedbf9594134b869e2d27dbc39bac6ea95e26f",
+      "size_bytes": 40978
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_1/row_029716/structure.svg",
+      "sha256": "6301190bec1629d6001d9459bf9455ee106269978d504299543bc0989e9b9f0d",
+      "size_bytes": 11583
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_1/row_112436/metadata.json",
+      "sha256": "a9b2d8a3d95dc19f33053ceea0b0105411233c4fcd1f75de6d901714cc5c83a7",
+      "size_bytes": 6549
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_1/row_112436/spectra.png",
+      "sha256": "385406993f39d07e72dd10ba2a412dbb591ca80744b56f2e33b0c20275c933a1",
+      "size_bytes": 51895
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_1/row_112436/structure.png",
+      "sha256": "301e1a105009d7f7f26dc5cad88c8b0f5df51d506518bfdad542b2bc8c92b80a",
+      "size_bytes": 34410
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_1/row_112436/structure.svg",
+      "sha256": "8d85a47aa7c802d3d5a0cdbe91b3b390056e18299d2f6d3b0f35b2bb77c6310b",
+      "size_bytes": 11416
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_2/row_013765/metadata.json",
+      "sha256": "1e1226fd50ca69344c1b937aee4c1f0c7743058c4c269c749f7cfe95cbf9fe5b",
+      "size_bytes": 6560
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_2/row_013765/spectra.png",
+      "sha256": "4a072197d8debec80dec1ba0210f60d14aee17d4a459601e031899b171e0b7e9",
+      "size_bytes": 51689
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_2/row_013765/structure.png",
+      "sha256": "165c1aacb0c7a307ba3cd3aa6c1e0806d5e5d3c130334006aedb9bdccfd2c1b3",
+      "size_bytes": 27744
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_2/row_013765/structure.svg",
+      "sha256": "cb581cb611ba904362875f27a10c3ba1dd6ee042da7a56b35b3332ec5ff3a086",
+      "size_bytes": 11179
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_2/row_028902/metadata.json",
+      "sha256": "d77c30266e23acfa842373a92772843c530f977ef83300556bbb19470480685c",
+      "size_bytes": 6569
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_2/row_028902/spectra.png",
+      "sha256": "0d89a746c4bf1f93f19922757f5c41e89e948627be0e4517bc8572bd99bbe9b7",
+      "size_bytes": 53400
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_2/row_028902/structure.png",
+      "sha256": "0a9a87608ecb1ae446b523b931a63254f827f75a490ef79ce39ead1025e7b28d",
+      "size_bytes": 38858
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_2/row_028902/structure.svg",
+      "sha256": "49bec17affeeadfabada61815355ead2a85dea0d9ab3a89094d05ef0915ef430",
+      "size_bytes": 12106
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_ge3/row_041338/metadata.json",
+      "sha256": "91abd9348674b09809b9d0a012224e12aca9a23ec50f8bbab4c439fc623e6de2",
+      "size_bytes": 6526
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_ge3/row_041338/spectra.png",
+      "sha256": "bef57fd3cef8f3cdd3d23ed4921786136a1c2a71626964642d6bab80349ff7f6",
+      "size_bytes": 49934
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_ge3/row_041338/structure.png",
+      "sha256": "50dbb3635c564bf5f594926e95585674d5ddda008322f79aa67bb60f86147868",
+      "size_bytes": 38115
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_ge3/row_041338/structure.svg",
+      "sha256": "38953cd46864ea5f1921c98609687a42b0336c8b1f96a61c64242a0ede552d67",
+      "size_bytes": 12025
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_ge3/row_066238/metadata.json",
+      "sha256": "bfb67c23ab4472156b814b78b857f32823d847f835223a1b1f08c96102c8e1d2",
+      "size_bytes": 6566
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_ge3/row_066238/spectra.png",
+      "sha256": "79a321554041a273756563cc2b3631eae2094f29cffaea959a946630cf004f8b",
+      "size_bytes": 53505
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_ge3/row_066238/structure.png",
+      "sha256": "17ac318f2e965b2aa4ec01baedf8dce89eb47b0a6f0c35488acef3510ab7d662",
+      "size_bytes": 47167
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/ring_count_ge3/row_066238/structure.svg",
+      "sha256": "2b56b9fc3c747a150ef73a6a05b57a820debbe8f69b88cbc1ce838e57dd738db",
+      "size_bytes": 11990
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_0/row_000004/metadata.json",
+      "sha256": "29c5236348a639a485dde061d925bde83c327abbb0aa320e800ddebbb0040d16",
+      "size_bytes": 6543
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_0/row_000004/spectra.png",
+      "sha256": "16b9ed91feaf4e65272990279c7cf4fd860e9ea41b8a141e807d95e7f79b5292",
+      "size_bytes": 45617
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_0/row_000004/structure.png",
+      "sha256": "700b5eb012471ee026451e9d737c9081e113c9a2c9055ff724d2e5b612cafc50",
+      "size_bytes": 7171
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_0/row_000004/structure.svg",
+      "sha256": "eada576ff764453c22c2c603aaae533bd429b66cba3a7328844444b869e8c25d",
+      "size_bytes": 2918
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_0/row_036012/metadata.json",
+      "sha256": "6adb6650079f7380ca768d5ed81b12b4c44997f69c3b8bd19ecb6df970ddf950",
+      "size_bytes": 6588
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_0/row_036012/spectra.png",
+      "sha256": "584c0008591025f67acd1392087846e9ce78b64bbe7fe1239346bc13dc7466ad",
+      "size_bytes": 52407
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_0/row_036012/structure.png",
+      "sha256": "4f5a4522b3f834640de8b84da27ba8ef5261b565a4bedb72693f16c4bdddf8d4",
+      "size_bytes": 43998
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_0/row_036012/structure.svg",
+      "sha256": "6379f1ae4d4a0ebf5b89a53d17df2707082c314c7ae1d8c408e18a263bf6e4fc",
+      "size_bytes": 12248
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_1/row_001360/metadata.json",
+      "sha256": "9789585f78822b002bb7280c7079a6fb1191c6215bdb7e24647b73e82e28bf00",
+      "size_bytes": 6536
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_1/row_001360/spectra.png",
+      "sha256": "26aab65b034af20cbf636083aee40c49f4a520919ce6e0bc9877837a62409dd2",
+      "size_bytes": 50621
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_1/row_001360/structure.png",
+      "sha256": "b176a5c709d1069469fadd9d5ece7bc5f1de831458d2554a9c77f3dae10aff1d",
+      "size_bytes": 29989
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_1/row_001360/structure.svg",
+      "sha256": "bd2732614b81706fa64d82800ad8fababb361409b9144328464bab50ede9606e",
+      "size_bytes": 9699
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_1/row_105983/metadata.json",
+      "sha256": "9dc5995ca66447b2b78fdd4a4b2f57477c6d71aa1c12959c0b4f88898ce3163f",
+      "size_bytes": 6586
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_1/row_105983/spectra.png",
+      "sha256": "160d17a572f5310687d6cc3310423ae4f630c549d1b8c9f80af2be59a4dba13c",
+      "size_bytes": 54757
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_1/row_105983/structure.png",
+      "sha256": "62a6ba155d3a6af570ad0cf9ad995f9ba4690f246dcc44cbb87e1b49a93f1d98",
+      "size_bytes": 45333
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_1/row_105983/structure.svg",
+      "sha256": "1af17490e3ee52b8b3d04df7487c301fd7aa81e995053145501a7648fbef2d1d",
+      "size_bytes": 11993
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_ge2/row_005627/metadata.json",
+      "sha256": "c441542fdf7ce440ed115e757fd6c3fa80defb592e5d2bcc0acbd399198c5533",
+      "size_bytes": 6576
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_ge2/row_005627/spectra.png",
+      "sha256": "e8268b4a26202ff785b82c443b7f5327dc8f087269160aea621d102db78691d7",
+      "size_bytes": 51559
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_ge2/row_005627/structure.png",
+      "sha256": "ed1985f5e27c76f2ee3ccf7333c9acef89bd2a62c89927280af2765b3f99f02b",
+      "size_bytes": 29440
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_ge2/row_005627/structure.svg",
+      "sha256": "28aa49a6b4ffc33dde717d22aa67ae65f814744924b1a9708642517198b9d483",
+      "size_bytes": 9684
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_ge2/row_094746/metadata.json",
+      "sha256": "1e2f73c46c7f4109b93a9973c1245c3a807ba87543832f83b34cedf958567d43",
+      "size_bytes": 6581
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_ge2/row_094746/spectra.png",
+      "sha256": "9ca4e9f37f227e61c60eecabfab8eb256d5085e4f7736b5dc3ebffe2b850aec1",
+      "size_bytes": 52022
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_ge2/row_094746/structure.png",
+      "sha256": "dc4ec93c4333c3547ae01a51d6080da74bab5c8c8ccf66e93f5abe78b13f2546",
+      "size_bytes": 33019
+    },
+    {
+      "path": "representative_molecules/Shared14/examples/rotatable_bond_count_ge2/row_094746/structure.svg",
+      "sha256": "c13d47cdb4f43ff0b4f1889cd67a4dd03d6eec746e1e279be7f42247642046ab",
+      "size_bytes": 11623
+    },
+    {
+      "path": "representative_molecules/subgroup_status.csv",
+      "sha256": "b2c0a18ad9db2d4f2844b77705bd1d9a5fbdc0c3795a4f94f40b412379d5f2ee",
+      "size_bytes": 21418
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_0/row_013654/metadata.json",
+      "sha256": "306e0308c99234ce222165293f58db4f73e1b1edaf245a5ee1c808d07cdcdd92",
+      "size_bytes": 9016
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_0/row_013654/spectra.png",
+      "sha256": "7f15fd5c1ed056b4cd4ccdc378ae116a8114f232d8c82f6ff76f91c92d96ae7a",
+      "size_bytes": 52379
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_0/row_013654/structure.png",
+      "sha256": "8ff8afb20b5f52cb7df35d2b24c215e4feb1e56970c2f8135fc58d71d8423b5e",
+      "size_bytes": 42170
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_0/row_013654/structure.svg",
+      "sha256": "75847f5ad7116dd55586a667e5a138fdf72eee1cf45d830167d239a57e664386",
+      "size_bytes": 10305
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_0/row_129434/metadata.json",
+      "sha256": "f1574646d95f80c421a218a5894d44eecdd591fdbe716389d80d62e5ec1bb2bb",
+      "size_bytes": 9057
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_0/row_129434/spectra.png",
+      "sha256": "4c3d1a294d748a2826e044bdc8de0dbe28541d14fab261ec32317b857f86033c",
+      "size_bytes": 52351
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_0/row_129434/structure.png",
+      "sha256": "c90cc56bfb0e08569ade52847b098bdc170b99a655a588bdac05c781d6b78d94",
+      "size_bytes": 31879
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_0/row_129434/structure.svg",
+      "sha256": "5c1d9eae27792d93e7d7ebe16f5ccec554c2cf1db0e8b468cceb2c09c6a560d9",
+      "size_bytes": 10840
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_1/row_003791/metadata.json",
+      "sha256": "d08302fdf426fd53f2eba9a23d65750af65b6c4f506080879c1fba5a479b05d8",
+      "size_bytes": 8973
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_1/row_003791/spectra.png",
+      "sha256": "0102e88c7964f5ef149d942e30ecc1e56f1b21faed095a3a6676d962a6fe5bbb",
+      "size_bytes": 49909
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_1/row_003791/structure.png",
+      "sha256": "38531fb4fe55a64f096e1836e88fa3a26bd1db65c853f0835f2ff6dcce390682",
+      "size_bytes": 28736
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_1/row_003791/structure.svg",
+      "sha256": "5d86acc7a04d631b2d07168f3852b537e29d333d351b2692e551c7ccdfdd8533",
+      "size_bytes": 9856
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_1/row_122119/metadata.json",
+      "sha256": "0cde313d85235286c686558ff9e2710b8fa4a80e95df22c87f215e4861a83157",
+      "size_bytes": 8910
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_1/row_122119/spectra.png",
+      "sha256": "e5c4b2fb9af0b281a39717f03367e6147158599a61eea18f090b56914895afe8",
+      "size_bytes": 51288
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_1/row_122119/structure.png",
+      "sha256": "3dbf955c3d1f1276ed1d7d9be1d5a19162075d276641f2bd639d7908845e561c",
+      "size_bytes": 41024
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_1/row_122119/structure.svg",
+      "sha256": "7dae756a769163d4a7fa5fac386f06619323b337c30ce020db6421e9f2595135",
+      "size_bytes": 12120
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_ge2/row_123764/metadata.json",
+      "sha256": "fc4db6b2174cdf043fa773c216e70562839600777ab3a5cb2a0f6fbb3a37fea0",
+      "size_bytes": 8936
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_ge2/row_123764/spectra.png",
+      "sha256": "d8f44f10fc83e8545755bb51cbcf029b8386fd1223dfcce5ce1e8dcde1254515",
+      "size_bytes": 53497
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_ge2/row_123764/structure.png",
+      "sha256": "2e78971e86306d5604399fb538f0ac1528237887d926c61f7b62a36de6793644",
+      "size_bytes": 46616
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_ge2/row_123764/structure.svg",
+      "sha256": "49c6ab52febcf72b508ab2bb64d8b29a5d9fb16b721144cf9d27386fc3de8d50",
+      "size_bytes": 13048
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_ge2/row_125242/metadata.json",
+      "sha256": "32e256a9f02dbaff71d8f5eefc901e55ef48cb0792e118ba87a4e4d41a6ba733",
+      "size_bytes": 8843
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_ge2/row_125242/spectra.png",
+      "sha256": "fecc9d8f13e9a9e4259777832ab48d114d2fddda3058bb0e630b211de70fcb8f",
+      "size_bytes": 51225
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_ge2/row_125242/structure.png",
+      "sha256": "0d44dfe3481482621a841288102c7b297508ada1d4d00645f656967027e5cf30",
+      "size_bytes": 45854
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/aromatic_ring_count_ge2/row_125242/structure.svg",
+      "sha256": "f287d3db3f2f3fcb459b7615955d7069755c66358371d6b1c0b0c3b3ba541474",
+      "size_bytes": 13145
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_ge0.5/row_079443/metadata.json",
+      "sha256": "69de37d9b2bb5df7155a96b75201ac0a53b378c1cfa5d5723ae86d305667deaa",
+      "size_bytes": 9047
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_ge0.5/row_079443/spectra.png",
+      "sha256": "b76856641e662c102807f37a636fa77a78abba33fe196fc2b3fd0f7862f20bd2",
+      "size_bytes": 51353
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_ge0.5/row_079443/structure.png",
+      "sha256": "9e1cf290ec56b19936a9a88ec634cb77b70afe869113ab30b6fd2bd9e3305091",
+      "size_bytes": 46118
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_ge0.5/row_079443/structure.svg",
+      "sha256": "e89ced8d21b23537f358a56137d24d187efd63c0eda5f50588948f49087e0efd",
+      "size_bytes": 11908
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_ge0.5/row_129434/metadata.json",
+      "sha256": "a6a79eceb1d9e62331f74256af5d470ba534df8e12e047b91016530262198f36",
+      "size_bytes": 9056
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_ge0.5/row_129434/spectra.png",
+      "sha256": "4c3d1a294d748a2826e044bdc8de0dbe28541d14fab261ec32317b857f86033c",
+      "size_bytes": 52351
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_ge0.5/row_129434/structure.png",
+      "sha256": "c90cc56bfb0e08569ade52847b098bdc170b99a655a588bdac05c781d6b78d94",
+      "size_bytes": 31879
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_ge0.5/row_129434/structure.svg",
+      "sha256": "5c1d9eae27792d93e7d7ebe16f5ccec554c2cf1db0e8b468cceb2c09c6a560d9",
+      "size_bytes": 10840
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_lt0.5/row_003791/metadata.json",
+      "sha256": "99647498e75c60659ac4089b6f54d21e26e6d6fd5552c921eb5201d6a2fe2846",
+      "size_bytes": 8972
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_lt0.5/row_003791/spectra.png",
+      "sha256": "0102e88c7964f5ef149d942e30ecc1e56f1b21faed095a3a6676d962a6fe5bbb",
+      "size_bytes": 49909
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_lt0.5/row_003791/structure.png",
+      "sha256": "38531fb4fe55a64f096e1836e88fa3a26bd1db65c853f0835f2ff6dcce390682",
+      "size_bytes": 28736
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_lt0.5/row_003791/structure.svg",
+      "sha256": "5d86acc7a04d631b2d07168f3852b537e29d333d351b2692e551c7ccdfdd8533",
+      "size_bytes": 9856
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_lt0.5/row_021270/metadata.json",
+      "sha256": "00b5afb60851ae2d5a5a0437b4abd0766dd74f687932cdbf2311dc5682217878",
+      "size_bytes": 8819
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_lt0.5/row_021270/spectra.png",
+      "sha256": "b585f85bb58564d75bef6d7df9414cfa5950dedfc6f321d240f47f19e08c1fa7",
+      "size_bytes": 52374
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_lt0.5/row_021270/structure.png",
+      "sha256": "cc985074942f9f32e84007210f233d944ef7b2c129046075057903e7856e18f0",
+      "size_bytes": 36709
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/fraction_csp3_lt0.5/row_021270/structure.svg",
+      "sha256": "6f47fa1c82029423e43cb4da8f01a8149730117e1bd6300b59888e3701d40f13",
+      "size_bytes": 11775
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_alkyne/row_076917/metadata.json",
+      "sha256": "6ae31f9dd251d966a0380c3adf3b0fcaf37eb5417648ec659ac545c771578ba6",
+      "size_bytes": 9028
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_alkyne/row_076917/spectra.png",
+      "sha256": "41a030066ce74c2227d601a88fe4ee44abbe580cec1dc79f0ed7f81446f44abf",
+      "size_bytes": 51935
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_alkyne/row_076917/structure.png",
+      "sha256": "bcdc29c3dc7cf1c09738992f6e7f27363b9c5e0f83252f14da6971366657ec18",
+      "size_bytes": 44555
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_alkyne/row_076917/structure.svg",
+      "sha256": "6204b737c47093df543d1b15cc2b9e57304acbe8fa5768ba05a8ac38a8272296",
+      "size_bytes": 12111
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_alkyne/row_099321/metadata.json",
+      "sha256": "af37d5aff4a3ef8daeb4fcd12d26037170d5053a8204dfc7d3ef55b93c6a5346",
+      "size_bytes": 9039
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_alkyne/row_099321/spectra.png",
+      "sha256": "8e1f41f297f80599070ab985dfadb800512e7c9957667463bd17cd92a9f82d8e",
+      "size_bytes": 52237
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_alkyne/row_099321/structure.png",
+      "sha256": "50baf240c98995e82f4aa7204b4af72581036b6164d628debac42cc137dffe73",
+      "size_bytes": 37521
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_alkyne/row_099321/structure.svg",
+      "sha256": "4b3995a8677fdb2bb38bec436adc25ce4a03e9b8dd912bee6fe8eed003da83d8",
+      "size_bytes": 11268
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_amine/row_032460/metadata.json",
+      "sha256": "5c7458daa6c5d7a89e102686cf477fe524378cab8219e05cea1720dcff1ed109",
+      "size_bytes": 8998
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_amine/row_032460/spectra.png",
+      "sha256": "2e1be06d1fea39734018ae4865ceb5e207a1b824521e8e0f940ee5aa7c7f19ba",
+      "size_bytes": 53942
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_amine/row_032460/structure.png",
+      "sha256": "49af771396d360bb10980a54c3d1029fc416c6050014fc0ccf2181281e3c033e",
+      "size_bytes": 48261
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_amine/row_032460/structure.svg",
+      "sha256": "c4965d86442c61d9650a4e906eb25b3b289a5f92ddd7707c25b9f17e16bf6525",
+      "size_bytes": 12470
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_amine/row_046293/metadata.json",
+      "sha256": "5df125bb3096f3e9ebe8da1cc5b24bdb31818dc9ee1cf14d975a47422e4a3956",
+      "size_bytes": 9064
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_amine/row_046293/spectra.png",
+      "sha256": "3e08ff4def2c0999259665a5afea4a98080ed470b731b2afdee36086a96fd893",
+      "size_bytes": 53766
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_amine/row_046293/structure.png",
+      "sha256": "81a37e2f69387a3bcfdbbe4e7b18c8d3b499a6980712df2bb7b3463474e1a9cd",
+      "size_bytes": 36896
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_amine/row_046293/structure.svg",
+      "sha256": "606aac51c7474c381cdbfb74d0b03c83d939d2d62c61ddc20778f2ded99829fc",
+      "size_bytes": 12240
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_carbonyl/row_063995/metadata.json",
+      "sha256": "42831700a2af12ed7b2b12deabee4c441d5b9c166c8e6fa9efa54afbfaf1df0f",
+      "size_bytes": 9030
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_carbonyl/row_063995/spectra.png",
+      "sha256": "e36a8c49bf079673ed6d58eab56ff1127688e31fbd301627c3b833d5bb512b81",
+      "size_bytes": 53662
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_carbonyl/row_063995/structure.png",
+      "sha256": "08d29b56d8f26b3f73f7df0f642df845fbf525bef5597f6208d98a6faaaa2c0d",
+      "size_bytes": 44688
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_carbonyl/row_063995/structure.svg",
+      "sha256": "b4f72ce4fcfe003af301ddd029ea769e5e8a5be05edfce337d58463b221078f3",
+      "size_bytes": 12200
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_carbonyl/row_099124/metadata.json",
+      "sha256": "48def6cb9a248c86243a92eed3adc1e662aa6b00b6e646c3c1a905eea80b2eb8",
+      "size_bytes": 9067
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_carbonyl/row_099124/spectra.png",
+      "sha256": "1a71e6c4713a773e6d70bb26166624858de9639911d9b0f0757e343d2f3adfcc",
+      "size_bytes": 52312
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_carbonyl/row_099124/structure.png",
+      "sha256": "c8524238a5f923f5871a96dcfc3ddff55d21f5a9e255da4001ac28564f3027cf",
+      "size_bytes": 34152
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_carbonyl/row_099124/structure.svg",
+      "sha256": "a1ec4e988ef0862e7d20cd58d20945f508ab105b93e21530514c03b5f5ab95bf",
+      "size_bytes": 12379
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_hydroxyl/row_108517/metadata.json",
+      "sha256": "a50ce7659ff95d9d7092efbbcc15d08725d9ff39f8d9d5df6e7050b403bdd7ba",
+      "size_bytes": 8973
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_hydroxyl/row_108517/spectra.png",
+      "sha256": "b04d3a59d1d1c31f3695440ba8bf44c6a955d31f6d5e31b18d37881cb229c585",
+      "size_bytes": 52849
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_hydroxyl/row_108517/structure.png",
+      "sha256": "bc85aa172fade1a739d9ed4392e6f66c5ed3a509bb56980065fe431c8f3e31f8",
+      "size_bytes": 38145
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_hydroxyl/row_108517/structure.svg",
+      "sha256": "6634b2f3a98540c43830f7439f9a6ba1985c6f91bc1be65c5c062c40982ef943",
+      "size_bytes": 11795
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_hydroxyl/row_113991/metadata.json",
+      "sha256": "24507e1cb4b12960ccbfa7f48e0f3b9753c408cc43f0b157c5c10fa0caf21d8a",
+      "size_bytes": 9066
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_hydroxyl/row_113991/spectra.png",
+      "sha256": "08c009f7e25dee64b12524aafddb5ac029b914493f27af0d3c997bed1074a73f",
+      "size_bytes": 50606
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_hydroxyl/row_113991/structure.png",
+      "sha256": "3bac2f74555ac6fd154da24777f7aca215981201282c11377359505dbfbaa90a",
+      "size_bytes": 30459
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_hydroxyl/row_113991/structure.svg",
+      "sha256": "41cc3adf2b7bcb59fcd50e54c9475c187b9bc43269efb20168ba4d406d6745c9",
+      "size_bytes": 12166
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_nitrile/row_035249/metadata.json",
+      "sha256": "5f21861528c524a77817f7ba6b0d31fe0b631d533e4b238d68dc9e33acfe1000",
+      "size_bytes": 9001
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_nitrile/row_035249/spectra.png",
+      "sha256": "ea6c53dd1c7eaa1a881683fab229a998049361e931e9a34ee663369f4ef4ef7f",
+      "size_bytes": 54153
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_nitrile/row_035249/structure.png",
+      "sha256": "91b67869ade819dc79e21ee37b3d5d252a40db5c401ebd7df4947d55d5dc2dc2",
+      "size_bytes": 34591
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_nitrile/row_035249/structure.svg",
+      "sha256": "d23fab293d531b3b28d372fbcb7243f03e03c8e6d92146ac35b1b072c398292c",
+      "size_bytes": 11940
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_nitrile/row_113991/metadata.json",
+      "sha256": "bf5d214da9bce7c7a383ca479b47450c9c23baa5b11f5a24c273fcf372afd007",
+      "size_bytes": 9064
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_nitrile/row_113991/spectra.png",
+      "sha256": "08c009f7e25dee64b12524aafddb5ac029b914493f27af0d3c997bed1074a73f",
+      "size_bytes": 50606
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_nitrile/row_113991/structure.png",
+      "sha256": "3bac2f74555ac6fd154da24777f7aca215981201282c11377359505dbfbaa90a",
+      "size_bytes": 30459
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/functional_group_nitrile/row_113991/structure.svg",
+      "sha256": "41cc3adf2b7bcb59fcd50e54c9475c187b9bc43269efb20168ba4d406d6745c9",
+      "size_bytes": 12166
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/heavy_atom_count_Q1/row_079333/metadata.json",
+      "sha256": "c67ca17a4beb9831848c0baa5580cadf0f6d3bad1db3a848e29951cf60c687f2",
+      "size_bytes": 9043
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/heavy_atom_count_Q1/row_079333/spectra.png",
+      "sha256": "3f6954f6471ff7d6892a8b2f75ed38953c7310ddb0d242fb8706951ebaff4637",
+      "size_bytes": 51949
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/heavy_atom_count_Q1/row_079333/structure.png",
+      "sha256": "3e3fb133a1ff19ee54864dcd3325814fc7ae4f921f67fc3d79ab34ed4b7367e7",
+      "size_bytes": 40001
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/heavy_atom_count_Q1/row_079333/structure.svg",
+      "sha256": "a40b830e1b71f4eb142b0c0b9461a8d7164a42b21ec6ad22fd792da383790b51",
+      "size_bytes": 12139
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/heavy_atom_count_Q1/row_129434/metadata.json",
+      "sha256": "50dbd8bd99cf52ad1ec66315d3855e94c31798ea0642d431fac65afa2905382f",
+      "size_bytes": 9067
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/heavy_atom_count_Q1/row_129434/spectra.png",
+      "sha256": "4c3d1a294d748a2826e044bdc8de0dbe28541d14fab261ec32317b857f86033c",
+      "size_bytes": 52351
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/heavy_atom_count_Q1/row_129434/structure.png",
+      "sha256": "c90cc56bfb0e08569ade52847b098bdc170b99a655a588bdac05c781d6b78d94",
+      "size_bytes": 31879
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/heavy_atom_count_Q1/row_129434/structure.svg",
+      "sha256": "5c1d9eae27792d93e7d7ebe16f5ccec554c2cf1db0e8b468cceb2c09c6a560d9",
+      "size_bytes": 10840
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_0/row_087857/metadata.json",
+      "sha256": "312bf9d05891ebe6fabacb222ddf16ed61b4a25a462966f727444104c4afa0c8",
+      "size_bytes": 8930
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_0/row_087857/spectra.png",
+      "sha256": "a4cb8a23bfeac4a1785734e57b346427c2139dba91adfe97ef241bb92e00b4d2",
+      "size_bytes": 51298
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_0/row_087857/structure.png",
+      "sha256": "05674c0f6f94764dc11644cad061cbf7bd96fac1a8de8db0bbca0058512ba1c2",
+      "size_bytes": 33728
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_0/row_087857/structure.svg",
+      "sha256": "08642a394792affacce4f0f37014d5c8a58923f70033fa3ebde9a220d640fb1b",
+      "size_bytes": 12360
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_0/row_119578/metadata.json",
+      "sha256": "3c17590ac5b29549547794cda51a54745184c8267acac926ab57fab6b402955e",
+      "size_bytes": 8970
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_0/row_119578/spectra.png",
+      "sha256": "4572b27e193cca52c85bd5bb02c0df9c668c1289c171435e81dc5103a198ca2f",
+      "size_bytes": 50839
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_0/row_119578/structure.png",
+      "sha256": "89c1a22ab2dd495c120915453105273d83243eaa7ce9feef4ca1d986e48b04e1",
+      "size_bytes": 32858
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_0/row_119578/structure.svg",
+      "sha256": "05980d42c663c7b21a156f76680da2f4c1bbac7d9b7d7b8e503dab8de09d9fe4",
+      "size_bytes": 11570
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_1/row_037287/metadata.json",
+      "sha256": "7a2f57532861ba77ab7c5a4f3793fef01c90babda753d280ad21d08bfb868ff1",
+      "size_bytes": 8998
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_1/row_037287/spectra.png",
+      "sha256": "3dde2c39801cfc20bc4449fcdba788fdc5699e58b5fa87543a9744a1c9c9f516",
+      "size_bytes": 51496
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_1/row_037287/structure.png",
+      "sha256": "e249edd9497db77833b8993d5da39755d88c9f2014aab66375d10fda37cb6eb3",
+      "size_bytes": 40081
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_1/row_037287/structure.svg",
+      "sha256": "2025b7cebeef04f7fba70349c7fada10dc4c9d979847d1ed0a5bed7f0215484c",
+      "size_bytes": 12226
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_1/row_057578/metadata.json",
+      "sha256": "d67fa77d16cc6004a050c771fcca7f5cc2cb83e213bccb5371d56ea83452d437",
+      "size_bytes": 8972
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_1/row_057578/spectra.png",
+      "sha256": "31d670bfce347ad2debf38fb5b8eb0cf5f52c994e6bb4347b7fd38882f8df232",
+      "size_bytes": 50541
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_1/row_057578/structure.png",
+      "sha256": "d9598956a1ec25be41b038b42a4468682cb0c25d42af1c92084587627b7d5f0a",
+      "size_bytes": 39777
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_1/row_057578/structure.svg",
+      "sha256": "98db9c814e3bc55f6f1fb222be6302593e04e0503b535fe4e84953c54e9dfdf0",
+      "size_bytes": 11357
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_2/row_085180/metadata.json",
+      "sha256": "4a5fc21c05ca7ad3592ef4187707301d0a6989f294552713fb6f9c9009bee168",
+      "size_bytes": 8956
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_2/row_085180/spectra.png",
+      "sha256": "acb9578bffbb50f45f570212075abc55c92942767383a2b2a9f7091968c5d0b5",
+      "size_bytes": 51912
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_2/row_085180/structure.png",
+      "sha256": "65104f0cf414a7180f312b472770fec7c8c61d12338fd418c64bbc31462d261c",
+      "size_bytes": 42665
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_2/row_085180/structure.svg",
+      "sha256": "0006661615c9820d3eb03a719bb49a83072ba28a348cfeeb0c2571aaea713447",
+      "size_bytes": 11260
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_2/row_088705/metadata.json",
+      "sha256": "d3e3d1ec06051998bd16c6d29810e971ecd41d2d54c828c6ca517f17d1a7adbf",
+      "size_bytes": 9032
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_2/row_088705/spectra.png",
+      "sha256": "bc93d5713ec5ff999f2dbc7edb429d5d87a54a8fb01b8873f51e4260f9230f4d",
+      "size_bytes": 51877
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_2/row_088705/structure.png",
+      "sha256": "647f7e3073c7aca8ff091d5f7703ff2af7b1ff811de5dc39e38ae614913dd3ba",
+      "size_bytes": 30264
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_2/row_088705/structure.svg",
+      "sha256": "4878fc3c2fdb7c441c2bc3c5e96fde89d553486e197045e59eeeca68f45b2db0",
+      "size_bytes": 11431
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_ge3/row_052972/metadata.json",
+      "sha256": "3fa104f0343d679bff276f5e7de1b7bfce61b751469dd7d62dd04c6b2e306952",
+      "size_bytes": 9009
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_ge3/row_052972/spectra.png",
+      "sha256": "2805ac2e7c83135eade54a1ee42217a16e83391857bb93c4b3abe8da0cd7240a",
+      "size_bytes": 52413
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_ge3/row_052972/structure.png",
+      "sha256": "a9d9933a327186a3c7250581e9aecd7b0158557867ccb45d4d505cd09f2cc602",
+      "size_bytes": 42564
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_ge3/row_052972/structure.svg",
+      "sha256": "aea5466b08bc787a3d51796f39e6502aebc57302bfb72807a5b4b29c10b09a5b",
+      "size_bytes": 12237
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_ge3/row_129434/metadata.json",
+      "sha256": "ac6731c3ccfb98405a14e8abc932747311bae00835cc11cde323a957ee89e839",
+      "size_bytes": 9044
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_ge3/row_129434/spectra.png",
+      "sha256": "4c3d1a294d748a2826e044bdc8de0dbe28541d14fab261ec32317b857f86033c",
+      "size_bytes": 52351
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_ge3/row_129434/structure.png",
+      "sha256": "c90cc56bfb0e08569ade52847b098bdc170b99a655a588bdac05c781d6b78d94",
+      "size_bytes": 31879
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/n_o_f_ge3/row_129434/structure.svg",
+      "sha256": "5c1d9eae27792d93e7d7ebe16f5ccec554c2cf1db0e8b468cceb2c09c6a560d9",
+      "size_bytes": 10840
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_0/row_008489/metadata.json",
+      "sha256": "1d4d37450fa78848a8c7dd126417c5fce7a1d1e6d061def530538574f956ec8a",
+      "size_bytes": 8965
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_0/row_008489/spectra.png",
+      "sha256": "2d2e5b5a49584295fe34b52fc912a9fd153e0b5e7bfa78c6f7e9ea06114d7d88",
+      "size_bytes": 52332
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_0/row_008489/structure.png",
+      "sha256": "f326dba4d9e734c5a52aa29319991839a51d387987ac1a99e315ea8a98985c3d",
+      "size_bytes": 33375
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_0/row_008489/structure.svg",
+      "sha256": "c42446c8ace96e38d092ea73d46f8e015379e8d34f608e3aad00036861b11c92",
+      "size_bytes": 11004
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_0/row_129434/metadata.json",
+      "sha256": "ddbb3057dd77419d485417857b4cde8fff2cf85eb077ce3d4832b91bc2773ec6",
+      "size_bytes": 9028
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_0/row_129434/spectra.png",
+      "sha256": "4c3d1a294d748a2826e044bdc8de0dbe28541d14fab261ec32317b857f86033c",
+      "size_bytes": 52351
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_0/row_129434/structure.png",
+      "sha256": "c90cc56bfb0e08569ade52847b098bdc170b99a655a588bdac05c781d6b78d94",
+      "size_bytes": 31879
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_0/row_129434/structure.svg",
+      "sha256": "5c1d9eae27792d93e7d7ebe16f5ccec554c2cf1db0e8b468cceb2c09c6a560d9",
+      "size_bytes": 10840
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_1/row_031468/metadata.json",
+      "sha256": "732af30065f30d1238214b151065001b4f31486e9a5a82708f3d6911b7495229",
+      "size_bytes": 8819
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_1/row_031468/spectra.png",
+      "sha256": "f43505ea4c3abb9ed19143b22848a97020094f2e68a2fb586f954786992461a4",
+      "size_bytes": 54042
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_1/row_031468/structure.png",
+      "sha256": "247f8fbbc2b60d102e474886aecf319094762d9e2936d9531f5ea4f557245c68",
+      "size_bytes": 34356
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_1/row_031468/structure.svg",
+      "sha256": "46253e3fa0b71d3b4b16455c0793e75982dba70af20a216dcd08af901f54fee3",
+      "size_bytes": 11819
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_1/row_093681/metadata.json",
+      "sha256": "392402810306607dbde0a6fb0c37755073d557a6565f4dc2a650356d5d13dd01",
+      "size_bytes": 9029
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_1/row_093681/spectra.png",
+      "sha256": "d7fa47d46866a558bd88b9a1256fff189feeb5909322cf542d8ca4623e52e60c",
+      "size_bytes": 53544
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_1/row_093681/structure.png",
+      "sha256": "0dd56583547af8bce07f70273b2a1f85d21b646fe1b300576cb94235a125d99e",
+      "size_bytes": 39846
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_1/row_093681/structure.svg",
+      "sha256": "2e12e84c9f28eaef9c22646bc1c3177a5bdfe06183d7b62fea748c9868d8551b",
+      "size_bytes": 11962
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_2/row_079416/metadata.json",
+      "sha256": "1f72e323ec0516939603e0d81bb5b36fb03bfa1ffb2abfa2aed4055a3fd483ed",
+      "size_bytes": 9024
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_2/row_079416/spectra.png",
+      "sha256": "5818b603dcad71c897a6edb3256318f417c38d1e6a864bd3c91c534dbd97eb61",
+      "size_bytes": 53011
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_2/row_079416/structure.png",
+      "sha256": "308e427f5eb1b15e9080be7091c3b081902c53b9e9fc873a41aab0e82527b272",
+      "size_bytes": 41877
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_2/row_079416/structure.svg",
+      "sha256": "0ad0bc918a82174e2ff00f79a616a8ece9b1b75dee9ac3def436fdc16330b103",
+      "size_bytes": 11636
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_2/row_088705/metadata.json",
+      "sha256": "2caaf9d21d4005004139daa1745887c35939109972a638044b6d508e4673ba66",
+      "size_bytes": 9042
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_2/row_088705/spectra.png",
+      "sha256": "bc93d5713ec5ff999f2dbc7edb429d5d87a54a8fb01b8873f51e4260f9230f4d",
+      "size_bytes": 51877
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_2/row_088705/structure.png",
+      "sha256": "647f7e3073c7aca8ff091d5f7703ff2af7b1ff811de5dc39e38ae614913dd3ba",
+      "size_bytes": 30264
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_2/row_088705/structure.svg",
+      "sha256": "4878fc3c2fdb7c441c2bc3c5e96fde89d553486e197045e59eeeca68f45b2db0",
+      "size_bytes": 11431
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_ge3/row_065226/metadata.json",
+      "sha256": "7b5e3da29510aee87d97bcd31f7054a73a4b4da1f0f1fcd9af1c1f5eca29e456",
+      "size_bytes": 9040
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_ge3/row_065226/spectra.png",
+      "sha256": "3329aa87ecaf1831128e12298ff0fad180317e10ebb75d2b897685e136f752ca",
+      "size_bytes": 51320
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_ge3/row_065226/structure.png",
+      "sha256": "49d8fcb7faaa83ec9562e7d4e97e4fcb641d4d194b8828dcf4ffd3d5b89b4805",
+      "size_bytes": 42769
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_ge3/row_065226/structure.svg",
+      "sha256": "2619d86098f6ba049f0e1c7d707640ea89103d649415e5a053470003a5cc1c41",
+      "size_bytes": 12463
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_ge3/row_077165/metadata.json",
+      "sha256": "ab28984efa96414aea55fb3748429784f73c0acd83746e6ccf15bc96d690f1ea",
+      "size_bytes": 9005
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_ge3/row_077165/spectra.png",
+      "sha256": "07dcf37e643f22ffc3f2aa6cce0bfc5317737c54fd857da621dc3e145594ae91",
+      "size_bytes": 51601
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_ge3/row_077165/structure.png",
+      "sha256": "a4ab0436ac451d805a44ffa591c94e4a1ee72a60a84021f69563557667e61247",
+      "size_bytes": 37486
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/ring_count_ge3/row_077165/structure.svg",
+      "sha256": "47333388a8c6dbb2468ec968da2ed764f035e3bcbc432db09c9c3cc4b9d23ecc",
+      "size_bytes": 12631
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_0/row_085609/metadata.json",
+      "sha256": "1ceb9a7fc3a804d2a20d7fe7a9a04280e3e0201c09b8886248674668ad196a31",
+      "size_bytes": 8984
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_0/row_085609/spectra.png",
+      "sha256": "2b9e0244e2e730e41e5626460a9804b49cab3622a19de848271621c9dfacadfd",
+      "size_bytes": 54445
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_0/row_085609/structure.png",
+      "sha256": "a3e3aad9b03f2e6f10b1ae8c3bf32f970a1f7cc3c4e38de7084e7d776b6c369b",
+      "size_bytes": 44779
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_0/row_085609/structure.svg",
+      "sha256": "c3528808bd60dcd03558ef9f4c44452def71399eeb5d54139e869f8b43aaa84c",
+      "size_bytes": 11787
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_0/row_088705/metadata.json",
+      "sha256": "9780bb0c4150252a35383d368633d625c760e993be28744ee0f3eda699110ef1",
+      "size_bytes": 9070
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_0/row_088705/spectra.png",
+      "sha256": "bc93d5713ec5ff999f2dbc7edb429d5d87a54a8fb01b8873f51e4260f9230f4d",
+      "size_bytes": 51877
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_0/row_088705/structure.png",
+      "sha256": "647f7e3073c7aca8ff091d5f7703ff2af7b1ff811de5dc39e38ae614913dd3ba",
+      "size_bytes": 30264
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_0/row_088705/structure.svg",
+      "sha256": "4878fc3c2fdb7c441c2bc3c5e96fde89d553486e197045e59eeeca68f45b2db0",
+      "size_bytes": 11431
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_1/row_056978/metadata.json",
+      "sha256": "6ed267c6409a75a99178ce181afe20993f59ed766eff6251849d0ca5c34a9bdc",
+      "size_bytes": 9026
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_1/row_056978/spectra.png",
+      "sha256": "8b5845f897169128563a40912e55b830fe1d6a5c4a65afaaf70ff9dca5b53f16",
+      "size_bytes": 53653
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_1/row_056978/structure.png",
+      "sha256": "f5aa3aa49444dedc799cb2438d03c2f2d9f528cc27ff9d01a160ab0b5c3087f6",
+      "size_bytes": 32972
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_1/row_056978/structure.svg",
+      "sha256": "cef40bd074e05a41a17ef10fe286154039b14a47ec2f32d25d1f73f3fb8b7720",
+      "size_bytes": 11735
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_1/row_129434/metadata.json",
+      "sha256": "9c017ef06ac8637b0ffc92c57692e7001d46f85b60193561f7f9385dc4b7650d",
+      "size_bytes": 9062
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_1/row_129434/spectra.png",
+      "sha256": "4c3d1a294d748a2826e044bdc8de0dbe28541d14fab261ec32317b857f86033c",
+      "size_bytes": 52351
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_1/row_129434/structure.png",
+      "sha256": "c90cc56bfb0e08569ade52847b098bdc170b99a655a588bdac05c781d6b78d94",
+      "size_bytes": 31879
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_1/row_129434/structure.svg",
+      "sha256": "5c1d9eae27792d93e7d7ebe16f5ccec554c2cf1db0e8b468cceb2c09c6a560d9",
+      "size_bytes": 10840
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_ge2/row_058778/metadata.json",
+      "sha256": "8c240e7d3c9b87b8b1756e9b78198f40c5b1c74b29e0439f5337c0a884b03a79",
+      "size_bytes": 9039
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_ge2/row_058778/spectra.png",
+      "sha256": "750800aeef186489d7e8ccf8dfa6dc7a0fd771584d97bddb5b646e447454a2df",
+      "size_bytes": 50737
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_ge2/row_058778/structure.png",
+      "sha256": "3c61bcd7bf3339f98dec2a35e11708f3956968fc930adbc17fc936f77b6ff179",
+      "size_bytes": 38662
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_ge2/row_058778/structure.svg",
+      "sha256": "1ed7a009ae1e58aae5c2d7955b376d1c242ebd8feff176d834e4a06c7770969d",
+      "size_bytes": 11995
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_ge2/row_113991/metadata.json",
+      "sha256": "4db7ae698b02ca2cbc5962cd2e3e17054d52ec1f8da04257013ab5c5ed6170a9",
+      "size_bytes": 9058
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_ge2/row_113991/spectra.png",
+      "sha256": "08c009f7e25dee64b12524aafddb5ac029b914493f27af0d3c997bed1074a73f",
+      "size_bytes": 50606
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_ge2/row_113991/structure.png",
+      "sha256": "3bac2f74555ac6fd154da24777f7aca215981201282c11377359505dbfbaa90a",
+      "size_bytes": 30459
+    },
+    {
+      "path": "representative_molecules/UVSPEC15/examples/rotatable_bond_count_ge2/row_113991/structure.svg",
+      "sha256": "41cc3adf2b7bcb59fcd50e54c9475c187b9bc43269efb20168ba4d406d6745c9",
+      "size_bytes": 12166
+    },
+    {
+      "path": "tables/conditional_bootstrap_ci.csv",
+      "sha256": "bc3db92ce06a6853991fb1b49065deadf9151ef57d1d8c256e0b61fa324698b3",
+      "size_bytes": 7005
+    },
+    {
+      "path": "tables/conditional_complementarity.csv",
+      "sha256": "f4a243b1c4019c8e7da1ef839d1010b09e79bd37ac3dafd8fe9c26628678cba4",
+      "size_bytes": 16492
+    },
+    {
+      "path": "tables/hypothesis_evaluation.csv",
+      "sha256": "4855f47557623d69660ea4f1d8e54030714acb0b296a45a670268ad7e9305a8f",
+      "size_bytes": 975
+    },
+    {
+      "path": "tables/mcnemar_holm.csv",
+      "sha256": "a765ec6ddd3a26253f51bca43f9f748e2db23a2ad32933cf24bedda3444ff31e",
+      "size_bytes": 121705
+    },
+    {
+      "path": "tables/micro_macro_summary.csv",
+      "sha256": "9e1ea0e9be62b5edfafa249977193a3cf58be85aa0f649ab46b91fcd7a245de1",
+      "size_bytes": 7219
+    },
+    {
+      "path": "tables/overall_metrics.csv",
+      "sha256": "59e4a27e3ad77dc6447a42ca3d764fff029df355a42a03715cc83d6277ea8c0b",
+      "size_bytes": 6953
+    },
+    {
+      "path": "tables/paired_differences_per_seed.csv",
+      "sha256": "3d5b4673c625c93d76d001ba218a896501d1879006bd8aae2162ee94bf31d78f",
+      "size_bytes": 186507
+    },
+    {
+      "path": "tables/paired_differences_three_seed.csv",
+      "sha256": "eee02a244f567fe0113725ffc21bff73bf9a98ee56bc1ac99223643e583abff5",
+      "size_bytes": 76442
+    },
+    {
+      "path": "tables/pairwise_error_complementarity.csv",
+      "sha256": "80f6767975f9dfcde42660c22c2e23b7df6038ba8d5abcfca94f6eaef14d179e",
+      "size_bytes": 118423
+    },
+    {
+      "path": "tables/pairwise_or_and.csv",
+      "sha256": "d9453ddfe384795c3799933ed3fc972436c472e8eb35d6096cd131d15aaa1de0",
+      "size_bytes": 5601
+    },
+    {
+      "path": "tables/per_label_metrics.csv",
+      "sha256": "4d3e4bfd7ed1f3dddea168dc8cef05a1e47dfb2585d6b56256a50239d052a90e",
+      "size_bytes": 111829
+    },
+    {
+      "path": "tables/representative_molecules.csv",
+      "sha256": "e1a5f810d341e83d5a899efe11b3433ac08968dcd47c8d646d2332ed62c851c7",
+      "size_bytes": 37183
+    },
+    {
+      "path": "tables/sample_error_summary.csv",
+      "sha256": "e08d128b7676c67d2b6cbfa156e1ef95a1730119fdf79f8d140054116cd629ce",
+      "size_bytes": 4104
+    },
+    {
+      "path": "tables/seed_mean_sd.csv",
+      "sha256": "f1028ee0162fc207e835cfbb42bcfed7c6f3d354364864005a83cfbac41c7f74",
+      "size_bytes": 5995
+    },
+    {
+      "path": "tables/subgroup_bootstrap_ci.csv",
+      "sha256": "292dc740eac0ca96e8162ce93142a672625dcc4d0f2a1736b53dc7284ca59ec0",
+      "size_bytes": 85073
+    },
+    {
+      "path": "tables/subgroup_metrics.csv",
+      "sha256": "04ab07fe6ef84b87622a4db8ff9284970d0dabd5148326267dea700b4b847bc6",
+      "size_bytes": 1769210
+    },
+    {
+      "path": "tables/three_modality_or.csv",
+      "sha256": "be6989c611b6b29e4e6d73b8b0f0bd32707f6983ab5bd73d238d05617018ed43",
+      "size_bytes": 1261
+    },
+    {
+      "path": "tables/true_oracle_per_label.csv",
+      "sha256": "315a17772cd159fea885179f0168516e002ef77e98de141b4c4a0c260656c80c",
+      "size_bytes": 14256
+    },
+    {
+      "path": "tables/true_oracle_summary.csv",
+      "sha256": "d6913aaea54fa37e8e2fa46c3734c44ee3a2e703bd38913e22dd90930e65a698",
+      "size_bytes": 2023
+    }
+  ],
+  "code": {
+    "builder": "training\\line_b\\build_line_b_final_report.py",
+    "builder_sha256": "9bdb2dc2dd11666c8a6f9d6cbfbca91862a757961d3dac0fc5a5f8decc4de117",
+    "verifier": "training/line_b/verify_b5_final_report.py",
+    "verifier_sha256": "b516b542ab9b5cbdae681b5b81ae53c07bf9122a557f33d594f5ed74f5d924f0"
+  }
+}

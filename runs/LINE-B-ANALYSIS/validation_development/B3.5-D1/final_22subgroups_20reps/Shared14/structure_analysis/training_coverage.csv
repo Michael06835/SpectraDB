@@ -1,0 +1,2 @@
+﻿task,rule,per_modality_train_n,common_train_n,excluded_from_common
+Shared14,intersection of ir/raman/uvvis authoritative Training indices; Test indices are never read,"{'ir': 103855, 'raman': 103855, 'uvvis': 103853}",103853,"{'ir': 2, 'raman': 2, 'uvvis': 0}"

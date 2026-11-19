@@ -1,0 +1,5 @@
+﻿hypothesis,verdict,evidence,note
+H1,PARTIAL SUPPORT,Shared14 macro AP IR/Raman/UV=0.9695/0.9551/0.5125; vibration gap=0.4451 vs other=0.4653,main IR/Raman>UV supported; vibration-label-gap clause not supported
+H2,REJECTED,UVSPEC15 macro AP UV/IR/Raman=0.5380/0.9709/0.9760; AUROC=0.9252/0.9977/0.9982,UV-Vis does not show the expected advantage in this task/metric system; does not mean UV has no electronic-structure information
+H3,PARTIAL SUPPORT,"Oracle any=0.9968/0.9989; three-OR gain range=[-0.2321,-0.0598]; UV rescue=0.4692/0.4984 vs marginal=0.8799/0.9246","errors complementary and Oracle ceiling high, but positive OR does not beat best_single and UV conditional rescue is below marginal; subgroup only_* enrichment not directly tested"
+H4,DESCRIPTIVELY SUPPORTED,"best-AP modality counts={'Shared14': {'ir': 19, 'raman': 2}, 'UVSPEC15': {'raman': 16, 'ir': 5}}",relative IR/Raman advantage varies by task and structural subgroup; no universal modality ranking

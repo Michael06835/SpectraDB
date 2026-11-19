@@ -1,0 +1,51 @@
+{
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "run_name": "EXP-IR-003-UVSPEC15-FULL",
+  "modality": "ir",
+  "seed": 42,
+  "split": "validation",
+  "test_split_accessed": false,
+  "calibration_split": "validation",
+  "in_sample_validation_f1": true,
+  "inputs": {
+    "prediction_manifest": {
+      "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\validation\\prediction_manifest.json",
+      "sha256": "d930886c5a61de5f5940f36dfd6509cbae4260f31624a5ffff1a271d63e1277a"
+    },
+    "probabilities": {
+      "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\validation\\probabilities.npy",
+      "sha256": "dc72a7e13e3dfae357e656eff97c74c101b418518ef55e01e0233237bd72c8bb"
+    },
+    "row_index": {
+      "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\validation\\row_index.npy",
+      "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4"
+    },
+    "labels": {
+      "path": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\validation\\labels.npy",
+      "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b"
+    },
+    "checkpoint": {
+      "path": "runs\\EXP-IR-003-UVSPEC15-FULL\\best_model.pt",
+      "sha256": "68c976d92b1b5f82c5d493b3ebab44b9e9953f1738d62f0ba760b3e6e79992fe"
+    },
+    "split": {
+      "path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+      "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb"
+    },
+    "label_names": {
+      "path": "processed\\qm9s\\prepared\\uvspec15_label_names.json",
+      "sha256": "c759f3d8e21ad841daf0e9ccb63e743acb36f39226b6b7f738a8d0e723cd9afc"
+    },
+    "label_matrix": {
+      "path": "processed\\qm9s\\prepared\\uvspec15_labels.npy",
+      "sha256": "f08170df62972828076b4cfdb1136b2890b86a4eec36f280466180f5c64f1705"
+    }
+  },
+  "outputs": {
+    "optimal_thresholds": "98e062029560be910526e8516b70531d3ef4e8c9a109cbedb3d9ed8a3a467110",
+    "validation_overall": "12aff2e59c4b4a054e0b5dd6a99989b03a3b077c2b2999e7f56e81b417b11809",
+    "validation_per_label_comparison": "84576ea567df6530275d3e76c1b8ba6e09daabee9e125051c67949b3cf898c71"
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,46 @@
+{
+  "phase": "B4.1-code-provenance",
+  "generated_at": "2026-11-20T01:56:23+08:00",
+  "freeze": {
+    "path": "runs/LINE-B-MANIFESTS/FREEZE.json",
+    "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c"
+  },
+  "b3_5a_code_provenance": {
+    "path": "runs/LINE-B-MANIFESTS/B3/code_provenance.json",
+    "sha256": "b1c5d2eb65b16f719dae971819c6f3623bcc1a355dc5eb89e687a25145e20e90",
+    "generated_at": "2026-11-18T22:18:57+08:00"
+  },
+  "changed_since_b3_5a": [
+    {
+      "file": "training/line_b/export_line_b_predictions.py",
+      "b3_5a_sha256": "c98245edbd1859664f5e684db5d677e96b4af52e6c7ca36ef50736fec762dec7",
+      "current_sha256": "a5a7d15f69aaa4adbae612288fdce86e3aff1822e23999c7d45e7ab24ec8fc26"
+    }
+  ],
+  "unchanged_b3_5a_files": [
+    "training/line_b/common.py",
+    "training/line_b/metrics.py",
+    "training/line_b/evaluate_line_b_multilabel.py",
+    "training/line_b/summarize_b1_exports.py",
+    "training/line_b/calibrate_line_b_thresholds.py",
+    "training/line_b/analyze_line_b_complementarity.py"
+  ],
+  "new_b4_1_files": [
+    {
+      "file": "training/line_b/run_b4_test_export.py",
+      "sha256": "124a2e9aab7c46518f0591086fb2342c2624c86971251f769684eb373e52e2af"
+    },
+    {
+      "file": "training/line_b/verify_b4_test_exports.py",
+      "sha256": "ea74086a1f35e9d3c9bc687e7f56037cea575bbec02181abc061686a8b7bc285"
+    }
+  ],
+  "impact": {
+    "b3_data_assets_unchanged": true,
+    "freeze_sha256_unchanged": true,
+    "b3_manifests_root_verifier_digest": "c099ae978071e14886b6f2e66997ee93eb80f6e4ecbfd91f0383df89ecb96a44",
+    "b3_manifests_root_matches_provenance": true,
+    "b3_verifier_rerun_note": "A full B3 verifier re-run would now report exactly one FAILED: code_provenance.current_source_sha for training/line_b/export_line_b_predictions.py, because the B3.5-A record pins the pre-B4.1 source (c98245ed...). This is the expected consequence of the user-authorized B4.1 minimal exporter extension; no data, threshold, checkpoint, Validation or B3 asset changed, FREEZE and its SHA are unchanged, and the historical provenance record must not be rewritten."
+  },
+  "note": "Additive B4.1 code-provenance record. It does not modify code_provenance.json, FREEZE.json or any frozen asset."
+}

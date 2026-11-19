@@ -1,0 +1,51 @@
+{
+  "task": "Shared14",
+  "label_set": "shared14",
+  "run_name": "EXP-RAMAN-001-SEED123",
+  "modality": "raman",
+  "seed": 123,
+  "split": "validation",
+  "test_split_accessed": false,
+  "calibration_split": "validation",
+  "in_sample_validation_f1": true,
+  "inputs": {
+    "prediction_manifest": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED123\\validation\\prediction_manifest.json",
+      "sha256": "1f746a75cee2e27664a13c53025a78292eb2f8e1e5b84ebfcc16fa9cf5c7f842"
+    },
+    "probabilities": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED123\\validation\\probabilities.npy",
+      "sha256": "c17d420218ccd7422596e10ea83830f0bdfe186a8b2b7a1295cbac54b7346b1d"
+    },
+    "row_index": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED123\\validation\\row_index.npy",
+      "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4"
+    },
+    "labels": {
+      "path": "runs\\LINE-B-PREDICTIONS\\Shared14\\Raman\\EXP-RAMAN-001-SEED123\\validation\\labels.npy",
+      "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e"
+    },
+    "checkpoint": {
+      "path": "runs\\EXP-RAMAN-001-SEED123\\best_model.pt",
+      "sha256": "84334c5e013490de75bc23f0f844880062150759947835cb29e18e80c9158298"
+    },
+    "split": {
+      "path": "processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+      "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610"
+    },
+    "label_names": {
+      "path": "processed\\qm9s\\prepared\\functional_group_label_names.json",
+      "sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942"
+    },
+    "label_matrix": {
+      "path": "processed\\qm9s\\prepared\\functional_group_labels.npy",
+      "sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4"
+    }
+  },
+  "outputs": {
+    "optimal_thresholds": "3be96864317a058d7aa19e7ffaee96e92a6494761d9a6092879b96fd117df04b",
+    "validation_overall": "00473b5e671e906ccb841a07954f9691e2a408ddcb77cbcc64e41017a1b8e61b",
+    "validation_per_label_comparison": "e63a6a8877792ae2d0ca084de21b2c7310eaa66f50775faed3efa8ce18563d4f"
+  },
+  "all_checks_pass": true
+}

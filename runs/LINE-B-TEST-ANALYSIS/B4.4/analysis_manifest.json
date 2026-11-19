@@ -1,0 +1,203 @@
+{
+  "phase": "B4.4",
+  "generated_at": "2026-11-20T03:23:28+08:00",
+  "classification": {
+    "status": "exploratory/post-hoc",
+    "blind_test_claim": false,
+    "confirmatory_significance": false,
+    "positive_or_is_oracle": false
+  },
+  "config": {
+    "bootstrap_reps_conditional": 2000,
+    "bootstrap_reps_subgroup": 500,
+    "b4_3_draws_sha256": "1c2e7e92e92371b1f528e2e4561ee2d58e1f4dbfabc28838b2bfe1d7a899f3b6",
+    "b4_3_draws_reconstructed_match": true,
+    "rng_seed": 20261117,
+    "hc_fp_prob": 0.9,
+    "hc_fn_prob": 0.1,
+    "hard_fraction": 0.1,
+    "support_min_n": 100,
+    "support_min_positive": 30,
+    "best_single": {
+      "Shared14": "ir",
+      "UVSPEC15": "raman"
+    },
+    "conditional_ci_percentiles": [
+      2.5,
+      97.5
+    ]
+  },
+  "inputs": {
+    "freeze": {
+      "path": "runs\\LINE-B-MANIFESTS\\FREEZE.json",
+      "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c"
+    },
+    "b4_1": {
+      "predictions_root": "runs\\LINE-B-TEST-PREDICTIONS",
+      "prediction_manifests": [
+        "73a35e86ea0764ec44b325cf5eca4d1182e8c3ea500f4deed9a86a05d9a06f75",
+        "fe0bcc14b533e1ad455ce05c022234617e0ab66711a7565259e1e334d77b0d9b",
+        "d1c043d810cf7cfe848d441c8b8b75afb141343ecf47803fd152c4d65c72c3b6",
+        "26ad8ff4a89a80ec2b016dcd67f95e163a426df43d2b969b331f1d8e3a1ded44",
+        "e9d524e2da4181e88b04a39ea5396a63032ea8b383469f2279aff4eec87ee8fb",
+        "c37c5542028d5087d5ca9eaff7bf464f5598972dbe01f2272eb8ee769187a0b2",
+        "e69e27186839200dc6aa6ca9ce3e8784940aa33dc15b6a494c823330ccae93f2",
+        "4c5c6df0c42106bf3cb8db5e767c798a06231e9503e57b27f078e3aa9ec90204",
+        "bc1dbfc7dfc51f7c39cad17eea47a2e412282db215d12c43e4f1ea6b54a3b361",
+        "caa257101923ba6b923eed735b778b15ece764607665faf66b1c76ce9a1ca157",
+        "f2f6fa54969981855bade9958dbe81a02e46f990cafc133d41f619eeeae86771",
+        "c855350241efdedb7d95fafa97669c88a83005801622a74518ddeabb03a008d3",
+        "5bfc6ff21794b5cd5203511aa75fa500c0cb982959a746e1d61cd00d00d00db8",
+        "6685e34a6d75d30bee9b390efa3feb25830e6d2e8f59992031cae2f476055540",
+        "fa9544fbdbb8cabf01c65d9cd2ebafd138cdfabf9a4296678e21d50cba7226e0",
+        "ea8a1cd22debd4d12be22a6234c884e7e3c773ab3ce93d2f94a95750f4ac9d89",
+        "94aa319464149d7a25036204d9c54b343440b6209f78f8041b86c3d432c60bfa",
+        "3f836f487b1de4a6d946a8c9b49ed79f5f395381a942612fc52c61fd9781ae0f"
+      ]
+    },
+    "b4_2": {
+      "analysis_manifest": "d809e140437c1865e4b43212caae3d8a6ba0f61861d015138710228b35664d06",
+      "verification": "334eb9ef58c8745fbb25233acb9512e324e9dd4cb4153ea58eb339ad5ae401ce"
+    },
+    "b4_3": {
+      "analysis_manifest": "8e95fe5691795ece0fba5dd8838288b97a082e1efad5ea1214b03f59a1c3c3ae",
+      "verification": "ca57a505764dba4012c3269d424bf7ef72b1f70281a2778efc609007a110b34b"
+    },
+    "test_access_log": {
+      "path": "runs/LINE-B-MANIFESTS/test_access_log.json",
+      "sha256": "e7b0bd49dccf816504afcca1438755e2cc82522f4dda688d6b20c5afc740580a"
+    },
+    "structure_library": {
+      "path": "processed\\qm9s\\structures\\qm9s_structure_library.csv",
+      "sha256": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9"
+    },
+    "scaffold_manifest": {
+      "path": "processed\\qm9s\\prepared\\qm9s_manifest_prepared.csv",
+      "sha256": "e5fd1710bde44fe7e5c57bc7115d8d69751ac36cb70ea01e6e6351f48013e51c"
+    },
+    "d1_training_cooccurrence": {
+      "Shared14": {
+        "training_cooccurrence_counts.csv": "70ccf5d16f51917a9cb74b168a39240254189793b44110914aa3704100236935",
+        "training_cooccurrence_phi.csv": "8de4a43580d026c660e1c3ea781e05b4758bf32b715a759f307ebb399ebeac23",
+        "training_cooccurrence_cramers_v.csv": "8f24c12ce4768b21d5fa86670908ae988e4dc39f30a58dd4220f2d5474c2ac32",
+        "training_cooccurrence_support.csv": "c477614575b9b2e2ca170efc98a2921a91fe07dc145856f5b65e7d73371f744d"
+      },
+      "UVSPEC15": {
+        "training_cooccurrence_counts.csv": "9ad8e47f2531e23009a9ba9dc2df8c07f762f2a2e55c66b337ad8df3e66fed38",
+        "training_cooccurrence_phi.csv": "ab670080f5e0eaa2d43e2899f48bbcdcd373a7371dcc8571eb8580f9d67732d0",
+        "training_cooccurrence_cramers_v.csv": "e0beb5fa97f679f151fb1007d0dd55407422befd3f283565a66afee7d4b2d09d",
+        "training_cooccurrence_support.csv": "56b17a041f0f0026c54a159e9586792b5632e13aa12d4d02e779dd22467aff59"
+      }
+    }
+  },
+  "outputs": [
+    {
+      "path": "conditional_bootstrap_ci.csv",
+      "sha256": "bc3db92ce06a6853991fb1b49065deadf9151ef57d1d8c256e0b61fa324698b3",
+      "size_bytes": 7005
+    },
+    {
+      "path": "conditional_complementarity.csv",
+      "sha256": "f4a243b1c4019c8e7da1ef839d1010b09e79bd37ac3dafd8fe9c26628678cba4",
+      "size_bytes": 16492
+    },
+    {
+      "path": "conditional_replicates.npz",
+      "sha256": "2ad0d699f22dc874b485bdab3db8631436fbc99b73dc3674e3f3d36227b2fefb",
+      "size_bytes": 906674
+    },
+    {
+      "path": "hard_sample_summary.csv",
+      "sha256": "a958636b9ab4ec460b8ca973240b5a2e96eef96d80cf96f951b864044634949b",
+      "size_bytes": 3479
+    },
+    {
+      "path": "mcnemar_holm.csv",
+      "sha256": "a765ec6ddd3a26253f51bca43f9f748e2db23a2ad32933cf24bedda3444ff31e",
+      "size_bytes": 121705
+    },
+    {
+      "path": "oracle_per_label.csv",
+      "sha256": "315a17772cd159fea885179f0168516e002ef77e98de141b4c4a0c260656c80c",
+      "size_bytes": 14256
+    },
+    {
+      "path": "oracle_summary.csv",
+      "sha256": "d6913aaea54fa37e8e2fa46c3734c44ee3a2e703bd38913e22dd90930e65a698",
+      "size_bytes": 2023
+    },
+    {
+      "path": "pairwise_error_jaccard.csv",
+      "sha256": "428e7144da6c25a6cdf3ffc22cac93c4bf77d9ea42cb0b634ffd81967d5dc3f7",
+      "size_bytes": 50620
+    },
+    {
+      "path": "pairwise_metrics.csv",
+      "sha256": "80f6767975f9dfcde42660c22c2e23b7df6038ba8d5abcfca94f6eaef14d179e",
+      "size_bytes": 118423
+    },
+    {
+      "path": "pairwise_or_and.csv",
+      "sha256": "d9453ddfe384795c3799933ed3fc972436c472e8eb35d6096cd131d15aaa1de0",
+      "size_bytes": 5601
+    },
+    {
+      "path": "report.md",
+      "sha256": "ec5c5b8c645073249af2db4adf68406474a9c1d1dbf5a7770cd16eb5ebd4f0ae",
+      "size_bytes": 7625
+    },
+    {
+      "path": "sample_error_summary.csv",
+      "sha256": "e08d128b7676c67d2b6cbfa156e1ef95a1730119fdf79f8d140054116cd629ce",
+      "size_bytes": 4104
+    },
+    {
+      "path": "spearman.csv",
+      "sha256": "c6d39c135aaf37c3e2be80d7eadfa2462846e7468e0a596a0d5043302556d8f6",
+      "size_bytes": 2025
+    },
+    {
+      "path": "subgroup_bootstrap_ci.csv",
+      "sha256": "292dc740eac0ca96e8162ce93142a672625dcc4d0f2a1736b53dc7284ca59ec0",
+      "size_bytes": 85073
+    },
+    {
+      "path": "subgroup_bootstrap_replicates.npz",
+      "sha256": "e2c9ac40d02da83380c0d5a5ea50660002f8be94727b630ba808608cf2863234",
+      "size_bytes": 2020694
+    },
+    {
+      "path": "subgroup_complementarity.csv",
+      "sha256": "b24bdbf9521ab37e2ed539aa122fa28d78bca2a2abed887da44cfa43b8aea330",
+      "size_bytes": 340077
+    },
+    {
+      "path": "subgroup_metrics.csv",
+      "sha256": "04ab07fe6ef84b87622a4db8ff9284970d0dabd5148326267dea700b4b847bc6",
+      "size_bytes": 1769210
+    },
+    {
+      "path": "summary.json",
+      "sha256": "e3d72176ffc5bb95f771b2e33ab942726f413f88ebdaeb5c7f185694c9a09a66",
+      "size_bytes": 5037
+    },
+    {
+      "path": "three_modality_or.csv",
+      "sha256": "be6989c611b6b29e4e6d73b8b0f0bd32707f6983ab5bd73d238d05617018ed43",
+      "size_bytes": 1261
+    }
+  ],
+  "code": {
+    "analysis_script": "training\\line_b\\analyze_b4_test_complementarity.py",
+    "analysis_script_sha256": "573b3f558a75766d87d5ec0ab28e5dafae81d15bfa8661eb900202bd4874eb24",
+    "verifier": "training/line_b/verify_b4_4_analysis.py",
+    "verifier_sha256": "ed9cd24644ac85c9f8bc8996a98edf62a7670b29d9103bc08539c683b5b44e89"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.9.0",
+    "cwd": "E:\\Projects\\曦源计划\\数据\\SpectraDB"
+  }
+}

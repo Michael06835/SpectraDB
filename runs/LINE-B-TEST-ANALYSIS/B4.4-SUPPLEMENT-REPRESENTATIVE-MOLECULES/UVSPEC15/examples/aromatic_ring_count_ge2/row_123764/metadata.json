@@ -1,0 +1,263 @@
+{
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "subgroup": "aromatic_ring_count=>=2",
+  "dimension": "aromatic_ring_count",
+  "bin": ">=2",
+  "case": "error",
+  "row_index": 123764,
+  "seed": 42,
+  "threshold": 0.5,
+  "selection_rule": "error: max confidence; tie row_index asc",
+  "confidence": 0.9773686528205872,
+  "subgroup_median_confidence": 0.942171573638916,
+  "n_subgroup_samples": 93,
+  "n_correct_candidates": 21,
+  "n_error_candidates": 72,
+  "positive_counts": {
+    "has_conjugation": 93,
+    "has_nonaromatic_conjugation": 0,
+    "acyclic_conjugated_system": 0,
+    "cyclic_conjugated_system": 93,
+    "has_aromatic_system": 93,
+    "heteroaromatic": 93,
+    "mixed_aromatic_nonaromatic_conjugation": 2,
+    "pi_conjugated_carbonyl": 2,
+    "alpha_beta_unsaturated_carbonyl": 0,
+    "aryl_carbonyl": 0,
+    "pi_conjugated_imine": 0,
+    "pi_conjugated_nitrile": 0,
+    "has_donor_substituted_pi_system": 24,
+    "has_acceptor_substituted_pi_system": 2,
+    "donor_acceptor_same_conjugated_system": 0
+  },
+  "true_labels": {
+    "has_conjugation": 1,
+    "has_nonaromatic_conjugation": 0,
+    "acyclic_conjugated_system": 0,
+    "cyclic_conjugated_system": 1,
+    "has_aromatic_system": 1,
+    "heteroaromatic": 1,
+    "mixed_aromatic_nonaromatic_conjugation": 0,
+    "pi_conjugated_carbonyl": 0,
+    "alpha_beta_unsaturated_carbonyl": 0,
+    "aryl_carbonyl": 0,
+    "pi_conjugated_imine": 0,
+    "pi_conjugated_nitrile": 0,
+    "has_donor_substituted_pi_system": 0,
+    "has_acceptor_substituted_pi_system": 0,
+    "donor_acceptor_same_conjugated_system": 0
+  },
+  "predictions": {
+    "ir": {
+      "has_conjugation": 1,
+      "has_nonaromatic_conjugation": 0,
+      "acyclic_conjugated_system": 0,
+      "cyclic_conjugated_system": 1,
+      "has_aromatic_system": 1,
+      "heteroaromatic": 1,
+      "mixed_aromatic_nonaromatic_conjugation": 0,
+      "pi_conjugated_carbonyl": 0,
+      "alpha_beta_unsaturated_carbonyl": 0,
+      "aryl_carbonyl": 0,
+      "pi_conjugated_imine": 0,
+      "pi_conjugated_nitrile": 0,
+      "has_donor_substituted_pi_system": 0,
+      "has_acceptor_substituted_pi_system": 0,
+      "donor_acceptor_same_conjugated_system": 0
+    },
+    "raman": {
+      "has_conjugation": 1,
+      "has_nonaromatic_conjugation": 0,
+      "acyclic_conjugated_system": 0,
+      "cyclic_conjugated_system": 1,
+      "has_aromatic_system": 1,
+      "heteroaromatic": 1,
+      "mixed_aromatic_nonaromatic_conjugation": 0,
+      "pi_conjugated_carbonyl": 0,
+      "alpha_beta_unsaturated_carbonyl": 0,
+      "aryl_carbonyl": 0,
+      "pi_conjugated_imine": 0,
+      "pi_conjugated_nitrile": 0,
+      "has_donor_substituted_pi_system": 0,
+      "has_acceptor_substituted_pi_system": 0,
+      "donor_acceptor_same_conjugated_system": 0
+    },
+    "uvvis": {
+      "has_conjugation": 0,
+      "has_nonaromatic_conjugation": 0,
+      "acyclic_conjugated_system": 0,
+      "cyclic_conjugated_system": 0,
+      "has_aromatic_system": 0,
+      "heteroaromatic": 0,
+      "mixed_aromatic_nonaromatic_conjugation": 0,
+      "pi_conjugated_carbonyl": 0,
+      "alpha_beta_unsaturated_carbonyl": 0,
+      "aryl_carbonyl": 0,
+      "pi_conjugated_imine": 0,
+      "pi_conjugated_nitrile": 0,
+      "has_donor_substituted_pi_system": 0,
+      "has_acceptor_substituted_pi_system": 0,
+      "donor_acceptor_same_conjugated_system": 0
+    }
+  },
+  "probabilities": {
+    "ir": {
+      "has_conjugation": 1.0,
+      "has_nonaromatic_conjugation": 3.0613441469318214e-12,
+      "acyclic_conjugated_system": 1.8907437108998936e-23,
+      "cyclic_conjugated_system": 1.0,
+      "has_aromatic_system": 1.0,
+      "heteroaromatic": 1.0,
+      "mixed_aromatic_nonaromatic_conjugation": 4.247764081810601e-05,
+      "pi_conjugated_carbonyl": 4.9515403333089125e-08,
+      "alpha_beta_unsaturated_carbonyl": 1.0330061805952084e-10,
+      "aryl_carbonyl": 4.5503540491154126e-08,
+      "pi_conjugated_imine": 6.486545328643345e-11,
+      "pi_conjugated_nitrile": 1.9166174723694862e-12,
+      "has_donor_substituted_pi_system": 0.08232194930315018,
+      "has_acceptor_substituted_pi_system": 0.00020907178986817598,
+      "donor_acceptor_same_conjugated_system": 3.0245541893236805e-07
+    },
+    "raman": {
+      "has_conjugation": 1.0,
+      "has_nonaromatic_conjugation": 5.103379199268565e-13,
+      "acyclic_conjugated_system": 6.870339863075824e-19,
+      "cyclic_conjugated_system": 1.0,
+      "has_aromatic_system": 1.0,
+      "heteroaromatic": 1.0,
+      "mixed_aromatic_nonaromatic_conjugation": 8.78200125953299e-08,
+      "pi_conjugated_carbonyl": 4.492055893923208e-10,
+      "alpha_beta_unsaturated_carbonyl": 8.918203437359635e-16,
+      "aryl_carbonyl": 1.267684357486587e-08,
+      "pi_conjugated_imine": 4.2266020727765863e-07,
+      "pi_conjugated_nitrile": 5.577398352191176e-13,
+      "has_donor_substituted_pi_system": 3.895952249877155e-05,
+      "has_acceptor_substituted_pi_system": 7.811350769770797e-06,
+      "donor_acceptor_same_conjugated_system": 6.838897503858021e-11
+    },
+    "uvvis": {
+      "has_conjugation": 0.19937004148960114,
+      "has_nonaromatic_conjugation": 0.003143814392387867,
+      "acyclic_conjugated_system": 0.002341916784644127,
+      "cyclic_conjugated_system": 0.13811922073364258,
+      "has_aromatic_system": 0.14016127586364746,
+      "heteroaromatic": 0.1601554900407791,
+      "mixed_aromatic_nonaromatic_conjugation": 0.02275933139026165,
+      "pi_conjugated_carbonyl": 0.014859111979603767,
+      "alpha_beta_unsaturated_carbonyl": 0.00011026512220269069,
+      "aryl_carbonyl": 0.001888199127279222,
+      "pi_conjugated_imine": 0.002165635349228978,
+      "pi_conjugated_nitrile": 0.009135373868048191,
+      "has_donor_substituted_pi_system": 0.21113385260105133,
+      "has_acceptor_substituted_pi_system": 0.022545546293258667,
+      "donor_acceptor_same_conjugated_system": 0.00789878610521555
+    }
+  },
+  "errors": {
+    "ir": [],
+    "raman": [],
+    "uvvis": [
+      "has_conjugation",
+      "cyclic_conjugated_system",
+      "has_aromatic_system",
+      "heteroaromatic"
+    ]
+  },
+  "exact_match": {
+    "ir": true,
+    "raman": true,
+    "uvvis": false
+  },
+  "canonical_smiles": "Cn1cnn2ncnc12",
+  "structure_library_smiles": "Cn1cnn2ncnc12",
+  "molecular_formula": "C4H5N5",
+  "qm9_number": "127366",
+  "atom_labels": {
+    "1": "C1",
+    "2": "C2",
+    "3": "C3",
+    "4": "N1",
+    "5": "N2",
+    "6": "N3",
+    "7": "C4",
+    "8": "N4",
+    "9": "N5"
+  },
+  "structure_files": {
+    "png": "structure.png",
+    "svg": "structure.svg",
+    "renderer": "RDKit rdMolDraw2D"
+  },
+  "spectra_files": {
+    "png": "spectra.png"
+  },
+  "spectra_axes": {
+    "ir": {
+      "file": "processed\\qm9s\\prepared\\ir_axis.npy",
+      "n_points": 3501,
+      "min": 500.0,
+      "max": 4000.0,
+      "units": "not recorded in prepared metadata"
+    },
+    "raman": {
+      "file": "processed\\qm9s\\prepared\\raman_axis.npy",
+      "n_points": 3501,
+      "min": 500.0,
+      "max": 4000.0,
+      "units": "not recorded in prepared metadata"
+    },
+    "uvvis": {
+      "file": "processed\\qm9s\\prepared\\uvvis_axis.npy",
+      "n_points": 701,
+      "min": 1.0,
+      "max": 15.0,
+      "units": "not recorded in prepared metadata"
+    }
+  },
+  "spectra_matrices": {
+    "ir": {
+      "file": "processed\\qm9s\\prepared\\ir_float32.npy",
+      "sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53",
+      "shape": [
+        129817,
+        3501
+      ],
+      "dtype": "float32"
+    },
+    "raman": {
+      "file": "processed\\qm9s\\prepared\\raman_float32.npy",
+      "sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+      "shape": [
+        129817,
+        3501
+      ],
+      "dtype": "float32"
+    },
+    "uvvis": {
+      "file": "processed\\qm9s\\prepared\\uvvis_float32.npy",
+      "sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a",
+      "shape": [
+        129817,
+        701
+      ],
+      "dtype": "float32"
+    }
+  },
+  "source_hashes": {
+    "structure_library": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9",
+    "structure_library_file": "processed\\qm9s\\structures\\qm9s_structure_library.csv",
+    "d1_definitions": "1c3dea3a99d05d380c6da092f4c2ddbb21e79b5183ca46b2a66fd7f497cf2d53",
+    "d1_summary": "3c3c80b8913807b52f26a857b431c1e77b121a4a8ce7cb98d716dc6d8a3c1444",
+    "b4_1_prediction_manifest": {
+      "ir": "caa257101923ba6b923eed735b778b15ece764607665faf66b1c76ce9a1ca157",
+      "raman": "5bfc6ff21794b5cd5203511aa75fa500c0cb982959a746e1d61cd00d00d00db8",
+      "uvvis": "ea8a1cd22debd4d12be22a6234c884e7e3c773ab3ce93d2f94a95750f4ac9d89"
+    },
+    "b4_1_probabilities": {
+      "ir": "d5b524b34de8d5e7fe12739b35bdb1c6578f84b76c79c42be12d98763da4b0f7",
+      "raman": "6796369d19b817dd40c850b481731e8f659f0e8e23a1083dc0966c7e706e2e2f",
+      "uvvis": "04d87dfe89257d201082e4aeb7a7b6eae84d533bf67f46729b7a7cb3ff2f628d"
+    }
+  }
+}

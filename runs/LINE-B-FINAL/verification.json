@@ -1,0 +1,354 @@
+{
+  "phase": "B5",
+  "generated_at": "2026-11-20T05:17:05+08:00",
+  "status": "PASS",
+  "analysis_manifest": {
+    "path": "runs\\LINE-B-FINAL\\asset_manifest.json",
+    "sha256": "a7e5910b95e99534682da1a4f58f9acada756fe9d040cb8672a3aa331ad53877"
+  },
+  "summary": {
+    "n_checks": 67,
+    "n_failed": 0,
+    "n_tables": 19,
+    "n_figures": 11,
+    "n_representative": 88
+  },
+  "checks": [
+    {
+      "id": "input.protocol",
+      "ok": true,
+      "detail": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a"
+    },
+    {
+      "id": "input.freeze",
+      "ok": true,
+      "detail": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c"
+    },
+    {
+      "id": "input.test_access_log",
+      "ok": true,
+      "detail": "e7b0bd49dccf816504afcca1438755e2cc82522f4dda688d6b20c5afc740580a"
+    },
+    {
+      "id": "input.b4_2.manifest",
+      "ok": true,
+      "detail": "d809e140437c1865e4b43212caae3d8a6ba0f61861d015138710228b35664d06"
+    },
+    {
+      "id": "input.b4_2.verification",
+      "ok": true,
+      "detail": "334eb9ef58c8745fbb25233acb9512e324e9dd4cb4153ea58eb339ad5ae401ce"
+    },
+    {
+      "id": "input.b4_3.manifest",
+      "ok": true,
+      "detail": "8e95fe5691795ece0fba5dd8838288b97a082e1efad5ea1214b03f59a1c3c3ae"
+    },
+    {
+      "id": "input.b4_3.verification",
+      "ok": true,
+      "detail": "ca57a505764dba4012c3269d424bf7ef72b1f70281a2778efc609007a110b34b"
+    },
+    {
+      "id": "input.b4_4.manifest",
+      "ok": true,
+      "detail": "9afd176c0951c5084cb454e234a87d9de58f41773ac0ce29d79fae266e7c7c4f"
+    },
+    {
+      "id": "input.b4_4.verification",
+      "ok": true,
+      "detail": "f4e10b86737671b358ae31002b783d616a5014a4a1f3da3593df60d1fa0dadd3"
+    },
+    {
+      "id": "input.supplement.manifest",
+      "ok": true,
+      "detail": "404ef19b8c9d41374f9fb80a8ffb8cf7632a7d8408fb8166891b8033cb297224"
+    },
+    {
+      "id": "input.supplement.verification",
+      "ok": true,
+      "detail": "063808b8ecf1e28922662aa20f729d066feae2d828fd925d6055a61134d8584d"
+    },
+    {
+      "id": "input.b44_tree",
+      "ok": true,
+      "detail": "d3e69052171ae753849a47139f21a03460ba7f772bd8d95e5143f749b9007a69"
+    },
+    {
+      "id": "input.seed_models_18",
+      "ok": true,
+      "detail": "18"
+    },
+    {
+      "id": "input.pred_manifest.Shared14.ir.42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.Shared14.ir.123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.Shared14.ir.2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.Shared14.raman.42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.Shared14.raman.123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.Shared14.raman.2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.Shared14.uvvis.42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.Shared14.uvvis.123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.Shared14.uvvis.2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.ir.42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.ir.123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.ir.2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.raman.42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.raman.123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.raman.2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.uvvis.42",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.uvvis.123",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "input.pred_manifest.UVSPEC15.uvvis.2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "outputs.manifest_hashes",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "id": "coverage.models_18",
+      "ok": true,
+      "detail": "18"
+    },
+    {
+      "id": "coverage.tasks_labels",
+      "ok": true,
+      "detail": "{'Shared14': 14, 'UVSPEC15': 15}"
+    },
+    {
+      "id": "coverage.seeds",
+      "ok": true,
+      "detail": "[42, 123, 2026]"
+    },
+    {
+      "id": "coverage.policies",
+      "ok": true,
+      "detail": "['fixed_0.5', 'validation_f1']"
+    },
+    {
+      "id": "coverage.per_label_rows",
+      "ok": true,
+      "detail": "522"
+    },
+    {
+      "id": "coverage.overall_rows",
+      "ok": true,
+      "detail": "36"
+    },
+    {
+      "id": "coverage.micro_rows",
+      "ok": true,
+      "detail": "36"
+    },
+    {
+      "id": "coverage.paired_three_seed_rows",
+      "ok": true,
+      "detail": "372"
+    },
+    {
+      "id": "coverage.paired_per_seed_rows",
+      "ok": true,
+      "detail": "1116"
+    },
+    {
+      "id": "coverage.conditional_rows",
+      "ok": true,
+      "detail": "120/64"
+    },
+    {
+      "id": "coverage.subgroup_rows",
+      "ok": true,
+      "detail": "11484/504"
+    },
+    {
+      "id": "coverage.representative_88",
+      "ok": true,
+      "detail": "88"
+    },
+    {
+      "id": "numbers.micro_ap_auroc",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "id": "numbers.report_key_values",
+      "ok": true,
+      "detail": "key values present"
+    },
+    {
+      "id": "warn1.paired_difference",
+      "ok": true,
+      "detail": "report states Δ=Metric(base)-Metric(other), not absolute CI"
+    },
+    {
+      "id": "warn1.absolute_point_estimates",
+      "ok": true,
+      "detail": "absolute performance referred to B4.2 point estimates"
+    },
+    {
+      "id": "warn2.h3_not_tested",
+      "ok": true,
+      "detail": "H3 subgroup only_* enrichment explicitly marked not directly tested"
+    },
+    {
+      "id": "warn2.no_uv_enrichment_claim",
+      "ok": true,
+      "detail": "no UV-conjugation enrichment claim"
+    },
+    {
+      "id": "warn3.ap_not_chemical",
+      "ok": true,
+      "detail": "AP/AUROC != chemical information"
+    },
+    {
+      "id": "warn3.qm9s_not_experimental",
+      "ok": true,
+      "detail": "QM9S not experimental domain"
+    },
+    {
+      "id": "warn3.representative_qualitative",
+      "ok": true,
+      "detail": "representative molecules qualitative only"
+    },
+    {
+      "id": "hypotheses.table",
+      "ok": true,
+      "detail": "{'H1': 'PARTIAL SUPPORT', 'H2': 'REJECTED', 'H3': 'PARTIAL SUPPORT', 'H4': 'DESCRIPTIVELY SUPPORTED'}"
+    },
+    {
+      "id": "hypotheses.report",
+      "ok": true,
+      "detail": "{'H1': 'PARTIAL SUPPORT', 'H2': 'REJECTED', 'H3': 'PARTIAL SUPPORT', 'H4': 'DESCRIPTIVELY SUPPORTED'}"
+    },
+    {
+      "id": "figures.count",
+      "ok": true,
+      "detail": "11"
+    },
+    {
+      "id": "figures.valid_png",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "id": "report.references_exist",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "id": "representative.byte_identical",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "id": "readme.warn_fixes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.B4.2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.B4.3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.B4.4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.Supplement",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.b44_tree",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.freeze",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "frozen.protocol",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

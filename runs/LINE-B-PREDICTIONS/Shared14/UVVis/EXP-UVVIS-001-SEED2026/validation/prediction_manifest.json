@@ -1,0 +1,199 @@
+{
+  "task": "Shared14",
+  "label_set": "shared14",
+  "modality": "uvvis",
+  "run_name": "EXP-UVVIS-001-SEED2026",
+  "split": "validation",
+  "split_key": "val",
+  "n_samples": 12981,
+  "label_names": [
+    "aldehyde",
+    "alkene",
+    "alkyne",
+    "amide",
+    "amine",
+    "c_f_bond",
+    "carbonyl",
+    "ester",
+    "ether",
+    "hydroxyl",
+    "imine",
+    "ketone",
+    "nitrile",
+    "nitro"
+  ],
+  "label_order_verified": true,
+  "checkpoint": {
+    "path": "runs\\EXP-UVVIS-001-SEED2026\\best_model.pt",
+    "sha256_before": "9e2b0dd81cb5319e5c4f1aa6f2bb550bf23f6b6a3045e478ac1aa2f97f88e01d",
+    "sha256_after": "9e2b0dd81cb5319e5c4f1aa6f2bb550bf23f6b6a3045e478ac1aa2f97f88e01d",
+    "sha256": "9e2b0dd81cb5319e5c4f1aa6f2bb550bf23f6b6a3045e478ac1aa2f97f88e01d",
+    "checkpoint_type": "original",
+    "best_val_mAP": 0.5097539899587329,
+    "val_metrics": {
+      "loss": 0.2932245925536059,
+      "micro_f1": 0.5050791007493756,
+      "macro_f1": 0.4069538663966766,
+      "mAP": 0.5097539899587329,
+      "macro_AUROC": 0.8490694117751005
+    },
+    "config": {
+      "experiment": "EXP-UVVIS-001-SEED2026",
+      "modality": "uvvis",
+      "seed": 2026,
+      "batch_size": 512,
+      "num_workers": 4,
+      "max_epochs": 50,
+      "early_stopping_patience": 8,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "embedding_dim": 256,
+      "normalization": "max",
+      "threshold": 0.5,
+      "use_pos_weight": false,
+      "loss": "BCEWithLogitsLoss",
+      "optimizer": "AdamW",
+      "amp": true,
+      "train_size": 103853,
+      "val_size": 12981,
+      "test_size": 12981,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ]
+    }
+  },
+  "split_file": {
+    "path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+    "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+    "key": "val"
+  },
+  "label_files": {
+    "names_path": "processed\\qm9s\\prepared\\functional_group_label_names.json",
+    "names_sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942",
+    "matrix_path": "processed\\qm9s\\prepared\\functional_group_labels.npy",
+    "matrix_sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4"
+  },
+  "spectra_file": {
+    "path": "processed\\qm9s\\prepared\\uvvis_float32.npy",
+    "shape": [
+      129817,
+      701
+    ],
+    "dtype": "float32",
+    "size_bytes": 364006996
+  },
+  "model": {
+    "head_dim": 14,
+    "embedding_dim": 256,
+    "bn_running_mean_layers": 12,
+    "num_batches_tracked": [
+      3451
+    ]
+  },
+  "inference": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "batch_size": 512,
+    "num_workers": 0,
+    "dtype": "float32",
+    "autocast": false,
+    "model_eval": true,
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "resources": {
+      "elapsed_seconds": 0.656222,
+      "process_rss_start_mb": 634.824,
+      "process_peak_rss_mb": 1035.461,
+      "system_available_start_mb": 12656.711,
+      "system_available_min_mb": 12267.941,
+      "gpu_peak_allocated_mb": 168.529,
+      "gpu_peak_reserved_mb": 202.0
+    }
+  },
+  "repeat_check": {
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "bitwise_equal": true,
+    "allclose_atol_1e-6": true,
+    "second_pass_resources": {
+      "elapsed_seconds": 0.441126,
+      "process_rss_start_mb": 1033.512,
+      "process_peak_rss_mb": 1037.984,
+      "system_available_start_mb": 12267.152,
+      "system_available_min_mb": 12266.477,
+      "gpu_peak_allocated_mb": 168.529,
+      "gpu_peak_reserved_mb": 202.0
+    }
+  },
+  "arrays": {
+    "probabilities": {
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "sha256": "6e9b67b605c02c5b3b8fb3ac6ea4aaa6b2b86f5859712f2a766e397b42512054",
+      "finite": true,
+      "min": 2.498318934542054e-13,
+      "max": 0.9999868869781494
+    },
+    "row_index": {
+      "shape": [
+        12981
+      ],
+      "dtype": "int64",
+      "sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "finite": true,
+      "min": 13.0,
+      "max": 129810.0
+    },
+    "labels": {
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "uint8",
+      "sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "finite": true,
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "checks": {
+    "n_rows_equals_validation_size": true,
+    "row_index_equals_frozen_validation": true,
+    "labels_equal_frozen_label_matrix": true,
+    "probabilities_finite": true,
+    "probabilities_in_unit_interval": true,
+    "head_dim_equals_label_count": true,
+    "checkpoint_label_order_verified": true,
+    "test_split_accessed": false,
+    "checkpoint_file_unchanged": true,
+    "model_state_unchanged": true,
+    "bn_buffers_unchanged": true,
+    "checkpoint_mutated": false,
+    "bn_buffers_mutated": false
+  },
+  "code": {
+    "exporter_path": "training\\line_b\\export_line_b_predictions.py",
+    "exporter_sha256": "564dee0b335f2447171ea0ae8ec6c26a96c4296ff0edbdbbb08a7bc961307056",
+    "common_sha256": "3ac26dcf424785d29de29213604dc35d47c02af2420a366050325508eae95b76",
+    "dataset_sha256": "42ec169ae8413f3124b907f8fecd3da24f6f7a033697c2952d35ea7dd74f4b0c",
+    "model_sha256": "8e19d7d6d651084fa3f17702632c185850ebdceca7dabe5e78a7df4647786936"
+  }
+}

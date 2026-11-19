@@ -1,0 +1,529 @@
+﻿subgroup,task,label_set,seed,threshold_policy,comparison,n_labels,positive_labels,zero_labels,negative_labels,mean_or_gain,best_single,note
+ring_count=0,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,3,6,6,-0.004538018374831454,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,3,6,6,-0.0009760300815591612,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,3,8,4,-0.013305930254731917,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,4,7,4,-0.01061089832741163,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,1,6,8,-0.03654271441435258,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,3,6,6,-0.00044786178407433635,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,2,6,7,-0.04362377191347356,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,1,6,8,-0.037384053741371354,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,6,8,-0.06720217032946521,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,5,6,4,-0.0011934776104965147,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,7,8,-0.05993839850029592,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,7,8,-0.06748838830177638,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,6,9,-0.06161278469389859,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,5,6,4,-0.0008197486620278601,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,2,6,7,-0.0577453280711896,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,6,9,-0.06201160175134102,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,3,6,6,-0.013808791053737956,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,1,6,8,-0.0068607008988286425,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,3,6,6,-0.013422036140635411,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,3,6,6,-0.012735530654623533,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,1,6,8,-0.03501838052157398,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,2,6,7,-0.004323014772211428,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,6,9,-0.037047215943137354,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=0,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,6,9,-0.03643125877326154,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.049222538575507915,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,5,0,10,-0.010677801775878086,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,1,14,-0.05724870364223034,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,1,14,-0.05597667565699676,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.18799621630360133,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,7,0,8,-0.012779935667239976,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.18657626198572616,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.19423129313025356,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.13249596645603437,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,9,0,6,0.004642093497856233,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,2,13,-0.12531481727457922,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,2,13,-0.13241464543351342,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.18079763222629933,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,6,0,9,-0.0108898930908921,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.17394326053511983,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.1817273911977276,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.057961204887825406,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,9,0,6,-0.0004098720666675752,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,1,14,-0.0621883630766443,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,1,14,-0.062386594872488745,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.13306767073724446,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,9,0,6,-0.001991174007138848,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.13466829902307237,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=1,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.137271290198987,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.11820343358230953,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,2,0,13,-0.031485264663289936,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,2,13,-0.11009387424514495,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,2,13,-0.1099376977045622,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.2913203285552094,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,3,0,12,-0.014761867100423405,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.290342912230665,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.29145552834212113,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,0,0,15,-0.32594388834075494,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,3,0,12,-0.031046341386422763,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.2931939424974999,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.31479184896151513,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.33702674863232235,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,3,0,12,-0.04069605957222639,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.3053568444895458,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.3309355423079992,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,2,1,12,-0.12548276828915425,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,5,0,10,-0.01790990635241206,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,1,1,13,-0.13707820558967268,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,2,1,12,-0.13180733339655698,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.2140498032945082,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,2,0,13,-0.01516510257602212,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.22243250114430105,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=2,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.21206486614656855,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,2,1,12,-0.17287182822560312,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,1,1,13,-0.07425120015932854,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,3,12,-0.2114120250712303,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,4,11,-0.1816011956591303,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,1,1,13,-0.3581230235360586,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,1,2,12,-0.05631383749605217,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,1,14,-0.39342152789157453,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,1,14,-0.3576192797014423,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,2,1,12,-0.38194345283997405,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,2,1,12,-0.03238116481157903,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,2,13,-0.37610369246944597,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,2,13,-0.40306032473554154,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,1,14,-0.4683354109366239,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,1,1,13,-0.03397573863423062,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,1,14,-0.4763287356898887,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,1,14,-0.4678525741777018,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,2,1,12,-0.2218018779608251,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,1,1,13,-0.05608480177538244,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,2,13,-0.2435531569584977,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,1,3,11,-0.21523210143699484,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,1,1,13,-0.3182411693769287,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,1,2,12,-0.05443177691281982,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,1,14,-0.3522041387820989,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+ring_count=>=3,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,2,13,-0.3201801139947521,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,4,4,7,-0.0342064532028437,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,4,4,7,-0.004240197095147558,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,1,5,9,-0.05275709249944303,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,5,10,-0.049306094071352044,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,4,11,-0.11999627470215325,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,4,4,7,-0.004899537184302035,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,4,11,-0.13702658719108562,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,4,11,-0.12972627096651682,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,0,4,11,-0.1797572057368245,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,7,4,4,0.0018631503023328463,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,5,10,-0.16861558104694513,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,5,10,-0.17994945470827417,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,4,11,-0.16646968533865053,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,4,4,7,-0.0070497826257818275,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,4,11,-0.16156999463110547,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,4,11,-0.16819204302036259,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,4,4,7,-0.05520947341116543,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,6,4,5,-0.0031433606497955754,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,2,4,9,-0.062414864806328144,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,1,4,10,-0.06226609457466969,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,4,11,-0.09977320020155478,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,6,4,5,-0.002371318713765902,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,4,11,-0.10935949051778018,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=0,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,4,11,-0.10650606322787785,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,4,1,10,-0.09219567097986696,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,5,1,9,-0.03153164228805289,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,4,2,9,-0.0712307691719701,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,4,2,9,-0.08028417632035019,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,4,1,10,-0.2245388044677491,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,5,1,9,-0.04034748066481531,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,4,1,10,-0.18623186362099337,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,4,1,10,-0.2230382060040813,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,5,1,9,-0.14300263158557228,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,7,1,7,-0.01788542627045164,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,4,3,8,-0.1458858095789338,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,4,3,8,-0.14239854360415266,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,4,1,10,-0.17028661691999178,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,6,1,8,-0.029408333051400427,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,4,1,10,-0.14364225686392607,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,4,1,10,-0.1700740321046532,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,5,1,9,-0.07319391798934184,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,6,1,8,-0.028688285607856554,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,4,2,9,-0.0526089933243785,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,4,2,9,-0.06291046678005797,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,4,1,10,-0.15911507547623094,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,6,1,8,-0.03587223551893426,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,4,1,10,-0.13484989595563837,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=1,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,4,1,10,-0.15718259789858044,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,0,11,4,-0.13404525807271803,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,0,12,3,-0.04064134599366983,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,11,4,-0.10146548707952216,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,11,4,-0.1258161072739078,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,1,11,3,-0.1410778459899644,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,0,13,2,-0.04455486542443064,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,11,4,-0.13351931756187074,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,12,3,-0.14682099173311017,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,11,3,-0.10971805971805973,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,0,14,1,-0.006371963361210671,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,11,4,-0.15181840296782825,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,12,3,-0.12948717948717947,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,1,11,3,-0.09377289377289376,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,0,13,2,-0.04683760683760684,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,11,4,-0.0910267027658332,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,12,3,-0.09170940170940171,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,1,11,3,-0.06151463351463351,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,0,12,3,-0.05122334455667789,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,11,4,-0.14747709654686397,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,12,3,-0.06954882154882155,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,1,11,3,-0.07980549199084667,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,0,12,3,-0.05015873015873015,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,11,4,-0.15017822333611805,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+aromatic_ring_count=>=2,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,12,3,-0.08626748029494026,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,0,11,4,-0.12224252402803738,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,0,11,4,-0.014305272630926121,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,1,11,3,-0.10704767241205253,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,11,4,-0.12107387295176149,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,10,5,-0.1886526714937404,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,0,12,3,-0.024550886666013846,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,1,10,4,-0.15269528854719733,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,10,5,-0.18755009581732127,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,0,10,5,-0.23439286451557367,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,1,13,1,-0.0016610978716241917,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,10,5,-0.21374750122397454,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,10,5,-0.23480912661859185,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,10,5,-0.22972758416849606,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,0,12,3,-0.006530581863915205,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,10,5,-0.21817655241356096,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,10,5,-0.22918154340283306,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,0,11,4,-0.15800954366940675,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,1,12,2,-0.0016651938630619571,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,12,3,-0.15120381532444505,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,12,3,-0.1569836173927937,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,12,3,-0.15316717438649313,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,0,13,2,-0.0032680106266604224,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,1,11,3,-0.14509010243723466,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=0,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,12,3,-0.15268693830999855,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,0,3,12,-0.15983420495605744,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,0,3,12,-0.04046970658102596,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,1,4,10,-0.16672305820520486,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,4,11,-0.15128174899447983,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,3,12,-0.2721301797456842,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,0,3,12,-0.0372210458397724,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,3,12,-0.27664063583965237,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,3,12,-0.2680662188838872,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,0,3,12,-0.37335379177976835,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,0,5,10,-0.042187193170964386,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,4,11,-0.3205044646525745,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,4,11,-0.3507860487383027,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,3,12,-0.3486612988630941,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,0,5,10,-0.05514736860491767,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,3,12,-0.3008275911493502,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,3,12,-0.3357070429585559,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,0,3,12,-0.21400460151175807,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,0,3,12,-0.031168450600255172,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,2,4,9,-0.20648611945488707,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,4,11,-0.20300429054144314,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,3,12,-0.24758209268116813,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,0,3,12,-0.044348050637209556,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,3,12,-0.24712388988435585,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=1,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,3,12,-0.23802469016420658,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,2,1,12,-0.08897365613960119,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,6,1,8,-0.03506544137967472,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,2,13,-0.11287036103571338,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,2,13,-0.09468385439248385,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.2819786590162782,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,4,1,10,-0.018835642155701025,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.3013049414831947,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.28762599162979224,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.2836351537090026,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,6,1,8,-0.014462466382181783,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,1,1,13,-0.2803654094163607,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.2842297798157964,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.3335820542919247,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,5,1,9,-0.015806377348667824,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.33127952276198863,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.34032194268447763,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,6,0,9,-0.13845122375895833,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,7,1,7,-0.020907329714785292,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,1,0,14,-0.16666148733733072,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,2,0,13,-0.14717383721370378,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.2054119653101899,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,8,1,6,-0.01605075153603523,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.22827390557709737,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=2,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.21247497612061886,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.04855675790943602,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,4,0,11,-0.008018010118435578,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,1,14,-0.0566623749000522,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,1,14,-0.05556264347069352,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.17393090360119753,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,4,0,11,-0.007598318974026023,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.17428052379722495,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.17818017189544869,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.1582866564979016,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,9,0,6,0.005909311494735459,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.14834335852138292,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.16056415357798617,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.1826679256788467,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,5,0,10,-0.010012739396910808,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.1717611841262739,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.18102649150714326,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.05330427038542917,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,5,0,10,-0.0011456481173266254,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,1,14,-0.05450401647494791,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,1,0,14,-0.05601449167596489,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.1228407756006745,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,6,0,9,-0.0024392140075891002,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.12588185961768703,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+n_o_f=>=3,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.12628130509049612,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,2,0,13,-0.0665353671158823,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,4,0,11,-0.009800768114708676,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,1,14,-0.07210172312506957,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,1,14,-0.07086264532998561,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.20751446838401605,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,4,0,11,-0.008214571921916021,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.20907008469179758,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.2115065603246822,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.21063301831198283,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,8,0,7,0.0004450648624055864,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.1974094367456698,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.21002339733759853,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.2266014183306061,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,2,0,13,-0.01320892758202381,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.21317599460124773,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.2250618441247518,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.08665696024706764,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,7,0,8,-0.0015149391726333894,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,0,15,-0.0900221195979373,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,0,15,-0.0905715869539847,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.15019830561923228,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,6,0,9,-0.002098565495758716,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.15388917666278062,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+heavy_atom_count=Q1,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.1540672953543877,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.08522290772152782,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,4,0,11,-0.01867836928954506,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,1,14,-0.08200692771437641,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,1,14,-0.08311962508490804,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.24869112817720973,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,1,0,14,-0.017410219443358795,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.24677163031782623,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.2512738293730857,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.2357575566077093,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,6,0,9,-0.01542022608734491,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.21066897785373245,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.23190442784607748,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.2567197771355744,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,0,0,15,-0.03523977275218571,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.2238133750749198,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.24757325819981177,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,2,0,13,-0.09895449696906246,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,5,1,9,-0.008277432052590905,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,1,14,-0.10389230899241081,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,1,14,-0.10384876893976311,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.17207924379018796,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,3,0,12,-0.007032298567024927,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.17051916243218548,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=0,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.17173900392212088,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.058978271347075895,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,8,0,7,-0.0035698872911345066,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,2,13,-0.0704227689772021,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,2,13,-0.06780788688342225,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.18411501545248082,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,10,0,5,-0.000995865295563251,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.18993151419852813,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.19151270381822713,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,0,0,15,-0.18395182248155553,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,10,0,5,0.010110135834751066,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.17720002956661673,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.1880933391080067,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.20098651128356188,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,10,0,5,0.0019728367910797867,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.20613227821924948,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.21020369756308951,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.07822994974546024,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,10,0,5,0.002962595608799501,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,0,15,-0.08650964198432903,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,1,0,14,-0.08502458184471588,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.1400862376391362,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,12,0,3,0.004856567647392721,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.1507254450739009,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=1,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.1482313040071097,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,5,0,10,-0.04880243658045106,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,3,1,11,-0.02654865803111918,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,2,13,-0.060982478433155664,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,2,1,12,-0.05777914472113865,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.1807789681490772,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,3,0,12,-0.0359212861678155,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.188569868280854,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.1809156930942662,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,2,0,13,-0.21046241037503266,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,7,0,8,-0.001057889906487645,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.21626829575100454,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.21358816982405107,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.2302221664732738,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,6,0,9,-0.0203465235813351,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.22787632092418836,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.2301982071567777,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.08448998315251588,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,3,0,12,-0.029480442187395168,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,1,0,14,-0.08425331817287071,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,0,15,-0.0801161438798179,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,1,0,14,-0.1487045704369469,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,5,0,10,-0.02687016925810386,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.15380073182253337,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+rotatable_bond_count=>=2,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.14958239819916602,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,2,0,13,-0.05168430999394316,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,6,0,9,-0.004290426762142189,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,1,14,-0.05205549602740991,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,1,14,-0.05254125756856128,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.18319117431848445,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,7,0,8,-0.006752572877552924,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.17594741333159128,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.18484528528727046,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.12270531982384099,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,9,0,6,0.004729378830167782,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,1,1,13,-0.11123934919215965,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.1245455603237576,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.16543068592399834,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,4,0,11,-0.010676159892056829,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.15070374461743175,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.1630329823486669,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,2,0,13,-0.049175491598454045,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,7,0,8,-0.0023598201315052857,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,0,15,-0.04938566449291712,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,0,15,-0.050781474365912446,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.12331609944833787,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,6,0,9,-0.004282994729398645,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.12041588580595913,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=<0.5,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.12541484213172513,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,2,1,12,-0.10317051238039446,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,3,0,12,-0.030167679895389658,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,2,13,-0.11452192575844755,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,2,13,-0.11011951956885782,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.28515431538594355,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,2,0,13,-0.02477565391921251,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.2988587808904609,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.29249179508922757,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.3297106348448533,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,7,1,7,-0.014117663887090763,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.3097802561655854,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.31919915061883436,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.3444414788707937,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,1,0,14,-0.030010810482622805,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.32305791155912267,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.34304732198944526,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,2,0,13,-0.1653370014245005,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,6,0,9,-0.014745314463698762,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,0,15,-0.1720727166730464,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,1,0,14,-0.17269121062823317,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.22494141372779694,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,4,0,11,-0.018480457272360244,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.23802501624401795,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+fraction_csp3=>=0.5,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.23189889869132993,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,4,0,11,-0.06740268808782728,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,6,0,9,-0.01621030033850801,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,1,14,-0.08791469520720659,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,1,1,13,-0.0779301419921077,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,1,0,14,-0.17605350940123277,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,4,0,11,-0.009109840392761437,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.18892177917639918,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.1829120660099706,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,0,0,15,-0.15931174903441378,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,8,0,7,0.004637140815546004,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.14997353888685233,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.15852380312358375,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.20613769539139573,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,7,0,8,-0.00652472673850466,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.20084759303191774,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.20843544439643147,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,4,0,11,-0.10325813946160319,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,7,0,8,-0.007274804800775677,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,2,0,13,-0.10857884015642778,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,2,0,13,-0.10575222220328483,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.15352256676399897,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,7,0,8,-0.008353176264337847,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.1624313116120611,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=carbonyl,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.15815735309020668,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.059475636985501075,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,6,1,8,-0.00650100457327422,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,1,14,-0.08541396167881153,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,1,14,-0.08059112576330095,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.1831130124246412,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,6,0,9,-0.007359478288696793,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.20173766413666863,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.19193283851106033,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,0,0,15,-0.20984811747773294,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,5,1,9,-0.012495170602448839,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,1,1,13,-0.19960857323799666,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.20954247299545598,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.18338258327541065,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,4,0,11,-0.012882631897604383,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.18415812580504742,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.1871842787917796,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,3,1,11,-0.0937102743082594,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,9,1,5,-0.010050610333578066,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,1,2,12,-0.10786388036349624,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,1,1,13,-0.10528759836231341,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.14104358574511797,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,7,1,7,-0.014381748580069494,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.15059606012406754,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=nitrile,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.14706472397061496,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.10510953131484234,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,6,0,9,-0.005314980626939144,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,2,13,-0.13870660874657942,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,1,1,13,-0.13036230892543565,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.2817550492067161,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,7,1,7,-0.009966798565604385,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.32344460990386886,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.30182605776498506,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,1,0,14,-0.3052153763348272,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,8,1,6,-0.0001769132109351886,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,2,13,-0.2834052217164372,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,2,13,-0.30826300148304936,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.3173993419573853,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,6,0,9,-0.00755664690886002,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.3315355053295322,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.32150684041318106,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.1252675417847856,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,6,1,8,-0.002701825877774537,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,1,14,-0.161685488003686,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,1,14,-0.15714070857577347,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.20728382746213198,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,5,2,8,-0.008841548917237355,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.24279150340268588,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=alkyne,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.23119544359025654,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,4,0,11,-0.06885483310660305,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,7,0,8,-0.0038806554855601214,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,2,13,-0.07992940461571996,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,1,2,12,-0.07801993815386142,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.20821632730709227,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,6,0,9,-0.0020493421919066373,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.21660366295754757,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.21774018170280796,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.23570452241286172,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,8,0,7,0.001992518451676495,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.2194845657902575,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.23927111380459037,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.23606492708837207,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,7,0,8,-0.00677545597879566,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.23408654413571944,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.23831529168219082,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.07195474241085967,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,11,1,3,0.004061417445442025,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,0,15,-0.0743361648582173,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,1,0,14,-0.07574295768826979,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.14050258724750087,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,10,0,5,0.00718734278617393,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.14799439995022434,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=amine,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.14808095193293921,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,42,fixed_0.5,three_modality_vs_best_single,15,2,0,13,-0.09935777733980154,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,42,fixed_0.5,IR-Raman,15,4,0,11,-0.016721086898546997,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,42,fixed_0.5,UV-IR,15,0,1,14,-0.10104951053584811,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,42,fixed_0.5,UV-Raman,15,0,1,14,-0.10009854084165522,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,42,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.26674438452613014,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,42,validation_f1,IR-Raman,15,3,0,12,-0.016512715219641157,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,42,validation_f1,UV-IR,15,0,0,15,-0.2666182658672115,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,42,validation_f1,UV-Raman,15,0,0,15,-0.26445242612667763,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,123,fixed_0.5,three_modality_vs_best_single,15,2,0,13,-0.2790252797358293,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,123,fixed_0.5,IR-Raman,15,6,0,9,-0.01060654650476783,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,123,fixed_0.5,UV-IR,15,0,1,14,-0.2756075003585231,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,123,fixed_0.5,UV-Raman,15,0,1,14,-0.2834085837469565,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,123,validation_f1,three_modality_vs_best_single,15,0,0,15,-0.29554586780613146,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,123,validation_f1,IR-Raman,15,2,0,13,-0.022295897694985026,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,123,validation_f1,UV-IR,15,0,0,15,-0.2854628118363332,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,123,validation_f1,UV-Raman,15,0,0,15,-0.296036633861645,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,2026,fixed_0.5,three_modality_vs_best_single,15,3,0,12,-0.1185049829986364,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,2026,fixed_0.5,IR-Raman,15,8,0,7,-0.006164229466287156,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,2026,fixed_0.5,UV-IR,15,0,1,14,-0.12326663445006433,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,2026,fixed_0.5,UV-Raman,15,0,1,14,-0.12659518183405796,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,2026,validation_f1,three_modality_vs_best_single,15,1,0,14,-0.19207311073542932,raman,positive_or_fusion vs protocol-selected best single; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,2026,validation_f1,IR-Raman,15,5,0,10,-0.00720586968485369,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,2026,validation_f1,UV-IR,15,0,0,15,-0.1942485445424661,,positive_or_fusion vs max of the two member modalities; OR is not Oracle
+functional_group=hydroxyl,UVSPEC15,uvspec15,2026,validation_f1,UV-Raman,15,0,0,15,-0.1981304675912036,,positive_or_fusion vs max of the two member modalities; OR is not Oracle

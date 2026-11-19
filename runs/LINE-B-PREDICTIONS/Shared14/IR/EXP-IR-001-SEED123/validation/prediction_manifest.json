@@ -1,0 +1,198 @@
+{
+  "task": "Shared14",
+  "label_set": "shared14",
+  "modality": "ir",
+  "run_name": "EXP-IR-001-SEED123",
+  "split": "validation",
+  "split_key": "val",
+  "n_samples": 12981,
+  "label_names": [
+    "aldehyde",
+    "alkene",
+    "alkyne",
+    "amide",
+    "amine",
+    "c_f_bond",
+    "carbonyl",
+    "ester",
+    "ether",
+    "hydroxyl",
+    "imine",
+    "ketone",
+    "nitrile",
+    "nitro"
+  ],
+  "label_order_verified": true,
+  "checkpoint": {
+    "path": "runs\\EXP-IR-001-SEED123\\best_model.pt",
+    "sha256_before": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+    "sha256_after": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+    "sha256": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+    "checkpoint_type": "original",
+    "best_val_mAP": 0.9567552281676337,
+    "val_metrics": {
+      "loss": 0.05699740783127401,
+      "micro_f1": 0.9480447768686311,
+      "macro_f1": 0.9118331696905312,
+      "mAP": 0.9567552281676337,
+      "macro_AUROC": 0.9923127124004046
+    },
+    "config": {
+      "experiment": "EXP-IR-001-SEED123",
+      "seed": 123,
+      "batch_size": 512,
+      "num_workers": 4,
+      "max_epochs": 50,
+      "early_stopping_patience": 8,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "embedding_dim": 256,
+      "normalization": "max",
+      "threshold": 0.5,
+      "use_pos_weight": false,
+      "loss": "BCEWithLogitsLoss",
+      "optimizer": "AdamW",
+      "amp": true,
+      "train_size": 103855,
+      "val_size": 12981,
+      "test_size": 12981,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ]
+    }
+  },
+  "split_file": {
+    "path": "processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+    "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+    "key": "val"
+  },
+  "label_files": {
+    "names_path": "processed\\qm9s\\prepared\\functional_group_label_names.json",
+    "names_sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942",
+    "matrix_path": "processed\\qm9s\\prepared\\functional_group_labels.npy",
+    "matrix_sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4"
+  },
+  "spectra_file": {
+    "path": "processed\\qm9s\\prepared\\ir_float32.npy",
+    "shape": [
+      129817,
+      3501
+    ],
+    "dtype": "float32",
+    "size_bytes": 1817957396
+  },
+  "model": {
+    "head_dim": 14,
+    "embedding_dim": 256,
+    "bn_running_mean_layers": 12,
+    "num_batches_tracked": [
+      6090
+    ]
+  },
+  "inference": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "batch_size": 512,
+    "num_workers": 0,
+    "dtype": "float32",
+    "autocast": false,
+    "model_eval": true,
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "resources": {
+      "elapsed_seconds": 1.470515,
+      "process_rss_start_mb": 635.336,
+      "process_peak_rss_mb": 1190.641,
+      "system_available_start_mb": 11804.168,
+      "system_available_min_mb": 11301.488,
+      "gpu_peak_allocated_mb": 788.826,
+      "gpu_peak_reserved_mb": 904.0
+    }
+  },
+  "repeat_check": {
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "bitwise_equal": true,
+    "allclose_atol_1e-6": true,
+    "second_pass_resources": {
+      "elapsed_seconds": 1.331352,
+      "process_rss_start_mb": 1179.594,
+      "process_peak_rss_mb": 1200.438,
+      "system_available_start_mb": 11311.961,
+      "system_available_min_mb": 11284.727,
+      "gpu_peak_allocated_mb": 788.826,
+      "gpu_peak_reserved_mb": 904.0
+    }
+  },
+  "arrays": {
+    "probabilities": {
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "float32",
+      "sha256": "6fd3bf245ea1fc94588e9a2d6089cb759ff656eea1f834f86df66159f1d3458a",
+      "finite": true,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "row_index": {
+      "shape": [
+        12981
+      ],
+      "dtype": "int64",
+      "sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "finite": true,
+      "min": 13.0,
+      "max": 129810.0
+    },
+    "labels": {
+      "shape": [
+        12981,
+        14
+      ],
+      "dtype": "uint8",
+      "sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "finite": true,
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "checks": {
+    "n_rows_equals_validation_size": true,
+    "row_index_equals_frozen_validation": true,
+    "labels_equal_frozen_label_matrix": true,
+    "probabilities_finite": true,
+    "probabilities_in_unit_interval": true,
+    "head_dim_equals_label_count": true,
+    "checkpoint_label_order_verified": true,
+    "test_split_accessed": false,
+    "checkpoint_file_unchanged": true,
+    "model_state_unchanged": true,
+    "bn_buffers_unchanged": true,
+    "checkpoint_mutated": false,
+    "bn_buffers_mutated": false
+  },
+  "code": {
+    "exporter_path": "training\\line_b\\export_line_b_predictions.py",
+    "exporter_sha256": "564dee0b335f2447171ea0ae8ec6c26a96c4296ff0edbdbbb08a7bc961307056",
+    "common_sha256": "3ac26dcf424785d29de29213604dc35d47c02af2420a366050325508eae95b76",
+    "dataset_sha256": "42ec169ae8413f3124b907f8fecd3da24f6f7a033697c2952d35ea7dd74f4b0c",
+    "model_sha256": "8e19d7d6d651084fa3f17702632c185850ebdceca7dabe5e78a7df4647786936"
+  }
+}

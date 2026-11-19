@@ -1,0 +1,257 @@
+{
+  "task": "UVSPEC15",
+  "label_set": "uvspec15",
+  "modality": "uvvis",
+  "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+  "split": "test",
+  "split_key": "test",
+  "n_samples": 12981,
+  "label_names": [
+    "has_conjugation",
+    "has_nonaromatic_conjugation",
+    "acyclic_conjugated_system",
+    "cyclic_conjugated_system",
+    "has_aromatic_system",
+    "heteroaromatic",
+    "mixed_aromatic_nonaromatic_conjugation",
+    "pi_conjugated_carbonyl",
+    "alpha_beta_unsaturated_carbonyl",
+    "aryl_carbonyl",
+    "pi_conjugated_imine",
+    "pi_conjugated_nitrile",
+    "has_donor_substituted_pi_system",
+    "has_acceptor_substituted_pi_system",
+    "donor_acceptor_same_conjugated_system"
+  ],
+  "label_order_verified": true,
+  "task_config": {
+    "expected_train_size": 103853,
+    "input_points": 701,
+    "n_labels": 15
+  },
+  "checkpoint": {
+    "path": "runs\\EXP-UVVIS-003-UVSPEC15-SEED2026\\best_model.pt",
+    "sha256_before": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+    "sha256_after": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+    "sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+    "checkpoint_type": "original",
+    "best_val_mAP": 0.5371503207890312,
+    "val_metrics": {
+      "loss": 0.17857317383576227,
+      "micro_f1": 0.60771496703605,
+      "macro_f1": 0.4449766557698011,
+      "mAP": 0.5371503207890312,
+      "macro_AUROC": 0.9217819387157353
+    },
+    "config": {
+      "experiment": "EXP-UVVIS-003-UVSPEC15-FULL",
+      "modality": "uvvis",
+      "seed": 2026,
+      "batch_size": 512,
+      "num_workers": 4,
+      "max_epochs": 50,
+      "early_stopping_patience": 8,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "embedding_dim": 256,
+      "normalization": "max",
+      "threshold": 0.5,
+      "use_pos_weight": false,
+      "loss": "BCEWithLogitsLoss",
+      "optimizer": "AdamW",
+      "amp": true,
+      "train_size": 103853,
+      "val_size": 12981,
+      "test_size": 12981,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ]
+    }
+  },
+  "split_file": {
+    "path": "processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+    "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+    "key": "test"
+  },
+  "label_files": {
+    "names_path": "processed\\qm9s\\prepared\\uvspec15_label_names.json",
+    "names_sha256": "c759f3d8e21ad841daf0e9ccb63e743acb36f39226b6b7f738a8d0e723cd9afc",
+    "matrix_path": "processed\\qm9s\\prepared\\uvspec15_labels.npy",
+    "matrix_sha256": "f08170df62972828076b4cfdb1136b2890b86a4eec36f280466180f5c64f1705"
+  },
+  "spectra_file": {
+    "path": "processed\\qm9s\\prepared\\uvvis_float32.npy",
+    "sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a",
+    "shape": [
+      129817,
+      701
+    ],
+    "dtype": "float32",
+    "size_bytes": 364006996
+  },
+  "model": {
+    "head_dim": 15,
+    "embedding_dim": 256,
+    "bn_running_mean_layers": 12,
+    "num_batches_tracked": [
+      2030
+    ]
+  },
+  "inference": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "batch_size": 512,
+    "num_workers": 0,
+    "dtype": "float32",
+    "autocast": false,
+    "model_eval": true,
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "resources": {
+      "elapsed_seconds": 0.525254,
+      "process_rss_start_mb": 989.598,
+      "process_peak_rss_mb": 1069.832,
+      "system_available_start_mb": 7733.129,
+      "system_available_min_mb": 7640.012,
+      "gpu_peak_allocated_mb": 168.407,
+      "gpu_peak_reserved_mb": 904.0
+    }
+  },
+  "repeat_check": {
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "bitwise_equal": true,
+    "allclose_atol_1e-6": true,
+    "second_pass_resources": {
+      "elapsed_seconds": 0.469674,
+      "process_rss_start_mb": 1069.832,
+      "process_peak_rss_mb": 1070.312,
+      "system_available_start_mb": 7640.012,
+      "system_available_min_mb": 7639.758,
+      "gpu_peak_allocated_mb": 168.407,
+      "gpu_peak_reserved_mb": 904.0
+    }
+  },
+  "arrays": {
+    "probabilities": {
+      "shape": [
+        12981,
+        15
+      ],
+      "dtype": "float32",
+      "sha256": "08e2833274349e0e1407c99a66e97ad092ef033c7ab2af12dd24a3078a9110bc",
+      "finite": true,
+      "min": 1.3139081836421873e-12,
+      "max": 0.9999983310699463,
+      "file_sha256": "0ed7c3153adf31bed0a8132af7671ca677c390c22d70c8d70b1842ce4e51d254",
+      "file_size_bytes": 778988
+    },
+    "row_index": {
+      "shape": [
+        12981
+      ],
+      "dtype": "int64",
+      "sha256": "145cf35991993b0b190f8449ebf81e9e011b39aee9d1a5e5c5336a58e3a5f8e3",
+      "finite": true,
+      "min": 4.0,
+      "max": 129816.0,
+      "file_sha256": "a7cb3a4de9d4217ffceaec9802ec3237fe6caad21f7d509bdd195d362d9e71f9",
+      "file_size_bytes": 103976
+    },
+    "labels": {
+      "shape": [
+        12981,
+        15
+      ],
+      "dtype": "uint8",
+      "sha256": "377c1f1e70ddcb0ed3ea4efff3a0bdf2709edf4ce29d5236d7b0319be9cbb815",
+      "finite": true,
+      "min": 0.0,
+      "max": 1.0,
+      "file_sha256": "23f756d6a3d09b5ed09a9dbc231dd61969e008ce34d6ca79ad52833a9ffec65b",
+      "file_size_bytes": 194843
+    }
+  },
+  "checks": {
+    "n_rows_equals_test_size": true,
+    "row_index_equals_frozen_test": true,
+    "row_index_unique": true,
+    "labels_equal_frozen_label_matrix": true,
+    "probabilities_finite": true,
+    "probabilities_in_unit_interval": true,
+    "label_order_equals_freeze": true,
+    "head_dim_equals_label_count": true,
+    "checkpoint_label_order_verified": true,
+    "checkpoint_sha256_equals_freeze": true,
+    "freeze_sha256_verified": true,
+    "test_split_accessed": true,
+    "checkpoint_file_unchanged": true,
+    "model_state_unchanged": true,
+    "bn_buffers_unchanged": true,
+    "checkpoint_mutated": false,
+    "bn_buffers_mutated": false
+  },
+  "freeze": {
+    "path": "runs\\LINE-B-MANIFESTS\\FREEZE.json",
+    "sha256": "65a84959356a9a1f7a6e1d6434449f607c75a4c224a17450f3345ba25bb92a0c",
+    "status": "FROZEN",
+    "phase": "B3",
+    "protocol_version": "B0 v0.2",
+    "protocol_sha256": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a",
+    "model_identity": {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "seed": 2026,
+      "checkpoint_sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+      "config_sha256": "3c6b5a99c8e52992d935ccf7363d46f8127eaa1b70a9d592813cac0c75202327",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "threshold_sha256": "7601afc4dfded6c470471518bd3bce208cfaee681da3693ed3f2c73fb0272b82"
+    },
+    "checks": {
+      "checkpoint_path": true,
+      "checkpoint_sha256": true,
+      "config_sha256": true,
+      "split_path": true,
+      "split_sha256": true,
+      "label_names_sha256": true,
+      "label_matrix_sha256": true,
+      "threshold_sha256": true,
+      "calibration_manifest_sha256": true,
+      "label_order": true
+    }
+  },
+  "test_access": {
+    "historical_test_information_read_before_b4": true,
+    "historical_read_scope": "B0 stage consistency audit of existing per-label Test CSVs and existing Raman Test probabilities",
+    "user_attestation_no_operational_interference": true,
+    "blind_test_claim": false,
+    "result_classification": "exploratory/post-hoc",
+    "access_logged": true,
+    "access_log_path": "runs\\LINE-B-MANIFESTS\\test_access_log.json"
+  },
+  "code": {
+    "exporter_path": "training\\line_b\\export_line_b_predictions.py",
+    "exporter_sha256": "a5a7d15f69aaa4adbae612288fdce86e3aff1822e23999c7d45e7ab24ec8fc26",
+    "common_sha256": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+    "dataset_sha256": "42ec169ae8413f3124b907f8fecd3da24f6f7a033697c2952d35ea7dd74f4b0c",
+    "model_sha256": "8e19d7d6d651084fa3f17702632c185850ebdceca7dabe5e78a7df4647786936"
+  }
+}

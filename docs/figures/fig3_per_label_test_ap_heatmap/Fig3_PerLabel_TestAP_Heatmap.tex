@@ -1,0 +1,152 @@
+% XiYuan Project — Fig. 3
+% Per-label Test AP heatmap: three-seed mean ± sample SD.
+% Corrected visual clearances: panel label boundary is included.
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{fontspec}
+\setmainfont{Arimo}
+\usepackage{tikz}
+
+\definecolor{ink}{HTML}{253340}
+\definecolor{hair}{HTML}{BEC9D1}
+\definecolor{mid}{HTML}{8999A4}
+\definecolor{ir}{HTML}{3C7294}
+\definecolor{ram}{HTML}{318A80}
+\definecolor{uv}{HTML}{756C9D}
+\definecolor{heatlow}{HTML}{F2F5F7}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+% Expanded canvas preserves 2.15 cm margins on both sides.
+\path[use as bounding box] (0,0) rectangle (20.762,6.55);
+
+% Panel titles centered over their heatmap matrices and underline rules.
+\node[font=\bfseries\fontsize{8.4}{9.6}\selectfont,text=ink] at (5.670,5.91)
+    {(A) Functional group features};
+\draw[ir,line width=1.15pt] (3.220,5.67) -- (8.120,5.67);
+
+\node[font=\bfseries\fontsize{8.4}{9.6}\selectfont,text=ink] at (16.392,5.91)
+    {(B) Electronic structure features};
+\draw[ram,line width=1.15pt] (13.942,5.67) -- (18.842,5.67);
+
+% Central divider. Both neighboring visible panel boundaries are 2.15 cm away.
+\draw[hair,line width=0.65pt,densely dashed] (10.140,1.55) -- (10.140,5.72);
+\node[font=\bfseries\fontsize{7.4}{8.5}\selectfont,text=ink] at (4.150,5.28) {IR};
+\node[font=\bfseries\fontsize{7.4}{8.5}\selectfont,text=ink] at (5.670,5.28) {Raman};
+\node[font=\bfseries\fontsize{7.4}{8.5}\selectfont,text=ink] at (7.190,5.28) {UV--Vis};
+\node[font=\bfseries\fontsize{7.4}{8.5}\selectfont,text=ink] at (14.872,5.28) {IR};
+\node[font=\bfseries\fontsize{7.4}{8.5}\selectfont,text=ink] at (16.392,5.28) {Raman};
+\node[font=\bfseries\fontsize{7.4}{8.5}\selectfont,text=ink] at (17.912,5.28) {UV--Vis};
+\node[anchor=east,align=right,font=\fontsize{7.3}{8.0}\selectfont,text=ink] at (3.300,4.78) {Carbonyl};
+\fill[heatlow!0.2!ir] (3.450,4.45) rectangle (4.850,5.11);
+\draw[hair,line width=0.45pt] (3.450,4.45) rectangle (4.850,5.11);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (4.150,4.86) {0.998};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (4.150,4.64) {$\pm$ 0.0003};
+\fill[heatlow!0.2!ir] (4.970,4.45) rectangle (6.370,5.11);
+\draw[hair,line width=0.45pt] (4.970,4.45) rectangle (6.370,5.11);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (5.670,4.86) {0.998};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (5.670,4.64) {$\pm$ 0.0001};
+\fill[heatlow!10.2!ir] (6.490,4.45) rectangle (7.890,5.11);
+\draw[hair,line width=0.45pt] (6.490,4.45) rectangle (7.890,5.11);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (7.190,4.86) {0.898};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (7.190,4.64) {$\pm$ 0.0015};
+\node[anchor=east,align=right,font=\fontsize{7.3}{8.0}\selectfont,text=ink] at (3.300,3.88) {Hydroxyl};
+\fill[heatlow!0.0!ir] (3.450,3.55) rectangle (4.850,4.21);
+\draw[hair,line width=0.45pt] (3.450,3.55) rectangle (4.850,4.21);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (4.150,3.96) {1.000};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (4.150,3.73) {$\pm$ 0.0000};
+\fill[heatlow!0.0!ir] (4.970,3.55) rectangle (6.370,4.21);
+\draw[hair,line width=0.45pt] (4.970,3.55) rectangle (6.370,4.21);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (5.670,3.96) {1.000};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (5.670,3.73) {$\pm$ 0.0000};
+\fill[heatlow!48.6!ir] (6.490,3.55) rectangle (7.890,4.21);
+\draw[hair,line width=0.45pt] (6.490,3.55) rectangle (7.890,4.21);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=ink] at (7.190,3.96) {0.514};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=ink] at (7.190,3.73) {$\pm$ 0.0057};
+\node[anchor=east,align=right,font=\fontsize{7.3}{8.0}\selectfont,text=ink] at (3.300,2.98) {Nitrile};
+\fill[heatlow!0.2!ir] (3.450,2.65) rectangle (4.850,3.31);
+\draw[hair,line width=0.45pt] (3.450,2.65) rectangle (4.850,3.31);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (4.150,3.06) {0.998};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (4.150,2.83) {$\pm$ 0.0007};
+\fill[heatlow!0.1!ir] (4.970,2.65) rectangle (6.370,3.31);
+\draw[hair,line width=0.45pt] (4.970,2.65) rectangle (6.370,3.31);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (5.670,3.06) {0.999};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (5.670,2.83) {$\pm$ 0.0002};
+\fill[heatlow!78.6!ir] (6.490,2.65) rectangle (7.890,3.31);
+\draw[hair,line width=0.45pt] (6.490,2.65) rectangle (7.890,3.31);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=ink] at (7.190,3.06) {0.214};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=ink] at (7.190,2.83) {$\pm$ 0.0055};
+\node[anchor=east,align=right,font=\fontsize{7.3}{8.0}\selectfont,text=ink] at (3.300,2.08) {Alkene};
+\fill[heatlow!1.5!ir] (3.450,1.75) rectangle (4.850,2.41);
+\draw[hair,line width=0.45pt] (3.450,1.75) rectangle (4.850,2.41);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (4.150,2.16) {0.985};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (4.150,1.94) {$\pm$ 0.0012};
+\fill[heatlow!1.1!ir] (4.970,1.75) rectangle (6.370,2.41);
+\draw[hair,line width=0.45pt] (4.970,1.75) rectangle (6.370,2.41);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (5.670,2.16) {0.989};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (5.670,1.94) {$\pm$ 0.0018};
+\fill[heatlow!42.0!ir] (6.490,1.75) rectangle (7.890,2.41);
+\draw[hair,line width=0.45pt] (6.490,1.75) rectangle (7.890,2.41);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=ink] at (7.190,2.16) {0.580};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=ink] at (7.190,1.94) {$\pm$ 0.0154};
+\node[anchor=east,align=right,font=\fontsize{6.2}{7.0}\selectfont,text=ink] at (14.072,4.78) {Conjugation};
+\fill[heatlow!0.4!ir] (14.172,4.45) rectangle (15.572,5.11);
+\draw[hair,line width=0.45pt] (14.172,4.45) rectangle (15.572,5.11);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (14.872,4.86) {0.996};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (14.872,4.64) {$\pm$ 0.0007};
+\fill[heatlow!0.2!ir] (15.692,4.45) rectangle (17.092,5.11);
+\draw[hair,line width=0.45pt] (15.692,4.45) rectangle (17.092,5.11);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (16.392,4.86) {0.998};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (16.392,4.64) {$\pm$ 0.0003};
+\fill[heatlow!12.1!ir] (17.212,4.45) rectangle (18.612,5.11);
+\draw[hair,line width=0.45pt] (17.212,4.45) rectangle (18.612,5.11);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (17.912,4.86) {0.879};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (17.912,4.64) {$\pm$ 0.0028};
+\node[anchor=east,align=right,font=\fontsize{6.2}{7.0}\selectfont,text=ink] at (14.072,3.88) {Aromatic system};
+\fill[heatlow!0.1!ir] (14.172,3.55) rectangle (15.572,4.21);
+\draw[hair,line width=0.45pt] (14.172,3.55) rectangle (15.572,4.21);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (14.872,3.96) {0.999};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (14.872,3.73) {$\pm$ 0.0002};
+\fill[heatlow!0.1!ir] (15.692,3.55) rectangle (17.092,4.21);
+\draw[hair,line width=0.45pt] (15.692,3.55) rectangle (17.092,4.21);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (16.392,3.96) {0.999};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (16.392,3.73) {$\pm$ 0.0003};
+\fill[heatlow!22.6!ir] (17.212,3.55) rectangle (18.612,4.21);
+\draw[hair,line width=0.45pt] (17.212,3.55) rectangle (18.612,4.21);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (17.912,3.96) {0.774};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (17.912,3.73) {$\pm$ 0.0394};
+\node[anchor=east,align=right,font=\fontsize{6.2}{7.0}\selectfont,text=ink] at (14.072,2.98) {Heteroaromatic};
+\fill[heatlow!0.2!ir] (14.172,2.65) rectangle (15.572,3.31);
+\draw[hair,line width=0.45pt] (14.172,2.65) rectangle (15.572,3.31);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (14.872,3.06) {0.998};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (14.872,2.83) {$\pm$ 0.0009};
+\fill[heatlow!0.3!ir] (15.692,2.65) rectangle (17.092,3.31);
+\draw[hair,line width=0.45pt] (15.692,2.65) rectangle (17.092,3.31);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (16.392,3.06) {0.997};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (16.392,2.83) {$\pm$ 0.0003};
+\fill[heatlow!23.4!ir] (17.212,2.65) rectangle (18.612,3.31);
+\draw[hair,line width=0.45pt] (17.212,2.65) rectangle (18.612,3.31);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (17.912,3.06) {0.766};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (17.912,2.83) {$\pm$ 0.0479};
+\node[anchor=east,align=right,font=\fontsize{6.0}{6.8}\selectfont,text=ink] at (14.072,2.08) {Donor--acceptor\\conjugated system};
+\fill[heatlow!6.8!ir] (14.172,1.75) rectangle (15.572,2.41);
+\draw[hair,line width=0.45pt] (14.172,1.75) rectangle (15.572,2.41);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (14.872,2.16) {0.932};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (14.872,1.94) {$\pm$ 0.0099};
+\fill[heatlow!7.4!ir] (15.692,1.75) rectangle (17.092,2.41);
+\draw[hair,line width=0.45pt] (15.692,1.75) rectangle (17.092,2.41);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=white] at (16.392,2.16) {0.926};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=white] at (16.392,1.94) {$\pm$ 0.0078};
+\fill[heatlow!65.3!ir] (17.212,1.75) rectangle (18.612,2.41);
+\draw[hair,line width=0.45pt] (17.212,1.75) rectangle (18.612,2.41);
+\node[font=\bfseries\fontsize{7.1}{7.8}\selectfont,text=ink] at (17.912,2.16) {0.347};
+\node[font=\fontsize{5.2}{5.8}\selectfont,text=ink] at (17.912,1.94) {$\pm$ 0.0284};
+
+\node[anchor=east,font=\fontsize{6.6}{7.5}\selectfont,text=ink] at (8.340,0.91) {Mean AP};
+\shade[left color=heatlow,right color=ir] (8.490,0.80) rectangle (12.090,0.98);
+\draw[hair,line width=0.4pt] (8.490,0.80) rectangle (12.090,0.98);
+\foreach \x/\lab in {8.490/0.0,10.140/0.5,12.090/1.0}{
+    \draw[hair,line width=0.45pt] (\x,0.78) -- (\x,0.73);
+    \node[font=\fontsize{5.8}{6.5}\selectfont,text=mid,anchor=north] at (\x,0.70) {\lab};
+}
+\end{tikzpicture}
+\end{document}

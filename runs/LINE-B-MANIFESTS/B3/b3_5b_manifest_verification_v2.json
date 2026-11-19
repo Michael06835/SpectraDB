@@ -1,0 +1,1528 @@
+{
+  "phase": "B3.5-B",
+  "generated_at": "2026-11-19T00:59:32+08:00",
+  "overall_status": "PASS",
+  "exit_code": 0,
+  "no_test_access": true,
+  "environment": {
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "python_version": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.9.0",
+    "torch": "2.11.0+cu128",
+    "cwd": "E:\\Projects\\曦源计划\\数据\\SpectraDB",
+    "git_commit": "f0395ad1f73c41e0ec4e4e0b35b34b0974d19d37",
+    "git_status_short": [
+      "M CHANGELOG.md",
+      " M TODO.md",
+      "?? docs/experiments/line_b_b0_asset_audit.md",
+      "?? docs/experiments/line_b_b1_shared14_validation_report.md",
+      "?? docs/experiments/line_b_b3_prefreeze_readiness_audit.md",
+      "?? docs/experiments/line_b_protocol_draft.md",
+      "?? docs/figures/",
+      "?? metadata/line_b_b0_audit.json",
+      "?? metadata/line_b_b0_checkpoints.csv",
+      "?? metadata/line_b_b0_experiment_matrix.csv",
+      "?? runs/EXP-IR-003-UVSPEC15-FULL/",
+      "?? runs/EXP-IR-003-UVSPEC15-SEED123/",
+      "?? runs/EXP-IR-003-UVSPEC15-SEED2026/",
+      "?? runs/EXP-RAMAN-003-UVSPEC15-FULL/",
+      "?? runs/EXP-RAMAN-003-UVSPEC15-SEED123/",
+      "?? runs/EXP-RAMAN-003-UVSPEC15-SEED2026/",
+      "?? runs/LINE-B-ANALYSIS/",
+      "?? runs/LINE-B-MANIFESTS/",
+      "?? runs/LINE-B-METRICS/",
+      "?? runs/LINE-B-PREDICTIONS/",
+      "?? runs/LINE-B-THRESHOLDS/",
+      "?? training/line_b/",
+      "?? training/train_ir_uvspec15.py",
+      "?? training/train_ir_uvspec15_seed123.py",
+      "?? training/train_ir_uvspec15_seed2026.py",
+      "?? training/train_raman_uvspec15.py",
+      "?? training/train_raman_uvspec15_seed123.py",
+      "?? training/train_raman_uvspec15_seed2026.py"
+    ]
+  },
+  "code_sha256": {
+    "current_source_sha256": {
+      "training/line_b/common.py": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+      "training/line_b/metrics.py": "e773f52da281d5ea69cf89c4e61b40ebbbdfca9ee00d5abb901401b42a105ac9",
+      "training/line_b/export_line_b_predictions.py": "c98245edbd1859664f5e684db5d677e96b4af52e6c7ca36ef50736fec762dec7",
+      "training/line_b/evaluate_line_b_multilabel.py": "c0589397e39f123e476b1d11c59c06877c66c69b7517aa88cd556ee595e59cfd",
+      "training/line_b/summarize_b1_exports.py": "44b877fef9ff4ddbfb05621301e39954192205fe5d4e90aec63113caa07fa55e",
+      "training/line_b/calibrate_line_b_thresholds.py": "2706d0713f43467356834f9173c41f8a436472bdb3dfcae826ed3f5b0adb8c74",
+      "training/line_b/analyze_line_b_complementarity.py": "f0ff92d8f7f5e67df24b7b03178adbdda9d92eb99e885f3b1b574d5c84bedb4c"
+    },
+    "verification_script_sha256": "8cb2e067828d7ed355f0e518b5713eb01ec4f93f7c1416b45c59bc8defc1feb6"
+  },
+  "prior_verification": {
+    "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-MANIFESTS\\B3\\b3_5b_manifest_verification.json",
+    "exists": true,
+    "sha256": "747bb90fa7876b1dbb02e7bd366273e2e76ed192ffd7eabca6e79cd80541d114"
+  },
+  "new_verification_code_sha256": "8cb2e067828d7ed355f0e518b5713eb01ec4f93f7c1416b45c59bc8defc1feb6",
+  "summary": {
+    "n_models": 18,
+    "n_passed_models": 18,
+    "n_failed_models": 0,
+    "threshold_records": 261
+  },
+  "models": [
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-FULL",
+      "seed_expected": 42,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "42"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "id": "config.modality",
+          "status": "ACCEPTED_HISTORICAL_LIMITATION",
+          "detail": "B1 IR historical config has no modality; registration fixes modality=ir"
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-FULL\\optimal_thresholds.json",
+        "sha256": "1cc92a75bb2e1f8b299fcf6333c01ec06d5749031383f65443fabb0096ed63c1",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-FULL\\calibration_manifest.json",
+        "calibration_sha256": "92c7278a169bec682f728c74a45bc5155569fa280c6d39c63787f14a6a016f5c",
+        "count": 14
+      },
+      "config_sha256": "7af88bd3e47b193f576ec1018f5e2c229cb797c65f72842de5895ae922d7de4b",
+      "checkpoint_sha256": "d60cc7b159891728d46597d15826f29028d00a84801475ab07120f3255613239",
+      "prediction_manifest_sha256": "627a9ddf95256bb60c6fb4da7e718e8802517ce001bd3bb612deeede1f0b6e49",
+      "probabilities_sha256": "2152f0c2904faf5c0d28cc071fb9deaba373a1010c4ddb204d52e0ede7c6f291",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 42,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-SEED123",
+      "seed_expected": 123,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "123"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "id": "config.modality",
+          "status": "ACCEPTED_HISTORICAL_LIMITATION",
+          "detail": "B1 IR historical config has no modality; registration fixes modality=ir"
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-SEED123\\optimal_thresholds.json",
+        "sha256": "f24079970a2e04ea10e8241285ef089cfda5ba5fca103141e6a885768be773a6",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-SEED123\\calibration_manifest.json",
+        "calibration_sha256": "9e4c739d2475b519bc1bce8eb966b06e3e295ed031a8cfb6cd0e2f2bfd093416",
+        "count": 14
+      },
+      "config_sha256": "061d83043dc63742bf70d8acbc1f59932bcf928d3b5f95115d332bcd633de4ad",
+      "checkpoint_sha256": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+      "prediction_manifest_sha256": "15d824710bc6bd7869835386dcc4a063f408afd7b697ce58a4d5b0dadc615915",
+      "probabilities_sha256": "6fd3bf245ea1fc94588e9a2d6089cb759ff656eea1f834f86df66159f1d3458a",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 123,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-SEED2026",
+      "seed_expected": 2026,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "2026"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "id": "config.modality",
+          "status": "ACCEPTED_HISTORICAL_LIMITATION",
+          "detail": "B1 IR historical config has no modality; registration fixes modality=ir"
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-SEED2026\\optimal_thresholds.json",
+        "sha256": "18e8136f8019b43458a1780bb4094351829a1d0365f24e2bfaa4a4c63fea935d",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-IR-001-SEED2026\\calibration_manifest.json",
+        "calibration_sha256": "18b0e55354637d2bbd535e08544ea37448bc3c3d78690b6aae3b7f85c302b584",
+        "count": 14
+      },
+      "config_sha256": "f97ce98347ea338a837abe6ec1251e40af1c10beb243d1a3d748e960e55fa776",
+      "checkpoint_sha256": "d7945c78d432fa907bbc0c8b39e3f4e7ae78088a1185931e625a8eb06cc4a274",
+      "prediction_manifest_sha256": "9e2c3b4b8d03e2acd27434369265ea4463962a57cdf5fe04f0751c41ceba190c",
+      "probabilities_sha256": "a69c1f9ad5b74565e82a198ae331e7268e445c65c397bb0f374ffc2b92b73789",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 2026,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-FULL",
+      "seed_expected": 42,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "42"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-FULL\\optimal_thresholds.json",
+        "sha256": "621992ca32363720ad435c510d6124e883cac84f54d6235009d3d97150467689",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-FULL\\calibration_manifest.json",
+        "calibration_sha256": "843f44434c81f8e6ace3d34d862e2d5641ee4857a7f8b9022c6ccf6798238731",
+        "count": 14
+      },
+      "config_sha256": "74180be06f20582241673d1ccdd8ec92f8d4580bb68d7a03b51925120aa06aa2",
+      "checkpoint_sha256": "573ae7e2a3351252c5f1ad7e0ec060c77435468d3c7bddb37a641e1206cdfcd3",
+      "prediction_manifest_sha256": "2318df1cc7d8a76b2c2047f7ba5155e9dfa228b022874099a8575c46f82b355c",
+      "probabilities_sha256": "466aca4de0d2909753b70abbfa2b25ca7db52774a90847fbe5af46ed3066e39e",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 42,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-SEED123",
+      "seed_expected": 123,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "123"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-SEED123\\optimal_thresholds.json",
+        "sha256": "3be96864317a058d7aa19e7ffaee96e92a6494761d9a6092879b96fd117df04b",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-SEED123\\calibration_manifest.json",
+        "calibration_sha256": "8ca13a1543d57c68ccb4d415717de82228ffbda4bb5dee8c45e2b42c212ca60e",
+        "count": 14
+      },
+      "config_sha256": "2e5eaf8165b3173febf8094276d834b2f91da836b20716e763b2683940305901",
+      "checkpoint_sha256": "84334c5e013490de75bc23f0f844880062150759947835cb29e18e80c9158298",
+      "prediction_manifest_sha256": "1f746a75cee2e27664a13c53025a78292eb2f8e1e5b84ebfcc16fa9cf5c7f842",
+      "probabilities_sha256": "5698017cf7d6facac41b09b33f3aa7ba2b5c28f6b4f183db4727e019421652de",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 123,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-SEED2026",
+      "seed_expected": 2026,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "2026"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-SEED2026\\optimal_thresholds.json",
+        "sha256": "18829f9157e7877b7077403d1c542011f233ec3a31baa347af7ec661b9f25440",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-RAMAN-001-SEED2026\\calibration_manifest.json",
+        "calibration_sha256": "43df2328c04ec1d1cd52a09cb3fca0f8860c72550cfc408c0dc04dee22b83ac1",
+        "count": 14
+      },
+      "config_sha256": "f68eb4017780de47e43b1cbf4063d09ffebc7b73c335d2e99a677c165b6f476d",
+      "checkpoint_sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+      "prediction_manifest_sha256": "1aa05855b6754e1e3939738b78389945768d4b31d597cf8d96df0d7ae8717181",
+      "probabilities_sha256": "b1717418fd64e8838ab57dd5cd792365eb6800ed6d9b2dd5cad74f893c017a74",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 2026,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-FULL",
+      "seed_expected": 42,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "42"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-FULL\\optimal_thresholds.json",
+        "sha256": "39a6eb5cce8db19982051f15a21809dda4aee0eed51a80cc7dbcdb603ea154bc",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-FULL\\calibration_manifest.json",
+        "calibration_sha256": "e04230cf9aa9c1e67837d7ba238dc6dd9cecd576b684f34987617475f8da1759",
+        "count": 14
+      },
+      "config_sha256": "1d02a551616673ef465435c7575dd451b9495167ef3cbf32e57bd615c9646b9c",
+      "checkpoint_sha256": "e8056dc4bbc5c4321514dcdd95d84b492a7d2c65a5772c2a953a79627cad2387",
+      "prediction_manifest_sha256": "95e7efbdb942b908334ccba3abb9840827950d1a804b6e9d5cd87f02592fe6bb",
+      "probabilities_sha256": "62169f375dde7a5017f043dfe6a9b9b6b17dc7a87be79da20ca05c3d25e140e9",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 42,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-SEED123",
+      "seed_expected": 123,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "123"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-SEED123\\optimal_thresholds.json",
+        "sha256": "ffe4d3e9c25d9f3ce2f94f0761a3d8eb25c57ba5cc83838ea3e70aab5b296c14",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-SEED123\\calibration_manifest.json",
+        "calibration_sha256": "61c8d0c749488619ca22700a20f4856c6314f043bbd3ce7a91e785ee85e80a7c",
+        "count": 14
+      },
+      "config_sha256": "3fdbf74e87111fc61f0bd65133fbe1bbd31986ca8e52cadc5f362f06c2e7c30e",
+      "checkpoint_sha256": "3c4af7df5b2440ba179b57e419dc8f3f10c26be78f4f542a337ab5ba58ac4acf",
+      "prediction_manifest_sha256": "f4685e3b2b732cc708d0d469bbfcb07d18bcc747708d42037c95a704d2a58659",
+      "probabilities_sha256": "6375f7e284d58e3e4b377daf7f1bd3b67ea641d25d6e2290b25e144f2b1b6e61",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 123,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-SEED2026",
+      "seed_expected": 2026,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "2026"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-SEED2026\\optimal_thresholds.json",
+        "sha256": "4cd32c5767344752e470f0636ac43d7b1e6e63bd7710bf24d9ebfc633a5c0cde",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\EXP-UVVIS-001-SEED2026\\calibration_manifest.json",
+        "calibration_sha256": "63b6a3851edb43de0a6b9ee8f533bc056316bc0d0e613429e458d3877ff1e8cc",
+        "count": 14
+      },
+      "config_sha256": "c2558c5d46156d317190a788fc9078a40e8fc6f3bd4beae31790fb2f8cfd473a",
+      "checkpoint_sha256": "9e2b0dd81cb5319e5c4f1aa6f2bb550bf23f6b6a3045e478ac1aa2f97f88e01d",
+      "prediction_manifest_sha256": "50f9bb796602c2ee6296833dd25cd5c61c0f2356b264285a3a981df5bc718589",
+      "probabilities_sha256": "6e9b67b605c02c5b3b8fb3ac6ea4aaa6b2b86f5859712f2a766e397b42512054",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 14,
+      "config_seed": 2026,
+      "label_names": [
+        "aldehyde",
+        "alkene",
+        "alkyne",
+        "amide",
+        "amine",
+        "c_f_bond",
+        "carbonyl",
+        "ester",
+        "ether",
+        "hydroxyl",
+        "imine",
+        "ketone",
+        "nitrile",
+        "nitro"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-FULL",
+      "seed_expected": 42,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "42"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-FULL\\optimal_thresholds.json",
+        "sha256": "98e062029560be910526e8516b70531d3ef4e8c9a109cbedb3d9ed8a3a467110",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-FULL\\calibration_manifest.json",
+        "calibration_sha256": "3e15f420a963d78d9e44c9ef1477ff2cd1881a9862f8189a3340933609622c67",
+        "count": 15
+      },
+      "config_sha256": "33f2a3c77eda6df1ce82a640e66bb9014f10c8f124524f951643af8759dffe26",
+      "checkpoint_sha256": "68c976d92b1b5f82c5d493b3ebab44b9e9953f1738d62f0ba760b3e6e79992fe",
+      "prediction_manifest_sha256": "d930886c5a61de5f5940f36dfd6509cbae4260f31624a5ffff1a271d63e1277a",
+      "probabilities_sha256": "67b13d2143455269ada77160573019a74034fe7fa87a863e9a13fe978e0dd07f",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 42,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+      "seed_expected": 123,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "123"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+        "sha256": "267c7cee9b6046bb64c185f7d049c73cfee77c9003381208ae284544c5af3609",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-SEED123\\calibration_manifest.json",
+        "calibration_sha256": "b044e4ed53822dc677f8dddc25580ed9c0d0e91760504eb68d228033423a0c4d",
+        "count": 15
+      },
+      "config_sha256": "7c86dadd761228b3b697d31dddf623521b36bc4a0548cf4856735c8181518f89",
+      "checkpoint_sha256": "7a977c63a8d52315e88c7497fd8c44b47f997985f1f2f8ab1392f38cc14eee63",
+      "prediction_manifest_sha256": "f4630d36d22bd9a0be02fa1ad9ac87b139b63641bd6bbaca40b16feea1b6a3f3",
+      "probabilities_sha256": "37509dc5dd8a17b9985a6584b2cc93e58b7a61da27da05792a3fabe2833de98d",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 123,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+      "seed_expected": 2026,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "2026"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+        "sha256": "2525d76d41448125b7f600a488169a6030cf4f0dad6c5c1259e183b950e36c1e",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-IR-003-UVSPEC15-SEED2026\\calibration_manifest.json",
+        "calibration_sha256": "7c233939e53be06f0372aa46182f2bd04bb105e233b3dfba1ef76d190720e1cc",
+        "count": 15
+      },
+      "config_sha256": "9ce923b88bf5da5d1332f98ed715a784fd5f7e13b3648a0080c7e05b09f3a6e0",
+      "checkpoint_sha256": "410c41d1413f2d1c8f697aa19504e765836a171aea61f258e3d4b88c282c19db",
+      "prediction_manifest_sha256": "f3cba2829b153eb4e3753d28d9a5d43a231879e66ef8ba432015ad14fad9df11",
+      "probabilities_sha256": "3c7d3b770816984f18db118d42e95b34a00c02f9f02ab687d0b7208228e4834d",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 2026,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+      "seed_expected": 42,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "42"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-FULL\\optimal_thresholds.json",
+        "sha256": "941f1edf5c0d282abcce5e4f34fc77dbe4535ad45893d502c978170394a226d9",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-FULL\\calibration_manifest.json",
+        "calibration_sha256": "c6f21346ca6f91c290a8b00f16220c584796db7b54bbb829db0342d373b2f712",
+        "count": 15
+      },
+      "config_sha256": "1d7988c1c6a0af7f1bde52f961c0b0231581a89630ec8e2b8ac6ff528b26adb6",
+      "checkpoint_sha256": "20e0264f5411dbef57ba23559c0db68aadcc39d324e5b21ee84f3e7e9b88f761",
+      "prediction_manifest_sha256": "6792cca85a4f3d37a2985b0d30506dd4a6ae9bcb7c4f7931194b74a9faba5478",
+      "probabilities_sha256": "44fd311fde58975bd27d8dc4981d7edccce36b8c089986ad4751f3a998f1c161",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 42,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "seed_expected": 123,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "123"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+        "sha256": "2c7ded918193796cacb91ba71c3102049f5f51d6bdacc648aa51047ab52a6814",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-SEED123\\calibration_manifest.json",
+        "calibration_sha256": "4919da9841b18f21f15840f19e5158cd0914fcdb1b1dc369a9863b57966f7c81",
+        "count": 15
+      },
+      "config_sha256": "aa4f1144707a0b9d75f230f909f81e9016cb483605a87494efca66c7430c7d0f",
+      "checkpoint_sha256": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+      "prediction_manifest_sha256": "e6b935c213fe39ae6173d1adbb579a800f3cc5f08143e0335b089f251c69603a",
+      "probabilities_sha256": "e218e70e8f48b263709a76784c1cb76bccc47abe573351a44a3db076424c6171",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 123,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "seed_expected": 2026,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "2026"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+        "sha256": "72a694f85d428aa56293216baf05eb08e32e5bb68f90ee91b45ad3efadd48f18",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-RAMAN-003-UVSPEC15-SEED2026\\calibration_manifest.json",
+        "calibration_sha256": "731a56fad99832eeeb5f764561d4f57e750519ec46358c89a54e4865150e249b",
+        "count": 15
+      },
+      "config_sha256": "7e8bf0698e139e5eb2f29e4c5576ac033d73e14a147ee0c90483ab3309f98ab3",
+      "checkpoint_sha256": "781b47422630899f1f234695dea49af71f4c6401594380da868e7bd17d8e022a",
+      "prediction_manifest_sha256": "8558c6534e997f4fe9bc42c857c1cfc263ae6478c0d8bbf33b6cab56b86b2625",
+      "probabilities_sha256": "749763a8e79666cc411a1acf912a2ec69997f10f5355a1d951c026ff3575bda7",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 2026,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+      "seed_expected": 42,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "42"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-FULL\\optimal_thresholds.json",
+        "sha256": "78f5609df0813ddefd43ddffce37eb2109cab900af0056fb840588a3825fbd92",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-FULL\\calibration_manifest.json",
+        "calibration_sha256": "fc43c1a5a900618a4495ae047bae06cf7d8d46348d508c87096a674d0e84aae0",
+        "count": 15
+      },
+      "config_sha256": "efc2ce2a7b0eb850afa98b9960a1c5081a4dbd241f1340cbb379d847e9e4cb22",
+      "checkpoint_sha256": "11f2a467e863ac4f943f0ce2509342ae058b297da742daaf19a3a6cf41280ace",
+      "prediction_manifest_sha256": "e8222dd7c205a4da69ec8ad75409fae17c1157d6486f60b1fd3368797c61f9fd",
+      "probabilities_sha256": "f4f9a606eeec454838d6c9726eece836f63f9a7a312e5f037b73f8119a47afcc",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 42,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+      "seed_expected": 123,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "123"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-SEED123\\optimal_thresholds.json",
+        "sha256": "26e0ccc6e079aeed6c80b541f6b7ef3a2943aa3113e2551b78e6e7b6c1ab0cf0",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-SEED123\\calibration_manifest.json",
+        "calibration_sha256": "1586771992915e145e849facff45357fc17405b0b5fabfa15ed91b6d1c9b09dd",
+        "count": 15
+      },
+      "config_sha256": "8774bc7a6fba2a0b1b688c788ac58f7fa0cdb8ec4cb0d18d4706d23cca01d5f5",
+      "checkpoint_sha256": "ded92d1d29ac26db56b3967f322fdbcca1143a527deb26abbafc0e9c3a54bdc8",
+      "prediction_manifest_sha256": "ee25728a832d9100e39fa8a49b7fae1a9d289a69ee4728d5876d0e1401c7ddc8",
+      "probabilities_sha256": "35d770b075251e64d0fcb351ae7ac2f2ace8f563d7e318cfdf9cccfa29c72d0f",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 123,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "seed_expected": 2026,
+      "checks": [
+        {
+          "id": "config.seed",
+          "status": "PASS",
+          "detail": "2026"
+        },
+        {
+          "id": "config.train_size",
+          "status": "PASS",
+          "detail": ""
+        }
+      ],
+      "threshold": {
+        "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-SEED2026\\optimal_thresholds.json",
+        "sha256": "7601afc4dfded6c470471518bd3bce208cfaee681da3693ed3f2c73fb0272b82",
+        "calibration_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\EXP-UVVIS-003-UVSPEC15-SEED2026\\calibration_manifest.json",
+        "calibration_sha256": "0b162373f8ca3b5f7fa2e466a2558d7a9ca0cbe579739c23424cdcf2cf06479a",
+        "count": 15
+      },
+      "config_sha256": "3c6b5a99c8e52992d935ccf7363d46f8127eaa1b70a9d592813cac0c75202327",
+      "checkpoint_sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+      "prediction_manifest_sha256": "898db9673fd68ade6d07eb412a2f325c856a29f3fc43287caf2c73dcbf5892fd",
+      "probabilities_sha256": "b4d40eaf82b9e83776fc81ebcfa66814b8e13b32237df8bc1c087d042fb58e85",
+      "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+      "labels_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e",
+      "split_sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_samples": 12981,
+      "n_labels": 15,
+      "config_seed": 2026,
+      "label_names": [
+        "has_conjugation",
+        "has_nonaromatic_conjugation",
+        "acyclic_conjugated_system",
+        "cyclic_conjugated_system",
+        "has_aromatic_system",
+        "heteroaromatic",
+        "mixed_aromatic_nonaromatic_conjugation",
+        "pi_conjugated_carbonyl",
+        "alpha_beta_unsaturated_carbonyl",
+        "aryl_carbonyl",
+        "pi_conjugated_imine",
+        "pi_conjugated_nitrile",
+        "has_donor_substituted_pi_system",
+        "has_acceptor_substituted_pi_system",
+        "donor_acceptor_same_conjugated_system"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "task_aggregate": {
+    "Shared14": {
+      "n_models": 9
+    },
+    "UVSPEC15": {
+      "n_models": 9
+    }
+  },
+  "thresholds": {
+    "Shared14": {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\Shared14\\summary.json",
+      "sha256": "5ca5e7ad2dcfea12492c3c523f4e67057264e53ea44275b0ddcf0d551bea6452",
+      "n_models": 9,
+      "n_labels": 14,
+      "n_threshold_records": 126,
+      "all_checks_pass": true,
+      "no_test_access": true
+    },
+    "UVSPEC15": {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS\\UVSPEC15\\summary.json",
+      "sha256": "7a50a432000686b2afe804604ff9c4c789b95b0ab46c3ba661e27e85fdd100b2",
+      "n_models": 9,
+      "n_labels": 15,
+      "n_threshold_records": 135,
+      "all_checks_pass": true,
+      "no_test_access": true
+    }
+  },
+  "metrics": {
+    "Shared14": {
+      "summary_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-METRICS\\Shared14\\summary.json",
+      "summary_sha256": "b11a89d813b2895d5248ae83123dbeb068a441fb7a312d91be1742cd47b3e64f",
+      "model_metrics_sha256": "1c24cbe40a057d8cbfa578fc094534005d61829f0c2df947b495f1e93a8e10a3",
+      "n_models": 9
+    },
+    "UVSPEC15": {
+      "summary_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-METRICS\\UVSPEC15\\summary.json",
+      "summary_sha256": "e2dfd26598369005c0400dff81d2a9bc1a8bc7b30c2a520232a57e4c1cf8b34f",
+      "model_metrics_sha256": "b1d033463234128d262eb6cbcf697d76da4194134c867cc0ab88c87823c885de",
+      "n_models": 9
+    }
+  },
+  "b3a": {
+    "Shared14": {
+      "summary_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-ANALYSIS\\Shared14\\complementarity\\summary.json",
+      "summary_sha256": "f057dcb7030ffea5fa71cc72cbc731a91cc0388d7ee1d28b1749608d28d7086d",
+      "n_outputs": 6,
+      "frozen_b3_metrics_sha256": "1c24cbe40a057d8cbfa578fc094534005d61829f0c2df947b495f1e93a8e10a3"
+    },
+    "UVSPEC15": {
+      "summary_path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-ANALYSIS\\UVSPEC15\\complementarity\\summary.json",
+      "summary_sha256": "af1c34b522d93b80453731bf27b71c6e2eb52872736c3b01ea7c413711624ec8",
+      "n_outputs": 6,
+      "frozen_b3_metrics_sha256": "b1d033463234128d262eb6cbcf697d76da4194134c867cc0ab88c87823c885de"
+    }
+  },
+  "formal_assets": {
+    "roots": {
+      "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-PREDICTIONS": {
+        "before": {
+          "tree_sha256": "5ecb18f4565ea690c477de798f9c8070d85bb3196579929a6fff5359e013409c",
+          "n_files": 72
+        },
+        "after": {
+          "tree_sha256": "5ecb18f4565ea690c477de798f9c8070d85bb3196579929a6fff5359e013409c",
+          "n_files": 72
+        },
+        "unchanged": true
+      },
+      "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-METRICS": {
+        "before": {
+          "tree_sha256": "3e42f6a14c1d70fda839779830eb1d3d4b362012d97dc58c935cf70397065cac",
+          "n_files": 15
+        },
+        "after": {
+          "tree_sha256": "3e42f6a14c1d70fda839779830eb1d3d4b362012d97dc58c935cf70397065cac",
+          "n_files": 15
+        },
+        "unchanged": true
+      },
+      "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-THRESHOLDS": {
+        "before": {
+          "tree_sha256": "0766ade5f43a5e685c7958f425cfbc04f7e35c10d33c66c53bd085e036334577",
+          "n_files": 84
+        },
+        "after": {
+          "tree_sha256": "0766ade5f43a5e685c7958f425cfbc04f7e35c10d33c66c53bd085e036334577",
+          "n_files": 84
+        },
+        "unchanged": true
+      },
+      "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-ANALYSIS": {
+        "before": {
+          "tree_sha256": "5940e0635e579cb91dde0e2bafcca0c60bd897b898fec0f9dd191c65226d9c8d",
+          "n_files": 14
+        },
+        "after": {
+          "tree_sha256": "5940e0635e579cb91dde0e2bafcca0c60bd897b898fec0f9dd191c65226d9c8d",
+          "n_files": 14
+        },
+        "unchanged": true
+      },
+      "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-MANIFESTS\\B1": {
+        "before": {
+          "tree_sha256": "1b9a7a454f278de67bbb2a74ad411900c04912cc2b8435a19f4830f222874264",
+          "n_files": 5
+        },
+        "after": {
+          "tree_sha256": "1b9a7a454f278de67bbb2a74ad411900c04912cc2b8435a19f4830f222874264",
+          "n_files": 5
+        },
+        "unchanged": true
+      },
+      "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-MANIFESTS\\B3": {
+        "before": {
+          "tree_sha256": "2e5dc8fa73de76cdd201fb0a0c216f910f729d3f4a5b1545266443ec8b04d0e7",
+          "n_files": 5
+        },
+        "after": {
+          "tree_sha256": "2e5dc8fa73de76cdd201fb0a0c216f910f729d3f4a5b1545266443ec8b04d0e7",
+          "n_files": 5
+        },
+        "unchanged": true
+      }
+    },
+    "all_unchanged": true
+  },
+  "spectra_history": [
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-IR-003-UVSPEC15-FULL",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\ir_float32.npy",
+      "historical_sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53",
+      "actual_sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53"
+    },
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\ir_float32.npy",
+      "historical_sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53",
+      "actual_sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53"
+    },
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\ir_float32.npy",
+      "historical_sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53",
+      "actual_sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53"
+    },
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\raman_float32.npy",
+      "historical_sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+      "actual_sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8"
+    },
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\raman_float32.npy",
+      "historical_sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+      "actual_sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8"
+    },
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\raman_float32.npy",
+      "historical_sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+      "actual_sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8"
+    },
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\uvvis_float32.npy",
+      "historical_sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a",
+      "actual_sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a"
+    },
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\uvvis_float32.npy",
+      "historical_sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a",
+      "actual_sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a"
+    },
+    {
+      "task": "UVSPEC15",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\uvvis_float32.npy",
+      "historical_sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a",
+      "actual_sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a"
+    }
+  ],
+  "raw_assets": [
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\ir_float32.npy",
+      "exists": true,
+      "sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53",
+      "historical_hash_available": true,
+      "historical_match": true,
+      "shape": [
+        129817,
+        3501
+      ]
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\raman_float32.npy",
+      "exists": true,
+      "sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+      "historical_hash_available": true,
+      "historical_match": true,
+      "shape": [
+        129817,
+        3501
+      ]
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\uvvis_float32.npy",
+      "exists": true,
+      "sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a",
+      "historical_hash_available": true,
+      "historical_match": true,
+      "shape": [
+        129817,
+        701
+      ]
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\functional_group_labels.npy",
+      "exists": true,
+      "sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4",
+      "historical_hash_available": true,
+      "historical_match": true,
+      "shape": [
+        129817,
+        14
+      ]
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\functional_group_label_names.json",
+      "exists": true,
+      "sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942",
+      "historical_hash_available": true,
+      "historical_match": true
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\uvspec15_labels.npy",
+      "exists": true,
+      "sha256": "f08170df62972828076b4cfdb1136b2890b86a4eec36f280466180f5c64f1705",
+      "historical_hash_available": true,
+      "historical_match": true,
+      "shape": [
+        129817,
+        15
+      ]
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\uvspec15_label_names.json",
+      "exists": true,
+      "sha256": "c759f3d8e21ad841daf0e9ccb63e743acb36f39226b6b7f738a8d0e723cd9afc",
+      "historical_hash_available": true,
+      "historical_match": true
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+      "exists": true,
+      "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "historical_hash_available": true,
+      "historical_match": true
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+      "exists": true,
+      "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "historical_hash_available": true,
+      "historical_match": true
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+      "exists": true,
+      "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "historical_hash_available": true,
+      "historical_match": true
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\scaffold_split_80_10_10.npz",
+      "exists": true,
+      "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "historical_hash_available": false,
+      "historical_match": null
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\multimodal_complete_scaffold_split.npz",
+      "exists": true,
+      "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "historical_hash_available": false,
+      "historical_match": null
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\modality_valid_masks.npz",
+      "exists": true,
+      "sha256": "967dae03d8816083a6f83960ee7ca6a86f87b0aa70f636eaa317c781c610b10b",
+      "historical_hash_available": false,
+      "historical_match": null
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\qm9s_manifest_prepared.csv",
+      "exists": true,
+      "sha256": "e5fd1710bde44fe7e5c57bc7115d8d69751ac36cb70ea01e6e6351f48013e51c",
+      "historical_hash_available": false,
+      "historical_match": null
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\structures\\qm9s_structure_library.csv",
+      "exists": true,
+      "sha256": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9",
+      "historical_hash_available": false,
+      "historical_match": null
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\structures\\qm9s_invalid_structures.csv",
+      "exists": true,
+      "sha256": "e3c7e6bc7dc36c1254c58d3a4625851efae1fb9ed46dee6ee47ca408eee5df6a",
+      "historical_hash_available": false,
+      "historical_match": null
+    },
+    {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\structures\\build_structure_library_report.json",
+      "exists": true,
+      "sha256": "2be5a0e7c60a5a93145b3e58d7f49d9ec515b0ff5718f286e864d4f85d3ef574",
+      "historical_hash_available": false,
+      "historical_match": null
+    }
+  ],
+  "splits_validation_only": {
+    "ir": {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\ir_scaffold_split_valid.npz",
+      "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "n_val": 12981,
+      "unique": 12981,
+      "min": 13,
+      "max": 129810,
+      "test_key_accessed": false
+    },
+    "raman": {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\raman_scaffold_split_valid.npz",
+      "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+      "n_val": 12981,
+      "unique": 12981,
+      "min": 13,
+      "max": 129810,
+      "test_key_accessed": false
+    },
+    "uvvis": {
+      "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\processed\\qm9s\\prepared\\uvvis_scaffold_split_valid.npz",
+      "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+      "n_val": 12981,
+      "unique": 12981,
+      "min": 13,
+      "max": 129810,
+      "test_key_accessed": false
+    }
+  },
+  "code_provenance": {
+    "path": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-MANIFESTS\\B3\\code_provenance.json",
+    "sha256": "b1c5d2eb65b16f719dae971819c6f3623bcc1a355dc5eb89e687a25145e20e90",
+    "no_test_access": true,
+    "unknown_historical": [
+      "B3-A execution code SHA256",
+      "threshold calibration execution code SHA256"
+    ]
+  },
+  "checks": [
+    {
+      "id": "provenance.roots",
+      "status": "PASS",
+      "detail": "runs/LINE-B-PREDICTIONS"
+    },
+    {
+      "id": "provenance.roots",
+      "status": "PASS",
+      "detail": "runs/LINE-B-METRICS"
+    },
+    {
+      "id": "provenance.roots",
+      "status": "PASS",
+      "detail": "runs/LINE-B-THRESHOLDS"
+    },
+    {
+      "id": "provenance.roots",
+      "status": "PASS",
+      "detail": "runs/LINE-B-ANALYSIS"
+    },
+    {
+      "id": "provenance.roots",
+      "status": "PASS",
+      "detail": "runs/LINE-B-MANIFESTS/B1"
+    },
+    {
+      "id": "provenance.roots",
+      "status": "PASS",
+      "detail": "runs/LINE-B-MANIFESTS/B3"
+    },
+    {
+      "id": "cross_task.row_index",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "b3a.Shared14.code_provenance",
+      "status": "ACCEPTED_HISTORICAL_LIMITATION",
+      "detail": "B3-A execution code SHA is unknown; B3.5-A reproduction evidence exists"
+    },
+    {
+      "id": "b3a.UVSPEC15.code_provenance",
+      "status": "ACCEPTED_HISTORICAL_LIMITATION",
+      "detail": "B3-A execution code SHA is unknown; B3.5-A reproduction evidence exists"
+    },
+    {
+      "id": "audit.b1_export_audit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "audit.b3_export_audit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "code_provenance.historical_unknown",
+      "status": "ACCEPTED_HISTORICAL_LIMITATION",
+      "detail": "B3-A/threshold historical execution code SHA is unknown; reproduction evidence only"
+    },
+    {
+      "id": "code_provenance.b1_historical_diff",
+      "status": "ACCEPTED_HISTORICAL_LIMITATION",
+      "detail": "B1 exporter/common historical code SHA differs from current; historical manifest preserved"
+    },
+    {
+      "id": "formal_assets.tree_unchanged",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "future_missing": [
+    "training/line_b/bootstrap_line_b_scaffold.py",
+    "training/line_b/analyze_line_b_structure.py",
+    "training/line_b/build_line_b_report.py",
+    "runs/LINE-B-MANIFESTS/FREEZE.json"
+  ],
+  "future_gaps": [
+    {
+      "path": "training/line_b/bootstrap_line_b_scaffold.py",
+      "status": "MISSING",
+      "gate": "B4/FREEZE"
+    },
+    {
+      "path": "training/line_b/analyze_line_b_structure.py",
+      "status": "MISSING",
+      "gate": "B4/FREEZE"
+    },
+    {
+      "path": "training/line_b/build_line_b_report.py",
+      "status": "MISSING",
+      "gate": "B4/FREEZE"
+    },
+    {
+      "path": "runs/LINE-B-MANIFESTS/FREEZE.json",
+      "status": "MISSING",
+      "gate": "B4/FREEZE"
+    }
+  ],
+  "accepted_historical_limitations": [
+    "B1 exporter/common historical code SHA differs from current source; historical manifest preserved.",
+    "B3-A execution code SHA is unknown; B3.5-A reproduction evidence exists.",
+    "threshold calibration execution code SHA is unknown; B3.5-A reproduction evidence exists.",
+    "B1 IR config.modality is absent in the frozen historical format; registration fixes modality=ir."
+  ]
+}

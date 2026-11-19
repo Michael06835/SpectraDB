@@ -1,0 +1,2902 @@
+{
+  "schema_version": "1.0",
+  "phase": "B3",
+  "status": "FROZEN",
+  "generated_at": "2026-11-20T01:44:10+08:00",
+  "project_root": "E:\\Projects\\曦源计划\\数据\\SpectraDB",
+  "protocol_version": "B0 v0.2",
+  "protocol_path": "docs/experiments/line_b_protocol_draft.md",
+  "protocol_sha256": "713fa92f5fd1f2134c1512bd2e49f689433a2158d120e41c9460ff5c287dd46a",
+  "preflight_verification_path": "runs/LINE-B-MANIFESTS/freeze_preflight_verification_20261120T014410.json",
+  "preflight_verification_sha256": "9a9b28e68d4c16823b9cafd72dea47d8bf509958e32fe6347f85558583ef4d66",
+  "verification": {
+    "verifier": "training/line_b/verify_line_b_manifests.py",
+    "verifier_phase": "B3.5-B",
+    "overall_status": "PASS",
+    "exit_code": 0,
+    "no_test_access": true,
+    "n_checks": 14,
+    "n_passed": 10,
+    "n_failed": 0,
+    "n_accepted_historical_limitation": 4,
+    "failed_check_ids": [],
+    "accepted_check_ids": [
+      "b3a.Shared14.code_provenance",
+      "b3a.UVSPEC15.code_provenance",
+      "code_provenance.historical_unknown",
+      "code_provenance.b1_historical_diff"
+    ],
+    "n_models": 18,
+    "n_passed_models": 18,
+    "n_failed_models": 0,
+    "threshold_records": 261,
+    "future_missing_at_preflight": [
+      "runs/LINE-B-MANIFESTS/FREEZE.json"
+    ],
+    "future_gaps_are_downstream_only": true,
+    "accepted_historical_limitations": [
+      "B1 exporter/common historical code SHA differs from current source; historical manifest preserved.",
+      "B3-A execution code SHA is unknown; B3.5-A reproduction evidence exists.",
+      "threshold calibration execution code SHA is unknown; B3.5-A reproduction evidence exists.",
+      "B1 IR config.modality is absent in the frozen historical format; registration fixes modality=ir."
+    ],
+    "verifier_scope": {
+      "analysis_root_check": "per-file verification of the 14 authoritative B3-A formal files plus reconstruction of the B3.5-A recorded tree digest",
+      "analysis_root_additive_subtree_excluded": "runs/LINE-B-ANALYSIS/validation_development (post-snapshot B3.5-C1/C2/D1/D2 analysis assets)",
+      "all_other_roots_check": "full-root tree digest equality against the B3.5-A provenance record"
+    },
+    "b3a_analysis_root_scope": {
+      "root": "E:\\Projects\\曦源计划\\数据\\SpectraDB\\runs\\LINE-B-ANALYSIS",
+      "recorded_tree_sha256": "5940e0635e579cb91dde0e2bafcca0c60bd897b898fec0f9dd191c65226d9c8d",
+      "recorded_file_count": 14,
+      "authoritative_file_count": 14,
+      "additive_subtree": "validation_development",
+      "files": [
+        "Shared14\\complementarity\\model_mean_sd.csv",
+        "Shared14\\complementarity\\model_metrics.csv",
+        "Shared14\\complementarity\\pairwise_mean_sd.csv",
+        "Shared14\\complementarity\\pairwise_metrics.csv",
+        "Shared14\\complementarity\\summary.json",
+        "Shared14\\complementarity\\three_modality_mean_sd.csv",
+        "Shared14\\complementarity\\three_modality_metrics.csv",
+        "UVSPEC15\\complementarity\\model_mean_sd.csv",
+        "UVSPEC15\\complementarity\\model_metrics.csv",
+        "UVSPEC15\\complementarity\\pairwise_mean_sd.csv",
+        "UVSPEC15\\complementarity\\pairwise_metrics.csv",
+        "UVSPEC15\\complementarity\\summary.json",
+        "UVSPEC15\\complementarity\\three_modality_mean_sd.csv",
+        "UVSPEC15\\complementarity\\three_modality_metrics.csv"
+      ],
+      "files_per_task": {
+        "Shared14": 7,
+        "UVSPEC15": 7
+      },
+      "reconstructed_tree_sha256": "5940e0635e579cb91dde0e2bafcca0c60bd897b898fec0f9dd191c65226d9c8d",
+      "additive_file_counts_by_top_dir": {
+        "B3.5-C1": 8,
+        "B3.5-C2": 36,
+        "B3.5-D1": 52,
+        "B3.5-D2": 8931
+      },
+      "additive_file_count": 9027,
+      "unexpected_files": []
+    }
+  },
+  "verification_matrix": {
+    "shared14_models": 9,
+    "uvspec15_models": 9,
+    "total_models": 18,
+    "shared14_threshold_records": 126,
+    "uvspec15_threshold_records": 135,
+    "total_threshold_records": 261,
+    "b3a_outputs_per_task": {
+      "Shared14": 6,
+      "UVSPEC15": 6
+    },
+    "test_accessed_during_freeze": false
+  },
+  "models": [
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-FULL",
+      "seed": 42,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-IR-001-FULL/config.json",
+        "sha256": "7af88bd3e47b193f576ec1018f5e2c229cb797c65f72842de5895ae922d7de4b",
+        "size_bytes": 687
+      },
+      "checkpoint": {
+        "path": "runs/EXP-IR-001-FULL/best_model.pt",
+        "sha256": "d60cc7b159891728d46597d15826f29028d00a84801475ab07120f3255613239",
+        "size_bytes": 12262583
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-FULL/validation/prediction_manifest.json",
+        "sha256": "627a9ddf95256bb60c6fb4da7e718e8802517ce001bd3bb612deeede1f0b6e49",
+        "size_bytes": 5653
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-FULL/validation/probabilities.npy",
+        "sha256": "a51ba2e1a615c7782eb43f68719eb79de282eb1913166be80587292ced00005e",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "2152f0c2904faf5c0d28cc071fb9deaba373a1010c4ddb204d52e0ede7c6f291"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-FULL/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-FULL/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/ir_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-IR-001-FULL/optimal_thresholds.json",
+        "sha256": "1cc92a75bb2e1f8b299fcf6333c01ec06d5749031383f65443fabb0096ed63c1",
+        "size_bytes": 2799,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-IR-001-FULL/calibration_manifest.json",
+        "sha256": "92c7278a169bec682f728c74a45bc5155569fa280c6d39c63787f14a6a016f5c",
+        "size_bytes": 2180
+      }
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-SEED123",
+      "seed": 123,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-IR-001-SEED123/config.json",
+        "sha256": "061d83043dc63742bf70d8acbc1f59932bcf928d3b5f95115d332bcd633de4ad",
+        "size_bytes": 691
+      },
+      "checkpoint": {
+        "path": "runs/EXP-IR-001-SEED123/best_model.pt",
+        "sha256": "d3856f25c0d1cbb9ddbd3e2b031e5bcdc1c43825b1e60fa26ae9bb4e048e82a2",
+        "size_bytes": 12262583
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-SEED123/validation/prediction_manifest.json",
+        "sha256": "15d824710bc6bd7869835386dcc4a063f408afd7b697ce58a4d5b0dadc615915",
+        "size_bytes": 5647
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-SEED123/validation/probabilities.npy",
+        "sha256": "27ae5d341cfce89f7a097b9b21e0299cd77b7e8e440eb7b183a12f600c47d860",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "6fd3bf245ea1fc94588e9a2d6089cb759ff656eea1f834f86df66159f1d3458a"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-SEED123/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-SEED123/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/ir_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-IR-001-SEED123/optimal_thresholds.json",
+        "sha256": "f24079970a2e04ea10e8241285ef089cfda5ba5fca103141e6a885768be773a6",
+        "size_bytes": 2806,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-IR-001-SEED123/calibration_manifest.json",
+        "sha256": "9e4c739d2475b519bc1bce8eb966b06e3e295ed031a8cfb6cd0e2f2bfd093416",
+        "size_bytes": 2199
+      }
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "ir",
+      "run_name": "EXP-IR-001-SEED2026",
+      "seed": 2026,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-IR-001-SEED2026/config.json",
+        "sha256": "f97ce98347ea338a837abe6ec1251e40af1c10beb243d1a3d748e960e55fa776",
+        "size_bytes": 693
+      },
+      "checkpoint": {
+        "path": "runs/EXP-IR-001-SEED2026/best_model.pt",
+        "sha256": "d7945c78d432fa907bbc0c8b39e3f4e7ae78088a1185931e625a8eb06cc4a274",
+        "size_bytes": 12262583
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-SEED2026/validation/prediction_manifest.json",
+        "sha256": "9e2c3b4b8d03e2acd27434369265ea4463962a57cdf5fe04f0751c41ceba190c",
+        "size_bytes": 5665
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-SEED2026/validation/probabilities.npy",
+        "sha256": "0eaf262838828c6824fe5bde2d3a3e46d63c836bbe98d31df028d043fd9e18af",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "a69c1f9ad5b74565e82a198ae331e7268e445c65c397bb0f374ffc2b92b73789"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-SEED2026/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/IR/EXP-IR-001-SEED2026/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/ir_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-IR-001-SEED2026/optimal_thresholds.json",
+        "sha256": "18e8136f8019b43458a1780bb4094351829a1d0365f24e2bfaa4a4c63fea935d",
+        "size_bytes": 2805,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-IR-001-SEED2026/calibration_manifest.json",
+        "sha256": "18b0e55354637d2bbd535e08544ea37448bc3c3d78690b6aae3b7f85c302b584",
+        "size_bytes": 2206
+      }
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-FULL",
+      "seed": 42,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-RAMAN-001-FULL/config.json",
+        "sha256": "74180be06f20582241673d1ccdd8ec92f8d4580bb68d7a03b51925120aa06aa2",
+        "size_bytes": 714
+      },
+      "checkpoint": {
+        "path": "runs/EXP-RAMAN-001-FULL/best_model.pt",
+        "sha256": "573ae7e2a3351252c5f1ad7e0ec060c77435468d3c7bddb37a641e1206cdfcd3",
+        "size_bytes": 12262647
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-FULL/validation/prediction_manifest.json",
+        "sha256": "2318df1cc7d8a76b2c2047f7ba5155e9dfa228b022874099a8575c46f82b355c",
+        "size_bytes": 5699
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-FULL/validation/probabilities.npy",
+        "sha256": "80165d1e0a06b19d795fcc6f5bf2f0546dc1735c21c7a6147ef1a3abbf2d9de0",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "466aca4de0d2909753b70abbfa2b25ca7db52774a90847fbe5af46ed3066e39e"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-FULL/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-FULL/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/raman_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-RAMAN-001-FULL/optimal_thresholds.json",
+        "sha256": "621992ca32363720ad435c510d6124e883cac84f54d6235009d3d97150467689",
+        "size_bytes": 2810,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-RAMAN-001-FULL/calibration_manifest.json",
+        "sha256": "843f44434c81f8e6ace3d34d862e2d5641ee4857a7f8b9022c6ccf6798238731",
+        "size_bytes": 2216
+      }
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-SEED123",
+      "seed": 123,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-RAMAN-001-SEED123/config.json",
+        "sha256": "2e5eaf8165b3173febf8094276d834b2f91da836b20716e763b2683940305901",
+        "size_bytes": 718
+      },
+      "checkpoint": {
+        "path": "runs/EXP-RAMAN-001-SEED123/best_model.pt",
+        "sha256": "84334c5e013490de75bc23f0f844880062150759947835cb29e18e80c9158298",
+        "size_bytes": 12262647
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-SEED123/validation/prediction_manifest.json",
+        "sha256": "1f746a75cee2e27664a13c53025a78292eb2f8e1e5b84ebfcc16fa9cf5c7f842",
+        "size_bytes": 5707
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-SEED123/validation/probabilities.npy",
+        "sha256": "c17d420218ccd7422596e10ea83830f0bdfe186a8b2b7a1295cbac54b7346b1d",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "5698017cf7d6facac41b09b33f3aa7ba2b5c28f6b4f183db4727e019421652de"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-SEED123/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-SEED123/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/raman_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-RAMAN-001-SEED123/optimal_thresholds.json",
+        "sha256": "3be96864317a058d7aa19e7ffaee96e92a6494761d9a6092879b96fd117df04b",
+        "size_bytes": 2796,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-RAMAN-001-SEED123/calibration_manifest.json",
+        "sha256": "8ca13a1543d57c68ccb4d415717de82228ffbda4bb5dee8c45e2b42c212ca60e",
+        "size_bytes": 2235
+      }
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-001-SEED2026",
+      "seed": 2026,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-RAMAN-001-SEED2026/config.json",
+        "sha256": "f68eb4017780de47e43b1cbf4063d09ffebc7b73c335d2e99a677c165b6f476d",
+        "size_bytes": 720
+      },
+      "checkpoint": {
+        "path": "runs/EXP-RAMAN-001-SEED2026/best_model.pt",
+        "sha256": "eac01833a7f618e18021856e94eeec21ef09802af428deae5a6c33e8f9e590ef",
+        "size_bytes": 12262647
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-SEED2026/validation/prediction_manifest.json",
+        "sha256": "1aa05855b6754e1e3939738b78389945768d4b31d597cf8d96df0d7ae8717181",
+        "size_bytes": 5709
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-SEED2026/validation/probabilities.npy",
+        "sha256": "6e4e2bf9c83593e946b0a0a626940eba3c321734a7e6f8f9333f681b3f12a589",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "b1717418fd64e8838ab57dd5cd792365eb6800ed6d9b2dd5cad74f893c017a74"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-SEED2026/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/Raman/EXP-RAMAN-001-SEED2026/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/raman_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-RAMAN-001-SEED2026/optimal_thresholds.json",
+        "sha256": "18829f9157e7877b7077403d1c542011f233ec3a31baa347af7ec661b9f25440",
+        "size_bytes": 2817,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-RAMAN-001-SEED2026/calibration_manifest.json",
+        "sha256": "43df2328c04ec1d1cd52a09cb3fca0f8860c72550cfc408c0dc04dee22b83ac1",
+        "size_bytes": 2242
+      }
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-FULL",
+      "seed": 42,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-UVVIS-001-FULL/config.json",
+        "sha256": "1d02a551616673ef465435c7575dd451b9495167ef3cbf32e57bd615c9646b9c",
+        "size_bytes": 714
+      },
+      "checkpoint": {
+        "path": "runs/EXP-UVVIS-001-FULL/best_model.pt",
+        "sha256": "e8056dc4bbc5c4321514dcdd95d84b492a7d2c65a5772c2a953a79627cad2387",
+        "size_bytes": 12262647
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-FULL/validation/prediction_manifest.json",
+        "sha256": "95e7efbdb942b908334ccba3abb9840827950d1a804b6e9d5cd87f02592fe6bb",
+        "size_bytes": 5711
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-FULL/validation/probabilities.npy",
+        "sha256": "37ef7404a1f8fc64b94eb0460e286dd0e15184c6a3fb36171824125e8372586b",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "62169f375dde7a5017f043dfe6a9b9b6b17dc7a87be79da20ca05c3d25e140e9"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-FULL/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-FULL/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-UVVIS-001-FULL/optimal_thresholds.json",
+        "sha256": "39a6eb5cce8db19982051f15a21809dda4aee0eed51a80cc7dbcdb603ea154bc",
+        "size_bytes": 2809,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-UVVIS-001-FULL/calibration_manifest.json",
+        "sha256": "e04230cf9aa9c1e67837d7ba238dc6dd9cecd576b684f34987617475f8da1759",
+        "size_bytes": 2216
+      }
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-SEED123",
+      "seed": 123,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-UVVIS-001-SEED123/config.json",
+        "sha256": "3fdbf74e87111fc61f0bd65133fbe1bbd31986ca8e52cadc5f362f06c2e7c30e",
+        "size_bytes": 718
+      },
+      "checkpoint": {
+        "path": "runs/EXP-UVVIS-001-SEED123/best_model.pt",
+        "sha256": "3c4af7df5b2440ba179b57e419dc8f3f10c26be78f4f542a337ab5ba58ac4acf",
+        "size_bytes": 12262647
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-SEED123/validation/prediction_manifest.json",
+        "sha256": "f4685e3b2b732cc708d0d469bbfcb07d18bcc747708d42037c95a704d2a58659",
+        "size_bytes": 5723
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-SEED123/validation/probabilities.npy",
+        "sha256": "12f9f860a386dc59528ef75f8f0fcf0b03511b03a07b3c229344dcc90ca68ca0",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "6375f7e284d58e3e4b377daf7f1bd3b67ea641d25d6e2290b25e144f2b1b6e61"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-SEED123/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-SEED123/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-UVVIS-001-SEED123/optimal_thresholds.json",
+        "sha256": "ffe4d3e9c25d9f3ce2f94f0761a3d8eb25c57ba5cc83838ea3e70aab5b296c14",
+        "size_bytes": 2812,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-UVVIS-001-SEED123/calibration_manifest.json",
+        "sha256": "61c8d0c749488619ca22700a20f4856c6314f043bbd3ce7a91e785ee85e80a7c",
+        "size_bytes": 2235
+      }
+    },
+    {
+      "task": "Shared14",
+      "label_set": "shared14",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-001-SEED2026",
+      "seed": 2026,
+      "n_labels": 14,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-UVVIS-001-SEED2026/config.json",
+        "sha256": "c2558c5d46156d317190a788fc9078a40e8fc6f3bd4beae31790fb2f8cfd473a",
+        "size_bytes": 720
+      },
+      "checkpoint": {
+        "path": "runs/EXP-UVVIS-001-SEED2026/best_model.pt",
+        "sha256": "9e2b0dd81cb5319e5c4f1aa6f2bb550bf23f6b6a3045e478ac1aa2f97f88e01d",
+        "size_bytes": 12262647
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-SEED2026/validation/prediction_manifest.json",
+        "sha256": "50f9bb796602c2ee6296833dd25cd5c61c0f2356b264285a3a981df5bc718589",
+        "size_bytes": 5726
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-SEED2026/validation/probabilities.npy",
+        "sha256": "78d89e7c6b5d4e42f7e87ef4e4a4fad7a946e2a7ce6a7aadaea4f85c594a38b0",
+        "size_bytes": 727064,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "float32",
+        "array_sha256": "6e9b67b605c02c5b3b8fb3ac6ea4aaa6b2b86f5859712f2a766e397b42512054"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-SEED2026/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/Shared14/UVVis/EXP-UVVIS-001-SEED2026/validation/labels.npy",
+        "sha256": "e3d00d24a869a5181a75e9a90f6a0c7ede49b59a7ca90aca0976cf63a4fd744e",
+        "size_bytes": 181862,
+        "shape": [
+          12981,
+          14
+        ],
+        "dtype": "uint8",
+        "array_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-UVVIS-001-SEED2026/optimal_thresholds.json",
+        "sha256": "4cd32c5767344752e470f0636ac43d7b1e6e63bd7710bf24d9ebfc633a5c0cde",
+        "size_bytes": 2824,
+        "n_threshold_records": 14,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/Shared14/EXP-UVVIS-001-SEED2026/calibration_manifest.json",
+        "sha256": "63b6a3851edb43de0a6b9ee8f533bc056316bc0d0e613429e458d3877ff1e8cc",
+        "size_bytes": 2242
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-FULL",
+      "seed": 42,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-IR-003-UVSPEC15-FULL/config.json",
+        "sha256": "33f2a3c77eda6df1ce82a640e66bb9014f10c8f124524f951643af8759dffe26",
+        "size_bytes": 1479
+      },
+      "checkpoint": {
+        "path": "runs/EXP-IR-003-UVSPEC15-FULL/best_model.pt",
+        "sha256": "68c976d92b1b5f82c5d493b3ebab44b9e9953f1738d62f0ba760b3e6e79992fe",
+        "size_bytes": 12266487
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-FULL/validation/prediction_manifest.json",
+        "sha256": "d930886c5a61de5f5940f36dfd6509cbae4260f31624a5ffff1a271d63e1277a",
+        "size_bytes": 6945
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-FULL/validation/probabilities.npy",
+        "sha256": "dc72a7e13e3dfae357e656eff97c74c101b418518ef55e01e0233237bd72c8bb",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "67b13d2143455269ada77160573019a74034fe7fa87a863e9a13fe978e0dd07f"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-FULL/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-FULL/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-IR-003-UVSPEC15-FULL/optimal_thresholds.json",
+        "sha256": "98e062029560be910526e8516b70531d3ef4e8c9a109cbedb3d9ed8a3a467110",
+        "size_bytes": 4321,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-IR-003-UVSPEC15-FULL/calibration_manifest.json",
+        "sha256": "3e15f420a963d78d9e44c9ef1477ff2cd1881a9862f8189a3340933609622c67",
+        "size_bytes": 2221
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+      "seed": 123,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-IR-003-UVSPEC15-SEED123/config.json",
+        "sha256": "7c86dadd761228b3b697d31dddf623521b36bc4a0548cf4856735c8181518f89",
+        "size_bytes": 1486
+      },
+      "checkpoint": {
+        "path": "runs/EXP-IR-003-UVSPEC15-SEED123/best_model.pt",
+        "sha256": "7a977c63a8d52315e88c7497fd8c44b47f997985f1f2f8ab1392f38cc14eee63",
+        "size_bytes": 12266487
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-SEED123/validation/prediction_manifest.json",
+        "sha256": "f4630d36d22bd9a0be02fa1ad9ac87b139b63641bd6bbaca40b16feea1b6a3f3",
+        "size_bytes": 6976
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-SEED123/validation/probabilities.npy",
+        "sha256": "f6985b65b0766185dc2599834f9d088bfef72d27d026b05fe4b64ae798a06068",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "37509dc5dd8a17b9985a6584b2cc93e58b7a61da27da05792a3fabe2833de98d"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-SEED123/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-SEED123/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-IR-003-UVSPEC15-SEED123/optimal_thresholds.json",
+        "sha256": "267c7cee9b6046bb64c185f7d049c73cfee77c9003381208ae284544c5af3609",
+        "size_bytes": 4325,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-IR-003-UVSPEC15-SEED123/calibration_manifest.json",
+        "sha256": "b044e4ed53822dc677f8dddc25580ed9c0d0e91760504eb68d228033423a0c4d",
+        "size_bytes": 2240
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "ir",
+      "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+      "seed": 2026,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-IR-003-UVSPEC15-SEED2026/config.json",
+        "sha256": "9ce923b88bf5da5d1332f98ed715a784fd5f7e13b3648a0080c7e05b09f3a6e0",
+        "size_bytes": 1489
+      },
+      "checkpoint": {
+        "path": "runs/EXP-IR-003-UVSPEC15-SEED2026/best_model.pt",
+        "sha256": "410c41d1413f2d1c8f697aa19504e765836a171aea61f258e3d4b88c282c19db",
+        "size_bytes": 12266487
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-SEED2026/validation/prediction_manifest.json",
+        "sha256": "f3cba2829b153eb4e3753d28d9a5d43a231879e66ef8ba432015ad14fad9df11",
+        "size_bytes": 6962
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-SEED2026/validation/probabilities.npy",
+        "sha256": "d6757d08e072259a34b0320fe651f091fde80657d0b9f3bb626618ed5d6ff968",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "3c7d3b770816984f18db118d42e95b34a00c02f9f02ab687d0b7208228e4834d"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-SEED2026/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/IR/EXP-IR-003-UVSPEC15-SEED2026/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026/optimal_thresholds.json",
+        "sha256": "2525d76d41448125b7f600a488169a6030cf4f0dad6c5c1259e183b950e36c1e",
+        "size_bytes": 4326,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-IR-003-UVSPEC15-SEED2026/calibration_manifest.json",
+        "sha256": "7c233939e53be06f0372aa46182f2bd04bb105e233b3dfba1ef76d190720e1cc",
+        "size_bytes": 2247
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+      "seed": 42,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-RAMAN-003-UVSPEC15-FULL/config.json",
+        "sha256": "1d7988c1c6a0af7f1bde52f961c0b0231581a89630ec8e2b8ac6ff528b26adb6",
+        "size_bytes": 1491
+      },
+      "checkpoint": {
+        "path": "runs/EXP-RAMAN-003-UVSPEC15-FULL/best_model.pt",
+        "sha256": "20e0264f5411dbef57ba23559c0db68aadcc39d324e5b21ee84f3e7e9b88f761",
+        "size_bytes": 12266487
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-FULL/validation/prediction_manifest.json",
+        "sha256": "6792cca85a4f3d37a2985b0d30506dd4a6ae9bcb7c4f7931194b74a9faba5478",
+        "size_bytes": 6967
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-FULL/validation/probabilities.npy",
+        "sha256": "1ef3f9c3fb856bb5778d937036e6467c2566d0ea6dc6c14ab2ba9bbf3e9439d8",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "44fd311fde58975bd27d8dc4981d7edccce36b8c089986ad4751f3a998f1c161"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-FULL/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-FULL/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL/optimal_thresholds.json",
+        "sha256": "941f1edf5c0d282abcce5e4f34fc77dbe4535ad45893d502c978170394a226d9",
+        "size_bytes": 4324,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-RAMAN-003-UVSPEC15-FULL/calibration_manifest.json",
+        "sha256": "c6f21346ca6f91c290a8b00f16220c584796db7b54bbb829db0342d373b2f712",
+        "size_bytes": 2254
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+      "seed": 123,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-RAMAN-003-UVSPEC15-SEED123/config.json",
+        "sha256": "aa4f1144707a0b9d75f230f909f81e9016cb483605a87494efca66c7430c7d0f",
+        "size_bytes": 1498
+      },
+      "checkpoint": {
+        "path": "runs/EXP-RAMAN-003-UVSPEC15-SEED123/best_model.pt",
+        "sha256": "0c693d360c55345f92549dac0781c496a7301f5ee6e37a55316cd6382d6233c1",
+        "size_bytes": 12266487
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-SEED123/validation/prediction_manifest.json",
+        "sha256": "e6b935c213fe39ae6173d1adbb579a800f3cc5f08143e0335b089f251c69603a",
+        "size_bytes": 6978
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-SEED123/validation/probabilities.npy",
+        "sha256": "46f315945b40cc1c50a3129b567dc21200fb228014ff0e5da9a678c220e2aaf1",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "e218e70e8f48b263709a76784c1cb76bccc47abe573351a44a3db076424c6171"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-SEED123/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-SEED123/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123/optimal_thresholds.json",
+        "sha256": "2c7ded918193796cacb91ba71c3102049f5f51d6bdacc648aa51047ab52a6814",
+        "size_bytes": 4323,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED123/calibration_manifest.json",
+        "sha256": "4919da9841b18f21f15840f19e5158cd0914fcdb1b1dc369a9863b57966f7c81",
+        "size_bytes": 2273
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "raman",
+      "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+      "seed": 2026,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-RAMAN-003-UVSPEC15-SEED2026/config.json",
+        "sha256": "7e8bf0698e139e5eb2f29e4c5576ac033d73e14a147ee0c90483ab3309f98ab3",
+        "size_bytes": 1501
+      },
+      "checkpoint": {
+        "path": "runs/EXP-RAMAN-003-UVSPEC15-SEED2026/best_model.pt",
+        "sha256": "781b47422630899f1f234695dea49af71f4c6401594380da868e7bd17d8e022a",
+        "size_bytes": 12266487
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-SEED2026/validation/prediction_manifest.json",
+        "sha256": "8558c6534e997f4fe9bc42c857c1cfc263ae6478c0d8bbf33b6cab56b86b2625",
+        "size_bytes": 6984
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-SEED2026/validation/probabilities.npy",
+        "sha256": "d90c0c9e18da9cc5da4b04207d475c5062c65436b1bc74ed0ba9f0925bc6570d",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "749763a8e79666cc411a1acf912a2ec69997f10f5355a1d951c026ff3575bda7"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-SEED2026/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/Raman/EXP-RAMAN-003-UVSPEC15-SEED2026/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026/optimal_thresholds.json",
+        "sha256": "72a694f85d428aa56293216baf05eb08e32e5bb68f90ee91b45ad3efadd48f18",
+        "size_bytes": 4329,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-RAMAN-003-UVSPEC15-SEED2026/calibration_manifest.json",
+        "sha256": "731a56fad99832eeeb5f764561d4f57e750519ec46358c89a54e4865150e249b",
+        "size_bytes": 2280
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+      "seed": 42,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-UVVIS-003-UVSPEC15-FULL/config.json",
+        "sha256": "efc2ce2a7b0eb850afa98b9960a1c5081a4dbd241f1340cbb379d847e9e4cb22",
+        "size_bytes": 1015
+      },
+      "checkpoint": {
+        "path": "runs/EXP-UVVIS-003-UVSPEC15-FULL/best_model.pt",
+        "sha256": "11f2a467e863ac4f943f0ce2509342ae058b297da742daaf19a3a6cf41280ace",
+        "size_bytes": 12265975
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-FULL/validation/prediction_manifest.json",
+        "sha256": "e8222dd7c205a4da69ec8ad75409fae17c1157d6486f60b1fd3368797c61f9fd",
+        "size_bytes": 6495
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-FULL/validation/probabilities.npy",
+        "sha256": "2cfc5c9554c527c50ea231f4bf04078d6f01fc4e78cc9238d3d86edbaa346ad2",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "f4f9a606eeec454838d6c9726eece836f63f9a7a312e5f037b73f8119a47afcc"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-FULL/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-FULL/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL/optimal_thresholds.json",
+        "sha256": "78f5609df0813ddefd43ddffce37eb2109cab900af0056fb840588a3825fbd92",
+        "size_bytes": 4332,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-UVVIS-003-UVSPEC15-FULL/calibration_manifest.json",
+        "sha256": "fc43c1a5a900618a4495ae047bae06cf7d8d46348d508c87096a674d0e84aae0",
+        "size_bytes": 2254
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+      "seed": 123,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-UVVIS-003-UVSPEC15-SEED123/config.json",
+        "sha256": "8774bc7a6fba2a0b1b688c788ac58f7fa0cdb8ec4cb0d18d4706d23cca01d5f5",
+        "size_bytes": 1016
+      },
+      "checkpoint": {
+        "path": "runs/EXP-UVVIS-003-UVSPEC15-SEED123/best_model.pt",
+        "sha256": "ded92d1d29ac26db56b3967f322fdbcca1143a527deb26abbafc0e9c3a54bdc8",
+        "size_bytes": 12265975
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-SEED123/validation/prediction_manifest.json",
+        "sha256": "ee25728a832d9100e39fa8a49b7fae1a9d289a69ee4728d5876d0e1401c7ddc8",
+        "size_bytes": 6500
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-SEED123/validation/probabilities.npy",
+        "sha256": "bff138f92fa90f6a16769591d342bdb0631ccc10ebbb8228f7f35066736fcc36",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "35d770b075251e64d0fcb351ae7ac2f2ace8f563d7e318cfdf9cccfa29c72d0f"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-SEED123/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-SEED123/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123/optimal_thresholds.json",
+        "sha256": "26e0ccc6e079aeed6c80b541f6b7ef3a2943aa3113e2551b78e6e7b6c1ab0cf0",
+        "size_bytes": 4334,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED123/calibration_manifest.json",
+        "sha256": "1586771992915e145e849facff45357fc17405b0b5fabfa15ed91b6d1c9b09dd",
+        "size_bytes": 2273
+      }
+    },
+    {
+      "task": "UVSPEC15",
+      "label_set": "uvspec15",
+      "modality": "uvvis",
+      "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+      "seed": 2026,
+      "n_labels": 15,
+      "split": "validation",
+      "config": {
+        "path": "runs/EXP-UVVIS-003-UVSPEC15-SEED2026/config.json",
+        "sha256": "3c6b5a99c8e52992d935ccf7363d46f8127eaa1b70a9d592813cac0c75202327",
+        "size_bytes": 1017
+      },
+      "checkpoint": {
+        "path": "runs/EXP-UVVIS-003-UVSPEC15-SEED2026/best_model.pt",
+        "sha256": "01792132650aa54a307ede0c0e26e0734baa4aa7f5148ef2db02fc033a126909",
+        "size_bytes": 12265975
+      },
+      "prediction_manifest": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-SEED2026/validation/prediction_manifest.json",
+        "sha256": "898db9673fd68ade6d07eb412a2f325c856a29f3fc43287caf2c73dcbf5892fd",
+        "size_bytes": 6502
+      },
+      "probabilities": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-SEED2026/validation/probabilities.npy",
+        "sha256": "da92a422e1dcb7430242fc0255720b486c44b32f5af7f981fe8440d52376d8f7",
+        "size_bytes": 778988,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "float32",
+        "array_sha256": "b4d40eaf82b9e83776fc81ebcfa66814b8e13b32237df8bc1c087d042fb58e85"
+      },
+      "row_index": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-SEED2026/validation/row_index.npy",
+        "sha256": "27d9c90fff26dfd3b3e97e5ecfbdeb107a539d3dbabf072ffaa17f55445b83f4",
+        "size_bytes": 103976,
+        "shape": [
+          12981
+        ],
+        "dtype": "int64",
+        "array_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904"
+      },
+      "labels": {
+        "path": "runs/LINE-B-PREDICTIONS/UVSPEC15/UVVis/EXP-UVVIS-003-UVSPEC15-SEED2026/validation/labels.npy",
+        "sha256": "586e94d1f8d85278a28ed82bf51628357c225584043c66470adb3ce0d677f81b",
+        "size_bytes": 194843,
+        "shape": [
+          12981,
+          15
+        ],
+        "dtype": "uint8",
+        "array_sha256": "f60a3df5148ca808b32a2fa43f9de478d234e46424038b2b38bfaec22b712f2e"
+      },
+      "split_file": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "threshold": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026/optimal_thresholds.json",
+        "sha256": "7601afc4dfded6c470471518bd3bce208cfaee681da3693ed3f2c73fb0272b82",
+        "size_bytes": 4309,
+        "n_threshold_records": 15,
+        "n_undefined_records": 0
+      },
+      "calibration_manifest": {
+        "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/EXP-UVVIS-003-UVSPEC15-SEED2026/calibration_manifest.json",
+        "sha256": "0b162373f8ca3b5f7fa2e466a2558d7a9ca0cbe579739c23424cdcf2cf06479a",
+        "size_bytes": 2280
+      }
+    }
+  ],
+  "labels_and_data": {
+    "label_sets": {
+      "shared14": {
+        "task": "Shared14",
+        "label_names": {
+          "path": "processed/qm9s/prepared/functional_group_label_names.json",
+          "sha256": "31377e3d6a68d626e9e6939bc5b11d6934dfd9ebe79c75ff0bcc33fab89ad942",
+          "size_bytes": 188,
+          "n_labels": 14,
+          "names": [
+            "aldehyde",
+            "alkene",
+            "alkyne",
+            "amide",
+            "amine",
+            "c_f_bond",
+            "carbonyl",
+            "ester",
+            "ether",
+            "hydroxyl",
+            "imine",
+            "ketone",
+            "nitrile",
+            "nitro"
+          ]
+        },
+        "label_matrix": {
+          "path": "processed/qm9s/prepared/functional_group_labels.npy",
+          "sha256": "a44323a3e8f4f3ef5bf75cf555f1b3996004844fc5ba22a8078e0fd1f73419a4",
+          "size_bytes": 1817566,
+          "shape": [
+            129817,
+            14
+          ],
+          "dtype": "uint8",
+          "array_sha256": "1eba5db2ad18b5583a90fe39551cf51ddda62a3d212dcc6ff006bd6863895d05"
+        }
+      },
+      "uvspec15": {
+        "task": "UVSPEC15",
+        "label_names": {
+          "path": "processed/qm9s/prepared/uvspec15_label_names.json",
+          "sha256": "c759f3d8e21ad841daf0e9ccb63e743acb36f39226b6b7f738a8d0e723cd9afc",
+          "size_bytes": 478,
+          "n_labels": 15,
+          "names": [
+            "has_conjugation",
+            "has_nonaromatic_conjugation",
+            "acyclic_conjugated_system",
+            "cyclic_conjugated_system",
+            "has_aromatic_system",
+            "heteroaromatic",
+            "mixed_aromatic_nonaromatic_conjugation",
+            "pi_conjugated_carbonyl",
+            "alpha_beta_unsaturated_carbonyl",
+            "aryl_carbonyl",
+            "pi_conjugated_imine",
+            "pi_conjugated_nitrile",
+            "has_donor_substituted_pi_system",
+            "has_acceptor_substituted_pi_system",
+            "donor_acceptor_same_conjugated_system"
+          ]
+        },
+        "label_matrix": {
+          "path": "processed/qm9s/prepared/uvspec15_labels.npy",
+          "sha256": "f08170df62972828076b4cfdb1136b2890b86a4eec36f280466180f5c64f1705",
+          "size_bytes": 7789148,
+          "shape": [
+            129817,
+            15
+          ],
+          "dtype": "float32",
+          "array_sha256": "ba1e20cad6f16d3302fbe6ffa6db04ddce74b57ba50e59701cc038678297c3c5"
+        }
+      }
+    },
+    "validation_splits": {
+      "ir": {
+        "path": "processed/qm9s/prepared/ir_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "raman": {
+        "path": "processed/qm9s/prepared/raman_scaffold_split_valid.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044,
+        "key": "val",
+        "n_validation_indices": 12981
+      },
+      "uvvis": {
+        "path": "processed/qm9s/prepared/uvvis_scaffold_split_valid.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041,
+        "key": "val",
+        "n_validation_indices": 12981
+      }
+    },
+    "prepared_spectra": {
+      "ir": {
+        "path": "processed/qm9s/prepared/ir_float32.npy",
+        "sha256": "af32cb729bc999f163cf908d9e7c0928c4a4754fd819ee93ed14637c488f7a53",
+        "size_bytes": 1817957396,
+        "shape": [
+          129817,
+          3501
+        ],
+        "dtype": "float32"
+      },
+      "raman": {
+        "path": "processed/qm9s/prepared/raman_float32.npy",
+        "sha256": "ac62a7ed423101497ea8d770c4c3916fd2b7e6b3affe15b8d505fa1804e3e5a8",
+        "size_bytes": 1817957396,
+        "shape": [
+          129817,
+          3501
+        ],
+        "dtype": "float32"
+      },
+      "uvvis": {
+        "path": "processed/qm9s/prepared/uvvis_float32.npy",
+        "sha256": "12cc4041a5cf10b9a8650088960210be5807865172e13578c93fb92232f9772a",
+        "size_bytes": 364006996,
+        "shape": [
+          129817,
+          701
+        ],
+        "dtype": "float32"
+      }
+    },
+    "prepared_manifest": {
+      "path": "processed/qm9s/prepared/qm9s_manifest_prepared.csv",
+      "sha256": "e5fd1710bde44fe7e5c57bc7115d8d69751ac36cb70ea01e6e6351f48013e51c",
+      "size_bytes": 13827853
+    },
+    "supporting_split_assets": [
+      {
+        "path": "processed/qm9s/prepared/scaffold_split_80_10_10.npz",
+        "sha256": "da6855944e536e3036d0b8de3511b55b6ab98cb6a7527f025791836444395610",
+        "size_bytes": 199044
+      },
+      {
+        "path": "processed/qm9s/prepared/multimodal_complete_scaffold_split.npz",
+        "sha256": "4d37d902a5dc8ab904bf21aa1947f11931772ebea63128becb72a81f3bddc7bb",
+        "size_bytes": 199041
+      },
+      {
+        "path": "processed/qm9s/prepared/modality_valid_masks.npz",
+        "sha256": "967dae03d8816083a6f83960ee7ca6a86f87b0aa70f636eaa317c781c610b10b",
+        "size_bytes": 1460
+      }
+    ],
+    "structure_library": {
+      "path": "processed/qm9s/structures/qm9s_structure_library.csv",
+      "sha256": "945d6308b360d16b066ec04cd9c589ca10c823ad55020ccc99bcc3998a0df6d9",
+      "size_bytes": 28918087
+    },
+    "structure_library_supplementary": [
+      {
+        "path": "processed/qm9s/structures/qm9s_invalid_structures.csv",
+        "sha256": "e3c7e6bc7dc36c1254c58d3a4625851efae1fb9ed46dee6ee47ca408eee5df6a",
+        "size_bytes": 38
+      },
+      {
+        "path": "processed/qm9s/structures/build_structure_library_report.json",
+        "sha256": "2be5a0e7c60a5a93145b3e58d7f49d9ec515b0ff5718f286e864d4f85d3ef574",
+        "size_bytes": 1727
+      }
+    ]
+  },
+  "analysis": {
+    "validation_metrics": {
+      "Shared14": {
+        "summary": {
+          "path": "runs/LINE-B-METRICS/Shared14/summary.json",
+          "sha256": "b11a89d813b2895d5248ae83123dbeb068a441fb7a312d91be1742cd47b3e64f",
+          "size_bytes": 11734
+        },
+        "model_metrics": {
+          "path": "runs/LINE-B-METRICS/Shared14/model_metrics.csv",
+          "sha256": "1c24cbe40a057d8cbfa578fc094534005d61829f0c2df947b495f1e93a8e10a3",
+          "size_bytes": 1584
+        },
+        "n_models": 9,
+        "n_samples": 12981,
+        "split": "validation",
+        "primary_threshold": 0.5,
+        "n_labels": 14,
+        "no_test_access": true,
+        "per_model_validation_metrics": [
+          {
+            "run_name": "EXP-IR-001-FULL",
+            "modality": "ir",
+            "seed": 42,
+            "seed_config": 42,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.9541887,
+            "micro_recall": 0.94234864,
+            "micro_f1": 0.94823171,
+            "macro_precision": 0.95060561,
+            "macro_recall": 0.90333141,
+            "macro_f1": 0.92411917,
+            "macro_ap": 0.96855356,
+            "macro_auroc": 0.99604635,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-IR-001-SEED123",
+            "modality": "ir",
+            "seed": 123,
+            "seed_config": 123,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.95377571,
+            "micro_recall": 0.94244844,
+            "micro_f1": 0.94807824,
+            "macro_precision": 0.94740172,
+            "macro_recall": 0.89237336,
+            "macro_f1": 0.91205419,
+            "macro_ap": 0.95866725,
+            "macro_auroc": 0.99598001,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-IR-001-SEED2026",
+            "modality": "ir",
+            "seed": 2026,
+            "seed_config": 2026,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.94983367,
+            "micro_recall": 0.94038589,
+            "micro_f1": 0.94508617,
+            "macro_precision": 0.93119008,
+            "macro_recall": 0.90043051,
+            "macro_f1": 0.91389205,
+            "macro_ap": 0.95682223,
+            "macro_auroc": 0.99558927,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-RAMAN-001-FULL",
+            "modality": "raman",
+            "seed": 42,
+            "seed_config": 42,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.93736842,
+            "micro_recall": 0.88872255,
+            "micro_f1": 0.91239754,
+            "macro_precision": 0.93100206,
+            "macro_recall": 0.83421399,
+            "macro_f1": 0.86827677,
+            "macro_ap": 0.94649394,
+            "macro_auroc": 0.98834055,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-RAMAN-001-SEED123",
+            "modality": "raman",
+            "seed": 123,
+            "seed_config": 123,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.9353882,
+            "micro_recall": 0.88133733,
+            "micro_f1": 0.90755871,
+            "macro_precision": 0.92230931,
+            "macro_recall": 0.86733371,
+            "macro_f1": 0.88803634,
+            "macro_ap": 0.95055993,
+            "macro_auroc": 0.98824329,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-RAMAN-001-SEED2026",
+            "modality": "raman",
+            "seed": 2026,
+            "seed_config": 2026,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.93828991,
+            "micro_recall": 0.884165,
+            "micro_f1": 0.91042373,
+            "macro_precision": 0.93005792,
+            "macro_recall": 0.83952873,
+            "macro_f1": 0.86658114,
+            "macro_ap": 0.94565046,
+            "macro_auroc": 0.98838109,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-UVVIS-001-FULL",
+            "modality": "uvvis",
+            "seed": 42,
+            "seed_config": 42,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.6835303,
+            "micro_recall": 0.3905855,
+            "micro_f1": 0.49711032,
+            "macro_precision": 0.59162114,
+            "macro_recall": 0.33961807,
+            "macro_f1": 0.40055496,
+            "macro_ap": 0.51386872,
+            "macro_auroc": 0.84971803,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-UVVIS-001-SEED123",
+            "modality": "uvvis",
+            "seed": 123,
+            "seed_config": 123,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.67221243,
+            "micro_recall": 0.40592149,
+            "micro_f1": 0.50618103,
+            "macro_precision": 0.6085009,
+            "macro_recall": 0.31299175,
+            "macro_f1": 0.37820097,
+            "macro_ap": 0.51577564,
+            "macro_auroc": 0.84807381,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-UVVIS-001-SEED2026",
+            "modality": "uvvis",
+            "seed": 2026,
+            "seed_config": 2026,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 14,
+            "threshold": 0.5,
+            "micro_precision": 0.67340124,
+            "micro_recall": 0.40249501,
+            "micro_f1": 0.50384159,
+            "macro_precision": 0.58585046,
+            "macro_recall": 0.33018945,
+            "macro_f1": 0.40508589,
+            "macro_ap": 0.50974759,
+            "macro_auroc": 0.84889323,
+            "n_defined_ap": 14,
+            "n_defined_auroc": 14,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          }
+        ],
+        "modality_mean_sd": [
+          {
+            "modality": "ir",
+            "metric": "micro_precision",
+            "mean": 0.95259936,
+            "sd": 0.00240404,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "micro_recall",
+            "mean": 0.94172766,
+            "sd": 0.00116307,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "micro_f1",
+            "mean": 0.94713204,
+            "sd": 0.00177344,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_precision",
+            "mean": 0.9430658,
+            "sd": 0.01040869,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_recall",
+            "mean": 0.89871176,
+            "sd": 0.00567761,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_f1",
+            "mean": 0.91668847,
+            "sd": 0.00650045,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_ap",
+            "mean": 0.96134768,
+            "sd": 0.00630829,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_auroc",
+            "mean": 0.99587188,
+            "sd": 0.00024698,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "micro_precision",
+            "mean": 0.93701551,
+            "sd": 0.0014827,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "micro_recall",
+            "mean": 0.88474163,
+            "sd": 0.00372622,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "micro_f1",
+            "mean": 0.91012666,
+            "sd": 0.00243306,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_precision",
+            "mean": 0.92778976,
+            "sd": 0.00476963,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_recall",
+            "mean": 0.84702548,
+            "sd": 0.01778707,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_f1",
+            "mean": 0.87429808,
+            "sd": 0.01192785,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_ap",
+            "mean": 0.94756811,
+            "sd": 0.00262509,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_auroc",
+            "mean": 0.98832164,
+            "sd": 7.082e-05,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "micro_precision",
+            "mean": 0.67638132,
+            "sd": 0.00621966,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "micro_recall",
+            "mean": 0.39966733,
+            "sd": 0.00804953,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "micro_f1",
+            "mean": 0.50237765,
+            "sd": 0.00470922,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_precision",
+            "mean": 0.59532417,
+            "sd": 0.01177051,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_recall",
+            "mean": 0.32759976,
+            "sd": 0.01350074,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_f1",
+            "mean": 0.39461394,
+            "sd": 0.01439345,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_ap",
+            "mean": 0.51313065,
+            "sd": 0.00308106,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_auroc",
+            "mean": 0.84889502,
+            "sd": 0.00082211,
+            "n_seeds": 3
+          }
+        ]
+      },
+      "UVSPEC15": {
+        "summary": {
+          "path": "runs/LINE-B-METRICS/UVSPEC15/summary.json",
+          "sha256": "e2dfd26598369005c0400dff81d2a9bc1a8bc7b30c2a520232a57e4c1cf8b34f",
+          "size_bytes": 12216
+        },
+        "model_metrics": {
+          "path": "runs/LINE-B-METRICS/UVSPEC15/model_metrics.csv",
+          "sha256": "b1d033463234128d262eb6cbcf697d76da4194134c867cc0ab88c87823c885de",
+          "size_bytes": 1662
+        },
+        "n_models": 9,
+        "n_samples": 12981,
+        "split": "validation",
+        "primary_threshold": 0.5,
+        "n_labels": 15,
+        "no_test_access": true,
+        "per_model_validation_metrics": [
+          {
+            "run_name": "EXP-IR-003-UVSPEC15-FULL",
+            "modality": "ir",
+            "seed": 42,
+            "seed_config": 42,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.94261513,
+            "micro_recall": 0.9336593,
+            "micro_f1": 0.93811584,
+            "macro_precision": 0.90776024,
+            "macro_recall": 0.89163581,
+            "macro_f1": 0.89846828,
+            "macro_ap": 0.95397678,
+            "macro_auroc": 0.99693752,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-IR-003-UVSPEC15-SEED123",
+            "modality": "ir",
+            "seed": 123,
+            "seed_config": 123,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.95409407,
+            "micro_recall": 0.89148794,
+            "micro_f1": 0.92172914,
+            "macro_precision": 0.92137703,
+            "macro_recall": 0.83430387,
+            "macro_f1": 0.87364893,
+            "macro_ap": 0.94180381,
+            "macro_auroc": 0.99600136,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-IR-003-UVSPEC15-SEED2026",
+            "modality": "ir",
+            "seed": 2026,
+            "seed_config": 2026,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.949435,
+            "micro_recall": 0.92432492,
+            "micro_f1": 0.93671171,
+            "macro_precision": 0.9283115,
+            "macro_recall": 0.87768873,
+            "macro_f1": 0.90080295,
+            "macro_ap": 0.95478028,
+            "macro_auroc": 0.99679772,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-RAMAN-003-UVSPEC15-FULL",
+            "modality": "raman",
+            "seed": 42,
+            "seed_config": 42,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.92829457,
+            "micro_recall": 0.93149239,
+            "micro_f1": 0.92989073,
+            "macro_precision": 0.90167565,
+            "macro_recall": 0.89366206,
+            "macro_f1": 0.89513274,
+            "macro_ap": 0.95515613,
+            "macro_auroc": 0.9959707,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-RAMAN-003-UVSPEC15-SEED123",
+            "modality": "raman",
+            "seed": 123,
+            "seed_config": 123,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.94496705,
+            "micro_recall": 0.93210357,
+            "micro_f1": 0.93849123,
+            "macro_precision": 0.91326737,
+            "macro_recall": 0.8997495,
+            "macro_f1": 0.90469194,
+            "macro_ap": 0.95622241,
+            "macro_auroc": 0.99633956,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-RAMAN-003-UVSPEC15-SEED2026",
+            "modality": "raman",
+            "seed": 2026,
+            "seed_config": 2026,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.9386845,
+            "micro_recall": 0.93565952,
+            "micro_f1": 0.93716957,
+            "macro_precision": 0.90299937,
+            "macro_recall": 0.90439013,
+            "macro_f1": 0.90300235,
+            "macro_ap": 0.95581985,
+            "macro_auroc": 0.99669162,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-UVVIS-003-UVSPEC15-FULL",
+            "modality": "uvvis",
+            "seed": 42,
+            "seed_config": 42,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.67537566,
+            "micro_recall": 0.55439493,
+            "micro_f1": 0.60893446,
+            "macro_precision": 0.66083345,
+            "macro_recall": 0.38347166,
+            "macro_f1": 0.43315665,
+            "macro_ap": 0.5169203,
+            "macro_auroc": 0.92115809,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-UVVIS-003-UVSPEC15-SEED123",
+            "modality": "uvvis",
+            "seed": 123,
+            "seed_config": 123,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.40227133,
+            "micro_recall": 0.65340593,
+            "micro_f1": 0.49796748,
+            "macro_precision": 0.41524134,
+            "macro_recall": 0.47130935,
+            "macro_f1": 0.35234164,
+            "macro_ap": 0.44593108,
+            "macro_auroc": 0.88997101,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          },
+          {
+            "run_name": "EXP-UVVIS-003-UVSPEC15-SEED2026",
+            "modality": "uvvis",
+            "seed": 2026,
+            "seed_config": 2026,
+            "seed_metadata_mismatch": false,
+            "n_samples": 12981,
+            "n_labels": 15,
+            "threshold": 0.5,
+            "micro_precision": 0.6204596,
+            "micro_recall": 0.60456717,
+            "micro_f1": 0.6124103,
+            "macro_precision": 0.65145816,
+            "macro_recall": 0.42203255,
+            "macro_f1": 0.45279847,
+            "macro_ap": 0.54131155,
+            "macro_auroc": 0.92299128,
+            "n_defined_ap": 15,
+            "n_defined_auroc": 15,
+            "undefined_ap_labels": "",
+            "undefined_auroc_labels": ""
+          }
+        ],
+        "modality_mean_sd": [
+          {
+            "modality": "ir",
+            "metric": "micro_precision",
+            "mean": 0.94871473,
+            "sd": 0.00577327,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "micro_recall",
+            "mean": 0.91649072,
+            "sd": 0.02215033,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "micro_f1",
+            "mean": 0.93218556,
+            "sd": 0.0090827,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_precision",
+            "mean": 0.91914959,
+            "sd": 0.01045513,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_recall",
+            "mean": 0.86787614,
+            "sd": 0.02989905,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_f1",
+            "mean": 0.89097339,
+            "sd": 0.01504876,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_ap",
+            "mean": 0.95018696,
+            "sd": 0.00727113,
+            "n_seeds": 3
+          },
+          {
+            "modality": "ir",
+            "metric": "macro_auroc",
+            "mean": 0.99657887,
+            "sd": 0.000505,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "micro_precision",
+            "mean": 0.93731537,
+            "sd": 0.00842014,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "micro_recall",
+            "mean": 0.93308516,
+            "sd": 0.00225031,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "micro_f1",
+            "mean": 0.93518384,
+            "sd": 0.00463136,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_precision",
+            "mean": 0.9059808,
+            "sd": 0.00634497,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_recall",
+            "mean": 0.89926723,
+            "sd": 0.00538027,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_f1",
+            "mean": 0.90094234,
+            "sd": 0.0051017,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_ap",
+            "mean": 0.9557328,
+            "sd": 0.00053844,
+            "n_seeds": 3
+          },
+          {
+            "modality": "raman",
+            "metric": "macro_auroc",
+            "mean": 0.99633396,
+            "sd": 0.00036049,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "micro_precision",
+            "mean": 0.56603553,
+            "sd": 0.14445753,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "micro_recall",
+            "mean": 0.60412268,
+            "sd": 0.049507,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "micro_f1",
+            "mean": 0.57310408,
+            "sd": 0.06509341,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_precision",
+            "mean": 0.57584432,
+            "sd": 0.13916523,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_recall",
+            "mean": 0.42560452,
+            "sd": 0.04402765,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_f1",
+            "mean": 0.41276559,
+            "sd": 0.05324228,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_ap",
+            "mean": 0.50138764,
+            "sd": 0.04955105,
+            "n_seeds": 3
+          },
+          {
+            "modality": "uvvis",
+            "metric": "macro_auroc",
+            "mean": 0.91137346,
+            "sd": 0.01855772,
+            "n_seeds": 3
+          }
+        ]
+      }
+    },
+    "b3a_complementarity": {
+      "Shared14": {
+        "summary": {
+          "path": "runs/LINE-B-ANALYSIS/Shared14/complementarity/summary.json",
+          "sha256": "f057dcb7030ffea5fa71cc72cbc731a91cc0388d7ee1d28b1749608d28d7086d",
+          "size_bytes": 12832
+        },
+        "phase": "B3-A",
+        "split": "validation",
+        "n_models": 9,
+        "n_labels": 14,
+        "seeds": [
+          42,
+          123,
+          2026
+        ],
+        "threshold_policies": [
+          "fixed_0.5",
+          "validation_f1"
+        ],
+        "best_single_modality": "ir",
+        "modality_macro_ap": {
+          "ir": 0.96134768,
+          "raman": 0.94756811,
+          "uvvis": 0.51313065
+        },
+        "n_model_rows": 252,
+        "n_pairwise_rows": 504,
+        "n_three_modality_rows": 84,
+        "n_error_jaccard_undefined": 0,
+        "all_checks_pass": true,
+        "no_test_access": true,
+        "partial": false,
+        "outputs": {
+          "model_mean_sd.csv": {
+            "path": "runs/LINE-B-ANALYSIS/Shared14/complementarity/model_mean_sd.csv",
+            "sha256": "9433b2d89b30065d0125cd4dfd99917a743b3b5bfc78d9ecdbf376bfeb55cfea",
+            "size_bytes": 50194
+          },
+          "model_metrics.csv": {
+            "path": "runs/LINE-B-ANALYSIS/Shared14/complementarity/model_metrics.csv",
+            "sha256": "d79f03e9697745d73239996d10ff836d8075151b9883439a740a72c4b05c16dd",
+            "size_bytes": 123432
+          },
+          "pairwise_mean_sd.csv": {
+            "path": "runs/LINE-B-ANALYSIS/Shared14/complementarity/pairwise_mean_sd.csv",
+            "sha256": "18d733464ac3f53d7c462de4bc8b8f74597db665b0110318b1c47bc13af4b0e5",
+            "size_bytes": 342591
+          },
+          "pairwise_metrics.csv": {
+            "path": "runs/LINE-B-ANALYSIS/Shared14/complementarity/pairwise_metrics.csv",
+            "sha256": "8cdb554dd16e9946b0411a770515bd8d6ce5ae50313e6fcee12fb0630f37927c",
+            "size_bytes": 233456
+          },
+          "three_modality_mean_sd.csv": {
+            "path": "runs/LINE-B-ANALYSIS/Shared14/complementarity/three_modality_mean_sd.csv",
+            "sha256": "30771af4150e6b58f64e64b1a0a8a831321c6b3f006227dfd388aa2e92da2676",
+            "size_bytes": 117853
+          },
+          "three_modality_metrics.csv": {
+            "path": "runs/LINE-B-ANALYSIS/Shared14/complementarity/three_modality_metrics.csv",
+            "sha256": "156ab416a8bb6419b6c73a54461c07d237878223a501a1ce9cf0d52bdc402653",
+            "size_bytes": 41858
+          }
+        }
+      },
+      "UVSPEC15": {
+        "summary": {
+          "path": "runs/LINE-B-ANALYSIS/UVSPEC15/complementarity/summary.json",
+          "sha256": "af1c34b522d93b80453731bf27b71c6e2eb52872736c3b01ea7c413711624ec8",
+          "size_bytes": 13102
+        },
+        "phase": "B3-A",
+        "split": "validation",
+        "n_models": 9,
+        "n_labels": 15,
+        "seeds": [
+          42,
+          123,
+          2026
+        ],
+        "threshold_policies": [
+          "fixed_0.5",
+          "validation_f1"
+        ],
+        "best_single_modality": "raman",
+        "modality_macro_ap": {
+          "ir": 0.9501869566666666,
+          "raman": 0.9557327966666667,
+          "uvvis": 0.5013876433333333
+        },
+        "n_model_rows": 270,
+        "n_pairwise_rows": 540,
+        "n_three_modality_rows": 90,
+        "n_error_jaccard_undefined": 0,
+        "all_checks_pass": true,
+        "no_test_access": true,
+        "partial": false,
+        "outputs": {
+          "model_mean_sd.csv": {
+            "path": "runs/LINE-B-ANALYSIS/UVSPEC15/complementarity/model_mean_sd.csv",
+            "sha256": "c9849b45e0c247e3ca4e119f3d9e1c36559eb855415ab47ffe2b278f50cfc9a4",
+            "size_bytes": 65771
+          },
+          "model_metrics.csv": {
+            "path": "runs/LINE-B-ANALYSIS/UVSPEC15/complementarity/model_metrics.csv",
+            "sha256": "3a9e271da0b97e93478f99b331d0bd21e1f9c24afd4ef745fa8735fee9896369",
+            "size_bytes": 139800
+          },
+          "pairwise_mean_sd.csv": {
+            "path": "runs/LINE-B-ANALYSIS/UVSPEC15/complementarity/pairwise_mean_sd.csv",
+            "sha256": "4265f49abb454bf36e0c6936dc34d852e9d33287777d70b190113017caf3713f",
+            "size_bytes": 435399
+          },
+          "pairwise_metrics.csv": {
+            "path": "runs/LINE-B-ANALYSIS/UVSPEC15/complementarity/pairwise_metrics.csv",
+            "sha256": "a7ffc1a7af03c41991ddf8ff00dbf0cd30c101e76b4d5e49bbacc64c3e89fd21",
+            "size_bytes": 270996
+          },
+          "three_modality_mean_sd.csv": {
+            "path": "runs/LINE-B-ANALYSIS/UVSPEC15/complementarity/three_modality_mean_sd.csv",
+            "sha256": "25d20a1f40e27d22db8c28e55a72169b422d3e2d527361e4dee1b409a8a6fadd",
+            "size_bytes": 151403
+          },
+          "three_modality_metrics.csv": {
+            "path": "runs/LINE-B-ANALYSIS/UVSPEC15/complementarity/three_modality_metrics.csv",
+            "sha256": "17f5fc346d46f3ebe275346643f9cb2988cc1bc04c554f9a696ebccea39e2ee0",
+            "size_bytes": 46950
+          }
+        }
+      }
+    },
+    "thresholds": {
+      "Shared14": {
+        "summary": {
+          "path": "runs/LINE-B-THRESHOLDS/Shared14/summary.json",
+          "sha256": "5ca5e7ad2dcfea12492c3c523f4e67057264e53ea44275b0ddcf0d551bea6452",
+          "size_bytes": 5745
+        },
+        "n_models": 9,
+        "n_labels": 14,
+        "n_threshold_records": 126,
+        "n_undefined_threshold_records": 0,
+        "default_threshold": 0.5,
+        "primary_threshold": 0.5,
+        "secondary_threshold": "validation_f1_per_label",
+        "all_checks_pass": true,
+        "no_test_access": true,
+        "outputs": {
+          "modality_mean_sd.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/Shared14/modality_mean_sd.csv",
+            "sha256": "9da94d22fdd4a14c58531709992f80136c36edee98d64a804228f9e89e274d0f",
+            "size_bytes": 3358
+          },
+          "model_metrics.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/Shared14/model_metrics.csv",
+            "sha256": "7e09832fc138ebc83c2cd1d6caee9570d24e61f64d2bd33ddc519f0c35f29dc1",
+            "size_bytes": 6825
+          },
+          "per_label_calibration.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/Shared14/per_label_calibration.csv",
+            "sha256": "41f8c608cf6355540aec3d767b9f99bed9f22210b179bad0b7a72907cc758fd8",
+            "size_bytes": 37393
+          },
+          "per_label_mean_sd.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/Shared14/per_label_mean_sd.csv",
+            "sha256": "abbfc14fa061f767265f47fea819d6d68026e2e7ed31473652f3af19bc21d282",
+            "size_bytes": 31341
+          },
+          "threshold_records.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/Shared14/threshold_records.csv",
+            "sha256": "8815aae4fefe5fbec93d6f000e7fe9c0ca88eb08115fef14a1a9a83d8ad2cf84",
+            "size_bytes": 14494
+          }
+        }
+      },
+      "UVSPEC15": {
+        "summary": {
+          "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/summary.json",
+          "sha256": "7a50a432000686b2afe804604ff9c4c789b95b0ab46c3ba661e27e85fdd100b2",
+          "size_bytes": 5830
+        },
+        "n_models": 9,
+        "n_labels": 15,
+        "n_threshold_records": 135,
+        "n_undefined_threshold_records": 0,
+        "default_threshold": 0.5,
+        "primary_threshold": 0.5,
+        "secondary_threshold": "validation_f1_per_label",
+        "all_checks_pass": true,
+        "no_test_access": true,
+        "outputs": {
+          "modality_mean_sd.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/modality_mean_sd.csv",
+            "sha256": "a73b9a5099676ece1d572d03254b9cb338014260c7193c107eb03198127a93d4",
+            "size_bytes": 3336
+          },
+          "model_metrics.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/model_metrics.csv",
+            "sha256": "f26099cfcbad5f4223a6e7871053d96f6d5bec4620c484d68212601aa33c3a92",
+            "size_bytes": 6917
+          },
+          "per_label_calibration.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/per_label_calibration.csv",
+            "sha256": "a408c7bcad3e7d263f9194761a1864ba822380f0d94160c5bd883fef415457d2",
+            "size_bytes": 43968
+          },
+          "per_label_mean_sd.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/per_label_mean_sd.csv",
+            "sha256": "772e55647f14f4f1217c3827b060753858c3687413605152d94a675c05886e17",
+            "size_bytes": 41975
+          },
+          "threshold_records.csv": {
+            "path": "runs/LINE-B-THRESHOLDS/UVSPEC15/threshold_records.csv",
+            "sha256": "080dc309d003f584408b4c330e25b3fee27209e7ed372594c1a2832cfddff3ae",
+            "size_bytes": 19187
+          }
+        }
+      }
+    },
+    "audit_manifests": {
+      "b1_export_audit": {
+        "path": "runs/LINE-B-MANIFESTS/B1/b1_export_audit.json",
+        "sha256": "d78043bb48fbac8336581caa2ad69a23df1e94fd0f791bf1f0aaf1c14591daa2",
+        "size_bytes": 930,
+        "all_checks_pass": true,
+        "no_test_access": true
+      },
+      "b3_export_audit": {
+        "path": "runs/LINE-B-MANIFESTS/B3/b3_export_audit.json",
+        "sha256": "07db923f34e67cd25f515b86e832b5d097382c9e4a4d8d88bc320a64f0bd575f",
+        "size_bytes": 1266,
+        "all_checks_pass": true,
+        "no_test_access": true
+      }
+    },
+    "code_provenance_manifest": {
+      "path": "runs/LINE-B-MANIFESTS/B3/code_provenance.json",
+      "sha256": "b1c5d2eb65b16f719dae971819c6f3623bcc1a355dc5eb89e687a25145e20e90",
+      "size_bytes": 47769
+    }
+  },
+  "code_sha256": {
+    "current_worktree_sha256": {
+      "training/line_b/common.py": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+      "training/line_b/metrics.py": "e773f52da281d5ea69cf89c4e61b40ebbbdfca9ee00d5abb901401b42a105ac9",
+      "training/line_b/export_line_b_predictions.py": "c98245edbd1859664f5e684db5d677e96b4af52e6c7ca36ef50736fec762dec7",
+      "training/line_b/evaluate_line_b_multilabel.py": "c0589397e39f123e476b1d11c59c06877c66c69b7517aa88cd556ee595e59cfd",
+      "training/line_b/summarize_b1_exports.py": "44b877fef9ff4ddbfb05621301e39954192205fe5d4e90aec63113caa07fa55e",
+      "training/line_b/calibrate_line_b_thresholds.py": "2706d0713f43467356834f9173c41f8a436472bdb3dfcae826ed3f5b0adb8c74",
+      "training/line_b/analyze_line_b_complementarity.py": "f0ff92d8f7f5e67df24b7b03178adbdda9d92eb99e885f3b1b574d5c84bedb4c",
+      "training/line_b/verify_line_b_manifests.py": "c310c5d4e429428ab254d7cabf010eeadf87e63542cde9d6e436d72a926069c8",
+      "training/line_b/freeze_line_b.py": "0e02972c97b87208202acf54e7492017636faaa393829ba09864d29a1a7379e4"
+    },
+    "historical_execution_sha256": {
+      "b1_prediction_export": {
+        "exporter_sha256": "564dee0b335f2447171ea0ae8ec6c26a96c4296ff0edbdbbb08a7bc961307056",
+        "common_sha256": "3ac26dcf424785d29de29213604dc35d47c02af2420a366050325508eae95b76",
+        "dataset_sha256": "42ec169ae8413f3124b907f8fecd3da24f6f7a033697c2952d35ea7dd74f4b0c",
+        "model_sha256": "8e19d7d6d651084fa3f17702632c185850ebdceca7dabe5e78a7df4647786936",
+        "source": "runs\\LINE-B-PREDICTIONS\\Shared14\\IR\\EXP-IR-001-FULL\\validation\\prediction_manifest.json"
+      },
+      "b3_uvspec15_prediction_export": {
+        "exporter_sha256": "c98245edbd1859664f5e684db5d677e96b4af52e6c7ca36ef50736fec762dec7",
+        "common_sha256": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+        "dataset_sha256": "42ec169ae8413f3124b907f8fecd3da24f6f7a033697c2952d35ea7dd74f4b0c",
+        "model_sha256": "8e19d7d6d651084fa3f17702632c185850ebdceca7dabe5e78a7df4647786936",
+        "source": "runs\\LINE-B-PREDICTIONS\\UVSPEC15\\IR\\EXP-IR-003-UVSPEC15-FULL\\validation\\prediction_manifest.json"
+      },
+      "b3a_complementarity_execution": null,
+      "threshold_calibration_execution": null
+    },
+    "raw_historical_unknown_markers": {
+      "b3a_complementarity_execution": "unknown",
+      "threshold_calibration_execution": "unknown"
+    },
+    "b1_historical_vs_current": [
+      {
+        "file": "training/line_b/export_line_b_predictions.py",
+        "b1_historical_sha256": "564dee0b335f2447171ea0ae8ec6c26a96c4296ff0edbdbbb08a7bc961307056",
+        "current_source_sha256": "c98245edbd1859664f5e684db5d677e96b4af52e6c7ca36ef50736fec762dec7",
+        "match": false
+      },
+      {
+        "file": "training/line_b/common.py",
+        "b1_historical_sha256": "3ac26dcf424785d29de29213604dc35d47c02af2420a366050325508eae95b76",
+        "current_source_sha256": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+        "match": false
+      }
+    ],
+    "source": "runs/LINE-B-MANIFESTS/B3/code_provenance.json",
+    "note": "current_worktree_sha256 is the hash of the files present in the working tree at freeze time. It is NOT the historical execution SHA256 of B3-A, threshold calibration or B1 export. historical_execution_sha256 is copied from the B3.5-A code provenance record and is null where the historical execution version is unrecoverable."
+  },
+  "accepted_provenance_exceptions": {
+    "b3a_execution_code": {
+      "historical_execution_code_sha256": null,
+      "status": "ACCEPTED_BY_USER",
+      "reproduction_evidence": "B3.5-A",
+      "reproduction_evidence_path": "runs/LINE-B-MANIFESTS/B3/code_provenance.json",
+      "current_source_sha256": {
+        "training/line_b/analyze_line_b_complementarity.py": "f0ff92d8f7f5e67df24b7b03178adbdda9d92eb99e885f3b1b574d5c84bedb4c"
+      },
+      "limitation": "The B3-A execution code SHA256 is unrecoverable; B3-A outputs are bound by input hashes and re-verified by B3.5-A reproduction."
+    },
+    "threshold_calibration_execution_code": {
+      "historical_execution_code_sha256": null,
+      "status": "ACCEPTED_BY_USER",
+      "reproduction_evidence": "B3.5-A",
+      "reproduction_evidence_path": "runs/LINE-B-MANIFESTS/B3/code_provenance.json",
+      "current_source_sha256": {
+        "training/line_b/calibrate_line_b_thresholds.py": "2706d0713f43467356834f9173c41f8a436472bdb3dfcae826ed3f5b0adb8c74"
+      },
+      "limitation": "The threshold-calibration execution code SHA256 is unrecoverable; 261 threshold records are bound by input hashes and re-verified by B3.5-A reproduction."
+    },
+    "b1_historical_code": {
+      "historical_code_difference": true,
+      "historical_manifest_preserved": true,
+      "files": [
+        {
+          "file": "training/line_b/export_line_b_predictions.py",
+          "b1_historical_sha256": "564dee0b335f2447171ea0ae8ec6c26a96c4296ff0edbdbbb08a7bc961307056",
+          "current_source_sha256": "c98245edbd1859664f5e684db5d677e96b4af52e6c7ca36ef50736fec762dec7",
+          "match": false
+        },
+        {
+          "file": "training/line_b/common.py",
+          "b1_historical_sha256": "3ac26dcf424785d29de29213604dc35d47c02af2420a366050325508eae95b76",
+          "current_source_sha256": "5738a057d916ad374e010153b7008e48032f0339add7865a27f5f2a3ba1665e8",
+          "match": false
+        }
+      ],
+      "limitation": "B1 historical exporter/common SHA256 differs from the current source; the historical manifests are preserved unchanged and were not rewritten during B3 freeze."
+    },
+    "note": "These accepted exceptions do not change any raw data, label, threshold, checkpoint, probability array or statistic.",
+    "does_not_change": [
+      "raw_data",
+      "labels",
+      "thresholds",
+      "checkpoints",
+      "probabilities",
+      "statistics"
+    ]
+  },
+  "test_status": {
+    "historical_test_information_read_before_freeze": true,
+    "historical_read_scope": "B0 stage consistency audit of existing per-label Test CSVs and existing Raman Test probabilities",
+    "user_attestation_no_operational_interference": true,
+    "test_access_during_freeze": false,
+    "new_test_inference_during_freeze": false,
+    "test_split_read_during_freeze": false,
+    "test_indices_read_during_freeze": false,
+    "test_labels_read_during_freeze": false,
+    "test_probabilities_read_during_freeze": false,
+    "result_classification": "exploratory/post-hoc"
+  },
+  "freeze_integrity": {
+    "formal_asset_roots": {
+      "runs/LINE-B-PREDICTIONS": {
+        "before_tree_sha256": "5ecb18f4565ea690c477de798f9c8070d85bb3196579929a6fff5359e013409c",
+        "after_tree_sha256": "5ecb18f4565ea690c477de798f9c8070d85bb3196579929a6fff5359e013409c",
+        "n_files": 72,
+        "unchanged_during_preflight": true
+      },
+      "runs/LINE-B-METRICS": {
+        "before_tree_sha256": "3e42f6a14c1d70fda839779830eb1d3d4b362012d97dc58c935cf70397065cac",
+        "after_tree_sha256": "3e42f6a14c1d70fda839779830eb1d3d4b362012d97dc58c935cf70397065cac",
+        "n_files": 15,
+        "unchanged_during_preflight": true
+      },
+      "runs/LINE-B-THRESHOLDS": {
+        "before_tree_sha256": "0766ade5f43a5e685c7958f425cfbc04f7e35c10d33c66c53bd085e036334577",
+        "after_tree_sha256": "0766ade5f43a5e685c7958f425cfbc04f7e35c10d33c66c53bd085e036334577",
+        "n_files": 84,
+        "unchanged_during_preflight": true
+      },
+      "runs/LINE-B-ANALYSIS": {
+        "before_tree_sha256": "9a74b072eeb0b79721bee16d098983899b788a4fb014bce84613fb1130984a18",
+        "after_tree_sha256": "9a74b072eeb0b79721bee16d098983899b788a4fb014bce84613fb1130984a18",
+        "n_files": 9041,
+        "unchanged_during_preflight": true
+      },
+      "runs/LINE-B-MANIFESTS/B1": {
+        "before_tree_sha256": "1b9a7a454f278de67bbb2a74ad411900c04912cc2b8435a19f4830f222874264",
+        "after_tree_sha256": "1b9a7a454f278de67bbb2a74ad411900c04912cc2b8435a19f4830f222874264",
+        "n_files": 5,
+        "unchanged_during_preflight": true
+      },
+      "runs/LINE-B-MANIFESTS/B3": {
+        "before_tree_sha256": "3b99e4511be605afdbe5be07c67d3f9e8190fd1c69e8fbcbc51e645d16dc1cf4",
+        "after_tree_sha256": "3b99e4511be605afdbe5be07c67d3f9e8190fd1c69e8fbcbc51e645d16dc1cf4",
+        "n_files": 6,
+        "unchanged_during_preflight": true
+      }
+    },
+    "formal_asset_tree_aggregate_sha256": "8ee3de67f3053e47d37b332731b64e35026f38ef3d28c89f39f430cb2e2eda11",
+    "b3_manifests_root": {
+      "verifier_compatible_tree_sha256": "c099ae978071e14886b6f2e66997ee93eb80f6e4ecbfd91f0383df89ecb96a44",
+      "verifier_compatible_file_count": 3,
+      "code_provenance_recorded_tree_sha256": "c099ae978071e14886b6f2e66997ee93eb80f6e4ecbfd91f0383df89ecb96a44",
+      "matches_code_provenance": true,
+      "b3_root_modified_by_freeze": false,
+      "artifacts_added_by_freeze_outside_b3": [
+        "runs/LINE-B-MANIFESTS/freeze_preflight_verification_20261120T014410.json",
+        "runs/LINE-B-MANIFESTS/FREEZE.json"
+      ],
+      "note": "The pre-flight report and FREEZE.json are written to runs/LINE-B-MANIFESTS/, outside the B3 root, so the B3 root and its B3.5-A digest are unchanged. The verifier stays re-runnable after the freeze."
+    },
+    "n_referenced_assets": 212
+  },
+  "environment": {
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "python_version": "3.12.13",
+    "python_executable": "D:\\miniconda3\\envs\\spectra-db\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.9.0",
+    "cwd": "E:\\Projects\\曦源计划\\数据\\SpectraDB"
+  },
+  "git": {
+    "head": "f0395ad1f73c41e0ec4e4e0b35b34b0974d19d37",
+    "branch": "main",
+    "working_tree_dirty": true,
+    "status_short": [
+      "M .codexignore",
+      " M CHANGELOG.md",
+      " M TODO.md",
+      "?? docs/experiments/line_b_b0_asset_audit.md",
+      "?? docs/experiments/line_b_b1_shared14_validation_report.md",
+      "?? docs/experiments/line_b_b3_prefreeze_readiness_audit.md",
+      "?? docs/experiments/line_b_b3_verifier_analysis_root_fix.md",
+      "?? docs/experiments/line_b_protocol_draft.md",
+      "?? docs/figures/",
+      "?? metadata/line_b_b0_audit.json",
+      "?? metadata/line_b_b0_checkpoints.csv",
+      "?? metadata/line_b_b0_experiment_matrix.csv",
+      "?? metadata/workspace_asset_relocation_manifest.csv",
+      "?? metadata/workspace_asset_relocation_manifest.json",
+      "?? runs/EXP-IR-003-UVSPEC15-FULL/",
+      "?? runs/EXP-IR-003-UVSPEC15-SEED123/",
+      "?? runs/EXP-IR-003-UVSPEC15-SEED2026/",
+      "?? runs/EXP-RAMAN-003-UVSPEC15-FULL/",
+      "?? runs/EXP-RAMAN-003-UVSPEC15-SEED123/",
+      "?? runs/EXP-RAMAN-003-UVSPEC15-SEED2026/",
+      "?? runs/LINE-B-ANALYSIS/",
+      "?? runs/LINE-B-MANIFESTS/",
+      "?? runs/LINE-B-METRICS/",
+      "?? runs/LINE-B-PREDICTIONS/",
+      "?? runs/LINE-B-THRESHOLDS/",
+      "?? training/line_b/",
+      "?? training/train_ir_uvspec15.py",
+      "?? training/train_ir_uvspec15_seed123.py",
+      "?? training/train_ir_uvspec15_seed2026.py",
+      "?? training/train_raman_uvspec15.py",
+      "?? training/train_raman_uvspec15_seed123.py",
+      "?? training/train_raman_uvspec15_seed2026.py"
+    ],
+    "commit_created_by_this_round": false,
+    "push_performed_by_this_round": false
+  },
+  "downstream": {
+    "b4_status": "NOT_STARTED",
+    "b5_status": "NOT_STARTED",
+    "formal_2000_bootstrap": "NOT_RUN",
+    "test_inference_during_freeze": "NONE",
+    "b4_scripts": {
+      "training/line_b/bootstrap_line_b_scaffold.py": {
+        "present": true,
+        "freeze_gate_reference": false
+      },
+      "training/line_b/analyze_line_b_structure.py": {
+        "present": true,
+        "freeze_gate_reference": false
+      },
+      "training/line_b/build_line_b_report.py": {
+        "present": true,
+        "freeze_gate_reference": false
+      },
+      "training/line_b/analyze_line_b_complementarity.py": {
+        "present": true,
+        "freeze_gate_reference": false
+      },
+      "training/line_b/export_line_b_predictions.py": {
+        "present": true,
+        "freeze_gate_reference": false
+      }
+    },
+    "todos": [
+      "B4 must implement the Test export gate (FREEZE.json presence + hash match), one export per model, and test_access_log.json; export_line_b_predictions.py currently exposes validation only.",
+      "B4 must run the pre-registered paired scaffold-cluster 2,000-repetition Bootstrap; it was NOT run during B3.",
+      "B4 is classified exploratory/post-hoc: historical Test information was already seen in B0.",
+      "The pre-flight report and FREEZE.json live outside runs/LINE-B-MANIFESTS/B3, so the B3 root digest still equals the B3.5-A record and the verifier stays re-runnable; B4 gating consumes FREEZE.json."
+    ]
+  },
+  "artifact_policy": {
+    "overwrite_existing_freeze": false,
+    "overwrite_historical_assets": false,
+    "commit_created": false,
+    "push_performed": false,
+    "test_inference": "NONE",
+    "formal_bootstrap_2000": "NOT_RUN"
+  }
+}

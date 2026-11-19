@@ -1,0 +1,41 @@
+{
+  "phase": "B4.4-SUPPLEMENT",
+  "generated_at": "2026-11-20T03:46:26+08:00",
+  "classification": {
+    "status": "post-hoc descriptive supplement",
+    "xai": false,
+    "confirmatory": false,
+    "selection_rule": "B0 v0.2 §7.6"
+  },
+  "config": {
+    "seed": 42,
+    "threshold": 0.5,
+    "tasks": [
+      "Shared14",
+      "UVSPEC15"
+    ],
+    "b44_tree_sha256_before": "d3e69052171ae753849a47139f21a03460ba7f772bd8d95e5143f749b9007a69"
+  },
+  "counts": {
+    "examples": 88,
+    "correct": 44,
+    "error": 44,
+    "subgroups_nonempty": 44,
+    "tasks": {
+      "Shared14": {
+        "correct": 22,
+        "error": 22
+      },
+      "UVSPEC15": {
+        "correct": 22,
+        "error": 22
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.4.6",
+    "rdkit": "2026.03.3"
+  },
+  "elapsed_started_at": "2026-11-20T03:46:14+08:00"
+}

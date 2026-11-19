@@ -1,0 +1,52 @@
+{
+  "phase": "B1",
+  "task": "Shared14",
+  "split": "validation",
+  "n_models": 9,
+  "n_per_modality": {
+    "ir": 3,
+    "raman": 3,
+    "uvvis": 3
+  },
+  "n_samples": 12981,
+  "label_names": [
+    "aldehyde",
+    "alkene",
+    "alkyne",
+    "amide",
+    "amine",
+    "c_f_bond",
+    "carbonyl",
+    "ester",
+    "ether",
+    "hydroxyl",
+    "imine",
+    "ketone",
+    "nitrile",
+    "nitro"
+  ],
+  "row_index_sha256": "bc6c8588db3375814fd08faae0f8e0e2ca8efe3bbed31c3e7d261b3161493904",
+  "labels_sha256": "4c748c0af56d84111bcdbd0791a03b7e25ce28647eb911d50ee421b0e8b72e01",
+  "no_test_access": true,
+  "all_checks_pass": true,
+  "max_repeat_abs_diff": 0.0,
+  "seed_metadata_mismatches": [],
+  "unique_config_seeds": {
+    "ir": [
+      42,
+      123,
+      2026
+    ],
+    "raman": [
+      42,
+      123,
+      2026
+    ],
+    "uvvis": [
+      42,
+      123,
+      2026
+    ]
+  },
+  "generated_at": "2026-11-18T00:15:39+08:00"
+}

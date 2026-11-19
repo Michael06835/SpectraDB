@@ -1,0 +1,10 @@
+﻿task,parent,child,parent_support,child_support,both,p_child_given_parent,p_parent_given_child,child_positive_parent_negative,strict_containment,definition_support
+UVSPEC15,has_conjugation,has_nonaromatic_conjugation,25117,7334,7334,0.29199347055778957,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+UVSPEC15,has_conjugation,acyclic_conjugated_system,25117,3200,3200,0.1274037504479038,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+UVSPEC15,has_conjugation,cyclic_conjugated_system,25117,21917,21917,0.8725962495520961,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+UVSPEC15,has_conjugation,has_aromatic_system,25117,17941,17941,0.7142970896205757,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+UVSPEC15,has_conjugation,mixed_aromatic_nonaromatic_conjugation,25117,5896,5896,0.23474141020026276,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+UVSPEC15,has_aromatic_system,heteroaromatic,17941,17683,17683,0.9856195306839084,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+UVSPEC15,has_aromatic_system,mixed_aromatic_nonaromatic_conjugation,17941,5896,5896,0.32863274064990805,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+UVSPEC15,pi_conjugated_carbonyl,alpha_beta_unsaturated_carbonyl,8874,1986,1986,0.22379986477349562,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
+UVSPEC15,pi_conjugated_carbonyl,aryl_carbonyl,8874,1694,1694,0.19089474870407933,1.0,0,True,predefined_semantic_hierarchy; pending human confirmation
