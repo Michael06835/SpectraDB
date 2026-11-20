@@ -254,85 +254,115 @@
 ## 2026-11-14
 ### 完成内容
 * 冻结UVSPEC15标签集（15个UV专属共轭/发色团标签），生成`processed/qm9s/prepared/uvspec15_labels.npy`（129817×15）与provenance manifest
-* 完成UVSPEC15单模态基线三随机种子训练（seed 42/123/2026）
-* 完成阈值校准、完整BN诊断、BN重校准模型保存与BN后阈值校准（普通BCE与Weighted BCE各3 seeds）
-* 完成Weighted BCE三随机种子对照实验
-* 完成shared vs specific正式对照分析（`runs/UVSPEC15-ANALYSIS/shared_vs_specific_summary.md`）
-* 完成UVSPEC15 v1正式实验策略归档（`docs/experiments/UVSPEC15_v1_experimental_strategy.md`：明确Training/Validation/Test分工与计算-实验域差异归因）
-* 完成实验数据一致性审计（checkpoint-seed对应、原始/BN重估配套、阈值配套、三seed样本SD、mAP/AUROC阈值无关、audit全过）
-* 新增`docs/experiments/uvspec15_repro_protocol.md`、`docs/data/uvspec15_label_guide.md`、`docs/experiments/uvspec15_ablation_registry.md`
-* 修复训练/汇总脚本行尾空格
+* 完成UVSPEC15单模态基线三随机种子训练（seed 42/123/2026）、阈值校准、完整BN诊断、BN重校准与BN后阈值校准（普通BCE与Weighted BCE各3 seeds）
+* 完成Weighted BCE三随机种子对照，确认不采用
+* 完成shared vs specific正式对照：同一UV光谱、同一backbone、同一split，仅替换标签集，UVSPEC15显著优于UV-v1 shared
+* 归档`UVSPEC15_v1_experimental_strategy.md`、`uvspec15_repro_protocol.md`、`uvspec15_ablation_registry.md`、`uvspec15_label_guide.md`
 ### 当前进度
-* shared vs specific对照成立：同一UV光谱、同一backbone、同一split，仅换标签集，UVSPEC15（BN重校准）达test Micro-F1 0.6580±0.0154、mAP 0.5728±0.0203、Macro-AUROC 0.9384±0.0040，显著优于UV-v1 shared（0.4892/0.5053/0.8501，当时口径）
-* 结论：UV不是弱，而是shared generic标签不匹配；BN重校准显著降低三seed方差（训练震荡所致）
-* Weighted BCE三seed对照确认不采用（整体指标仍略低）
-* UVSPEC15 v1已归档；IR/Raman的BN审计尚未同步，多模态融合尚未开始
+* UVSPEC15主方案BCE + Recalibrated BN + Validation-F1：Test Micro-F1 0.6568±0.0138、mAP 0.5728±0.0203、Macro-AUROC 0.9384±0.0040；shared vs specific对照成立
+* 结论：UV-Vis在共享14类标签上的弱势主要来自标签集不匹配，而不是UV光谱本身缺乏结构信息；BN重校准显著降低三seed方差
+* IR/Raman的BN审计尚未同步，多模态融合尚未开始
 ### 下一步计划
-* 三模态信息画像（Line B）：IR/Raman在UVSPEC15标签上的baseline
-* naive fusion对照 → chemistry-aware routing（Line C）
+* 完成IR v1同构审计与冻结
+* 完成Raman v1同构审计与冻结
+* 启动Line B三模态信息画像
 
 ## 2026-11-15
 ### 完成内容
-* 补齐 WBCE Seed 123 / 2026 训练，IR 达到 6 个独立模型（BCE/WBCE × seed 42/123/2026）
-* 新增 `training/diagnose_ir_batchnorm_full.py`（UVSPEC15 Full BN 诊断的 IR 移植，仅 Full，不含 Quick）
-* 完成 6 次 Full BN Diagnostic（严格串行），6 份 JSON 通过基线复现、参数不变性、BN 统计量与源文件保护检查
-* 新增 `training/save_ir_bn_checkpoint.py`，保存 6 份 Training-only BN 重估 checkpoint 与 manifest（源/重估 SHA256、配置摘要、数据规模、与诊断记录的一致性核验）
-* 新增 `training/calibrate_ir_original_thresholds.py` 与 `training/calibrate_ir_recalibrated_thresholds.py`，完成 12 次 Validation 逐标签 F1 阈值校准（6 Original + 6 Recalibrated），阈值在计算任何 Test 指标前落盘，Test 不参与拟合
-* 新增 `training/summarize_ir_ablation.py`，生成 24 条件消融汇总（24+24 条件、16 组 Mean±SD、84 条配对、672 行逐标签、48 条来源登记、6 份审计），全部只读、含 manifest 哈希链核验
-* 新增 `docs/experiments/IR_v1_experimental_strategy.md` 与 `docs/experiments/IR_v1_final_decision.md`
-* 新增 `docs/experiments/ir_ablation_registry.md` 与 `docs/experiments/ir_repro_protocol.md`（与 UVSPEC15 对齐的溯源登记表与复现协议）
-* 新增 `docs/experiments/UVSPEC15_v1_final_decision.md`（补齐 UVSPEC15 缺失的独立 Final Decision 文档；章节与统计口径同 IR，结论按 UVSPEC15 自身数据得出，正式配置维持 BCE + Recalibrated BN + Validation-F1）
-* 废弃脚本归档：`training/calibrate_ir_thresholds.py` 实现迁至 `archive/2026-11-15/calibrate_ir_thresholds.py`（内容未改，992 行）；原路径改为弃用入口，直接运行立即非零退出且不加载数据/不写文件；同步更新 `ir_repro_protocol.md`、`IR_v1_experimental_strategy.md`、`TODO.md`、`AGENTS.md` 中的引用
-* 废止并移除早期 IR 专属复杂方案（5×5 交叉拟合、P1–P5、L1/L2′/L3），IR 全面对齐 UVSPEC15 v1 已验证流程
+* 完成IR v1完整方法学消融：6个独立模型（BCE/WBCE × seed 42/123/2026）、6次Full BN Diagnostic、6份Training-only BN重估checkpoint、12次Validation逐标签F1阈值校准、24条件汇总（48条split-level、672条逐标签）
+* IR主方案确定为BCE + Original BN + Validation-F1；备选BCE + Recalibrated BN + Validation-F1；固定基线BCE + Original BN + 0.5
+* 补齐`UVSPEC15_v1_final_decision.md`，统一IR与UVSPEC15的Final Decision、Ablation Registry与Repro Protocol结构
+* 归档废弃的IR专用复杂方案与旧阈值脚本；原路径改为立即非零退出的弃用入口
 ### 当前进度
-* **IR v1 冻结归档**：6/6 模型训练、6/6 Full BN Diagnostic、6/6 BN 重估 checkpoint、12/12 阈值校准、24/24 消融条件、48 条 split-level 与 672 条逐标签记录全部齐备
-* 最终配置：主方案 BCE + Original BN + Validation-F1（Validation Micro-F1 0.9505±0.0025；Test 0.9364±0.0054）；备选 BCE + Recalibrated BN + Validation-F1（Validation Macro-F1 0.9299±0.0035，mAP 0.9607±0.0067）；固定基线 BCE + Original BN + 0.5（Test Micro-F1 0.9405±0.0048）
-* 观察到阈值校准的 Validation 增益（+0.0035～+0.0071 Micro-F1）未稳定迁移至 Test（−0.0011～−0.0042），已如实记录并讨论，不以 Test 反向调整决策
-* 历史 `runs/IR-v1-FINAL/` 保持 2026-08-14 原样未改写
+* IR v1冻结：Validation Micro-F1 0.9505±0.0025，Test Micro-F1 0.9364±0.0054；24条件、48条split-level、672条逐标签记录齐备
+* 观察到阈值校准的Validation增益未稳定迁移至Test（Test −0.0011～−0.0042），如实记录，不以Test反向调整配置
+* UVSPEC15 v1 Final Decision同步完成（Test Micro-F1 0.6568±0.0138）
 ### 下一步计划
-* **Raman 同构实验（下一步重点）**：Full BN Diagnostic → BN 重估 checkpoint → 12 次阈值校准 → 24 条件汇总，复用 IR 的四个脚本
-* 三模态信息画像（Line B）与 chemistry-aware 融合（Line C）
-* IR v1 归档提交
+* 完成Raman v1同构审计
+* 提交IR/UVSPEC15归档
+* 启动Line B
 
 ## 2026-11-16
 ### 完成内容
-* IR v1 与 UVSPEC15 v1 归档成果提交并推送 GitHub `main`（`bbcdfa4`）；补齐 `UVSPEC15_v1_final_decision.md`。
-* Raman v1 完成 6 个独立模型（BCE/WBCE × seed 42/123/2026）、6 次 Full BN Diagnostic、6 份 Training-only BN 重估 checkpoint、12 次 Validation 阈值校准，以及 24 条件消融汇总（48 条 split-level、672 条逐标签）。
-* Raman 数值审计与 gate policy v5 落地：Gate A 10 项 + Gate B 六指标 1e-3；修复 Gate A 第 09 项写盘顺序缺陷，并完成 FP16 历史读数 `1.086e-3 → 1.080e-3` 的算术勘误；冻结 manifest 原样保留。
-* 新增 `Raman_v1_final_decision.md`、`raman_ablation_registry.md`、`raman_repro_protocol.md`；完成 IR/Raman 废弃脚本归档。
-* Raman v1 归档分两次提交并推送 GitHub `main`。
+* 完成Raman v1同构审计：6个独立模型、6次Full BN Diagnostic、6份Training-only BN重估checkpoint、12次阈值校准、24条件汇总（48条split-level、672条逐标签）
+* 落地Raman数值审计与gate policy v5（Gate A 10项 + Gate B六项1e-3）；修复Gate A第09项写盘顺序缺陷，完成FP16历史读数1.086e-3 → 1.080e-3的算术勘误，冻结manifest保持原样
+* 新增`Raman_v1_final_decision.md`、`raman_ablation_registry.md`、`raman_repro_protocol.md`
 ### 当前进度
-* IR v1、UVSPEC15 v1、Raman v1 全部冻结归档：各 6 模型、24 条件、48 条 split-level；逐标签 IR 672 行 / UVSPEC15 720 行 / Raman 672 行。
-* IR v1 主方案 BCE + Original + Validation-F1：Test Micro-F1 0.9364±0.0054；UVSPEC15 主方案 BCE + Recalibrated + Validation-F1：Test 0.6568±0.0138；Raman 主方案 WBCE + Recalibrated + Validation-F1：Validation 0.922034±0.002103 / Test 0.914113±0.006869。
-* Raman 主方案相对备选的 Validation 领先低于跨 Seed SD，不作显著性宣称；仓库外 checkpoint 备份按项目决定跳过。
+* IR v1、UVSPEC15 v1、Raman v1全部冻结：各6模型、24条件、48条split-level；逐标签记录IR 672行、UVSPEC15 720行、Raman 672行
+* IR主方案Test Micro-F1 0.9364±0.0054；UVSPEC15主方案Test 0.6568±0.0138；Raman主方案WBCE + Recalibrated BN + Validation-F1：Validation Micro-F1 0.922034±0.002103、Test 0.914113±0.006869
+* Raman主方案相对备选的Validation领先低于跨seed SD，不作显著性宣称
 ### 下一步计划
-* 启动 Line B 三模态信息画像：先做 B0 资产审计与协议设计，再进入 B1 Validation 导出。
-* B2/B3 训练与冻结、Line C 融合、Line D 完整结构 Top-k、实验域与开放集分析。
+* 启动Line B：先做B0资产审计与协议设计，再进入B1 Validation导出
 
 ## 2026-11-17
 ### 完成内容
-* 完成 Line B B0 只读资产审计：核查 40 份 checkpoint、22 份逐标签 Test CSV、三模态 split/row_index/标签一致性、UVSPEC15 列顺序与 support；输出 `metadata/line_b_b0_*` 与 `line_b_b0_asset_audit.md`。
-* 完成协议 v0.2：拆分 `positive_or_fusion` 与真实 Oracle；明确 scaffold 聚类 Bootstrap、undefined 处理；记录 B0 的历史 Test 接触边界；拆分 UV 边际/互补；阶段统一为 B1–B5。
-* 完成 B1 基础设施 `training/line_b/` 与 6 个 CPU 合成测试；Shared14 九模型 FP32 Validation 导出（各 12,981 行），9/9 对齐/哈希/checkpoint-BN 不可变性检查通过，重复前向 bitwise 一致。
-* 输出 B1 九模型指标、逐标签与模态汇总，以及 prediction inventory / resource / audit / code hashes；新增 `line_b_b1_shared14_validation_report.md`。
-* B1 发现 `EXP-UVVIS-001-SEED2026` 实际使用 Seed 42，UV 唯一 config seeds 为 {42,123}，留待审核处理。
+* 完成Line B B0只读资产审计：核查40份checkpoint、22份逐标签Test CSV、三模态split/row_index/标签一致性、UVSPEC15列顺序与support；输出`metadata/line_b_b0_*`与`line_b_b0_asset_audit.md`
+* 完成协议v0.2：拆分`positive_or_fusion`与真实Oracle，明确scaffold聚类Bootstrap与undefined处理，记录B0历史Test接触边界，拆分UV边际/互补，阶段统一为B1–B5
+* 完成B1基础设施与6个CPU合成测试；Shared14九模型FP32 Validation导出（各12981行），9/9对齐/哈希/checkpoint-BN不可变性检查通过，重复前向bitwise一致
+* 输出B1九模型指标、逐标签与模态汇总、prediction inventory/resource/audit/code hashes；新增`line_b_b1_shared14_validation_report.md`
 ### 当前进度
-* B0 审计与协议 v0.2 完成；B1 初版 Validation 导出完成，但 UV Seed2026 元数据存在问题，B1 待人工审核。
-* 未训练新模型、未访问/推理 Line B Test、未重估 BN、未拟合阈值；B2/B3 未启动。
+* B0审计与协议v0.2完成；B1初版Validation导出完成，但发现`EXP-UVVIS-001-SEED2026`实际使用Seed 42，UV唯一config seeds为{42,123}，留待审核处理
+* 未训练新模型、未访问/推理Line B Test、未重估BN、未拟合阈值；B2/B3未启动
 ### 下一步计划
-* 人工审核 B0 v0.2 与 B1 初版结果，决定 UV Seed2026 处理方式。
-* 审核通过后按 B1→B2→B3→B4→B5 推进；B1/B2 的 GPU 推理与训练需单独启动。
+* 人工审核B0 v0.2与B1初版结果，决定UV Seed2026处理方式
+* 审核通过后按B1→B2→B3→B4→B5推进
 
 ## 2026-11-18
 ### 完成内容
-* 确认并纠正 UV Shared14 Seed2026 配置错误：旧实验实际 `SEED=42`，完整归档至 `archive/2026-11-17/UVVIS-SHARED14-INVALID-SEED2026/` 并弃用旧指标；修正训练脚本为 `SEED=2026`，沿用原编号完成重训、历史格式 FINAL TEST 与 B1 FP32 Validation 重导。
-* 新 config/checkpoint 均核实 Seed 2026；新结果进入 B1 三真实 Seed（42/123/2026）统计；UV Validation 三 Seed Micro-F1 0.5024±0.0047、Macro-AP 0.5131±0.0031、Macro-AUROC 0.8489±0.0008。
-* 重建 UVVIS-v1 Test 三 Seed 汇总：Micro-F1 0.5158±0.0067、mAP 0.5126±0.0011、Macro-AUROC 0.8526±0.0016；旧 `UVVIS-v1-FINAL` 归档，修正版成为唯一 `runs/UVVIS-v1-FINAL/`。
-* 完成 B1 文档精简与引用统一：Seed2026 纠错压缩为 B1 报告中的简短说明；旧 FINAL 路径、机器汇总与图表不再混入当前结果。
-* 完成 UVVIS-v1 目录规范化与脚本防覆盖：旧 finalizer 拒绝覆盖非空 FINAL；修正汇总脚本输出指向正式 FINAL。
+* 纠正UV Shared14 Seed2026配置错误：旧实验实际`SEED=42`，完整归档至`archive/2026-11-17/UVVIS-SHARED14-INVALID-SEED2026/`并弃用旧指标；修正训练脚本为`SEED=2026`，沿用原编号完成重训、历史格式FINAL TEST与B1 FP32 Validation重导
+* 重建UVVIS-v1 Test三seed汇总：Micro-F1 0.5158±0.0067、mAP 0.5126±0.0011、Macro-AUROC 0.8526±0.0016；修正版成为唯一`runs/UVVIS-v1-FINAL/`
+* 完成B2训练代码与正式训练：共享Validation-only训练模块，IR/Raman × seed 42/123/2026共6个模型；固定UV 103853 split、15类UVSPEC15、BCE、Original BN、0.5、Validation mAP选模；36/36资产、manifest、best epoch、early stopping与Test隔离检查通过
+* 完成B3统一接口与门禁：`training/line_b/common.py`支持modality × label_set；导出/评价/汇总支持14/15维；强制注册run ID与seed、数组实际SHA256、权威row_index/labels/label_names、重复推理0.0/bitwise、checkpoint/BN不变性；完成负向sanity
+* 完成B3 18模型FP32 Validation导出与261条Validation-only逐标签F1阈值校准（Shared14 126 + UVSPEC15 135）；固定0.5为主评价，Validation-F1为同集次评价
+* 完成B3-A正式互补性分析：TP/TN/FP/FN、错误交集、FN rescue、FP correction、new FP/FN、条件正确率、positive OR、真实Oracle与三模态独特纠错空间；18模型对齐、双阈值政策、14/15标签全覆盖
+* 完成B3.5-A代码溯源与非破坏性复现：261条阈值与12个B3-A CSV在临时目录复现，正式产物树哈希前后不变；新增`B3/code_provenance.json`，历史执行代码SHA明确为unknown
+* 完成B3.5-B统一只读校验：18/18模型、261/261阈值、B3-A 14文件、B1/B3 audit、code provenance、原始prepared/结构资产全部通过；输出`b3_5b_manifest_verification.json`与`_v2.json`
+* 完成B3.5-C1/C2 Validation-only分析：C1实现scaffold簇配对bootstrap基础设施，20次/任务sanity通过（Test正式2000次留待B4）；C2完成McNemar/Holm、六方向条件互补、逐分子错误分布、Spearman、hard sample/Jaccard、分子exact-match、sample-label Oracle、OR增益与高置信度FP/FN诊断
+* 完成B3.5-D1结构子群基础设施：Training共现、hierarchy/语义组、22个非空子群定义与互斥覆盖断言、支持度门禁、子群AP/AUROC/F1、条件互补/Oracle/OR三seed汇总、逐标签bootstrap；每子群20次scaffold bootstrap sanity通过，未写正式Test产物
+* 完成B3.5-D2 Validation典型分子报告工具：22子群×2选择位置、原生RDKit PNG/SVG、每分子独立目录与metadata、三模态光谱、统计表、图与完整报告；Smoke/Full及独立验证通过；明确为非B4/B5正式报告
 ### 当前进度
-* UV Shared14 三真实 Seed 基线恢复；B1 九模型 Validation 汇总与 UVVIS-v1 Test 汇总均为当前有效版本。
-* B1 待人工审核；B2 六模型训练、B3 Validation/阈值/FREEZE、B4 Test 均未启动。
+* B1–B3完成：18模型Validation资产、261条阈值、B3-A正式输出、B2六模型与统一门禁均已归档
+* B3.5 A/B/C1/C2/D1/D2完成：代码溯源、manifest校验、Bootstrap基础设施、扩展互补性、结构子群与Validation报告工具均通过；Test未被访问
+* 正式Test导出、FREEZE、2000次Test Bootstrap与B4/B5尚未开始
 ### 下一步计划
-* 人工审核 B1 与 UV Seed2026 纠错结果。
-* B3 前完成条件互补性拆分、WBCE S-03 边界、Bootstrap/互补性/子群/报告代码与合成测试；审核通过后进入 B2/B3。
+* 完成B3 FREEZE与B0 v0.2 FINAL定稿
+* 启动B4.1 Test预测导出，随后按B4.2→B4.3→B4.4→B4.4 Supplement→B5推进
+
+## 2026-11-19
+### 完成内容
+* 修复原始科研环境`spectra-db`的RDKit原生绘图故障：根因为`libglib`与`libintl`共享`Library/bin/intl-8.dll`，clone对齐`libglib 2.90.1`时该文件被删除，导致`fontconfig → cairo → RDKitMolDraw2D`依赖链断裂
+* 仅执行`conda install libintl=0.22.5=h5728263_4`，`intl-8.dll`恢复为conda-forge版本（224256 B，SHA256 `19B198C1…`）；`rdMolDraw2D`导入、Cairo PNG、SVG、Pillow解码与项目四个样本渲染全部通过，Python/RDKit/PyTorch/CUDA/PyG/Pillow版本未变
+* 记录修复后的硬性约束：禁止对`libglib`执行force-reinstall/install/update；禁止未经评估升级`libffi`；禁止未经评估切换Python构建；任何相关conda操作前必须dry-run，操作后复核`intl-8.dll` SHA256
+* 完成工作区外历史资产迁移：1739文件、190,543,006 bytes迁入`runs/LINE-B-ANALYSIS/validation_development/`与`runs/environment_validation/rdkit/20261119/`，逐文件SHA256一致；重复/被取代运行803文件、46,747,421 bytes归档至`archive/2026-11-19/line-b-relocation-duplicates/`
+* 完成B3.5-D2 R2工作区原生化与路径安全补丁：Builder/Verifier支持工作区内输出、中文路径、历史路径relocation解析、MOL/SDF独立解析、metadata与Manifest outputs边界校验；R1保持不可变，R2保持669文件
+### 当前进度
+* 原始科研环境已恢复RDKit原生绘图，可继续B3.5-D2与B4.4 Supplement结构渲染；回滚环境`spectra-db-pre-rdkit-fix`（5.83 GB）保留
+* B3.5-D2 R1/R2报告与图像一致；D2仅保留R1 final为活跃历史资产，R2保持669文件
+* Line B正式Test仍未开始
+### 下一步计划
+* 完成B3 FREEZE与B0 v0.2 FINAL定稿
+* 启动B4.1 Test导出与B4.2–B4.4分析
+
+## 2026-11-20
+### 完成内容
+* 完成B3 FREEZE：修复`verify_line_b_manifests.py`对`runs/LINE-B-ANALYSIS`的整树摘要误判，改为对14个权威B3-A文件逐文件校验并重建历史摘要；`validation_development/`（C1 8 + C2 36 + D1 52 + D2 8931 = 9027文件）明确识别为快照后追加资产
+* 定稿B0 v0.2 FINAL（SHA256 `713fa92f…`），生成`FREEZE.json`（SHA256 `65a84959…`，status=FROZEN、phase=B3）：18/18模型、261条阈值、B3-A 6+6输出、212项资产路径/大小/SHA256；预检与写入后复验`PASS 10 / FAILED 0 / ACCEPTED 4`，18/18、261、正式根前后不变、Test零访问
+* 完成B4.1 Test预测导出：18个冻结模型各导出一次，每模型12981行，72文件/18,969,279 B；FREEZE哈希门禁、模型身份校验、重复推理bitwise一致、checkpoint/BN不变；`test_access_log.json`18条，`blind_test_claim=false`、`result_classification=exploratory/post-hoc`；独立验证PASS 466/466
+* 完成B4.2 Test性能评估：18模型×2 Task，主F1政策固定0.5、次政策冻结Validation-F1，AP/AUROC阈值无关；Shared14 IR/Raman/UV-Vis Micro-F1 0.9405/0.9151/0.5159、mAP 0.9695/0.9551/0.5125；UVSPEC15 IR/Raman/UV-Vis Micro-F1 0.9512/0.9538/0.6108、mAP 0.9709/0.9760/0.5380；17文件/1,841,098 B，独立验证PASS 8,374/8,374
+* 完成B4.3正式Test scaffold-clustered paired bootstrap：2853个Test scaffold、2000次重采样、固定RNG 20261117，18模型/3 seed/全部标签/3组比较共用同一draw matrix；AP/AUROC按draw count加权，undefined不填补，F1两政策，95% percentile CI，Seed SD ddof=1；Shared14 UV−IR AP −0.4570 [−0.4871,−0.3857]，UVSPEC15 UV−IR AP −0.4329 [−0.4910,−0.3931]；独立验证PASS 1,144/1,144
+* 完成B4.4 Test错误互补性与结构子群：pairwise TP/FP/FN/TN、错误Jaccard、A/B-only、FN rescue、FP correction、new FP/FN、McNemar exact + Holm、Positive OR/AND、真实Oracle、六方向条件互补（2000次bootstrap，复用B4.3 draw）、sample-level、hard 10%、高置信度错误与结构子群（D1定义，子群内500次bootstrap）
+* B4.4主要结果：macro错误Jaccard 0.049–0.101；Oracle any-correct 0.9968/0.9989、exactly-one 1.49%/0.55%、all-wrong 0.32%/0.11%；IR/Raman同时错误而UV正确的pair为509/205，但UV rescue 0.469/0.498低于边际0.880/0.925，delta −0.411/−0.426，95% CI全负；三模态OR F1比best_single低0.06–0.23；Shared14 19/21支持子群以IR最优，UVSPEC15 16/21以Raman最优；全部84个fixed-0.5子群UV比较CI上界<0；独立验证PASS 1,127/1,127
+* 完成B4.4 Supplement典型分子分析：固定Seed 42/0.5，按B0 §7.6选择每个非空子群的1个median-confidence correct与1个最高-confidence error；两Task各22个非空子群、44案例，共88案例；原生RDKit PNG/SVG、prepared真实光谱轴、完整metadata与输入SHA；358文件/9,356,623 B，独立验证PASS 263/263；B4.4树SHA `d3e69052…`未变
+* 完成B5 Phase 0预检与正式报告：388文件/12,643,790 B（19表、11图、88案例）；修复三个WARN——明确B4.3 CI为配对差值CI而非绝对性能CI、明确H3的`only_UV/only_IR/only_Raman × 结构子群`富集未直接检验、补充AP/AUROC≠化学信息总量与QM9S计算域≠NIST/SDBS/API-Raman实验域等边界
+* B5最终结论：H1 PARTIAL SUPPORT（IR/Raman>UV的边际优势成立，但振动标签差距未更大）；H2 REJECTED（UVSPEC15 UV未优于IR/Raman）；H3 PARTIAL SUPPORT（错误集合互补，但Positive OR未超过best_single、UV条件rescue低于边际、子群独家正确富集未检验）；H4 DESCRIPTIVELY SUPPORTED（最佳模态随Task与结构子群变化）
+* B5独立验证PASS 67/67；报告SHA `398c0481…`、verification `70eae468…`、asset_manifest `a7e5910b…`；所有Test结果标记exploratory/post-hoc，不作为confirmatory evidence
+* 完成Line B Git归档：分支`archive/line-b-2026-11-20`，commit `ab1e85dd0274e803bae074fc19acce47f6feb142`（parent `f0395ad`）；1173个新增文件、内容143,591,799 B，加6个已跟踪未修改文件后共1,179路径/143,780,373 B；9处既有尾随空格作为格式例外保留；D类`CHANGELOG.md`/`TODO.md`/`.codexignore`未纳入，已推送至远端分支 archive/line-b-2026-11-20
+### 当前进度
+* Line B B0–B5全部完成并归档；B5正式报告通过独立验收；Test结果仅为exploratory/post-hoc
+* 三模态信息画像的核心结论已形成：IR/Raman在Shared14与UVSPEC15标签上均强于UV-Vis；UV-Vis在UVSPEC15上未表现出预期优势；错误集合存在差异，但条件互补与Positive OR均不足以支持“UV带来稳定增量”的结论
+* QM9S为计算光谱域，尚未进行NIST/SDBS/API-Raman实验域验证；典型分子分析仅为定性案例，不是XAI或统计证据
+### 下一步计划
+* Line C：先做naive concatenation/fixed-weight对照，再做generic attention/gating，最后实现chemistry-aware routing与消融；所有融合必须与best_single比较，并使用scaffold-aware不确定性
+* Line D：在融合证据成立后进入完整结构候选与Top-k
+* Line F/G：缺失/噪声鲁棒性与实验域验证
+* Line H/I：开放集识别与可解释性
