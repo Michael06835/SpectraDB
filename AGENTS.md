@@ -1,4 +1,4 @@
-# SpectraDB Agent 工作说明 最近修改：2026-11-18 00:53 (UTC+8)
+# SpectraDB Agent 工作说明 最近修改：2026-11-21 22:26 (UTC+8)
 
 ## 1. 项目定位
 
@@ -43,7 +43,7 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 
 当前处于：
 
-**第一阶段（数据体系与单模态模型）已完成；当前进入第二阶段准备（UV专属化学语义监督与 chemistry-aware 多模态融合）。Raman v1 的同构资产审计与 24 条件消融已于 2026-11-16 完成并冻结；当前即时任务是三模态信息画像（Line B）。**
+**第一阶段（数据体系与单模态模型）已完成；Line A（UV专属语义与UVSPEC15基线）已完成；Line B（三模态信息画像）B0–B5 已完成并通过独立验收，已归档至 `archive/line-b-2026-11-20`（commit `ab1e85dd0274e803bae074fc19acce47f6feb142`）。当前没有进行中的正式训练；Line B 是三模态性能比较与互补性分析，不代表已经实现或训练真正的多模态融合模型；下一阶段是 Line C：Chemistry-aware Multimodal Fusion，尚未开始正式实验。**
 
 第一阶段包括：
 
@@ -65,12 +65,16 @@ SpectraDB 是一个面向有机小分子多模态光谱分析与分子结构推�
 - IR 1D-CNN：已完成，**IR-v1 已冻结归档**（6 模型 × 2 BN × 2 阈值 = 24 条件；主方案 BCE + Original BN + Validation-F1，Validation Micro-F1 0.9505±0.0025 / Test 0.9364±0.0054；备选 BCE + Recalibrated BN + Validation-F1；固定基线 BCE + Original BN + 0.5。决策记录见 `docs/experiments/IR_v1_final_decision.md`）。
 - Raman 1D-CNN：已完成，**Raman-v1 已冻结归档**（历史基线 test Micro-F1 0.9151 / Macro-AUROC 0.9911；6 模型 × 2 BN × 2 阈值 = 24 条件；主方案 WBCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.922034±0.002103 / Test 0.914113±0.006869；备选 WBCE + Original BN + Validation-F1；固定基线 BCE + Original BN + 0.5。决策记录见 `docs/experiments/Raman_v1_final_decision.md`）。
 - UV-Vis 1D-CNN：已完成，UV-Vis-v1 已冻结（corrected test Micro-F1 0.5158，Macro-AUROC 0.8526；旧 invalid Seed2026 三 Run 均值已弃用）。
-- 模态对比：待输出（三模态信息画像）。
+- 模态对比：已完成（Line B，B0–B5；18个冻结模型，Shared14/UVSPEC15 × IR/Raman/UV-Vis × 3 seeds；B5 报告已通过独立验证）。
 - UV-specific 化学语义标签：schema v1.0 FINAL 已冻结，builder v1.0.1 已完成全量标注（129817 全部成功，58 二值 + 73 数值），频数与 split 审计已完成；UVSPEC15（15 个 UV 专属标签）已选定并生成标签矩阵。
 - UVSPEC15 单模态基线：已完成（3 seeds，含阈值校准、BN 诊断、BN 重校准与 WBCE 对照）。
 - **UVSPEC15 v1 完整方法学消融**：已完成（6 模型 × 2 BN × 2 阈值 = 24 条件；48 条 split-level、720 条逐标签；主方案 BCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.6283±0.0059 / Test 0.6568±0.0138；Final Decision / Ablation Registry / Repro Protocol 均已归档，2026-11-15）。
 - shared vs specific 对照：已完成（`runs/UVSPEC15-ANALYSIS/`，UV 专属语义任务显著优于 shared 通用任务）。
-- **Raman v1 完整方法学消融**：已完成并冻结（2026-11-16；6 模型 × 2 BN × 2 阈值 = 24 条件；48 条 split-level、672 条逐标签；主方案 WBCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.922034±0.002103 / Test 0.914113±0.006869；Final Decision / Ablation Registry / Repro Protocol 均已归档）。三模态信息画像与融合尚未开始。
+- **Raman v1 完整方法学消融**：已完成并冻结（2026-11-16；6 模型 × 2 BN × 2 阈值 = 24 条件；48 条 split-level、672 条逐标签；主方案 WBCE + Recalibrated BN + Validation-F1，Validation Micro-F1 0.922034±0.002103 / Test 0.914113±0.006869；Final Decision / Ablation Registry / Repro Protocol 均已归档）。Line B 三模态信息画像已完成；Line C 多模态融合尚未开始。
+- **Line B 三模态信息画像**：B0–B5 已完成。18个冻结模型（2 Task × IR/Raman/UV-Vis × 3 seeds；Test 12,981），B4.3 为2,000次 scaffold-clustered paired bootstrap；B5 正式报告通过独立验证。
+- **Line B 主要结论**：IR/Raman 在 Shared14 与 UVSPEC15 上均优于 UV-Vis；UV-Vis 在 UVSPEC15 未取得预期单模态优势；模态错误集合有差异，但 Positive OR 未超过 best_single；True Oracle 是理论诊断上界，不是实际融合性能；最佳模态随 Task 与结构子群变化。H1：PARTIAL SUPPORT；H2：REJECTED；H3：PARTIAL SUPPORT；H4：DESCRIPTIVELY SUPPORTED。
+- **边界**：Line B 的 Test 分析为 exploratory/post-hoc，不是独立盲测或 confirmatory evidence；结论限于 QM9S 计算域与当前任务。H2 被拒绝不表示 UV 无结构信息；H4 不等于 chemistry-aware routing 已验证。
+- **归档**：报告 `runs/LINE-B-FINAL/line_b_final_report.md` 位于 `archive/line-b-2026-11-20` 分支（commit `ab1e85dd...`），不在 `main`；链接：https://github.com/Michael06835/SpectraDB/blob/archive/line-b-2026-11-20/runs/LINE-B-FINAL/line_b_final_report.md
 - 归档状态：IR v1、UVSPEC15 v1、Raman v1 的成果均已提交 Git 并推送 GitHub `main`；12 份 IR checkpoint（约 140 MB）与 12 份 Raman checkpoint（约 140 MB）及原始光谱矩阵不进 Git，需仓库外独立备份（Raman 备份用户已决定跳过）。
 
 ---
@@ -541,14 +545,11 @@ Git 中不保存：
 
 当前最高优先级如下：
 
-1. 更新 `AGENTS.md` 和 `TODO.md`，明确当前阶段策略。
-2. **Raman v1（已完成）**：六模型（BCE/WBCE × seed 42/123/2026）→ 6 次 Full BN Diagnostic → 6 份 Training-only BN 重估 checkpoint（gate policy v5：Gate A 10 项 + Gate B 六指标 1e-3）→ 12 次阈值校准 → 24 条件消融（48 条 split-level、672 条逐标签、11 个汇总文件）→ Phase 7 三份文档与 Final Decision，已于 2026-11-16 冻结归档。后续同类审计沿用该流程。
-3. 三模态信息画像：IR/Raman 在 UVSPEC15 标签上的 baseline + 与 UV 的 per-label 对比，识别各模态擅长与不擅长的结构子群（Line B）。
-4. chemistry-aware 融合：naive 对照 → generic gating → proposed routing + 消融（Line C，论文核心方法）。
-5. 完整结构 Top-k：融合证据成立后进入（Line D）。
-6. 鲁棒性与实验域：缺失/噪声模态、NIST/API-Raman 验证（Line F/G）。
-7. 开放集与可解释性分析（Line H/I）。
-8. checkpoint 与原始数据的仓库外独立备份（IR 12 份 checkpoint 约 140 MB，Git 仅保存轻量 JSON/CSV）。
+1. **Line C：Chemistry-aware Multimodal Fusion（下一阶段，尚未开始正式实验）**：按 naive concatenation / fixed-weight → IR+Raman 与 IR+Raman+UV 对照 → generic attention/gating → chemistry-aware routing → UV-specific chemical supervision 与关键消融 → gate 与化学证据相关性 → scaffold-aware 不确定性推进。所有融合实验必须与 best_single 比较；不能以 Positive OR 或 True Oracle 推断融合性能；不得以 Test 探索性结果反向决定训练/阈值配置；negative transfer 仍需正式实验检验，不能提前视为已确认结论。
+2. 完整结构 Top-k：融合证据成立后进入（Line D）。
+3. 鲁棒性与实验域：缺失/噪声模态、NIST/API-Raman 验证（Line F/G）。
+4. 开放集与可解释性分析（Line H/I）。
+5. checkpoint 与原始数据的仓库外独立备份（IR 12 份约 140 MB，Git 仅保存轻量 JSON/CSV；Raman 备份已决定跳过）。
 
 ---
 
