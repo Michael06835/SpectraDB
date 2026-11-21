@@ -1,4 +1,4 @@
-# 最后更新时间：2026-11-18 02:49 (UTC+8)
+# 最后更新时间：2026-11-21 22:09 (UTC+8)
 
 # SpectraDB
 ## 项目简介
@@ -58,6 +58,7 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 * 官能团多标签（14类）
 * 原子/键/环/共轭体系标注
 * UV专属化学语义标注（58二值 + 73数值特征）
+* UVSPEC15（15类UV专属结构语义标签；从UV标注中选定，与Shared14为两个独立任务）
 
 ## 项目目录
 * SpectraDB/
@@ -87,8 +88,8 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 8. IR v1 完整方法学消融（6 模型 / 24 条件）与 Final Decision（已完成，2026-11-15）
 9. UVSPEC15 v1 完整方法学消融（6 模型 / 24 条件）与 Final Decision（已完成，2026-11-15）
 10. Raman 同构 BN 审计与 24 条件消融（已完成，2026-11-16）
-11. 三模态信息画像与模态对比
-12. Chemistry-aware多模态融合
+11. 三模态信息画像与模态对比（Line B，B0–B5 已完成并归档）
+12. Chemistry-aware多模态融合（Line C，下一阶段，尚未开始）
 13. 完整结构候选与Top-k
 14. 实验域数据（NIST、API-Raman）验证与微调
 15. 开放集识别与可解释性分析
@@ -107,7 +108,7 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 * Lightning
 ## 项目状态
 
-> 最后同步 2026-11-18，包含 UV Shared14 Seed2026 配置纠错与 B1 文档收尾。
+> 最后同步 2026-11-21，Line B（B0–B5）已完成并通过独立验收，归档于 `archive/line-b-2026-11-20`；Line C 尚未开始。
 
 ### 单模态基线（IR/Raman 2026-08 冻结；UV-Vis corrected 2026-11-18；阈值 0.5，三随机种子 Mean）
 
@@ -132,9 +133,38 @@ SpectraDB是一个面向有机小分子多模态光谱分析的数据库与模�
 - Raman v1 备选：WBCE + Original BN + Validation-F1（Validation 0.921640 ± 0.002583）；BCE 家族最佳：BCE + Recalibrated BN + Validation-F1（0.920907 ± 0.003517）；固定基线：BCE + Original BN + 0.5（Validation 0.910148 ± 0.002418 / Test 0.915080 ± 0.001382）。记录见 `docs/experiments/Raman_v1_final_decision.md`。
 - 三者均含 48 条 split-level 记录；逐标签 IR 672 行、UVSPEC15 720 行、Raman 672 行。Raman 的 Test Micro-F1 在八组配置中排第 6（低于 Validation 第 1），属已记录现象，**未据此改选**。
 
-### 进行中 / 尚未开展
+### Line B 三模态信息画像（已完成）
 
-- **三模态信息画像（Line B）**：当前下一步重点。IR/Raman 在 UVSPEC15 标签上的 baseline 与逐标签对比尚未开展。
-- **Raman 已完成**：六模型训练、6 次 Full BN Diagnostic、6 份 Training-only BN 重估 checkpoint、12 次阈值校准、24 条件消融（48 条 split-level、672 条逐标签）与 Phase 7 决策/溯源/复现三份文档；数值门禁采用 Gate A（制品完整性 10 项）+ Gate B（官方 FP16 六指标 1e-3）双门，审计记录在 `runs/RAMAN-NUMERIC-AUDIT/`。
-- 尚未开展：chemistry-aware 融合（Line C）、完整结构 Top-k（Line D）、实验域迁移（Line G）、开放集拒识与 XAI（Line H/I）。
-- 待落实：12 份 IR checkpoint（约 140 MB）与 12 份 Raman checkpoint（约 140 MB）的**仓库外独立备份**（Git 仅保存轻量 JSON/CSV；Raman 备份已由项目决定跳过）。
+Line B 的 B0–B5 已完成。B4.1 导出 18 个冻结模型的 Test 预测；B4.2 完成 Shared14/UVSPEC15 两任务的三模态评估；B4.3 完成 2,000 次 scaffold-clustered paired bootstrap；B4.4 完成错误互补性、Positive OR/AND、真实 Oracle、条件互补与结构子群分析；B5 汇总为正式报告并通过独立验证。
+
+- 模型配置：2 Task × IR/Raman/UV-Vis × 3 seeds = 18 个冻结模型；Test n=12,981。
+- 评估口径：主 F1 政策固定 0.5，次政策为冻结 Validation-F1；AP/AUROC 阈值无关；Bootstrap 描述 scaffold 重采样不确定性，不是训练随机性。
+- Test 三 seed 均值（exploratory/post-hoc）：
+
+| Task | Modality | Micro-F1 (0.5) | Macro-AP | Macro-AUROC |
+|---|---|---|---|---|
+| Shared14 | IR | 0.9405 | 0.9695 | 0.9955 |
+| Shared14 | Raman | 0.9151 | 0.9551 | 0.9911 |
+| Shared14 | UV-Vis | 0.5159 | 0.5125 | 0.8524 |
+| UVSPEC15 | IR | 0.9512 | 0.9709 | 0.9977 |
+| UVSPEC15 | Raman | 0.9538 | 0.9760 | 0.9982 |
+| UVSPEC15 | UV-Vis | 0.6108 | 0.5380 | 0.9252 |
+
+主要结论：
+
+- IR/Raman 在当前两个任务上均优于 UV-Vis。
+- UV-Vis 在 UVSPEC15 上未表现出预期的单模态优势；这不表示 UV 没有结构信息或潜在互补性。
+- 不同模态的错误集合存在差异，但 Positive OR 未超过 best_single；True Oracle 是理论诊断上界，不是实际融合模型的性能。
+- 最佳模态随任务与结构子群变化，因此仍有研究自适应融合的必要性；这还不是对 chemistry-aware routing 的验证。
+
+正式判定：H1 **PARTIAL SUPPORT**；H2 **REJECTED**；H3 **PARTIAL SUPPORT**；H4 **DESCRIPTIVELY SUPPORTED**。
+
+> Line B 的 Test 结果属于 exploratory/post-hoc，不是独立盲测，也不能作为 confirmatory evidence；结论仅限 QM9S 计算域和当前已评估任务，不能外推到 NIST、SDBS 或 API-Raman 实验域。
+
+归档入口：归档分支 `archive/line-b-2026-11-20`，commit `ab1e85dd0274e803bae074fc19acce47f6feb142`。正式报告位于归档分支：[line_b_final_report.md](https://github.com/Michael06835/SpectraDB/blob/archive/line-b-2026-11-20/runs/LINE-B-FINAL/line_b_final_report.md)。该路径不在 `main`，阅读报告请使用归档分支链接。
+
+### 下一步与尚未开展
+
+- **Line C（下一阶段，尚未开始）**：naive concatenation / fixed-weight 三模态对照；IR+Raman 与 IR+Raman+UV 的对照；generic attention/gating；chemistry-aware routing；UV-specific chemical supervision 与关键消融；gate 可解释性与 scaffold-aware 不确定性。所有融合模型必须与 best_single 比较；negative transfer 仅作为待实验检验的现象，不是已确认结论。
+- **Line D–I（后续计划）**：完整结构 Top-k、Woodward–Fieser 等化学规则 reranking、实验域迁移、开放集拒识、XAI 与自然语言解释；均尚未开展。
+- **待落实**：12 份 IR checkpoint（约 140 MB）与 12 份 Raman checkpoint（约 140 MB）的仓库外独立备份（Git 仅保存轻量 JSON/CSV；Raman 备份已由项目决定跳过）。
